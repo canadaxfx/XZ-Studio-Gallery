@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noai, noimageai">
+    <meta name="copyright" content="Content curation and organization © 2025 CanadaXFX. Unauthorized AI training prohibited.">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QP979YZW73"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QP979YZW73');
+</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh; color: #333;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 16px 0; color: white; }
+        h1 { font-size: 1.5rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .subtitle { font-size: 0.8rem; opacity: 1; }
+        .nav-buttons { display: flex; justify-content: center; gap: 15px; margin: 10px 0 12px; }
+        .nav-btn, .btn {
+            padding: 15px 15px; border: none; border-radius: 25px; cursor: pointer;
+            font-size: 13px; font-weight: 600; transition: all 0.3s ease;
+            text-decoration: none; display: inline-block;
+        }
+        .nav-btn.active, .btn.primary {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white; transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(238, 90, 36, 0.3);
+        }
+        .nav-btn:not(.active) { background: rgba(255,255,255,0.2); color: white; backdrop-filter: blur(10px); }
+        .nav-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+        .content-section {
+            background: rgba(255,255,255,0.95); border-radius: 20px; padding: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); backdrop-filter: blur(10px);
+        }
+        .hidden { display: none !important; }
+        
+        /* Search and Filter Styles */
+        .search-bar {
+            width: 100%; max-width: 400px; padding: 15px; border: 2px solid #e0e0e0;
+            border-radius: 25px; font-size: 14px; margin: 0 auto 20px; display: block;
+            transition: border-color 0.3s ease;
+        }
+        .search-bar:focus { outline: none; border-color: #667eea; }
+        
+        /* Stats Grid */
+        .stats-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(50px, 100px));  
+            justify-content: center; 
+            gap: 10px; 
+            max-width: 740px; 
+            margin: 0 auto 15px; 
+        }
+        .stat-card { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            padding: 10px 12px; 
+            border-radius: 15px; 
+            text-align: center; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+        }
+        .stat-number { font-size: 0.75rem; font-weight: bold; margin-bottom: 0px; }
+        .stat-label { font-size: 9px; opacity: 0.9; }
+
+        /* Timeline Styles */
+        .timeline-container { max-width: 1000px; margin: 0 auto; }
+        .timeline-year { 
+            margin-bottom: 20px; border: 1px solid #e0e0e0; border-radius: 15px; 
+            overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: white;
+        }
+        .timeline-year-header { 
+            background: linear-gradient(45deg, #667eea, #764ba2); color: white; 
+            padding: 15px 20px; font-size: 16px; font-weight: bold; cursor: pointer; 
+            transition: all 0.3s ease; user-select: none; position: relative;
+        }
+        .timeline-year-header::after {
+            content: "Click thumbnails for high-res photos • 点击缩略图打开高清图";
+            position: absolute; bottom: 5px; left: 20px; font-size: 11px;
+            opacity: 0.8; font-weight: normal; font-style: italic;
+        }
+        .timeline-year-header:hover { 
+            background: linear-gradient(45deg, #5a6fd8, #6a42a0); 
+            transform: translateY(-1px); 
+        }
+        .year-header-content { width: 100%; }
+        .year-header-top {
+            display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;
+        }
+        .year-title { font-size: 16px; font-weight: bold; }
+        .year-preview {
+            display: flex; gap: 6px; align-items: center; margin-top: 8px; opacity: 0.9;
+        }
+        .timeline-year.expanded .year-preview { display: none; }
+        .preview-thumb {
+            width: 32px; height: 32px; object-fit: cover; border-radius: 6px;
+            border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;
+        }
+        .preview-thumb:hover { transform: scale(1.1); border-color: rgba(255,255,255,0.6); }
+        .preview-more {
+            background: rgba(255,255,255,0.2); color: white; padding: 6px 10px;
+            border-radius: 12px; font-size: 11px; font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .timeline-year-count { 
+            font-size: 14px; opacity: 0.9; background: rgba(255,255,255,0.2); 
+            padding: 5px 12px; border-radius: 20px; 
+        }
+        .expand-icon { font-size: 12px; transition: transform 0.3s ease; margin-left: 10px; }
+        .timeline-year.expanded .expand-icon { transform: rotate(180deg); }
+        .timeline-year-content { padding: 20px; background: white; display: none; }
+        .timeline-year.expanded .timeline-year-content { display: block; }
+        
+        /* Photo Grid */
+        .year-photos-grid { 
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
+            gap: 12px; margin-bottom: 15px;
+        }
+        .timeline-photo { 
+            aspect-ratio: 1; border-radius: 10px; overflow: hidden; cursor: pointer; 
+            transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: relative; background: #f0f0f0;
+        }
+        .timeline-photo:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+        .timeline-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .timeline-photo:hover img { transform: scale(1.05); }
+        .photo-overlay {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: white;
+            padding: 10px 8px 6px; font-size: 11px; font-weight: 600; text-align: center;
+        }
+        
+        /* Pagination Styles */
+        .year-controls {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 10px;
+            padding: 0 5px;
+        }
+        .year-controls label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #555;
+        }
+        .year-controls select {
+            padding: 6px 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #f8f9fa;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .pagination-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .pagination-nav .btn {
+            min-width: 40px;
+            padding: 10px;
+            font-size: 13px;
+            background: rgba(255,255,255,0.2);
+            color: #667eea;
+            border: 1px solid #667eea;
+        }
+        .pagination-nav .btn:hover {
+            background: #e9eafc;
+            transform: translateY(-2px);
+        }
+        .pagination-nav .btn.primary, .pagination-nav .btn[disabled] {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            transform: none;
+            cursor: default;
+            border: none;
+            opacity: 1;
+        }
+        .pagination-nav span {
+            color: #555;
+            padding: 0 5px;
+            font-weight: 600;
+        }
+
+        /* Jump to Page Styles */
+        .jump-to-page { display: flex; align-items: center; gap: 5px; margin-left: 15px; }
+        .jump-to-page input {
+            width: 70px;
+            padding: 9px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-size: 13px;
+        }
+        .jump-to-page input::-webkit-outer-spin-button,
+        .jump-to-page input::-webkit-inner-spin-button {
+            -webkit-appearance: none; margin: 0;
+        }
+        .jump-to-page input[type=number] { -moz-appearance: textfield; }
+        
+        /* Loading States */
+        .loading-placeholder {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%; animation: loading 1.5s infinite;
+        }
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* Empty State */
+        .timeline-empty { 
+            text-align: center; padding: 60px 20px; color: #666; background: white; 
+            border-radius: 15px; border: 2px dashed #e0e0e0; 
+        }
+        .timeline-empty h3 { color: #667eea; margin-bottom: 10px; }
+
+        /* Enhanced Modal Styles - Mobile Optimized */
+        .modal { 
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.9);
+            display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 5px; 
+            overflow: hidden;
+        }
+        
+        .modal-content { 
+            background: white; border-radius: 15px; 
+            max-width: 700px; max-height: 90vh;
+            width: 100%; height: auto;
+            position: relative; 
+            display: flex; flex-direction: column;
+            overflow-y: auto;
+	    overflow-x: hidden;
+        }
+
+        /* Modal Header */
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 10px;
+            border-bottom: 1px solid #e0e0e0;
+            background: #f8f9fa;
+            border-radius: 15px 15px 0 0;
+            flex-shrink: 0;
+        }
+
+        .photo-counter {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 12px;
+            min-width: 60px;
+        }
+
+        .group-title {
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+            flex: 1;
+            text-align: center;
+            margin: 0 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .close-modal { 
+            background: none; border: none; 
+            font-size: 40px; cursor: pointer; 
+            color: #333; padding: 0px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            background: #e9ecef;
+            color: #333;
+        }
+
+        /* Main Photo Display */
+        .modal-photo-container {
+            flex: 1 1 auto; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+            min-height: 350px;
+	    max-height: 60vh; 
+	    height: 60vh; 
+        }
+
+        .modal-photo {
+            max-width: 100%;
+            max-height: 100%;
+    	    width: auto;
+    	    height: auto; 
+            object-fit: contain;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Navigation Arrows */
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-arrow:hover {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .nav-arrow.prev {
+            left: 20px;
+        }
+
+        .nav-arrow.next {
+            right: 20px;
+        }
+
+        .nav-arrow:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: translateY(-50%);
+        }
+
+        .nav-arrow:disabled:hover {
+            background: rgba(255,255,255,0.9);
+            box-shadow: none;
+            transform: translateY(-50%);
+        }
+
+        /* Thumbnail Strip */
+        .thumbnail-strip {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+            overflow-x: auto;
+            white-space: nowrap;
+            border-radius: 0 0 15px 15px;
+            min-height: 80px;
+            flex-shrink: 0;
+        }
+
+        .thumbnail-container {
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .thumbnail {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+            border-color: #667eea;
+        }
+
+        .thumbnail.active {
+            border-color: #667eea;
+            box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Photo Actions Panel */
+        .photo-info-panel {
+            padding: 8px 10px;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            max-height: 250px;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        .close-bottom-btn {
+            font-size: 20px !important; /* Smaller size */
+            color: #000000 !important;
+            width: 30px;
+            height: 30px;
+            background: none !important;
+            border: 2px solid #e0e0e0 !important;
+            border-radius: 50%;
+            padding: 0;
+            margin-left: 10px;
+            line-height: 1;
+        }
+
+        .close-bottom-btn:hover {
+            background: #e9ecef !important;
+            transform: scale(1.1);
+        }
+
+        /* Enhanced Download Section */
+        .download-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 8px;
+            margin-top: 0px;
+            border: 2px solid #e9ecef;
+        }
+        
+        .download-section h4 {
+            color: #495057;
+            margin-bottom: 8px;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .download-actions-row {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+        
+        .action-btn {
+            flex: 1;
+            min-width: 160px;
+            max-width: 200px;
+            padding: 6px 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            line-height: 1.2;
+        }
+
+        /* Download and Action Buttons */
+        .action-btn.download-btn {
+            background: linear-gradient(45deg, #4CAF50, #45a049); 
+            color: white;
+        }
+        .action-btn.download-btn:hover {
+            background: linear-gradient(45deg, #45a049, #3d8b40);
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+        
+        .action-btn.quark-btn {
+            background: linear-gradient(45deg, #FF6B35, #F7931E); 
+            color: white;
+        }
+        .action-btn.quark-btn:hover {
+            background: linear-gradient(45deg, #E55A2B, #E8851A);
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+        
+        .action-btn.weibo-btn {
+            background: linear-gradient(45deg, #fa2a55, #e91e63); 
+            color: white;
+        }
+        .action-btn.weibo-btn:hover {
+            background: linear-gradient(45deg, #e91e63, #d81b60);
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 12px rgba(250, 42, 85, 0.3);
+        }
+        
+        .action-btn:disabled {
+            background: #ccc !important;
+            cursor: not-allowed;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+        
+        .download-hint { 
+            font-size: 11px; color: #666; margin: 8px 0 10px; text-align: center; opacity: 0.8; 
+        }
+        
+        /* Enhanced Weibo Section with Photo Info */
+        .weibo-section {
+            background: linear-gradient(45deg, #fa2a55, #e91e63);
+            color: white;
+            border-radius: 12px;
+            padding: 12px;
+            margin-top: 12px;
+            text-align: center;
+        }
+        
+        .weibo-photo-info {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .weibo-link-btn {
+            background: rgba(255,255,255,0.2) !important; 
+            color: white !important;
+            padding: 10px 20px !important; 
+            border: 2px solid rgba(255,255,255,0.3) !important; 
+            border-radius: 8px !important;
+            font-size: 14px !important; 
+            font-weight: 600 !important; 
+            text-decoration: none !important;
+            display: inline-block !important; 
+            transition: all 0.3s ease !important;
+            backdrop-filter: blur(10px);
+        }
+        .weibo-link-btn:hover {
+            background: rgba(255,255,255,0.3) !important;
+            border-color: rgba(255,255,255,0.5) !important;
+            transform: translateY(-2px) !important; 
+            box-shadow: 0 4px 12px rgba(255,255,255,0.2) !important;
+        }
+
+        /* Group Info Styles */
+        .group-info {
+            background: linear-gradient(45deg, #e3f2fd, #f3e5f5);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 15px 0;
+            border-left: 4px solid #2196F3;
+        }
+        
+        .group-info h5 {
+            color: #1976D2;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .group-info p {
+            color: #424242;
+            font-size: 12px;
+            margin: 0;
+        }
+
+        /* Game Section */
+        .game-container { text-align: center; }
+        .game-stats { display: flex; justify-content: center; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
+        .stat { 
+            background: linear-gradient(45deg, #667eea, #764ba2); color: white; 
+            padding: 15px 20px; border-radius: 15px; font-size: 14px; font-weight: 600;
+        }
+        .game-photo { 
+            max-width: 400px; max-height: 400px; width: 100%; height: 300px; object-fit: contain; 
+            background: #f5f5f7; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
+            margin: 20px auto; display: block; 
+        }
+        .options { 
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; 
+            max-width: 500px; margin: 30px auto; 
+        }
+        .option-btn { 
+            padding: 15px; border: 2px solid #e0e0e0; background: white; border-radius: 15px; 
+            cursor: pointer; font-size: 16px; font-weight: 600; transition: all 0.3s ease; 
+        }
+        .option-btn:hover { border-color: #667eea; background: #f8f9ff; transform: translateY(-2px); }
+        .option-btn.correct { background: linear-gradient(45deg, #2ed573, #1dd1a1); color: white; border-color: #2ed573; }
+        .option-btn.incorrect { background: linear-gradient(45deg, #ff4757, #ff3742); color: white; border-color: #ff4757; }
+        .game-result { margin: 20px 0; padding: 15px; border-radius: 10px; font-weight: 600; font-size: 14px; }
+        .game-result.correct { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .game-result.incorrect { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed; bottom: 20px; right: 20px; 
+            background: white;
+            color: #e53e3e; width: 80px; height: 90x; border-radius: 30px; 
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            cursor: pointer; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            opacity: 0; visibility: hidden; 
+            transition: all 0.3s ease; z-index: 9999;
+            border: 1px solid #e53e3e;
+            font-size: 40px; font-weight: 600; 
+            -webkit-text-stroke: 2px #e53e3e;
+            text-stroke: 2px #e53e3e;
+            padding: 4px 4px;
+        }
+        #back-to-top .arrow {
+            line-height: 1;
+        }
+        #back-to-top .text {
+            font-size: 12px; font-weight: 600; margin-top: 0px;
+            text-align: center; line-height: 1;
+            color: #e53e3e;
+            -webkit-text-stroke: 0;
+            text-stroke: 0;
+            -webkit-text-fill-color: #e53e3e;
+            position: relative;
+            z-index: 1;
+        }
+
+        #back-to-top.visible { 
+            opacity: 0.85; visibility: visible; 
+            animation: subtle-pulse-white 2s infinite ease-in-out;
+        }
+        #back-to-top:hover { 
+            transform: scale(1.15); 
+            box-shadow: 0 6px 25px rgba(229, 62, 62, 0.4);
+            opacity: 1;
+        }
+        
+        @keyframes subtle-pulse-white {
+            0%, 100% { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); }
+            50% { box-shadow: 0 4px 20px rgba(229, 62, 62, 0.3); }
+        }
+
+        /* Search Results */
+        .search-results { background: white; border-radius: 20px; padding: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .search-results-header { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #e0e0e0; }
+        .search-results-header h3 { color: #667eea; font-size: 1.5rem; margin-bottom: 10px; }
+        .search-results-header p { color: #666; font-size: 1rem; margin-bottom: 15px; }
+        .clear-search-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2); color: white; border: none;
+            padding: 12px 25px; border-radius: 25px; font-size: 14px; font-weight: 600;
+            cursor: pointer; transition: all 0.3s ease;
+        }
+        .clear-search-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3); }
+        .search-hint {
+            font-size: 11px; opacity: 0.8; font-weight: normal; font-style: italic;
+            color: #666; margin: 5px 0 10px;
+        }
+
+        .section-title { font-size: 1rem; line-height: 1.25; margin: 6px 0 8px; }
+
+        /* Smooth scrolling for thumbnail strip */
+        .thumbnail-strip::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .thumbnail-strip::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+
+        .thumbnail-strip::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 3px;
+        }
+
+        .thumbnail-strip::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container { padding: 15px; }
+            .nav-buttons { gap: 15px; }
+            .nav-btn { padding: 10px 12px; font-size: 13px; }
+            .year-photos-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .timeline-year-header { padding: 12px 15px; font-size: 14px; }
+            .timeline-year-header::after { font-size: 10px; left: 15px; bottom: 4px; }
+            .year-header-top { margin-bottom: 8px; }
+            .year-title { font-size: 14px; }
+            .timeline-year-count { font-size: 12px; padding: 4px 10px; }
+            .preview-thumb { width: 28px; height: 28px; }
+            .preview-more { padding: 4px 8px; font-size: 10px; }
+            .timeline-year-content { padding: 15px; }
+            #back-to-top { bottom: 30px; right: 10px; width: 63px; height: 63x; line-height: 43px; font-size: 23px; }
+            .search-results-header h3 { font-size: 1.2rem; }
+            .clear-search-btn { padding: 10px 20px; font-size: 13px; }
+            .game-stats {flex-wrap: nowrap; gap: 8px; margin: 15px 0; }
+            .stat { padding: 10px 12px; font-size: 12px; border-radius: 10px; flex: 1; text-align: center; min-width: 0; }
+            
+            /* Mobile Modal Optimizations */
+            .modal {
+                padding: 5px;
+                align-items: flex-start;
+                padding-top: 5px;
+            }
+            
+            .modal-content {
+                max-width: 95vw;
+                max-height: 98vh;
+                margin-top: 0;
+            }
+            
+            .modal-header {
+                padding: 12px 15px;
+                flex-shrink: 0;
+            }
+            
+            .group-title {
+                font-size: 14px;
+                margin: 0 10px;
+            }
+            
+            .photo-counter {
+                font-size: 12px;
+                min-width: 50px;
+            }
+            
+            /* Key change: Limit photo container height on mobile */
+            .modal-photo-container {
+                flex: none;
+                height: 35vh;
+                min-height: 200px;
+                max-height: 300px;
+                flex-shrink: 0;
+            }
+            
+            .modal-photo {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            
+            .nav-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            .nav-arrow.prev {
+                left: 10px;
+            }
+            
+            .nav-arrow.next {
+                right: 10px;
+            }
+            
+            .thumbnail-strip {
+                padding: 8px 10px;
+                min-height: 50px;
+                flex-shrink: 0;
+            }
+            
+            .thumbnail {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .photo-info-panel {
+                padding: 12px 15px;
+                flex-shrink: 0;
+                max-height: none;
+                overflow-y: visible;
+            }
+            
+            .download-section {
+                padding: 8px;
+                margin-top: 0px;
+            }
+            
+            .download-section h4 {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            
+            .action-btn {
+                padding: 5px 8px;
+                font-size: 12px;
+                min-width: 170px;
+            }
+            
+            .download-hint {
+                font-size: 10px;
+                margin: 6px 0 8px;
+            }
+            
+            .weibo-section {
+                padding: 10px;
+                margin-top: 10px;
+            }
+            
+            .weibo-photo-info {
+                font-size: 11px;
+                margin-bottom: 6px;
+            }
+            
+            .weibo-link-btn {
+                padding: 8px 16px !important;
+                font-size: 12px !important;
+            }
+            
+            .close-modal {
+                font-size: 40px;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .modal {
+                padding: 2px;
+                padding-top: 5px;
+            }
+            
+            .modal-content {
+                padding: 5px;
+                border-radius: 10px;
+                max-height: 95vh;
+            }
+            
+            .download-section h4 {
+                font-size: 13px;
+            }
+            
+            .weibo-photo-info {
+                font-size: 10px;
+            }
+        }
+
+        /* Very short screens (Nest Hub, landscape phones, etc.) */
+        @media (max-height: 600px) {
+            .modal {
+                align-items: flex-start;
+                padding: 5px;
+                padding-top: 5px;
+            }
+            
+            .modal-content {
+                max-height: 98vh;
+                overflow-y: auto;
+                height: auto;
+            }
+            
+            /* Make photo container smaller on very short screens */
+            .modal-photo-container {
+                height: 25vh !important;
+                min-height: 150px !important;
+                max-height: 200px !important;
+                flex: none;
+            }
+            
+            .modal-header {
+                padding: 8px 12px;
+                flex-shrink: 0;
+            }
+            
+            .thumbnail-strip {
+                padding: 8px 8px;
+                min-height: 50px;
+            }
+            
+            .thumbnail {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .photo-info-panel {
+                padding: 10px 12px;
+                flex-shrink: 0;
+            }
+            
+            .download-section {
+                padding: 10px;
+            }
+            
+            .download-section h4 {
+                font-size: 13px;
+                margin-bottom: 8px;
+            }
+            
+            .action-btn {
+                padding: 8px 10px;
+                font-size: 12px;
+                line-height: 1.1;
+            }
+        }
+
+        /* Extremely short screens (like Nest Hub) */
+        @media (max-height: 480px) {
+            .modal-photo-container {
+                height: 20vh !important;
+                min-height: 120px !important;
+                max-height: 150px !important;
+            }
+            
+            .modal-header {
+                padding: 6px 10px;
+            }
+            
+            .group-title {
+                font-size: 12px;
+            }
+            
+            .photo-counter {
+                font-size: 11px;
+            }
+            
+            .thumbnail-strip {
+                padding: 6px 10px;
+                min-height: 40px;
+            }
+            
+            .thumbnail {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .photo-info-panel {
+                padding: 8px 10px;
+            }
+            
+            .download-section h4 {
+                font-size: 12px;
+                margin-bottom: 6px;
+            }
+            
+            .action-btn {
+                padding: 6px 6px;
+                font-size: 12px;
+                min-width: 120px;
+            }
+            
+            .nav-arrow {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+            }
+        }
+
+        /* Footer Styles */
+        .site-footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; padding: 10px 0; margin-top: 50px; text-align: center; font-size: 0.8rem;
+        }
+        .footer-content { margin-bottom: 10px; }
+        .footer-link {
+            color: white; text-decoration: underline; font-weight: 600; display: inline-block;
+            padding: 8px 12px; border-radius: 8px; transition: all 0.3s ease; margin: 0 8px;
+        }
+        .footer-link:hover { opacity: 0.9; transform: translateY(-1px); background: rgba(255,255,255,0.1); }
+        #terms-content {
+            background-color: rgba(255,255,255,0.1); border-radius: 10px; margin: 15px auto 0;
+            text-align: left; max-width: 700px; padding: 15px 20px; display: none;
+        }
+        #terms-content ul { list-style: disc; padding-left: 20px; margin: 10px 0; }
+        #terms-content li { margin: 5px 0; }
+        .copyright-notice { opacity: 0.9; margin-top: 10px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1>Xiao Zhan Studio Gallery<br>肖战工作室高清图库</h1>
+        <p class="subtitle" style="font-weight: 600; color: white;">
+            * High-resolution photos from XZ Studio<br>
+            * Slightly compressed photos and full size uncompressed photo sets available<br>
+            * <a href="https://canadaxfx.github.io/XZ-HD-Gallery-2/" target="_blank" style="color: white; text-decoration: underline;">Click here for XZ HD Gallery-2 高清(非工作室)图库-2</a><br>
+         </p>
+    </header>
+        <nav class="nav-buttons">
+            <button class="nav-btn active" data-section="gallery">Photo Timeline<br>时间线相册</button>
+            <button class="nav-btn" data-section="game">Time Game<br>时间游戏</button>
+        </nav>
+
+        <div id="gallery-section" class="content-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalPhotosDisplay">0</div>
+                    <div class="stat-label">Total Photos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="yearsSpanDisplay">0</div>
+                    <div class="stat-label">Years Covered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="expandedYearsDisplay">0</div>
+                    <div class="stat-label">Years Expanded</div>
+                </div>
+            </div>
+
+            <input type="text" class="search-bar" placeholder="Search photos by keywords 关键词搜索" id="searchInput">
+
+            <div class="timeline-container" id="timelineContainer">
+                <div class="timeline-empty">
+                    <h3>Loading Photo Timeline...</h3>
+                    <p>Please wait while we organize your photos by year.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-section" class="content-section hidden">
+            <div class="game-container">
+                <h2 class="section-title">When Was This Photo Posted?</h2>
+                <p style="font-size:13px; color:#1565C0;">Click "Start Game" to begin!</p>
+                <div style="background:#e8f4ff; padding:15px; border-radius:10px; margin:20px auto; max-width:500px; border-left:4px solid #2196F3;">
+                    <p style="margin:0; font-size:12px; color:#1565C0;"><strong>💡 猜猜看:</strong> 这张照片在什么时候发布？<br>点击"开始游戏！"，测试你的眼力吧！</p>
+                </div>
+                <div class="game-stats">
+                    <div class="stat">Score: <span id="score">0</span></div>
+                    <div class="stat">Streak: <span id="streak">0</span></div>
+                    <div class="stat">Total: <span id="totalQuestions">0</span></div>
+                </div>
+                <div id="gameContent">
+                    <img id="gamePhoto" class="game-photo" alt="Guess the date">
+                    <div id="gameOptions" class="options"></div>
+                    <div id="gameResult" class="game-result hidden"></div>
+                    <button id="nextQuestion" class="btn primary hidden">Next Question 下一题</button>
+                </div>
+                <div class="game-controls">
+                    <button id="startGame" class="btn primary">Start Game 开始游戏！</button>
+                    <button id="newGame" class="btn primary hidden">New Game 重新开始</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Photo Modal with Group Navigation -->
+    <div id="photoModal" class="modal hidden">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="photo-counter" id="photoCounter">1 of 5</div>
+                <div class="group-title" id="groupTitle">Photo Collection</div>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+
+            <!-- Main Photo Display -->
+            <div class="modal-photo-container">
+                <button class="nav-arrow prev" id="prevBtn" onclick="navigatePhoto(-1)">‹</button>
+                <img id="modalPhoto" class="modal-photo" alt="Current photo">
+                <button class="nav-arrow next" id="nextBtn" onclick="navigatePhoto(1)">›</button>
+            </div>
+
+            <!-- Thumbnail Strip -->
+            <div class="thumbnail-strip">
+                <div class="thumbnail-container" id="thumbnailContainer">
+                    <!-- Thumbnails will be generated here -->
+                </div>
+            </div>
+
+            <div class="photo-info-panel">
+                <div class="download-section">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <h4 style="margin: 0; flex-grow: 1; text-align: center;">🔥Download Options & Links</h4>
+                        <button class="close-modal close-bottom-btn" onclick="closeModal()">×</button>
+                    </div>
+                    
+<div class="download-actions-row" id="actionButtonsRow">
+    <a class="action-btn download-btn" id="downloadBtn" href="#" target="_blank" download>
+        🔥Download HD Photo<br>
+        <small>Original Quality (原图)</small>
+    </a>
+    
+    <a class="action-btn weibo-btn" id="weiboLinkBtn" target="_blank">
+        📱 View on Weibo<br>
+        <small style="opacity: 1;">Original Post</small><br>
+        <small style="opacity: 1;">微博原贴</small>
+    </a>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Report Issue Modal -->
+    <div id="reportModal" class="modal hidden">
+        <div class="modal-content" style="max-width: 500px;">
+            <button class="close-modal" onclick="closeReportModal()">&times;</button>
+          <div class="report-form-container" style="padding: 10px;">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <h3 style="color: #667eea; margin-bottom: 10px;">🔧 Report an Issue</h3>
+                    <p style="color: #666; font-size: 14px;">Help us by reporting bugs or broken links<br>
+                    <span style="font-size: 12px; color: #888;">帮助我们改进网站，报告错误或失效链接</span></p>
+                </div>
+                
+                <form id="reportForm" class="report-form" action="https://formsubmit.co/canadaxfx1005@gmail.com" method="POST">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_next" value="https://canadaxfx.github.io/XZ-photo-gallery/report-success.html">
+                    <input type="hidden" name="_subject" value="XZ Gallery Issue Report">
+                    
+                    <div style="margin-bottom: 10px;">
+                        <label for="reportType" style="display: block; font-size: 13px; font-weight: 600; color: #444; margin-bottom: 5px;">Issue Type 问题类型</label>
+                        <select id="reportType" name="issue_type" required style="padding: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; width: 100%;">
+                            <option value="">Select issue type...</option>
+                            <option value="broken-link">Broken Link 链接失效</option>
+                            <option value="missing-photo">Missing Photo 图片丢失</option>
+                            <option value="download-issue">Download Problem 下载问题</option>
+                            <option value="page-error">Page Error 页面错误</option>
+                            <option value="feature-request">Feature Request 功能建议</option>
+                            <option value="other">Other 其他</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 10px;">
+                        <label for="reportPage" style="display: block; font-size: 13px; font-weight: 600; color: #444; margin-bottom: 5px;">Page/Section 页面/部分</label>
+                        <input type="text" id="reportPage" name="page_section" placeholder="e.g., 2024 photos, Game section, etc." required style="padding: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; width: 100%;">
+                    </div>
+
+                    <div style="margin-bottom: 10px;">
+                        <label for="reportDevice" style="display: block; font-size: 13px; font-weight: 600; color: #444; margin-bottom: 5px;">Device & Browser 设备和浏览器</label>
+                        <input type="text" id="reportDevice" name="device_browser" placeholder="e.g., iPhone Safari, Chrome Windows, etc." style="padding: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; width: 100%;">
+                    </div>
+
+                    <div style="margin-bottom: 10px;">
+                        <label for="reportDescription" style="display: block; font-size: 13px; font-weight: 600; color: #444; margin-bottom: 5px;">Description 详细描述</label>
+                        <textarea id="reportDescription" name="description" rows="4" placeholder="Please describe the issue in detail..." required style="padding: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; width: 100%;"></textarea>
+                    </div>
+
+                    <div style="margin-bottom: 10px;">
+                        <label for="reportEmail" style="display: block; font-size: 13px; font-weight: 600; color: #444; margin-bottom: 5px;">Your Email (Optional) 邮箱（可选）</label>
+                        <input type="email" id="reportEmail" name="user_email" placeholder="your@email.com (for follow-up)" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; width: 100%;">
+                    </div>
+
+                    <div class="form-actions" style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee;">
+                        <button type="button" class="nav-btn" style="background: #f8f8f8; color: #666; border: 1px solid #ddd;" onclick="closeReportModal()">Cancel 取消</button>
+                        <button type="submit" class="btn primary">Send Report 发送报告</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="back-to-top">
+        <div class="arrow">▲</div>
+        <div class="text">TOP<br>回顶部</div>
+    </div>
+    
+    <script>
+        /* ---------- Core Variables ---------- */
+        let photoData = [];
+        let gameScore = 0, gameStreak = 0, totalQuestions = 0, currentPhoto = null, gameActive = false;
+        let expandedYears = new Set();
+        let yearPaginationSettings = {}; // Stores { perPage: number, currentPage: number } for each year
+        let imageObserver = null;
+        
+        /* ---------- Enhanced Modal Variables ---------- */
+        let currentPhotoGroup = [];
+        let currentPhotoIndex = 0;
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        /* ---------- Utility Functions ---------- */
+        function calculatePhotosPerRow() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth <= 768) return 3;
+            const maxContainerWidth = 1000;
+            const containerPadding = 40;
+            const availableWidth = maxContainerWidth - containerPadding;
+            const gap = 12;
+            const minPhotoWidth = 120;
+            return Math.floor((availableWidth + gap) / (minPhotoWidth + gap));
+        } 
+      
+
+
+        /* ---------- Photo Group Management ---------- */
+function getPhotoGroup(photo) {
+    // 1. If it has an explicit group name (Migrated data), use it
+    if (photo.groupName) {
+        return photoData.filter(p => p.groupName === photo.groupName)
+                        .sort((a, b) => new Date(a.date) - new Date(b.date));
+    }
+    
+    // 2. If no group name (New data), group by DATE + WEIBO LINK
+    // This creates "Virtual Groups" automatically so the modal still works nicely
+    return photoData.filter(p => p.date === photo.date && p.weibo === photo.weibo)
+                    .sort((a, b) => p.id - p.id);
+}
+
+        
+        function countGroupPhotos(groupName, quarkLink) {
+            return photoData.filter(p => 
+                (p.groupName === groupName) || 
+                (p.quarkLink === quarkLink && quarkLink)
+            ).length;
+        }
+
+        /* ---------- Enhanced Modal Functions ---------- */
+        function openPhotoModal(photoId) {
+            const photo = photoData.find(p => p.id === photoId);
+            if (!photo) return;
+            
+            // Get all photos in the same group
+            currentPhotoGroup = getPhotoGroup(photo);
+            currentPhotoIndex = currentPhotoGroup.findIndex(p => p.id === photoId);
+            
+            const modal = document.getElementById('photoModal');
+            modal.classList.remove('hidden');
+            
+            updateModalContent();
+            generateThumbnails();
+            updateNavigationButtons();
+            
+            // Add keyboard navigation
+            document.addEventListener('keydown', handleKeyboardNavigation);
+        }
+
+        function updateModalContent() {
+            const photo = currentPhotoGroup[currentPhotoIndex];
+            
+            // Update main photo
+            document.getElementById('modalPhoto').src = photo.url;
+            
+            // Update counter
+            document.getElementById('photoCounter').textContent = 
+                `${currentPhotoIndex + 1} of ${currentPhotoGroup.length}`;
+            
+            // Update group title
+            document.getElementById('groupTitle').textContent = 
+                photo.groupName || `${photo.month} ${photo.year}`;
+
+
+// Inside updateModalContent()...
+document.getElementById('downloadBtn').href = photo.url; // Point directly to R2
+            
+         
+            // Update action buttons row
+            const downloadBtn = document.getElementById('downloadBtn');
+            const weiboBtn = document.getElementById('weiboLinkBtn');
+            const batchDownloadDesc = document.getElementById('batchDownloadDesc');
+            
+
+            
+            // Handle Weibo link
+            if (photo.weibo && String(photo.weibo).trim()) {
+                const w = photo.weibo.trim();
+                weiboBtn.href = /^https?:\/\//i.test(w) ? w : `https://${w}`;
+                weiboBtn.style.display = 'inline-block';
+            } else {
+                weiboBtn.style.display = 'none';
+            }
+        }
+
+function generateThumbnail(originalUrl, size = 'm') {
+    // 1. Handle New Cloudflare R2 Links
+    // Structure: .../full/image.jpg -> .../thumbs/image_m.jpg
+    if (originalUrl.includes('/full/')) {
+        let thumbUrl = originalUrl.replace('/full/', '/thumbs/');
+        // Split to insert the suffix before the extension
+        const parts = thumbUrl.split('.');
+        const extension = parts.pop();
+        const basePath = parts.join('.');
+        return `${basePath}_${size}.${extension}`;
+    }
+
+    // 2. Handle Old Imgur Links (Backward Compatibility)
+    const match = originalUrl.match(/https:\/\/i\.imgur\.com\/([^.]+)\.(\w+)/);
+    if (match) {
+        const [, imageId, extension] = match;
+        return `https://i.imgur.com/${imageId}${size}.${extension}`;
+    }
+
+    // 3. Fallback
+    return originalUrl;
+}
+
+
+        function goToPhoto(index) {
+            if (index >= 0 && index < currentPhotoGroup.length) {
+                currentPhotoIndex = index;
+                updateModalContent();
+                updateThumbnailsActive();
+                updateNavigationButtons();
+            }
+        }
+
+        function navigatePhoto(direction) {
+            const newIndex = currentPhotoIndex + direction;
+            goToPhoto(newIndex);
+        }
+
+        function updateThumbnailsActive() {
+            document.querySelectorAll('.thumbnail').forEach((thumb, index) => {
+                thumb.classList.toggle('active', index === currentPhotoIndex);
+            });
+        }
+
+        function updateNavigationButtons() {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            if (prevBtn && nextBtn) {
+                prevBtn.disabled = currentPhotoIndex === 0;
+                nextBtn.disabled = currentPhotoIndex === currentPhotoGroup.length - 1;
+                
+                // Hide arrows if only one photo
+                if (currentPhotoGroup.length <= 1) {
+                    prevBtn.style.display = 'none';
+                    nextBtn.style.display = 'none';
+                } else {
+                    prevBtn.style.display = 'flex';
+                    nextBtn.style.display = 'flex';
+                }
+            }
+        }
+
+        function handleKeyboardNavigation(e) {
+            if (document.getElementById('photoModal').classList.contains('hidden')) {
+                return;
+            }
+            
+            switch(e.key) {
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    if (currentPhotoIndex > 0) navigatePhoto(-1);
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+                    if (currentPhotoIndex < currentPhotoGroup.length - 1) navigatePhoto(1);
+                    break;
+                case 'Escape':
+                    e.preventDefault();
+                    closeModal();
+                    break;
+            }
+        }
+
+        function closeModal() { 
+            document.getElementById('photoModal').classList.add('hidden');
+            document.removeEventListener('keydown', handleKeyboardNavigation);
+        }
+
+        /* ---------- Touch/Swipe Support ---------- */
+        document.getElementById('photoModal').addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.getElementById('photoModal').addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0 && currentPhotoIndex < currentPhotoGroup.length - 1) {
+                    // Swipe left - next photo
+                    navigatePhoto(1);
+                } else if (diff < 0 && currentPhotoIndex > 0) {
+                    // Swipe right - previous photo
+                    navigatePhoto(-1);
+                }
+            }
+        }
+
+        /* ---------- Initialization ---------- */
+        document.addEventListener('DOMContentLoaded', () => {
+            setupNavigation();
+            setupSearch();
+            setupIntersectionObserver();
+            setupBackToTop();
+            setupFooterToggle();
+            loadPhotoData();
+        });
+
+        /* ---------- Data Loading ---------- */
+async function loadPhotoData() {
+    try {
+        // Define your data sources
+        const yearFiles = [2025, 2024, 2023, 2022, 2021, 2020, 2019];
+        const customFiles = ["testing"]; // Add any custom filename here (without .json)
+        
+        let allPhotos = [];
+        
+        // Load year files
+        for (const year of yearFiles) {
+            try {
+                const res = await fetch(`${year}.json?v=${Date.now()}`, { cache: 'no-store' });
+                if (res.ok) {
+                    const yearData = await res.json();
+                    if (Array.isArray(yearData)) allPhotos.push(...yearData);
+                }
+            } catch (err) {
+                console.log(`No ${year}.json found, skipping`);
+            }
+        }
+        
+        // Load custom files
+        for (const customFile of customFiles) {
+            try {
+                const res = await fetch(`${customFile}.json?v=${Date.now()}`, { cache: 'no-store' });
+                if (res.ok) {
+                    const customData = await res.json();
+                    if (Array.isArray(customData)) allPhotos.push(...customData);
+                }
+            } catch (err) {
+                console.log(`No ${customFile}.json found, skipping`);
+            }
+        }
+        
+        // Fallback to photoData.json if nothing loaded
+        if (allPhotos.length === 0) {
+            console.log('No files found, trying photoData.json...');
+            const res = await fetch(`photoData.json?v=${Date.now()}`, { cache: 'no-store' });
+            if (res.ok) allPhotos = await res.json();
+        }
+        
+        if (!Array.isArray(allPhotos) || allPhotos.length === 0) throw new Error('No valid photo data found');
+        
+        allPhotos.sort((a, b) => new Date(b.date) - new Date(a.date));
+        allPhotos.forEach((photo, index) => { photo.id = index + 1; });
+        
+        photoData = allPhotos;
+        initializeTimeline();
+        
+    } catch (err) {
+        console.error('Failed to load photo data:', err);
+        document.getElementById('timelineContainer').innerHTML = `
+            <div class="timeline-empty"><h3>Could not load photo data</h3><p>Please check your connection and refresh.</p></div>`;
+    }
+}
+        /* ---------- Timeline & Pagination Functions ---------- */
+        function initializeTimeline() {
+            if (photoData.length === 0) {
+                document.getElementById('timelineContainer').innerHTML = `
+                    <div class="timeline-empty"><h3>No photos found</h3><p>Add photoData.json to display photos.</p></div>`;
+                return;
+            }
+
+            const photosByYear = photoData.reduce((acc, photo) => {
+                if (!acc[photo.year]) acc[photo.year] = [];
+                acc[photo.year].push(photo);
+                return acc;
+            }, {});
+
+            Object.values(photosByYear).forEach(yearPhotos => yearPhotos.sort((a, b) => new Date(b.date) - new Date(a.date)));
+
+            createTimelineHTML(photosByYear);
+            updateStats();
+            initializeGame();
+            
+            const sortedYears = Object.keys(photosByYear).sort((a, b) => b - a);
+            if (sortedYears.length > 0) setTimeout(() => toggleYear(sortedYears[0]), 100);
+        }
+
+        function createTimelineHTML(photosByYear) {
+            const sortedYears = Object.keys(photosByYear).sort((a, b) => b - a);
+            const timelineHTML = sortedYears.map(year => {
+                const photos = photosByYear[year];
+                const photosPerRow = calculatePhotosPerRow();
+                const totalRows = Math.ceil(photos.length / photosPerRow);
+                
+                const previewPhotos = photos.slice(0, 4);
+                const previewHTML = `
+                    <div class="year-preview">
+                        ${previewPhotos.map(p => `<img src="${generateThumbnail(p.url, 'm')}" alt="Preview" class="preview-thumb">`).join('')}
+                        ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
+                    </div>`;
+                
+                return `
+                    <div class="timeline-year" data-year="${year}">
+                        <div class="timeline-year-header" onclick="toggleYear('${year}')">
+                            <div class="year-header-content">
+                                <div class="year-header-top">
+                                    <span class="year-title">${year}</span>
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <span class="timeline-year-count">${photos.length} photos (${totalRows} rows)</span>
+                                        <span class="expand-icon">▼</span>
+                                    </div>
+                                </div>
+                                ${previewHTML}
+                            </div>
+                        </div>
+                        <div class="timeline-year-content">
+                            <div class="year-controls">
+                                <label for="per-page-${year}">Photos per page:</label>
+                                <select id="per-page-${year}" onchange="changePhotosPerPage('${year}', this.value)">
+                                    <option value="21">21</option>
+                                    <option value="42">42</option>
+                                    <option value="84">84</option>
+                                    <option value="all">All</option>
+                                </select>
+                            </div>
+                            <div class="year-photos-grid" id="photos-${year}"></div>
+                            <div class="pagination-nav" id="pagination-nav-${year}"></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            document.getElementById('timelineContainer').innerHTML = timelineHTML;
+        }
+
+// --- NEW CODE (Paste this) ---
+function generatePhotosHTML(photos) {
+    return photos.map(photo => {
+        // 1. Check if it's a video file
+        const isVideo = photo.url.toLowerCase().endsWith('.mp4') || photo.url.toLowerCase().endsWith('.mov');
+        
+        // 2. Create a "Play" icon overlay if it is a video
+        const videoIcon = isVideo ? '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>' : '';
+
+        // 3. Return the HTML card
+        return `
+            <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
+                ${videoIcon}
+                <img data-src="${generateThumbnail(photo.url, 'm')}" 
+                     data-fullsize="${photo.url}" 
+                     alt="Photo ${photo.id}" 
+                     class="lazy-image">
+                <div class="photo-overlay">${photo.date}</div>
+            </div>
+        `;
+    }).join('');
+}
+
+        function toggleYear(year) {
+            const yearElement = document.querySelector(`[data-year="${year}"]`);
+            if (!yearElement) return;
+
+            const isExpanded = yearElement.classList.toggle('expanded');
+            
+            if (isExpanded) {
+                expandedYears.add(year);
+                if (!yearPaginationSettings[year]) {
+                    yearPaginationSettings[year] = { perPage: 21, currentPage: 1 };
+                }
+                document.getElementById(`per-page-${year}`).value = yearPaginationSettings[year].perPage === Infinity ? 'all' : yearPaginationSettings[year].perPage;
+                renderYearPage(year);
+            } else {
+                expandedYears.delete(year);
+                unloadYearImages(year);
+            }
+            updateStats();
+        }
+
+        function changePhotosPerPage(year, perPageValue) {
+            const perPage = perPageValue === 'all' ? Infinity : parseInt(perPageValue, 10);
+            yearPaginationSettings[year] = { perPage, currentPage: 1 };
+            renderYearPage(year);
+        }
+
+        function goToPage(year, page) {
+            if (!yearPaginationSettings[year]) return;
+            yearPaginationSettings[year].currentPage = parseInt(page, 10);
+            renderYearPage(year);
+            document.getElementById(`photos-${year}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function jumpToPage(year, totalPages) {
+            const inputElement = document.getElementById(`jump-to-input-${year}`);
+            if (!inputElement) return;
+
+            const pageNum = parseInt(inputElement.value, 10);
+
+            if (isNaN(pageNum) || pageNum < 1 || pageNum > totalPages) {
+                alert(`Please enter a valid page number between 1 and ${totalPages}.`);
+                inputElement.value = '';
+                inputElement.focus();
+                return;
+            }
+            goToPage(year, pageNum);
+        }
+
+        function renderYearPage(year) {
+            if (!yearPaginationSettings[year]) {
+                yearPaginationSettings[year] = { perPage: 21, currentPage: 1 };
+            }
+            const { perPage, currentPage } = yearPaginationSettings[year];
+            const yearPhotos = photoData.filter(p => p.year === year);
+            const totalPhotos = yearPhotos.length;
+            const photosGrid = document.getElementById(`photos-${year}`);
+            const paginationNav = document.getElementById(`pagination-nav-${year}`);
+
+            if (!photosGrid || !paginationNav) return;
+
+            let startIndex, endIndex;
+
+            if (perPage === Infinity) {
+                startIndex = 0;
+                endIndex = totalPhotos;
+            } else {
+                startIndex = (currentPage - 1) * perPage;
+                endIndex = Math.min(startIndex + perPage, totalPhotos);
+            }
+
+            photosGrid.innerHTML = generatePhotosHTML(yearPhotos.slice(startIndex, endIndex));
+
+            paginationNav.innerHTML = '';
+            if (perPage !== Infinity && totalPhotos > perPage) {
+                const totalPages = Math.ceil(totalPhotos / perPage);
+                paginationNav.innerHTML = createPaginationButtons(year, currentPage, totalPages);
+                
+                const jumpInput = document.getElementById(`jump-to-input-${year}`);
+                if(jumpInput) {
+                    jumpInput.addEventListener('keydown', (event) => {
+                        if (event.key === 'Enter') {
+                            event.preventDefault();
+                            jumpToPage(year, totalPages);
+                        }
+                    });
+                }
+            }
+            setupLazyLoadingForYear(year);
+        }
+
+        function createPaginationButtons(year, currentPage, totalPages) {
+            let html = '';
+            const maxPagesToShow = 5;
+            let startPage, endPage;
+
+            if (totalPages <= maxPagesToShow) {
+                startPage = 1;
+                endPage = totalPages;
+            } else {
+                const maxBefore = Math.floor(maxPagesToShow / 2);
+                const maxAfter = Math.ceil(maxPagesToShow / 2) - 1;
+                if (currentPage <= maxBefore) {
+                    startPage = 1; endPage = maxPagesToShow;
+                } else if (currentPage + maxAfter >= totalPages) {
+                    startPage = totalPages - maxPagesToShow + 1; endPage = totalPages;
+                } else {
+                    startPage = currentPage - maxBefore; endPage = currentPage + maxAfter;
+                }
+            }
+
+            if (currentPage > 1) html += `<button class="btn" onclick="goToPage('${year}', ${currentPage - 1})">‹ Prev</button>`;
+            if (startPage > 1) {
+                html += `<button class="btn" onclick="goToPage('${year}', 1)">1</button>`;
+                if (startPage > 2) html += `<span>...</span>`;
+            }
+            for (let i = startPage; i <= endPage; i++) {
+                html += `<button class="btn ${i === currentPage ? 'primary' : ''}" ${i === currentPage ? 'disabled' : `onclick="goToPage('${year}', ${i})"`}>${i}</button>`;
+            }
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) html += `<span>...</span>`;
+                html += `<button class="btn" onclick="goToPage('${year}', ${totalPages})">${totalPages}</button>`;
+            }
+            if (currentPage < totalPages) html += `<button class="btn" onclick="goToPage('${year}', ${currentPage + 1})">Next ›</button>`;
+            
+            html += `
+                <div class="jump-to-page">
+                    <input type="number" id="jump-to-input-${year}" min="1" max="${totalPages}" placeholder="Page #" title="Enter page number and press Go or Enter">
+                    <button class="btn" onclick="jumpToPage('${year}', ${totalPages})">Go</button>
+                </div>
+            `;
+
+            return html;
+        }
+
+        /* ---------- Lazy Loading ---------- */
+        function setupIntersectionObserver() {
+            imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src && !img.src) {
+                            img.src = img.dataset.src;
+                            img.onload = () => img.classList.remove('loading-placeholder');
+                            img.onerror = () => {
+                                if (img.dataset.fullsize) img.src = img.dataset.fullsize;
+                                else img.classList.remove('loading-placeholder');
+                            };
+                        }
+                        imageObserver.unobserve(img);
+                    }
+                });
+            }, { rootMargin: '50px' });
+        }
+
+        function setupLazyLoading() {
+            document.querySelectorAll('.lazy-image[data-src]').forEach(img => {
+                img.classList.add('loading-placeholder');
+                if (imageObserver) imageObserver.observe(img);
+            });
+        }
+
+        function setupLazyLoadingForYear(year) {
+            document.querySelectorAll(`#photos-${year} .lazy-image[data-src]`).forEach(img => {
+                img.classList.add('loading-placeholder');
+                if (imageObserver) imageObserver.observe(img);
+            });
+        }
+
+        function unloadYearImages(year) {
+            document.querySelectorAll(`#photos-${year} img`).forEach(img => {
+                img.src = '';
+                img.classList.add('loading-placeholder');
+            });
+        }
+
+        /* ---------- Search Functions ---------- */
+        function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            let searchTimeout;
+            searchInput.addEventListener('input', () => {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => performSearch(searchInput.value.toLowerCase().trim()), 300);
+            });
+        }
+
+        function performSearch(query) {
+            const timelineContainer = document.getElementById('timelineContainer');
+            if (!query) {
+                initializeTimeline();
+                return;
+            }
+
+            const matchingPhotos = photoData.filter(p => 
+                p.year.includes(query) || p.month.toLowerCase().includes(query) || p.date.includes(query) ||
+                (Array.isArray(p.tags) && p.tags.some(t => String(t).toLowerCase().includes(query)))
+            );
+
+            if (matchingPhotos.length === 0) {
+                timelineContainer.innerHTML = `<div class="timeline-empty"><h3>No photos found</h3><p>No results for "${query}".</p></div>`;
+                updateSearchStats(0, 0);
+                return;
+            }
+
+            timelineContainer.innerHTML = `
+                <div class="search-results">
+                    <div class="search-results-header">
+                        <h3>Search Results for "${query}"</h3>
+                        <p>${matchingPhotos.length} photos found</p>
+                        <p class="search-hint">Click thumbnails for high-res photos • 点击缩略图打开高清图</p>
+                        <button class="clear-search-btn" onclick="clearSearch()">← Back to Timeline <br> 回时间线</button>
+                    </div>
+                    <div class="year-photos-grid">${generatePhotosHTML(matchingPhotos)}</div>
+                </div>`;
+            setupLazyLoading();
+            updateSearchStats(matchingPhotos.length, matchingPhotos.length);
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            initializeTimeline();
+        }
+
+        function updateSearchStats(total, matching) {
+            document.getElementById('totalPhotosDisplay').textContent = total.toLocaleString();
+            document.getElementById('yearsSpanDisplay').textContent = matching > 0 ? 'Search' : '0';
+            document.getElementById('expandedYearsDisplay').textContent = matching > 0 ? 'Results' : '0';
+        }
+
+        /* ---------- Statistics ---------- */
+        function updateStats() {
+            document.getElementById('totalPhotosDisplay').textContent = photoData.length.toLocaleString();
+            document.getElementById('yearsSpanDisplay').textContent = new Set(photoData.map(p => p.year)).size;
+            document.getElementById('expandedYearsDisplay').textContent = expandedYears.size;
+        }
+
+        /* ---------- Navigation ---------- */
+        function setupNavigation() {
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    showSection(this.dataset.section);
+                    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        }
+        
+        function showSection(section) {
+            document.querySelectorAll('.content-section').forEach(s => s.classList.add('hidden'));
+            document.getElementById(section + '-section').classList.remove('hidden');
+            if (section === 'game') initializeGame();
+        }
+
+
+
+        /* ---------- Report Form Functions ---------- */
+        function openReportModal() {
+            document.getElementById('reportModal').classList.remove('hidden');
+            // Auto-detect user's device/browser info
+            const deviceInfo = `${navigator.platform} - ${navigator.userAgent.split(' ').slice(-2).join(' ')}`;
+            document.getElementById('reportDevice').value = deviceInfo;
+        }
+
+        function closeReportModal() {
+            document.getElementById('reportModal').classList.add('hidden');
+            document.getElementById('reportForm').reset();
+        }
+
+        // Rate limiting variables
+        let lastSubmissionTime = 0;
+        const SUBMISSION_COOLDOWN = 30000; // 30 seconds
+
+
+        /* ---------- Modal Event Listeners ---------- */
+        document.getElementById('photoModal').addEventListener('click', e => { 
+            if (e.target === e.currentTarget) closeModal(); 
+        });
+        document.getElementById('reportModal').addEventListener('click', e => { 
+            if (e.target === e.currentTarget) closeReportModal(); 
+        });
+        document.addEventListener('keydown', e => { 
+            if (e.key === 'Escape') {
+                closeModal(); 
+                closeReportModal();
+            }
+        });
+
+        /* ---------- Game Functions ---------- */
+        document.getElementById('startGame').addEventListener('click', startGame);
+        document.getElementById('newGame').addEventListener('click', newGame);
+        document.getElementById('nextQuestion').addEventListener('click', nextQuestion);
+
+        function initializeGame() {
+            const startBtn = document.getElementById('startGame');
+            if (photoData.length === 0) {
+                document.getElementById('gamePhoto').src = createDefaultGameImage();
+                startBtn.textContent = 'Add Photos First'; 
+                startBtn.disabled = true; 
+            } else if (!gameActive) {
+                document.getElementById('gamePhoto').src = createDefaultGameImage();
+            }
+        }
+        
+        function startGame() {
+            if (photoData.length === 0) return; 
+            gameActive = true; 
+            document.getElementById('startGame').classList.add('hidden');
+            document.getElementById('newGame').classList.remove('hidden'); 
+            nextQuestion();
+        }
+        
+        function newGame() {
+            gameScore = gameStreak = totalQuestions = 0; 
+            updateGameStats(); 
+            nextQuestion();
+        }
+        
+        function nextQuestion() {
+            if (photoData.length === 0) return; 
+            document.getElementById('gameResult').classList.add('hidden');
+            document.getElementById('nextQuestion').classList.add('hidden');
+            currentPhoto = photoData[Math.floor(Math.random() * photoData.length)];
+            document.getElementById('gamePhoto').src = currentPhoto.url;
+            displayGameOptions(generateOptions(currentPhoto));
+        }
+        
+        function generateOptions(correctPhoto) {
+            const correctOption = correctPhoto.date.substring(0, 7); // "YYYY-MM"
+            const options = new Set([correctOption]);
+            const years = [...new Set(photoData.map(p => p.year))];
+            
+            while (options.size < 4) {
+                const year = years[Math.floor(Math.random() * years.length)];
+                const month = String(Math.floor(Math.random() * 12) + 1).padStart(2, '0');
+                options.add(`${year}-${month}`);
+            }
+            return [...options].sort(() => Math.random() - 0.5);
+        }
+        
+        function displayGameOptions(options) {
+            document.getElementById('gameOptions').innerHTML = options.map(opt => 
+                `<button class="option-btn" onclick="selectOption('${opt}')">${opt}</button>`
+            ).join('');
+        }
+        
+        function selectOption(selected) {
+            const correctAnswer = currentPhoto.date.substring(0, 7);
+            const isCorrect = selected === correctAnswer; 
+            totalQuestions++;
+            if (isCorrect) { 
+                gameScore++; gameStreak++; 
+                showGameResult('Correct! 正确!', 'correct'); 
+            } else { 
+                gameStreak = 0; 
+                showGameResult(`Wrong! It was ${correctAnswer}`, 'incorrect'); 
+            }
+            updateGameStats(); 
+            highlightOptions(selected, correctAnswer);
+            document.getElementById('nextQuestion').classList.remove('hidden');
+        }
+        
+        function showGameResult(message, type) {
+            const resultDiv = document.getElementById('gameResult');
+            resultDiv.textContent = message; 
+            resultDiv.className = `game-result ${type}`; 
+            resultDiv.classList.remove('hidden');
+        }
+        
+        function highlightOptions(selected, correct) {
+            document.querySelectorAll('.option-btn').forEach(btn => {
+                btn.disabled = true;
+                if (btn.textContent === correct) btn.classList.add('correct');
+                else if (btn.textContent === selected) btn.classList.add('incorrect');
+            });
+        }
+        
+        function updateGameStats() {
+            document.getElementById('score').textContent = gameScore;
+            document.getElementById('streak').textContent = gameStreak;
+            document.getElementById('totalQuestions').textContent = totalQuestions;
+        }
+
+        function createDefaultGameImage() {
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#667eea"/><stop offset="100%" stop-color="#764ba2"/></linearGradient></defs><rect width="400" height="300" fill="url(#g)"/><text x="200" y="150" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="white">Game Photo Here</text></svg>`;
+            return 'data:image/svg+xml,' + encodeURIComponent(svg);
+        }
+
+        /* ---------- Back to Top Button ---------- */
+        function setupBackToTop() {
+            const btn = document.getElementById('back-to-top');
+            if (!btn) return;
+            window.addEventListener('scroll', () => {
+                window.requestAnimationFrame(() => {
+                    btn.classList.toggle('visible', window.scrollY > 300);
+                });
+            }, { passive: true });
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+
+        /* ---------- Footer Toggle Function ---------- */
+        function setupFooterToggle() {
+            const termsToggle = document.getElementById('terms-toggle');
+            if (!termsToggle) return;
+            termsToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const termsContent = document.getElementById('terms-content');
+                const isHidden = termsContent.style.display === 'none' || !termsContent.style.display;
+                termsContent.style.display = isHidden ? 'block' : 'none';
+                if (isHidden) termsContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+    </script>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div style="margin-bottom:10px;font-weight:700;">Explore more</div>
+            <a class="footer-link" href="https://canadaxfx.github.io/XZworks/" target="_blank" rel="noopener">Screen Arts of Xiao Zhan</a>
+            <a class="footer-link" href="https://www.youtube.com/@CanadaXFX" target="_blank" rel="noopener">CanadaXFX YouTube Channel</a>
+        </div>
+
+        <div class="footer-content" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.2);">
+            <a class="footer-link" href="#" onclick="openReportModal(); return false;">
+                🔧 Report Broken Links or Bugs<br>
+                <small style="font-size:11px; opacity:0.8; font-weight:normal;">报告错误链接或功能问题</small>
+            </a>
+        </div>
+
+        <div class="copyright-notice">&copy; 2025 CanadaXFX. All rights reserved.</div>
+
+        <a href="#" id="terms-toggle" class="footer-link">Terms of Use</a>
+        <div id="terms-content">
+            <ul>
+                <li>All images and content related to Xiao Zhan belong to their respective copyright owners.</li>
+                <li>All content on this site is curated and organized © 2025 CanadaXFX.</li>
+                <li>AI training is strictly prohibited.</li>
+                <li>The original content, design, and code of this website may not be reproduced, distributed, or used without explicit permission.</li>
+                <li>Personal and non-commercial use only.</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
