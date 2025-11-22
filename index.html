@@ -969,7 +969,6 @@
         <h1>Xiao Zhan Studio Gallery<br>肖战工作室高清图库</h1>
         <p class="subtitle" style="font-weight: 600; color: white;">
             * High-resolution photos from XZ Studio<br>
-            * Slightly compressed photos and full size uncompressed photo sets available<br>
             * <a href="https://canadaxfx.github.io/XZ-HD-Gallery-2/" target="_blank" style="color: white; text-decoration: underline;">Click here for XZ HD Gallery-2 高清(非工作室)图库-2</a><br>
          </p>
     </header>
@@ -1254,14 +1253,17 @@ document.getElementById('downloadBtn').href = photo.url; // Point directly to R2
 
 function generateThumbnail(originalUrl, size = 'm') {
     // 1. Handle New Cloudflare R2 Links
-    // Structure: .../full/image.jpg -> .../thumbs/image_m.jpg
     if (originalUrl.includes('/full/')) {
         let thumbUrl = originalUrl.replace('/full/', '/thumbs/');
-        // Split to insert the suffix before the extension
-        const parts = thumbUrl.split('.');
-        const extension = parts.pop();
-        const basePath = parts.join('.');
-        return `${basePath}_${size}.${extension}`;
+        
+        // Remove the original extension (e.g. .jpeg, .png)
+        const lastDotIndex = thumbUrl.lastIndexOf('.');
+        if (lastDotIndex !== -1) {
+            thumbUrl = thumbUrl.substring(0, lastDotIndex);
+        }
+        
+        // Force append _m.jpg (matches your Python script's output)
+        return `${thumbUrl}_${size}.jpg`; 
     }
 
     // 2. Handle Old Imgur Links (Backward Compatibility)
