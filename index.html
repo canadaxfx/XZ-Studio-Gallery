@@ -967,7 +967,7 @@
     <div class="container">
     <header>
         <h1>Xiao Zhan Studio Gallery<br>肖战工作室高清图库</h1>
-        <p class="subtitle" style="font-weight: 600; color: white; line-height: 1.8">
+        <p class="subtitle" style="font-weight: 600; color: white; line-height: 1.8;">
             * High-resolution photos from XZ Studio<br>
             * 其他来源分类高清图库请点击下方链接<br>
             * <a href="https://canadaxfx.github.io/XZ-HD-Gallery-Misc/" target="_blank" style="color: white; text-decoration: underline;">Click here for XZ HD Gallery Misc 肖战高清图库-其他</a><br>
@@ -1041,12 +1041,13 @@
             </div>
 
             <!-- Main Photo Display -->
-            <div class="modal-photo-container">
-                <button class="nav-arrow prev" id="prevBtn" onclick="navigatePhoto(-1)">‹</button>
-                <img id="modalPhoto" class="modal-photo" alt="Current photo">
-                <button class="nav-arrow next" id="nextBtn" onclick="navigatePhoto(1)">›</button>
-            </div>
-
+<div class="modal-photo-container">
+    <button class="nav-arrow prev" id="prevBtn" onclick="navigatePhoto(-1)">‹</button>
+    <img id="modalPhoto" class="modal-photo" alt="Current photo">
+    <!-- NEW VIDEO ELEMENT ADDED BELOW -->
+    <video id="modalVideo" class="modal-photo hidden" controls playsinline loop></video> 
+    <button class="nav-arrow next" id="nextBtn" onclick="navigatePhoto(1)">›</button>
+</div>
             <!-- Thumbnail Strip -->
             <div class="thumbnail-strip">
                 <div class="thumbnail-container" id="thumbnailContainer">
@@ -1216,11 +1217,27 @@ function getPhotoGroup(photo) {
             document.addEventListener('keydown', handleKeyboardNavigation);
         }
 
-        function updateModalContent() {
-            const photo = currentPhotoGroup[currentPhotoIndex];
-            
-            // Update main photo
-            document.getElementById('modalPhoto').src = photo.url;
+function updateModalContent() {
+    const photo = currentPhotoGroup[currentPhotoIndex];
+    const imgElement = document.getElementById('modalPhoto');
+    const videoElement = document.getElementById('modalVideo');
+    
+    // 1. Check if file is a video
+    const isVideo = /\.(mp4|mov)$/i.test(photo.url);
+
+    // 2. Toggle Elements
+    if (isVideo) {
+        imgElement.classList.add('hidden');       // Hide Image
+        videoElement.classList.remove('hidden');  // Show Video
+        videoElement.src = photo.url;             // Set Video Source
+        videoElement.play().catch(e => console.log("Autoplay prevented")); // Try to autoplay
+    } else {
+        videoElement.pause();                     // Stop Video
+        videoElement.classList.add('hidden');     // Hide Video
+        imgElement.classList.remove('hidden');    // Show Image
+        imgElement.src = photo.url;               // Set Image Source
+    }
+
             
             // Update counter
             document.getElementById('photoCounter').textContent = 
@@ -1339,10 +1356,15 @@ function generateThumbnail(originalUrl, size = 'm') {
             }
         }
 
-        function closeModal() { 
-            document.getElementById('photoModal').classList.add('hidden');
-            document.removeEventListener('keydown', handleKeyboardNavigation);
-        }
+function closeModal() { 
+    // NEW: Stop video playback on close
+    const videoElement = document.getElementById('modalVideo');
+    if (videoElement) videoElement.pause();
+
+    document.getElementById('photoModal').classList.add('hidden');
+    document.removeEventListener('keydown', handleKeyboardNavigation);
+}
+
 
         /* ---------- Touch/Swipe Support ---------- */
         document.getElementById('photoModal').addEventListener('touchstart', (e) => {
