@@ -1270,6 +1270,30 @@ document.getElementById('downloadBtn').href = photo.url; // Point directly to R2
             }
         }
 
+
+/* ---------- FIX: Use 'm' instead of 's' ---------- */
+function generateThumbnails() {
+    const container = document.getElementById('thumbnailContainer');
+    if (!container) return;
+
+    container.innerHTML = currentPhotoGroup.map((photo, index) => `
+        <img src="${generateThumbnail(photo.url, 'm')}" 
+             class="thumbnail ${index === currentPhotoIndex ? 'active' : ''}" 
+             onclick="goToPhoto(${index})" 
+             alt="Thumbnail ${index + 1}"
+             loading="lazy">
+    `).join('');
+    
+    // Scroll the active thumbnail into view
+    setTimeout(() => {
+        const activeThumb = container.querySelector('.thumbnail.active');
+        if (activeThumb) {
+            activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+    }, 100);
+}
+
+
 function generateThumbnail(originalUrl, size = 'm') {
     // 1. Handle New Cloudflare R2 Links
     if (originalUrl.includes('/full/')) {
