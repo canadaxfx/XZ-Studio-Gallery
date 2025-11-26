@@ -43,13 +43,25 @@
         }
         .hidden { display: none !important; }
         
-        /* Search and Filter Styles */
+        /* Search and Filter Styles - COPIED FROM SAMPLE.HTML */
         .search-bar {
-            width: 100%; max-width: 400px; padding: 15px; border: 2px solid #e0e0e0;
-            border-radius: 25px; font-size: 14px; margin: 0 auto 20px; display: block;
+            width: 100%; max-width: 500px; padding: 15px; border: 2px solid #e0e0e0;
+            border-radius: 25px; font-size: 13px; margin: 0 auto 15px; display: block;
             transition: border-color 0.3s ease;
         }
         .search-bar:focus { outline: none; border-color: #667eea; }
+        #clearSearchBtn {
+            display: none; /* Hidden by default */
+            margin: 0 auto 15px;
+            background: linear-gradient(45deg, #6c757d, #495057); /* Grey gradient from sample.html */
+            color: white;
+            max-width: 500px;
+            width: 100%;
+        }
+        #clearSearchBtn:hover {
+            background: linear-gradient(45deg, #5a6268, #343a40);
+            transform: translateY(-2px);
+        }
         
         /* Stats Grid */
         .stats-grid { 
@@ -637,17 +649,57 @@
             50% { box-shadow: 0 4px 20px rgba(229, 62, 62, 0.3); }
         }
 
-        /* Search Results */
-        .search-results { background: white; border-radius: 20px; padding: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .search-results-header { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #e0e0e0; }
-        .search-results-header h3 { color: #667eea; font-size: 1.5rem; margin-bottom: 10px; }
-        .search-results-header p { color: #666; font-size: 1rem; margin-bottom: 15px; }
-        .clear-search-btn {
-            background: linear-gradient(45deg, #667eea, #764ba2); color: white; border: none;
-            padding: 12px 25px; border-radius: 25px; font-size: 14px; font-weight: 600;
-            cursor: pointer; transition: all 0.3s ease;
+        /* Search Results Styles - COPIED FROM SAMPLE.HTML */
+        .search-results-container { 
+            max-width: 1000px; 
+            margin: 0 auto;
         }
-        .clear-search-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3); }
+
+        /* This is the new search result presentation that uses timeline year structure */
+        .search-year-header { 
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24); /* Using red gradient from sample for search results */
+            color: white; 
+            padding: 15px 20px; 
+            font-size: 16px; 
+            font-weight: bold; 
+            border-radius: 15px 15px 0 0;
+            position: relative;
+        }
+        .search-year-header::after {
+            content: "Click thumbnails for high-res photos • 点击缩略图打开高清图";
+            position: absolute; bottom: 5px; left: 20px; font-size: 10px;
+            opacity: 0.8; font-weight: normal; font-style: italic; white-space: nowrap; 
+        }
+
+        .search-summary {
+            background: white; 
+            padding: 15px 20px 5px; 
+            border-bottom: 2px solid #e0e0e0;
+            text-align: center;
+        }
+        .search-summary h3 { color: #667eea; font-size: 1.5rem; margin-bottom: 10px; }
+        .search-summary p { color: #666; font-size: 1rem; margin-bottom: 15px; }
+
+        .clear-search-btn-search-page {
+            /* Using the same style as #clearSearchBtn but centered below results */
+            background: linear-gradient(45deg, #6c757d, #495057); 
+            color: white; 
+            border: none;
+            padding: 12px 25px; 
+            border-radius: 25px; 
+            font-size: 14px; 
+            font-weight: 600;
+            cursor: pointer; 
+            transition: all 0.3s ease;
+            display: block;
+            margin: 20px auto 0;
+            max-width: 300px;
+        }
+        .clear-search-btn-search-page:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2); 
+        }
+
         .search-hint {
             font-size: 11px; opacity: 0.8; font-weight: normal; font-style: italic;
             color: #666; margin: 5px 0 10px;
@@ -690,8 +742,8 @@
             .preview-more { padding: 4px 8px; font-size: 10px; }
             .timeline-year-content { padding: 15px; }
             #back-to-top { bottom: 30px; right: 10px; width: 63px; height: 63x; line-height: 43px; font-size: 23px; }
-            .search-results-header h3 { font-size: 1.2rem; }
-            .clear-search-btn { padding: 10px 20px; font-size: 13px; }
+            .search-summary h3 { font-size: 1.2rem; }
+            .clear-search-btn-search-page { padding: 10px 20px; font-size: 13px; }
             .game-stats {flex-wrap: nowrap; gap: 8px; margin: 15px 0; }
             .stat { padding: 10px 12px; font-size: 12px; border-radius: 10px; flex: 1; text-align: center; min-width: 0; }
             
@@ -995,7 +1047,7 @@
             </div>
 
             <input type="text" class="search-bar" placeholder="Search photos by keywords 关键词搜索" id="searchInput">
-
+            <button id="clearSearchBtn" class="btn">Clear Search / 返回</button>
             <div class="timeline-container" id="timelineContainer">
                 <div class="timeline-empty">
                     <h3>Loading Photo Timeline...</h3>
@@ -1030,29 +1082,23 @@
         </div>
     </div>
 
-    <!-- Enhanced Photo Modal with Group Navigation -->
     <div id="photoModal" class="modal hidden">
         <div class="modal-content">
-            <!-- Modal Header -->
             <div class="modal-header">
                 <div class="photo-counter" id="photoCounter">1 of 5</div>
                 <div class="group-title" id="groupTitle">Photo Collection</div>
                 <button class="close-modal" onclick="closeModal()">&times;</button>
             </div>
 
-            <!-- Main Photo Display -->
-<div class="modal-photo-container">
+            <div class="modal-photo-container">
     <button class="nav-arrow prev" id="prevBtn" onclick="navigatePhoto(-1)">‹</button>
     <img id="modalPhoto" class="modal-photo" alt="Current photo">
-    <!-- NEW VIDEO ELEMENT ADDED BELOW -->
     <video id="modalVideo" class="modal-photo hidden" controls playsinline loop></video> 
     <button class="nav-arrow next" id="nextBtn" onclick="navigatePhoto(1)">›</button>
 </div>
-            <!-- Thumbnail Strip -->
             <div class="thumbnail-strip">
                 <div class="thumbnail-container" id="thumbnailContainer">
-                    <!-- Thumbnails will be generated here -->
-                </div>
+                    </div>
             </div>
 
             <div class="photo-info-panel">
@@ -1082,7 +1128,6 @@
         </div>
     </div>
 
-    <!-- Report Issue Modal -->
     <div id="reportModal" class="modal hidden">
         <div class="modal-content" style="max-width: 500px;">
             <button class="close-modal" onclick="closeReportModal()">&times;</button>
@@ -1155,6 +1200,7 @@
         let expandedYears = new Set();
         let yearPaginationSettings = {}; // Stores { perPage: number, currentPage: number } for each year
         let imageObserver = null;
+        let currentSearchQuery = ''; // ADDED: Global search query variable
         
         /* ---------- Enhanced Modal Variables ---------- */
         let currentPhotoGroup = [];
@@ -1419,7 +1465,8 @@ function closeModal() {
         /* ---------- Initialization ---------- */
         document.addEventListener('DOMContentLoaded', () => {
             setupNavigation();
-            setupSearch();
+            setupSearch(); // This will now use the new function
+            setupClearSearch(); // ADDED: setup for the new button
             setupIntersectionObserver();
             setupBackToTop();
             setupFooterToggle();
@@ -1489,6 +1536,12 @@ async function loadPhotoData() {
                     <div class="timeline-empty"><h3>No photos found</h3><p>Add photoData.json to display photos.</p></div>`;
                 return;
             }
+            
+            // If there's a search query, run the search, otherwise initialize the full timeline
+            if (currentSearchQuery) {
+                performSearch(currentSearchQuery);
+                return;
+            }
 
             const photosByYear = photoData.reduce((acc, photo) => {
                 if (!acc[photo.year]) acc[photo.year] = [];
@@ -1503,7 +1556,7 @@ async function loadPhotoData() {
             initializeGame();
             
             const sortedYears = Object.keys(photosByYear).sort((a, b) => b - a);
-            if (sortedYears.length > 0) setTimeout(() => toggleYear(sortedYears[0]), 100);
+            if (sortedYears.length > 0 && !expandedYears.size) setTimeout(() => toggleYear(sortedYears[0]), 100);
         }
 
         function createTimelineHTML(photosByYear) {
@@ -1520,8 +1573,12 @@ async function loadPhotoData() {
                         ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
                     </div>`;
                 
+                // Determine if this year should be expanded
+                const isExpanded = expandedYears.has(year);
+                const expandedClass = isExpanded ? 'expanded' : '';
+
                 return `
-                    <div class="timeline-year" data-year="${year}">
+                    <div class="timeline-year ${expandedClass}" data-year="${year}">
                         <div class="timeline-year-header" onclick="toggleYear('${year}')">
                             <div class="year-header-content">
                                 <div class="year-header-top">
@@ -1551,6 +1608,18 @@ async function loadPhotoData() {
                 `;
             }).join('');
             document.getElementById('timelineContainer').innerHTML = timelineHTML;
+
+            // Render content for any expanded years after creation
+            sortedYears.forEach(year => {
+                if (expandedYears.has(year)) {
+                     // Ensure pagination settings exist before trying to read them
+                    if (!yearPaginationSettings[year]) {
+                         yearPaginationSettings[year] = { perPage: 21, currentPage: 1 };
+                    }
+                    // Re-render the expanded year's content to populate the grid
+                    renderYearPage(year);
+                }
+            });
         }
 
 // --- NEW CODE (Paste this) ---
@@ -1587,6 +1656,7 @@ function generatePhotosHTML(photos) {
                 if (!yearPaginationSettings[year]) {
                     yearPaginationSettings[year] = { perPage: 21, currentPage: 1 };
                 }
+                // Ensure the select box is set correctly
                 document.getElementById(`per-page-${year}`).value = yearPaginationSettings[year].perPage === Infinity ? 'all' : yearPaginationSettings[year].perPage;
                 renderYearPage(year);
             } else {
@@ -1629,7 +1699,18 @@ function generatePhotosHTML(photos) {
                 yearPaginationSettings[year] = { perPage: 21, currentPage: 1 };
             }
             const { perPage, currentPage } = yearPaginationSettings[year];
-            const yearPhotos = photoData.filter(p => p.year === year);
+            
+            // Filter photos based on year AND search query
+            let yearPhotos = photoData.filter(p => p.year === year);
+
+            if (currentSearchQuery) {
+                const query = currentSearchQuery;
+                yearPhotos = yearPhotos.filter(p => 
+                    p.year.includes(query) || p.month.toLowerCase().includes(query) || p.date.includes(query) ||
+                    (Array.isArray(p.tags) && p.tags.some(t => String(t).toLowerCase().includes(query)))
+                );
+            }
+            
             const totalPhotos = yearPhotos.length;
             const photosGrid = document.getElementById(`photos-${year}`);
             const paginationNav = document.getElementById(`pagination-nav-${year}`);
@@ -1751,64 +1832,177 @@ function generatePhotosHTML(photos) {
             });
         }
 
-        /* ---------- Search Functions ---------- */
+        /* ---------- Search Functions - COPIED/MODIFIED FROM SAMPLE.HTML ---------- */
         function setupSearch() {
             const searchInput = document.getElementById('searchInput');
             let searchTimeout;
             searchInput.addEventListener('input', () => {
                 clearTimeout(searchTimeout);
-                searchTimeout = setTimeout(() => performSearch(searchInput.value.toLowerCase().trim()), 300);
+                searchTimeout = setTimeout(() => {
+                    currentSearchQuery = searchInput.value.toLowerCase().trim();
+                    performSearch(currentSearchQuery); 
+                }, 300);
+            });
+        }
+
+        function setupClearSearch() {
+            document.getElementById('clearSearchBtn').addEventListener('click', () => {
+                currentSearchQuery = '';
+                document.getElementById('searchInput').value = '';
+                document.getElementById('clearSearchBtn').style.display = 'none';
+                initializeTimeline();
             });
         }
 
         function performSearch(query) {
             const timelineContainer = document.getElementById('timelineContainer');
+            const searchInput = document.getElementById('searchInput');
+
+            // 1. Show/hide clear button
+            document.getElementById('clearSearchBtn').style.display = query ? 'block' : 'none';
+
             if (!query) {
+                // If query is empty, reset to full timeline
                 initializeTimeline();
                 return;
             }
 
+            // 2. Filter photos by query
             const matchingPhotos = photoData.filter(p => 
-                p.year.includes(query) || p.month.toLowerCase().includes(query) || p.date.includes(query) ||
+                p.year.includes(query) || 
+                p.month.toLowerCase().includes(query) || 
+                p.date.includes(query) ||
                 (Array.isArray(p.tags) && p.tags.some(t => String(t).toLowerCase().includes(query)))
             );
+            
+            // 3. Group filtered photos by year
+            const photosByYear = matchingPhotos.reduce((acc, photo) => {
+                if (!acc[photo.year]) acc[photo.year] = [];
+                acc[photo.year].push(photo);
+                return acc;
+            }, {});
+            
+            // 4. Sort years and photos within years
+            const sortedYears = Object.keys(photosByYear).sort((a, b) => b - a);
+            sortedYears.forEach(year => photosByYear[year].sort((a, b) => new Date(b.date) - new Date(a.date)));
 
             if (matchingPhotos.length === 0) {
-                timelineContainer.innerHTML = `<div class="timeline-empty"><h3>No photos found</h3><p>No results for "${query}".</p></div>`;
+                timelineContainer.innerHTML = `
+                    <div class="timeline-empty">
+                        <h3>No photos found</h3>
+                        <p>No results for "${query}".</p>
+                        <button class="clear-search-btn-search-page" onclick="clearSearch()">← Back to Timeline <br> 回时间线</button>
+                    </div>`;
                 updateSearchStats(0, 0);
                 return;
             }
 
-            timelineContainer.innerHTML = `
-                <div class="search-results">
-                    <div class="search-results-header">
-                        <h3>Search Results for "${query}"</h3>
-                        <p>${matchingPhotos.length} photos found</p>
-                        <p class="search-hint">Click thumbnails for high-res photos • 点击缩略图打开高清图</p>
-                        <button class="clear-search-btn" onclick="clearSearch()">← Back to Timeline <br> 回时间线</button>
+            // 5. Generate Search Results HTML (mimicking the timeline year structure)
+            const searchResultsHTML = sortedYears.map(year => {
+                const photos = photosByYear[year];
+                const photosPerRow = calculatePhotosPerRow();
+                const totalRows = Math.ceil(photos.length / photosPerRow);
+                
+                // Initialize/reset pagination settings for search results (simpler in search view)
+                yearPaginationSettings[year] = yearPaginationSettings[year] || { perPage: 21, currentPage: 1 };
+                
+                const isExpanded = expandedYears.has(year);
+                const expandedClass = isExpanded ? 'expanded' : '';
+
+                // Generate the preview from the *filtered* photos
+                const previewPhotos = photos.slice(0, 4);
+                const previewHTML = `
+                    <div class="year-preview">
+                        ${previewPhotos.map(p => `<img src="${generateThumbnail(p.url, 'm')}" alt="Preview" class="preview-thumb">`).join('')}
+                        ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
+                    </div>`;
+
+
+                return `
+                    <div class="timeline-year ${expandedClass}" data-year="${year}">
+                        <div class="timeline-year-header" onclick="toggleYear('${year}')">
+                            <div class="year-header-content">
+                                <div class="year-header-top">
+                                    <span class="year-title">${year}</span>
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <span class="timeline-year-count">${photos.length} photos (${totalRows} rows)</span>
+                                        <span class="expand-icon">▼</span>
+                                    </div>
+                                </div>
+                                ${previewHTML}
+                            </div>
+                        </div>
+                        <div class="timeline-year-content">
+                            <div class="year-controls">
+                                <label for="per-page-${year}">Photos per page:</label>
+                                <select id="per-page-${year}" onchange="changePhotosPerPage('${year}', this.value)">
+                                    <option value="21">21</option>
+                                    <option value="42">42</option>
+                                    <option value="84">84</option>
+                                    <option value="all">All</option>
+                                </select>
+                            </div>
+                            <div class="year-photos-grid" id="photos-${year}"></div>
+                            <div class="pagination-nav" id="pagination-nav-${year}"></div>
+                        </div>
                     </div>
-                    <div class="year-photos-grid">${generatePhotosHTML(matchingPhotos)}</div>
-                </div>`;
-            setupLazyLoading();
-            updateSearchStats(matchingPhotos.length, matchingPhotos.length);
+                `;
+            }).join('');
+
+            // Add a summary header to the results
+            const finalHTML = `
+                <div class="search-summary">
+                    <h3>Search Results for "${query}"</h3>
+                    <p>${matchingPhotos.length} photos found across ${sortedYears.length} year(s)</p>
+                    <button class="clear-search-btn-search-page" onclick="clearSearch()">← Back to Timeline <br> 回时间线</button>
+                </div>
+                <div class="search-results-container">
+                    ${searchResultsHTML}
+                </div>
+            `;
+            timelineContainer.innerHTML = finalHTML;
+            
+            // Re-render expanded years after placing them in the DOM
+            sortedYears.forEach(year => {
+                if (expandedYears.has(year)) {
+                    renderYearPage(year);
+                }
+            });
+            
+            updateSearchStats(matchingPhotos.length, sortedYears.length);
         }
 
         function clearSearch() {
+            currentSearchQuery = '';
             document.getElementById('searchInput').value = '';
+            document.getElementById('clearSearchBtn').style.display = 'none';
+            // Clear expanded years so the correct one re-opens
+            expandedYears.clear(); 
             initializeTimeline();
         }
 
-        function updateSearchStats(total, matching) {
-            document.getElementById('totalPhotosDisplay').textContent = total.toLocaleString();
-            document.getElementById('yearsSpanDisplay').textContent = matching > 0 ? 'Search' : '0';
-            document.getElementById('expandedYearsDisplay').textContent = matching > 0 ? 'Results' : '0';
+        function updateSearchStats(totalPhotos, totalYears) {
+            document.getElementById('totalPhotosDisplay').textContent = totalPhotos.toLocaleString();
+            document.getElementById('yearsSpanDisplay').textContent = totalYears;
+            document.getElementById('expandedYearsDisplay').textContent = expandedYears.size;
         }
 
         /* ---------- Statistics ---------- */
         function updateStats() {
-            document.getElementById('totalPhotosDisplay').textContent = photoData.length.toLocaleString();
-            document.getElementById('yearsSpanDisplay').textContent = new Set(photoData.map(p => p.year)).size;
-            document.getElementById('expandedYearsDisplay').textContent = expandedYears.size;
+            // When not in search mode, use all photo data
+            if (!currentSearchQuery) {
+                document.getElementById('totalPhotosDisplay').textContent = photoData.length.toLocaleString();
+                document.getElementById('yearsSpanDisplay').textContent = new Set(photoData.map(p => p.year)).size;
+                document.getElementById('expandedYearsDisplay').textContent = expandedYears.size;
+            } else {
+                 // Update stats for the current search results
+                const matchingPhotos = photoData.filter(p => 
+                    p.year.includes(currentSearchQuery) || p.month.toLowerCase().includes(currentSearchQuery) || p.date.includes(currentSearchQuery) ||
+                    (Array.isArray(p.tags) && p.tags.some(t => String(t).toLowerCase().includes(currentSearchQuery)))
+                );
+                const totalYears = new Set(matchingPhotos.map(p => p.year)).size;
+                updateSearchStats(matchingPhotos.length, totalYears);
+            }
         }
 
         /* ---------- Navigation ---------- */
@@ -1860,6 +2054,24 @@ function generatePhotosHTML(photos) {
                 closeModal(); 
                 closeReportModal();
             }
+        });
+
+        /* ---------- Form Rate Limiting ---------- */
+        document.getElementById('reportForm').addEventListener('submit', function(e) {
+            const now = Date.now();
+            if (now - lastSubmissionTime < SUBMISSION_COOLDOWN) {
+                e.preventDefault();
+                alert('Please wait 30 seconds between submissions. / 请等待30秒后再次提交。');
+                return false;
+            }
+            lastSubmissionTime = now;
+        });
+        /* ---------- Form Submission Feedback ---------- */
+        document.getElementById('reportForm').addEventListener('submit', function() {
+            const submitBtn = this.querySelector('button[type="submit"]');
+            submitBtn.innerHTML = '⏳ Sending... 发送中...';
+            submitBtn.disabled = true;
+            // Don't re-enable - let FormSubmit.co handle the redirect
         });
 
         /* ---------- Game Functions ---------- */
