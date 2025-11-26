@@ -1891,7 +1891,6 @@ function generatePhotosHTML(photos) {
                     <div class="timeline-empty">
                         <h3>No photos found</h3>
                         <p>No results for "${query}".</p>
-                        <button class="clear-search-btn-search-page" onclick="clearSearch()">← Back to Timeline <br> 回时间线</button>
                     </div>`;
                 updateSearchStats(0, 0);
                 return;
@@ -1954,7 +1953,6 @@ function generatePhotosHTML(photos) {
                 <div class="search-summary">
                     <h3>Search Results for "${query}"</h3>
                     <p>${matchingPhotos.length} photos found across ${sortedYears.length} year(s)</p>
-                    <button class="clear-search-btn-search-page" onclick="clearSearch()">← Back to Timeline <br> 回时间线</button>
                 </div>
                 <div class="search-results-container">
                     ${searchResultsHTML}
