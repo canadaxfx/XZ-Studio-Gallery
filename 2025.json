@@ -1,5 +1,41 @@
 [
     {
+        "id": 909,
+        "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/20251203_XZ-1.jpg",
+        "date": "2025-12-03",
+        "month": "December",
+        "year": "2025",
+        "tags": [
+            "得闲谨制",
+            "海报"
+        ],
+        "sourceType": [
+            "other"
+        ],
+        "quarkLink": "https://pan.quark.cn/s/2192e0ebd2f0",
+        "groupName": "202512-1",
+        "weibo": "https://weibo.com/6643123988/QgFbvBIHu",
+        "note": ""
+    },
+    {
+        "id": 908,
+        "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/202512_XZ_Studio_Header_image_MDX.jpg",
+        "date": "2025-12-01",
+        "month": "November",
+        "year": "2025",
+        "tags": [
+            "得闲谨制",
+            "工作室版头"
+        ],
+        "sourceType": [
+            "other"
+        ],
+        "quarkLink": "https://pan.quark.cn/s/2192e0ebd2f0",
+        "groupName": "202512-1",
+        "weibo": "https://weibo.com/u/6643123988",
+        "note": ""
+    },
+    {
         "id": 893,
         "url": "https://pub-7ef623b87169458aaafb3a91ab9b2966.r2.dev/full/20251127_XZ-3.jpg",
         "date": "2025-11-27",
