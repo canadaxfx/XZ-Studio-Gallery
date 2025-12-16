@@ -592,7 +592,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 8px 10px;
+        padding: 16px 24px;
         border-bottom: 1px solid #e0e0e0;
         background: #f8f9fa;
         border-radius: 15px 15px 0 0;
@@ -812,6 +812,27 @@
         line-height: 1.2;
       }
 
+      .source-btn.weibo {
+        background-color: #f5c518; /* Weibo Gold */
+        color: #000; /* Black text for contrast on yellow */
+        border: 1px solid #e0b000;
+      }
+
+      .source-btn.weibo:hover {
+        background-color: #e0b000;
+      }
+
+      /* RedNote Button - Red */
+      .source-btn.rednote {
+        background-color: #ff2442; /* RedNote Red */
+        color: white;
+        border: 1px solid #d91c36;
+      }
+
+      .source-btn.rednote:hover {
+        background-color: #d91c36;
+      }
+
       /* Download and Action Buttons */
       .action-btn.download-btn {
         background: linear-gradient(45deg, #4caf50, #45a049);
@@ -831,16 +852,6 @@
         background: linear-gradient(45deg, #e55a2b, #e8851a);
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
-      }
-
-      .action-btn.weibo-btn {
-        background: linear-gradient(45deg, #fa2a55, #e91e63);
-        color: white;
-      }
-      .action-btn.weibo-btn:hover {
-        background: linear-gradient(45deg, #e91e63, #d81b60);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(250, 42, 85, 0.3);
       }
 
       .action-btn:disabled {
@@ -1005,7 +1016,7 @@
         background: white;
         color: #e53e3e;
         width: 80px;
-        height: 90x;
+        height: 90px;
         border-radius: 30px;
         display: flex;
         flex-direction: column;
@@ -1219,7 +1230,7 @@
           bottom: 30px;
           right: 10px;
           width: 63px;
-          height: 63x;
+          height: 63px;
           line-height: 43px;
           font-size: 23px;
         }
@@ -1787,9 +1798,12 @@
                 <small style="opacity: 1">下载原图</small>
               </a>
 
-              <a class="action-btn weibo-btn" id="weiboLinkBtn" target="_blank">
-                📱 View Original Post<br />
-              <small style="opacity: 1">查看原贴</small>
+              <a
+                class="action-btn"
+                id="weiboLinkBtn"
+                target="_blank"
+                style="display: none"
+              >
               </a>
             </div>
           </div>
@@ -2049,17 +2063,16 @@
 
       /* ---------- Photo Group Management ---------- */
       function getPhotoGroup(photo) {
-        // 1. If it has an explicit group name (Migrated data), use it
+        // 1. If it has an explicit group name, use it
         if (photo.groupName) {
           return photoData
             .filter((p) => p.groupName === photo.groupName)
             .sort((a, b) => new Date(a.date) - new Date(b.date));
         }
 
-        // 2. If no group name (New data), group by DATE + WEIBO LINK
-        // This creates "Virtual Groups" automatically so the modal still works nicely
+        // 2. If no group name, group by DATE + LINK (p.link is the correct property in your JSON)
         return photoData
-          .filter((p) => p.date === photo.date && p.weibo === photo.weibo)
+          .filter((p) => p.date === photo.date && p.link === photo.link)
           .sort((a, b) => p.id - p.id);
       }
 
@@ -2093,49 +2106,65 @@
         document.addEventListener("keydown", handleKeyboardNavigation);
       }
 
+      /* ---------- Enhanced Modal Functions ---------- */
       function updateModalContent() {
         const photo = currentPhotoGroup[currentPhotoIndex];
         const imgElement = document.getElementById("modalPhoto");
         const videoElement = document.getElementById("modalVideo");
         const downloadBtn = document.getElementById("downloadBtn");
         const weiboBtn = document.getElementById("weiboLinkBtn");
+        const groupTitle = document.getElementById("groupTitle");
+        const photoCounter = document.getElementById("photoCounter");
 
-        // 1. Determine Source & Variables
-        const source = photo.source || "weibo"; // Default to weibo
-        let sourceName = "Source";
-        let badgeClass = "badge-other";
-        let btnColorStyle = "";
+        // --- 1. ROBUST SOURCE DETECTION (Fixes the RedNote Issue) ---
+        let rawSource = "weibo"; // Default
 
-        // Configure based on source
-        if (source === "weibo") {
-          sourceName = "Weibo 微博";
-          badgeClass = "badge-weibo";
-          // CHANGED: Gold/Yellow Gradient for Weibo
-          btnColorStyle = "linear-gradient(45deg, #f6b60d, #ffca28)";
-        } else if (source === "rednote") {
-          sourceName = "RedNote 小红书";
-          badgeClass = "badge-rednote";
-          // CHANGED: Red Gradient for RedNote
-          btnColorStyle = "linear-gradient(45deg, #FF2442, #ff5e75)";
-        } else {
-          sourceName = source.charAt(0).toUpperCase() + source.slice(1);
-          badgeClass = "badge-" + source;
+        // Check if 'source' exists (Legacy)
+        if (photo.source) {
+          rawSource = String(photo.source).toLowerCase();
+        }
+        // Check if 'sourceType' exists (From your 2025.json)
+        else if (photo.sourceType) {
+          if (Array.isArray(photo.sourceType) && photo.sourceType.length > 0) {
+            rawSource = String(photo.sourceType[0]).toLowerCase();
+          } else if (typeof photo.sourceType === "string") {
+            rawSource = photo.sourceType.toLowerCase();
+          }
         }
 
-        // 2. Update Button Styles & Link
-        weiboBtn.className = "action-btn weibo-btn"; // Reset base classes
-        weiboBtn.style.background = btnColorStyle; // Apply custom color if needed
+        // Determine if it is RedNote/Xiaohongshu
+        const isRedNote =
+          rawSource === "rednote" || rawSource === "xiaohongshu";
 
-if (photo.link && String(photo.link).trim()) {
-    const w = photo.link.trim(); 
-         weiboBtn.href = /^https?:\/\//i.test(w) ? w : `https://${w}`;
+        // --- 2. Set Variables for Badge and Buttons ---
+        let badgeText = isRedNote ? "REDNOTE" : "WEIBO";
+        // Use your existing CSS classes
+        let badgeClass = isRedNote ? "badge-rednote" : "badge-weibo";
+        let btnClass = isRedNote ? "source-btn rednote" : "source-btn weibo";
+        let sourceNameFull = isRedNote ? "RedNote 小红书" : "Weibo 微博";
+
+        // --- 3. Update the Header Badge & Title ---
+        const titleText = photo.groupName || `${photo.month} ${photo.year}`;
+
+        // Inject badge + text
+        groupTitle.innerHTML = `<span class="source-badge ${badgeClass}">${badgeText}</span> ${titleText}`;
+
+        photoCounter.textContent = `${currentPhotoIndex + 1} of ${currentPhotoGroup.length}`;
+
+        // --- 4. Update "View Original Post" Button ---
+        weiboBtn.className = "action-btn " + btnClass;
+        weiboBtn.style.background = ""; // Reset inline style to let CSS take over
+
+        if (photo.link && String(photo.link).trim()) {
+          const w = photo.link.trim();
+          weiboBtn.href = /^https?:\/\//i.test(w) ? w : `https://${w}`;
           weiboBtn.style.display = "inline-block";
-          
+          weiboBtn.innerHTML = `📱 View on ${sourceNameFull}<br><small style="opacity: 1">查看原帖</small>`;
         } else {
           weiboBtn.style.display = "none";
         }
 
-        // 3. Handle Video vs Photo Display
+        // --- 5. Handle Video vs Photo Display ---
         const isVideo = /\.(mp4|mov)$/i.test(photo.url);
         if (isVideo) {
           imgElement.classList.add("hidden");
@@ -2149,19 +2178,7 @@ if (photo.link && String(photo.link).trim()) {
           imgElement.src = photo.url;
         }
 
-        // 4. Update Header Info with BADGE
-        document.getElementById("photoCounter").textContent =
-          `${currentPhotoIndex + 1} of ${currentPhotoGroup.length}`;
-
-        // Create the badge HTML
-        const badgeHtml = `<span class="source-badge ${badgeClass}">${source.toUpperCase()}</span>`;
-
-        // Use innerHTML to render the badge + text
-        const titleText = photo.groupName || `${photo.month} ${photo.year}`;
-        document.getElementById("groupTitle").innerHTML =
-          `${badgeHtml} ${titleText}`;
-
-        // 5. Update Download Link
+        // --- 6. Update Download Link ---
         downloadBtn.href = photo.url;
       }
 
@@ -2520,7 +2537,6 @@ if (photo.link && String(photo.link).trim()) {
         });
       }
 
-      // --- NEW CODE (Paste this) ---
       function generatePhotosHTML(photos) {
         return photos
           .map((photo) => {
@@ -3267,6 +3283,7 @@ if (photo.link && String(photo.link).trim()) {
 
         // 2. Filter the Data
         const filtered = photoData.filter((item) => {
+          // --- DATE CHECK ---
           if (!item.date) return false;
           const parts = String(item.date).split(/[-/.]/);
           if (parts.length < 3) return false;
@@ -3279,27 +3296,45 @@ if (photo.link && String(photo.link).trim()) {
           if (mVal !== "all" && pMonth !== mVal) return false;
           if (dVal !== "all" && pDay !== dVal) return false;
 
-          const itemSource = item.source || "weibo";
+          // --- SOURCE CHECK (FIXED) ---
+          let itemSource = "weibo"; // Default fallback
 
+          // A. Check legacy 'source' property
+          if (item.source) {
+            itemSource = String(item.source).toLowerCase();
+          }
+          // B. Check new 'sourceType' property (Array or String) from 2025.json
+          else if (item.sourceType) {
+            if (Array.isArray(item.sourceType) && item.sourceType.length > 0) {
+              itemSource = String(item.sourceType[0]).toLowerCase();
+            } else if (typeof item.sourceType === "string") {
+              itemSource = item.sourceType.toLowerCase();
+            }
+          }
+
+          // C. Normalize RedNote variations
+          if (itemSource === "xiaohongshu") itemSource = "rednote";
+
+          // D. Compare with filter value
           if (sVal !== "all" && itemSource !== sVal) return false;
 
           return true;
         });
 
         // 3. Update Global Render Data
-        currentRenderData = filtered; // <--- CRITICAL UPDATE
+        currentRenderData = filtered;
 
         // 4. Clear Search Input
         document.getElementById("searchInput").value = "";
         document.getElementById("clearSearchBtn").style.display = "none";
-        currentSearchQuery = ""; // Clear search query variable too
+        currentSearchQuery = "";
 
         // 5. Update UI
         if (filtered.length === 0) {
           document.getElementById("timelineContainer").innerHTML = `
             <div class="timeline-empty">
                 <h3>No photos found</h3>
-                <p>No photos match this date selection.</p>
+                <p>No photos match this selection.</p>
             </div>`;
           updateCustomStats(0, 0);
         } else {
