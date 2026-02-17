@@ -2826,6 +2826,7 @@
             p.year.includes(query) ||
             p.month.toLowerCase().includes(query) ||
             p.date.includes(query) ||
+            (p.description && p.description.toLowerCase().includes(query)) ||
             (Array.isArray(p.tags) &&
               p.tags.some((t) => String(t).toLowerCase().includes(query))),
         );
