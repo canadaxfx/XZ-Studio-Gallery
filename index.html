@@ -461,9 +461,14 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
-        margin-bottom: 15px;
+        margin-bottom: 8px;
         flex-wrap: wrap;
       }
+
+      .media-filter-tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 15px; }
+      .media-tab { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 4px 16px; font-size: 13px; cursor: pointer; transition: all 0.2s; }
+      .media-tab:hover { background: rgba(255,255,255,0.25); color: white; }
+      .media-tab.active { background: rgba(255,255,255,0.92); color: #2c5f8a; font-weight: 600; border-color: transparent; }
 
       .date-select-wrapper {
         display: flex;
@@ -1659,6 +1664,12 @@
           </button>
         </div>
 
+        <div class="media-filter-tabs">
+          <button class="media-tab active" data-media="all" onclick="setMediaFilter('all')">All 全部</button>
+          <button class="media-tab" data-media="photo" onclick="setMediaFilter('photo')">📷 Photos 图片</button>
+          <button class="media-tab" data-media="video" onclick="setMediaFilter('video')">🎬 Videos 视频</button>
+        </div>
+
         <input
           type="text"
           class="search-bar"
@@ -2042,6 +2053,7 @@
       let yearPaginationSettings = {}; // Stores { perPage: number, currentPage: number } for each year
       let imageObserver = null;
       let currentSearchQuery = ""; // ADDED: Global search query variable
+      let currentMediaFilter = "all";
 
       /* ---------- Enhanced Modal Variables ---------- */
       let currentPhotoGroup = [];
@@ -3262,6 +3274,16 @@
         }
       }
 
+      function isVideoUrl(url) { return /\.(mp4|mov)$/i.test(url); }
+
+      function setMediaFilter(type) {
+        currentMediaFilter = type;
+        document.querySelectorAll('.media-tab').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.media === type);
+        });
+        applyDateFilter();
+      }
+
       function applyDateFilter() {
         const yVal = document.getElementById("filterYear").value;
         const mVal = document.getElementById("filterMonth").value;
@@ -3279,13 +3301,16 @@
           resetBtn.classList.remove("hidden");
         } else {
           resetBtn.classList.add("hidden");
-          currentRenderData = photoData;
-          initializeTimeline();
-          return;
+          // If only media filter is active, still need to filter (don't early-return)
+          if (currentMediaFilter === 'all') {
+            currentRenderData = photoData;
+            initializeTimeline();
+            return;
+          }
         }
 
         // 2. Filter the Data
-        const filtered = photoData.filter((item) => {
+        let filtered = photoData.filter((item) => {
           // --- DATE CHECK ---
           if (!item.date) return false;
           const parts = String(item.date).split(/[-/.]/);
@@ -3324,7 +3349,14 @@
           return true;
         });
 
-        // 3. Update Global Render Data
+        // 3. Apply media type filter
+        if (currentMediaFilter === 'video') {
+          filtered = filtered.filter(p => isVideoUrl(p.url));
+        } else if (currentMediaFilter === 'photo') {
+          filtered = filtered.filter(p => !isVideoUrl(p.url));
+        }
+
+        // 4. Update Global Render Data
         currentRenderData = filtered;
 
         // 4. Clear Search Input
