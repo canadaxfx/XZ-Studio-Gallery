@@ -2064,6 +2064,42 @@
       let touchStartX = 0;
       let touchEndX = 0;
 
+      /* ---------- Cached DOM Elements ---------- */
+      const elSearchInput    = document.getElementById("searchInput");
+      const elClearSearchBtn = document.getElementById("clearSearchBtn");
+      const elTotalPhotos    = document.getElementById("totalPhotosDisplay");
+      const elYearsSpan      = document.getElementById("yearsSpanDisplay");
+      const elExpandedYears  = document.getElementById("expandedYearsDisplay");
+      const elFilterYear     = document.getElementById("filterYear");
+      const elFilterMonth    = document.getElementById("filterMonth");
+      const elFilterDay      = document.getElementById("filterDay");
+      const elFilterSource   = document.getElementById("filterSource");
+
+      /* ---------- Shared Helpers ---------- */
+      function _setStats(photoCount, yearCount) {
+        elTotalPhotos.textContent   = Number(photoCount).toLocaleString();
+        elYearsSpan.textContent     = yearCount;
+        elExpandedYears.textContent = expandedYears.size;
+      }
+
+      function setMediaElement(imgEl, videoEl, url) {
+        if (isVideoUrl(url)) {
+          imgEl.classList.add("hidden");
+          videoEl.classList.remove("hidden");
+          videoEl.src = url;
+          videoEl.play().catch((e) => console.log("Autoplay prevented", e));
+        } else {
+          videoEl.pause();
+          videoEl.classList.add("hidden");
+          imgEl.classList.remove("hidden");
+          imgEl.src = url;
+        }
+      }
+
+      function sortedYearKeys(byYear) {
+        return Object.keys(byYear).sort((a, b) => b - a);
+      }
+
       /* ---------- Utility Functions ---------- */
       function calculatePhotosPerRow() {
         const screenWidth = window.innerWidth;
@@ -2180,18 +2216,7 @@
         }
 
         // --- 5. Handle Video vs Photo Display ---
-        const isVideo = /\.(mp4|mov)$/i.test(photo.url);
-        if (isVideo) {
-          imgElement.classList.add("hidden");
-          videoElement.classList.remove("hidden");
-          videoElement.src = photo.url;
-          videoElement.play().catch((e) => console.log("Autoplay prevented"));
-        } else {
-          videoElement.pause();
-          videoElement.classList.add("hidden");
-          imgElement.classList.remove("hidden");
-          imgElement.src = photo.url;
-        }
+        setMediaElement(imgElement, videoElement, photo.url);
 
         // --- 6. Update Download Link ---
         downloadBtn.href = photo.url;
@@ -2310,10 +2335,6 @@
             e.preventDefault();
             if (currentPhotoIndex < currentPhotoGroup.length - 1)
               navigatePhoto(1);
-            break;
-          case "Escape":
-            e.preventDefault();
-            closeModal();
             break;
         }
       }
@@ -2482,31 +2503,20 @@
         updateStats();
         initializeGame();
 
-        const sortedYears = Object.keys(photosByYear).sort((a, b) => b - a);
+        const sortedYears = sortedYearKeys(photosByYear);
         if (sortedYears.length > 0 && !expandedYears.size)
           setTimeout(() => toggleYear(sortedYears[0]), 100);
       }
 
-      function createTimelineHTML(photosByYear) {
-        const sortedYears = Object.keys(photosByYear).sort((a, b) => b - a);
-        const timelineHTML = sortedYears
-          .map((year) => {
-            const photos = photosByYear[year];
-            const photosPerRow = calculatePhotosPerRow();
-            const totalRows = Math.ceil(photos.length / photosPerRow);
-
-            const previewPhotos = photos.slice(0, 4);
-            const previewHTML = `
+      function buildYearCardHTML(year, photos) {
+        const previewPhotos = photos.slice(0, 4);
+        const previewHTML = `
                     <div class="year-preview">
                         ${previewPhotos.map((p) => `<img src="${generateThumbnail(p.url, "m")}" alt="Preview" class="preview-thumb">`).join("")}
                         ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ""}
                     </div>`;
-
-            // Determine if this year should be expanded
-            const isExpanded = expandedYears.has(year);
-            const expandedClass = isExpanded ? "expanded" : "";
-
-            return `
+        const expandedClass = expandedYears.has(year) ? "expanded" : "";
+        return `
                     <div class="timeline-year ${expandedClass}" data-year="${year}">
                         <div class="timeline-year-header" onclick="toggleYear('${year}')">
                             <div class="year-header-content">
@@ -2535,7 +2545,12 @@
                         </div>
                     </div>
                 `;
-          })
+      }
+
+      function createTimelineHTML(photosByYear) {
+        const sortedYears = sortedYearKeys(photosByYear);
+        const timelineHTML = sortedYears
+          .map((year) => buildYearCardHTML(year, photosByYear[year]))
           .join("");
         document.getElementById("timelineContainer").innerHTML = timelineHTML;
 
@@ -2556,9 +2571,7 @@
         return photos
           .map((photo) => {
             // 1. Check if it's a video file
-            const isVideo =
-              photo.url.toLowerCase().endsWith(".mp4") ||
-              photo.url.toLowerCase().endsWith(".mov");
+            const isVideo = isVideoUrl(photo.url);
 
             // 2. Create a "Play" icon overlay if it is a video
             const videoIcon = isVideo
@@ -2687,16 +2700,6 @@
             currentPage,
             totalPages,
           );
-
-          const jumpInput = document.getElementById(`jump-to-input-${year}`);
-          if (jumpInput) {
-            jumpInput.addEventListener("keydown", (event) => {
-              if (event.key === "Enter") {
-                event.preventDefault();
-                jumpToPage(year, totalPages);
-              }
-            });
-          }
         }
         setupLazyLoadingForYear(year);
       }
@@ -2742,7 +2745,7 @@
 
         html += `
                 <div class="jump-to-page">
-                    <input type="number" id="jump-to-input-${year}" min="1" max="${totalPages}" placeholder="Page #" title="Enter page number and press Go or Enter">
+                    <input type="number" id="jump-to-input-${year}" min="1" max="${totalPages}" placeholder="Page #" title="Enter page number and press Go or Enter" onkeydown="if(event.key==='Enter'){event.preventDefault();jumpToPage('${year}',${totalPages})}">
                     <button class="btn" onclick="jumpToPage('${year}', ${totalPages})">Go</button>
                 </div>
             `;
@@ -2799,36 +2802,30 @@
 
       /* ---------- Search Functions - COPIED/MODIFIED FROM SAMPLE.HTML ---------- */
       function setupSearch() {
-        const searchInput = document.getElementById("searchInput");
         let searchTimeout;
-        searchInput.addEventListener("input", () => {
+        elSearchInput.addEventListener("input", () => {
           clearTimeout(searchTimeout);
           searchTimeout = setTimeout(() => {
-            currentSearchQuery = searchInput.value.toLowerCase().trim();
+            currentSearchQuery = elSearchInput.value.toLowerCase().trim();
             performSearch(currentSearchQuery);
           }, 300);
         });
       }
 
       function setupClearSearch() {
-        document
-          .getElementById("clearSearchBtn")
-          .addEventListener("click", () => {
-            currentSearchQuery = "";
-            document.getElementById("searchInput").value = "";
-            document.getElementById("clearSearchBtn").style.display = "none";
-            initializeTimeline();
-          });
+        elClearSearchBtn.addEventListener("click", () => {
+          currentSearchQuery = "";
+          elSearchInput.value = "";
+          elClearSearchBtn.style.display = "none";
+          initializeTimeline();
+        });
       }
 
       function performSearch(query) {
         const timelineContainer = document.getElementById("timelineContainer");
-        const searchInput = document.getElementById("searchInput");
 
         // 1. Show/hide clear button
-        document.getElementById("clearSearchBtn").style.display = query
-          ? "block"
-          : "none";
+        elClearSearchBtn.style.display = query ? "block" : "none";
 
         if (!query) {
           // If query is empty, reset to full timeline
@@ -2842,7 +2839,6 @@
             p.year.includes(query) ||
             p.month.toLowerCase().includes(query) ||
             p.date.includes(query) ||
-            (p.description && p.description.toLowerCase().includes(query)) ||
             (Array.isArray(p.tags) &&
               p.tags.some((t) => String(t).toLowerCase().includes(query))),
         );
@@ -2855,7 +2851,7 @@
         }, {});
 
         // 4. Sort years and photos within years
-        const sortedYears = Object.keys(photosByYear).sort((a, b) => b - a);
+        const sortedYears = sortedYearKeys(photosByYear);
         sortedYears.forEach((year) =>
           photosByYear[year].sort(
             (a, b) => new Date(b.date) - new Date(a.date),
@@ -2868,63 +2864,16 @@
                         <h3>No photos found</h3>
                         <p>No results for "${query}".</p>
                     </div>`;
-          updateSearchStats(0, 0);
+          _setStats(0, 0);
           return;
         }
 
-        // 5. Generate Search Results HTML (mimicking the timeline year structure)
+        // 5. Generate Search Results HTML
         const searchResultsHTML = sortedYears
           .map((year) => {
-            const photos = photosByYear[year];
-            const photosPerRow = calculatePhotosPerRow();
-            const totalRows = Math.ceil(photos.length / photosPerRow);
-
-            // Initialize/reset pagination settings for search results (simpler in search view)
-            yearPaginationSettings[year] = yearPaginationSettings[year] || {
-              perPage: 21,
-              currentPage: 1,
-            };
-
-            const isExpanded = expandedYears.has(year);
-            const expandedClass = isExpanded ? "expanded" : "";
-
-            // Generate the preview from the *filtered* photos
-            const previewPhotos = photos.slice(0, 4);
-            const previewHTML = `
-                    <div class="year-preview">
-                        ${previewPhotos.map((p) => `<img src="${generateThumbnail(p.url, "m")}" alt="Preview" class="preview-thumb">`).join("")}
-                        ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ""}
-                    </div>`;
-
-            return `
-                    <div class="timeline-year ${expandedClass}" data-year="${year}">
-                        <div class="timeline-year-header" onclick="toggleYear('${year}')">
-                            <div class="year-header-content">
-                                <div class="year-header-top">
-                                    <span class="year-title">${year}</span>
-                                    <div style="display: flex; align-items: center; gap: 10px;">
-                                        <span class="timeline-year-count">${mediaCountLabel(photos)}</span>
-                                        <span class="expand-icon">▼</span>
-                                    </div>
-                                </div>
-                                ${previewHTML}
-                            </div>
-                        </div>
-                        <div class="timeline-year-content">
-                            <div class="year-controls">
-                                <label for="per-page-${year}">Photos per page:</label>
-                                <select id="per-page-${year}" onchange="changePhotosPerPage('${year}', this.value)">
-                                    <option value="21">21</option>
-                                    <option value="42">42</option>
-                                    <option value="84">84</option>
-                                    <option value="all">All</option>
-                                </select>
-                            </div>
-                            <div class="year-photos-grid" id="photos-${year}"></div>
-                            <div class="pagination-nav" id="pagination-nav-${year}"></div>
-                        </div>
-                    </div>
-                `;
+            // Ensure pagination state exists for search results
+            yearPaginationSettings[year] = yearPaginationSettings[year] || { perPage: 21, currentPage: 1 };
+            return buildYearCardHTML(year, photosByYear[year]);
           })
           .join("");
 
@@ -2947,52 +2896,26 @@
           }
         });
 
-        updateSearchStats(matchingPhotos.length, sortedYears.length);
+        _setStats(matchingPhotos.length, sortedYears.length);
       }
 
-      function clearSearch() {
-        currentSearchQuery = "";
-        document.getElementById("searchInput").value = "";
-        document.getElementById("clearSearchBtn").style.display = "none";
-        // Clear expanded years so the correct one re-opens
-        expandedYears.clear();
-        initializeTimeline();
-      }
-
-      function updateSearchStats(totalPhotos, totalYears) {
-        document.getElementById("totalPhotosDisplay").textContent =
-          totalPhotos.toLocaleString();
-        document.getElementById("yearsSpanDisplay").textContent = totalYears;
-        document.getElementById("expandedYearsDisplay").textContent =
-          expandedYears.size;
-      }
 
       /* ---------- Statistics ---------- */
       function updateStats() {
-        // When not in search mode, use all photo data
         if (!currentSearchQuery) {
-          document.getElementById("totalPhotosDisplay").textContent =
-            photoData.length.toLocaleString();
-          document.getElementById("yearsSpanDisplay").textContent = new Set(
-            photoData.map((p) => p.year),
-          ).size;
-          document.getElementById("expandedYearsDisplay").textContent =
-            expandedYears.size;
+          _setStats(photoData.length, new Set(photoData.map((p) => p.year)).size);
         } else {
-          // Update stats for the current search results
           const matchingPhotos = photoData.filter(
             (p) =>
               p.year.includes(currentSearchQuery) ||
               p.month.toLowerCase().includes(currentSearchQuery) ||
               p.date.includes(currentSearchQuery) ||
-              (p.description && p.description.toLowerCase().includes(currentSearchQuery)) ||
               (Array.isArray(p.tags) &&
                 p.tags.some((t) =>
                   String(t).toLowerCase().includes(currentSearchQuery),
                 )),
           );
-          const totalYears = new Set(matchingPhotos.map((p) => p.year)).size;
-          updateSearchStats(matchingPhotos.length, totalYears);
+          _setStats(matchingPhotos.length, new Set(matchingPhotos.map((p) => p.year)).size);
         }
       }
 
@@ -3130,26 +3053,7 @@
         const imgElement = document.getElementById("gamePhoto");
         const videoElement = document.getElementById("gameVideo");
 
-        // Check if file is a video (mp4 or mov)
-        const isVideo = /\.(mp4|mov)$/i.test(currentPhoto.url);
-
-        if (isVideo) {
-          // Hide Image, Show Video
-          imgElement.classList.add("hidden");
-          videoElement.classList.remove("hidden");
-
-          videoElement.src = currentPhoto.url;
-          videoElement
-            .play()
-            .catch((e) => console.log("Game video autoplay prevented", e));
-        } else {
-          // Hide Video, Show Image (works for jpg, png, gif)
-          videoElement.pause();
-          videoElement.classList.add("hidden");
-          imgElement.classList.remove("hidden");
-
-          imgElement.src = currentPhoto.url;
-        }
+        setMediaElement(imgElement, videoElement, currentPhoto.url);
 
         displayGameOptions(generateOptions(currentPhoto));
       }
@@ -3297,10 +3201,10 @@
       }
 
       function applyDateFilter() {
-        const yVal = document.getElementById("filterYear").value;
-        const mVal = document.getElementById("filterMonth").value;
-        const dVal = document.getElementById("filterDay").value;
-        const sVal = document.getElementById("filterSource").value;
+        const yVal = elFilterYear.value;
+        const mVal = elFilterMonth.value;
+        const dVal = elFilterDay.value;
+        const sVal = elFilterSource.value;
         const resetBtn = document.getElementById("resetDateBtn");
 
         // 1. Manage Reset Button Visibility
@@ -3372,8 +3276,8 @@
         currentRenderData = filtered;
 
         // 4. Clear Search Input
-        document.getElementById("searchInput").value = "";
-        document.getElementById("clearSearchBtn").style.display = "none";
+        elSearchInput.value = "";
+        elClearSearchBtn.style.display = "none";
         currentSearchQuery = "";
 
         // 5. Update UI
@@ -3383,7 +3287,7 @@
                 <h3>No photos found</h3>
                 <p>No photos match this selection.</p>
             </div>`;
-          updateCustomStats(0, 0);
+          _setStats(0, 0);
         } else {
           const photosByYear = filtered.reduce((acc, photo) => {
             if (!acc[photo.year]) acc[photo.year] = [];
@@ -3398,25 +3302,18 @@
             if (!expandedYears.has(year)) toggleYear(year);
           });
 
-          updateCustomStats(filtered.length, Object.keys(photosByYear).length);
+          _setStats(filtered.length, Object.keys(photosByYear).length);
         }
       }
 
       function resetDateFilter() {
-        document.getElementById("filterYear").value = "all";
-        document.getElementById("filterMonth").value = "all";
-        document.getElementById("filterDay").value = "all";
-        document.getElementById("filterSource").value = "all";
+        elFilterYear.value = "all";
+        elFilterMonth.value = "all";
+        elFilterDay.value = "all";
+        elFilterSource.value = "all";
         applyDateFilter(); // This will trigger the "all" check and run initializeTimeline()
       }
 
-      // Helper to update stats when filtering
-      function updateCustomStats(photoCount, yearCount) {
-        document.getElementById("totalPhotosDisplay").textContent = photoCount;
-        document.getElementById("yearsSpanDisplay").textContent = yearCount;
-        document.getElementById("expandedYearsDisplay").textContent =
-          expandedYears.size;
-      }
     </script>
 
     <footer class="site-footer">
