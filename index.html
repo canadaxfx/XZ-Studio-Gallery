@@ -642,6 +642,32 @@
         color: #333;
       }
 
+      .post-text-pill {
+        font-size: 11px;
+        padding: 3px 10px;
+        background: #e0e7ff;
+        color: #4338ca;
+        border-radius: 12px;
+        border: 1px solid #c7d2fe;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-family: inherit;
+        white-space: nowrap;
+      }
+      .post-text-pill:hover { background-color: #e0e7ff; filter: brightness(0.95); }
+      #postTextPanel {
+        padding: 1px 16px;
+        background: #f0f4ff;
+        border-bottom: 1px solid #c7d2fe;
+        text-align: left;
+        font-size: 13px;
+        line-height: 1.3;
+        color: #374151;
+        white-space: pre-wrap;
+        word-break: break-word;
+        flex-shrink: 0;
+      }
+
       /* Main Photo Display */
       .modal-photo-container {
         flex: 1 1 auto;
@@ -1748,7 +1774,11 @@
         <div class="modal-header">
           <div class="photo-counter" id="photoCounter">1 of 5</div>
           <div class="group-title" id="groupTitle">Photo Collection</div>
+          <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文</button>
           <button class="close-modal" onclick="closeModal()">&times;</button>
+        </div>
+        <div id="postTextPanel" style="display:none;">
+          <p id="postTextContent" style="margin:0;"></p>
         </div>
 
         <div class="modal-photo-container">
@@ -2220,6 +2250,28 @@
 
         // --- 6. Update Download Link ---
         downloadBtn.href = photo.url;
+
+        // --- 7. postText pill ---
+        const postTextBtn     = document.getElementById("postTextBtn");
+        const postTextPanel   = document.getElementById("postTextPanel");
+        const postTextContent = document.getElementById("postTextContent");
+        if (photo.postText && photo.postText.trim()) {
+          postTextContent.textContent = photo.postText;
+          postTextBtn.style.display = "";
+          postTextPanel.style.display = "none";
+          postTextBtn.textContent = "📋 原文";
+        } else {
+          postTextBtn.style.display = "none";
+          postTextPanel.style.display = "none";
+        }
+      }
+
+      function togglePostText() {
+        const panel = document.getElementById("postTextPanel");
+        const btn   = document.getElementById("postTextBtn");
+        const open  = panel.style.display !== "none";
+        panel.style.display = open ? "none" : "block";
+        btn.textContent = open ? "📋 原文" : "📋 收起";
       }
 
       /* ---------- FIX: Use 'm' instead of 's' ---------- */
