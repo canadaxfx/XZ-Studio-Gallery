@@ -2523,9 +2523,8 @@
 
       /* ---------- Timeline & Pagination Functions ---------- */
       function initializeTimeline() {
-        // [STEP 5 FIX] Reset currentRenderData to full list if not searching
-        // This ensures that when we reset filters, we actually look at the full list again
-        if (!currentSearchQuery) {
+        // Reset currentRenderData to full list only when no filters are active
+        if (!currentSearchQuery && currentMediaFilter === 'all') {
           currentRenderData = photoData;
         }
 
