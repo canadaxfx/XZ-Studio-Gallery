@@ -2886,15 +2886,18 @@
           return;
         }
 
-        // 2. Filter photos by query
-        const matchingPhotos = photoData.filter(
-          (p) =>
+        // 2. Filter photos by query + active media filter
+        const matchingPhotos = photoData.filter((p) => {
+          if (currentMediaFilter === 'video' && !isVideoUrl(p.url)) return false;
+          if (currentMediaFilter === 'photo' && isVideoUrl(p.url)) return false;
+          return (
             p.year.includes(query) ||
             p.month.toLowerCase().includes(query) ||
             p.date.includes(query) ||
             (Array.isArray(p.tags) &&
-              p.tags.some((t) => String(t).toLowerCase().includes(query))),
-        );
+              p.tags.some((t) => String(t).toLowerCase().includes(query)))
+          );
+        });
 
         // 3. Group filtered photos by year
         const photosByYear = matchingPhotos.reduce((acc, photo) => {
