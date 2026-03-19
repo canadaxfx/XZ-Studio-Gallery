@@ -2114,7 +2114,7 @@
       }
 
       function setMediaElement(imgEl, videoEl, url) {
-        if (isVideoUrl(url)) {
+        if (isPlayableVideo(url)) {
           imgEl.classList.add("hidden");
           videoEl.classList.remove("hidden");
           videoEl.src = url;
@@ -2622,12 +2622,16 @@
       function generatePhotosHTML(photos) {
         return photos
           .map((photo) => {
-            // 1. Check if it's a video file
+            // 1. Check media type
             const isVideo = isVideoUrl(photo.url);
+            const isMotion = isMotionUrl(photo.url);
 
-            // 2. Create a "Play" icon overlay if it is a video
+            // 2. Overlay badge
+            const ext = (photo.url.match(/\.(\w+)$/i) || [])[1]?.toUpperCase();
             const videoIcon = isVideo
               ? '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>'
+              : isMotion
+              ? `<div style="position:absolute;top:8px;right:8px;background:rgba(0,150,136,0.85);color:white;border-radius:10px;padding:2px 5px;font-size:10px;font-weight:700;line-height:16px;z-index:2;">${ext}</div>`
               : "";
 
             // 3. Return the HTML card
@@ -3236,7 +3240,9 @@
         }
       }
 
-      function isVideoUrl(url) { return /\.(mp4|mov)$/i.test(url); }
+      function isVideoUrl(url) { return /\.mp4$/i.test(url); }
+      function isMotionUrl(url) { return /\.(mov|gif)$/i.test(url); }
+      function isPlayableVideo(url) { return /\.(mp4|mov)$/i.test(url); }
 
       function mediaCountLabel(photos) {
         const videoCount = photos.filter(p => isVideoUrl(p.url)).length;
