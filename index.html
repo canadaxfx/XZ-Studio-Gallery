@@ -2640,7 +2640,7 @@
                      data-fullsize="${photo.url}" 
                      alt="Photo ${photo.id}" 
                      class="lazy-image">
-                <div class="photo-overlay" style="${isMotion ? 'display:flex;justify-content:center;align-items:center;gap:5px;' : ''}">${photo.date}${isMotion ? `<span style="font-size:9px;font-weight:700;opacity:0.8;letter-spacing:0.5px;">${ext}</span>` : ''}</div>
+                <div class="photo-overlay" style="position:relative;">${photo.date}${isMotion ? `<span style="position:absolute;right:4px;top:50%;transform:translateY(-50%);background:rgba(0,150,136,0.75);color:white;border-radius:6px;padding:1px 4px;font-size:9px;font-weight:700;">${ext}</span>` : ''}</div>
             </div>
         `;
           })
