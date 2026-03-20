@@ -2623,8 +2623,8 @@
         return photos
           .map((photo) => {
             // 1. Check media type
-            const isVideo = isVideoUrl(photo.url);
-            const isMotion = isMotionUrl(photo.url);
+            const isVideo = isRealVideo(photo);
+            const isMotion = isMotionUrl(photo.url) || isClip(photo);
 
             // 2. Overlay badge
             const ext = (photo.url.match(/\.(\w+)$/i) || [])[1]?.toUpperCase();
@@ -2893,8 +2893,8 @@
 
         // 2. Filter photos by query + active media filter
         const matchingPhotos = photoData.filter((p) => {
-          if (currentMediaFilter === 'video' && !isVideoUrl(p.url)) return false;
-          if (currentMediaFilter === 'photo' && isVideoUrl(p.url)) return false;
+          if (currentMediaFilter === 'video' && !isRealVideo(p)) return false;
+          if (currentMediaFilter === 'photo' && isRealVideo(p)) return false;
           return (
             p.year.includes(query) ||
             p.month.toLowerCase().includes(query) ||
@@ -3245,9 +3245,11 @@
       function isVideoUrl(url) { return /\.mp4$/i.test(url); }
       function isMotionUrl(url) { return /\.(mov|gif)$/i.test(url); }
       function isPlayableVideo(url) { return /\.(mp4|mov)$/i.test(url); }
+      function isClip(photo) { return photo.clip === true && isVideoUrl(photo.url); }
+      function isRealVideo(photo) { return isVideoUrl(photo.url) && !photo.clip; }
 
       function mediaCountLabel(photos) {
-        const videoCount = photos.filter(p => isVideoUrl(p.url)).length;
+        const videoCount = photos.filter(p => isRealVideo(p)).length;
         const photoCount = photos.length - videoCount;
         const parts = [];
         if (photoCount > 0) parts.push(`${photoCount} 📷`);
@@ -3330,9 +3332,9 @@
 
         // 3. Apply media type filter
         if (currentMediaFilter === 'video') {
-          filtered = filtered.filter(p => isVideoUrl(p.url));
+          filtered = filtered.filter(p => isRealVideo(p));
         } else if (currentMediaFilter === 'photo') {
-          filtered = filtered.filter(p => !isVideoUrl(p.url));
+          filtered = filtered.filter(p => !isRealVideo(p));
         }
 
         // 4. Update Global Render Data
