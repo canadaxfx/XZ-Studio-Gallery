@@ -5805,6 +5805,24 @@
         "quality": "1080p"
     },
     {
+        "id": 882,
+        "url": "https://assets.xz-studio-gallery.com/full/20230916_骄阳伴我_XZ-STU-1.mp4",
+        "date": "2023-09-16",
+        "month": "September",
+        "year": "2023",
+        "tags": [
+            "骄阳伴我"
+        ],
+        "groupName": "20230916",
+        "quality": "1080p",
+        "link": "https://weibo.com/6643123988/NjAKwC5bl",
+        "sourceType": [
+            "weibo"
+        ],
+        "description": "",
+        "postText": "#骄阳伴我# 清醒盛阳@X玖少年团肖战DAYTOY 的人生感悟分享给大家～  #盛阳清醒发言# http://t.cn/A6ON2DkY ​​​"
+    },
+    {
         "id": 307,
         "url": "https://assets.xz-studio-gallery.com/full/k9xvZns.jpeg",
         "date": "2023-09-15",
@@ -5956,6 +5974,25 @@
             "weibo"
         ],
         "postText": "#骄阳伴我# 盛阳@X玖少年团肖战DAYTOY 的“冒泡”日常投递成功[比耶] ​​​"
+    },
+    {
+        "id": 883,
+        "url": "https://assets.xz-studio-gallery.com/full/20230915_骄阳伴我_XZ-STU-1.mp4",
+        "date": "2023-09-15",
+        "month": "September",
+        "year": "2023",
+        "tags": [
+            "骄阳伴我",
+            "盛阳"
+        ],
+        "groupName": "20230915",
+        "quality": "1080p",
+        "link": "https://weibo.com/6643123988/NjrjHbNhq",
+        "sourceType": [
+            "weibo"
+        ],
+        "description": "",
+        "postText": "#骄阳伴我# 盛阳@X玖少年团肖战DAYTOY 感叹：还是家里好[苦涩]#掌中宝盛阳和小野草盛阳# http://t.cn/A6O9Fc3k ​​​"
     },
     {
         "id": 316,
