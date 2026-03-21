@@ -905,6 +905,20 @@
         border: 1px solid rgba(255,255,255,0.6);
       }
       .badge-4k:hover { background: rgba(255,255,255,0.15); }
+      .badge-quality {
+        position: absolute;
+        bottom: 3px;
+        left: 10px;
+        background: rgba(0, 180, 80, 0.85);
+        color: #fff;
+        padding: 3px 9px;
+        border-radius: 4px;
+        font-size: 11px;
+        font-weight: 700;
+        z-index: 11;
+        letter-spacing: 0.05em;
+        pointer-events: none;
+      }
 
       .action-btn:disabled {
         background: #ccc !important;
@@ -1815,6 +1829,7 @@
             playsinline
             loop
           ></video>
+          <span id="badgeQuality" class="badge-quality hidden"></span>
           <a id="badgeAlt" class="badge-4k hidden" href="#" target="_blank"></a>
           <button
             class="nav-arrow next"
@@ -2281,6 +2296,18 @@
             badgeAlt.classList.remove('hidden');
           } else {
             badgeAlt.classList.add('hidden');
+          }
+        }
+        const badgeQuality = document.getElementById('badgeQuality');
+        if (badgeQuality) {
+          if (isRealVideo(photo) && photo.quality === '4k') {
+            badgeQuality.textContent = '4K';
+            badgeQuality.classList.remove('hidden');
+          } else if (isRealVideo(photo) && photo.quality === '1080p') {
+            badgeQuality.textContent = '1080P';
+            badgeQuality.classList.remove('hidden');
+          } else {
+            badgeQuality.classList.add('hidden');
           }
         }
 
