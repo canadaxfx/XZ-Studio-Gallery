@@ -609,13 +609,14 @@
       }
       .modal-header-top {
         display: flex;
-        justify-content: space-between;
         align-items: center;
       }
       .modal-header-controls {
         display: flex;
         align-items: center;
         gap: 8px;
+        flex: 1;
+        justify-content: center;
       }
       .modal-header-bottom {
         text-align: center;
@@ -628,7 +629,8 @@
         font-weight: 600;
         color: #5E9FD8;
         font-size: 12px;
-        min-width: 60px;
+        width: 50px;
+        flex-shrink: 0;
       }
 
       .group-title {
@@ -643,6 +645,9 @@
         color: #333;
         padding: 0px;
         border-radius: 50%;
+        width: 50px;
+        flex-shrink: 0;
+        text-align: right;
         transition: all 0.3s ease;
       }
 
