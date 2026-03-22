@@ -599,13 +599,29 @@
       /* Modal Header */
       .modal-header {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px 24px;
+        flex-direction: column;
+        padding: 12px 24px 10px;
         border-bottom: 1px solid #e0e0e0;
         background: #f8f9fa;
         border-radius: 15px 15px 0 0;
         flex-shrink: 0;
+        gap: 6px;
+      }
+      .modal-header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .modal-header-controls {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .modal-header-bottom {
+        text-align: center;
+        font-size: 13px;
+        color: #555;
+        font-weight: 500;
       }
 
       .photo-counter {
@@ -616,15 +632,7 @@
       }
 
       .group-title {
-        font-weight: 600;
-        color: #333;
-        font-size: 14px;
-        flex: 1;
-        text-align: center;
-        margin: 0 20px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        display: none;
       }
 
       .close-modal {
@@ -646,7 +654,6 @@
       .post-text-pill {
         font-size: 11px;
         padding: 3px 10px;
-        margin-right: 20px;
         background: #e0e7ff;
         color: #4338ca;
         border-radius: 12px;
@@ -1336,13 +1343,10 @@
         }
 
         .modal-header {
-          padding: 12px 15px;
-          flex-shrink: 0;
+          padding: 10px 15px 8px;
         }
-
-        .group-title {
-          font-size: 14px;
-          margin: 0 10px;
+        .modal-header-bottom {
+          font-size: 12px;
         }
 
         .photo-counter {
@@ -1483,8 +1487,10 @@
         }
 
         .modal-header {
-          padding: 8px 12px;
-          flex-shrink: 0;
+          padding: 8px 12px 6px;
+        }
+        .modal-header-bottom {
+          font-size: 11px;
         }
 
         .thumbnail-strip {
@@ -1527,7 +1533,8 @@
         }
 
         .modal-header {
-          padding: 6px 10px;
+          padding: 6px 10px 5px;
+          gap: 4px;
         }
 
         .group-title {
@@ -1805,10 +1812,16 @@
     <div id="photoModal" class="modal hidden">
       <div class="modal-content">
         <div class="modal-header">
-          <div class="photo-counter" id="photoCounter">1 of 5</div>
-          <div class="group-title" id="groupTitle">Photo Collection</div>
-          <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文</button>
-          <button class="close-modal" onclick="closeModal()">&times;</button>
+          <div class="modal-header-top">
+            <div class="photo-counter" id="photoCounter">1 of 5</div>
+            <div class="modal-header-controls">
+              <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文</button>
+              <span id="sourceBadge"></span>
+              <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+          </div>
+          <div class="modal-header-bottom" id="modalDateTag"></div>
+          <div class="group-title" id="groupTitle" style="display:none;"></div>
         </div>
         <div id="postTextPanel" style="display:none;">
           <p id="postTextContent" style="margin:0;"></p>
@@ -2231,6 +2244,8 @@
         const weiboBtn = document.getElementById("weiboLinkBtn");
         const groupTitle = document.getElementById("groupTitle");
         const photoCounter = document.getElementById("photoCounter");
+        const sourceBadge = document.getElementById("sourceBadge");
+        const modalDateTag = document.getElementById("modalDateTag");
 
         // --- 1. ROBUST SOURCE DETECTION (Fixes the RedNote Issue) ---
         let rawSource = "weibo"; // Default
@@ -2262,8 +2277,12 @@
         // --- 3. Update the Header Badge & Title ---
         const titleText = photo.groupName || `${photo.month} ${photo.year}`;
 
-        // Inject badge + text
-        groupTitle.innerHTML = `<span class="source-badge ${badgeClass}">${badgeText}</span> ${titleText}`;
+        // Row 1: source badge
+        sourceBadge.innerHTML = `<span class="source-badge ${badgeClass}">${badgeText}</span>`;
+
+        // Row 2: date · first tag
+        const firstTag = Array.isArray(photo.tags) && photo.tags.length > 0 ? photo.tags[0] : '';
+        modalDateTag.textContent = firstTag ? `${photo.date}  ·  ${firstTag}` : (photo.date || '');
 
         photoCounter.textContent = `${currentPhotoIndex + 1} of ${currentPhotoGroup.length}`;
 
