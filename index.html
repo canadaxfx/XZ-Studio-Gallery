@@ -3318,13 +3318,14 @@
 
       function setMediaFilter(type) {
         currentMediaFilter = type;
+        expandedYears.clear();
         document.querySelectorAll('.media-tab').forEach(btn => {
           btn.classList.toggle('active', btn.dataset.media === type);
         });
-        applyDateFilter();
+        applyDateFilter(true);
       }
 
-      function applyDateFilter() {
+      function applyDateFilter(fromMediaTab = false) {
         const yVal = elFilterYear.value;
         const mVal = elFilterMonth.value;
         const dVal = elFilterDay.value;
@@ -3421,10 +3422,16 @@
 
           createTimelineHTML(photosByYear);
 
-          // Expand all years to show results immediately
-          Object.keys(photosByYear).forEach((year) => {
-            if (!expandedYears.has(year)) toggleYear(year);
-          });
+          if (fromMediaTab) {
+            // Media tab filter: collapse all, open only latest year
+            const firstYear = Object.keys(photosByYear).sort((a, b) => b - a)[0];
+            if (firstYear) setTimeout(() => toggleYear(firstYear), 100);
+          } else {
+            // Date/source filter: expand all years to show results immediately
+            Object.keys(photosByYear).forEach((year) => {
+              if (!expandedYears.has(year)) toggleYear(year);
+            });
+          }
 
           _setStats(filtered.length, Object.keys(photosByYear).length);
         }
