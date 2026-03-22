@@ -241,6 +241,19 @@
       .year-title {
         font-size: 16px;
         font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .gallery-id-badge {
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 2px 7px;
+        border-radius: 8px;
+        background: #3B82F6;
+        color: white;
       }
       .year-preview {
         display: flex;
@@ -2655,7 +2668,7 @@
                         <div class="timeline-year-header" onclick="toggleYear('${year}')">
                             <div class="year-header-content">
                                 <div class="year-header-top">
-                                    <span class="year-title">${year}</span>
+                                    <span class="year-title">${year}<span class="gallery-id-badge">Studio</span></span>
                                     <div style="display: flex; align-items: center; gap: 10px;">
                                         <span class="timeline-year-count">${mediaCountLabel(photos)}</span>
                                         <span class="expand-icon">▼</span>
