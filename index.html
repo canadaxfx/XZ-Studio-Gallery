@@ -2729,11 +2729,15 @@
             const motionBadge = isMotion
               ? '<span style="position:absolute;right:4px;bottom:15px;background:rgba(0,150,136,0.75);color:white;border-radius:6px;padding:1px 4px;font-size:9px;font-weight:700;">' + ext + '</span>'
               : "";
+            const durBadge = (isVideo && photo.duration)
+              ? '<div style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 5px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>'
+              : "";
 
             // 3. Return the HTML card
             return `
             <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
                 ${videoIcon}
+                ${durBadge}
                 <img data-src="${generateThumbnail(photo.url, "m")}"
                      data-fullsize="${photo.url}"
                      alt="Photo ${photo.id}"
@@ -3342,6 +3346,15 @@
       function isPlayableVideo(url) { return /\.(mp4|mov)$/i.test(url); }
       function isClip(photo) { return photo.clip === true && isVideoUrl(photo.url); }
       function isRealVideo(photo) { return isVideoUrl(photo.url) && !photo.clip; }
+      function fmtDuration(secs) {
+        if (!secs) return '';
+        secs = Math.round(secs);
+        const h = Math.floor(secs / 3600);
+        const m = Math.floor((secs % 3600) / 60);
+        const s = secs % 60;
+        if (h > 0) return h + 'h' + String(m).padStart(2, '0') + 'm';
+        return m + ':' + String(s).padStart(2, '0');
+      }
 
       function mediaCountLabel(photos) {
         const videoCount = photos.filter(p => isRealVideo(p)).length;
