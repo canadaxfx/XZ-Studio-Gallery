@@ -348,7 +348,7 @@
         right: 0;
         background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
         color: white;
-        padding: 10px 8px 3px;
+        padding: 6px 4px 2px;
         font-size: 11px;
         font-weight: 600;
         text-align: center;
@@ -2724,13 +2724,13 @@
             // 2. Overlay badge
             const ext = (photo.url.match(/\.(\w+)$/i) || [])[1]?.toUpperCase();
             const videoIcon = isVideo
-              ? '<div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>'
+              ? '<div style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>'
               : "";
             const motionBadge = isMotion
               ? '<span style="position:absolute;right:4px;bottom:15px;background:rgba(0,150,136,0.75);color:white;border-radius:6px;padding:1px 4px;font-size:9px;font-weight:700;">' + ext + '</span>'
               : "";
             const durBadge = (isVideo && photo.duration)
-              ? '<div style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 5px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>'
+              ? '<div style="position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 5px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>'
               : "";
 
             // 3. Return the HTML card
