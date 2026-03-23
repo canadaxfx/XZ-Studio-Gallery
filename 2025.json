@@ -1048,7 +1048,8 @@
         ],
         "description": "",
         "postText": "#东方卫视跨年# 是谁在🎤，@肖战 已就位✌🏼 http://t.cn/AX41UXoH ​​​",
-        "quality": "4k"
+        "quality": "4k",
+        "duration": 48
     },
     {
         "id": 1128,
@@ -1066,7 +1067,8 @@
         ],
         "description": "",
         "postText": "用拥抱传递温暖，以举杯碰响欢聚。\n和青岛啤酒品牌代言人@肖战 一起拥抱温暖，福满马年，喝青岛启鸿运，用一个温暖的福“抱”，迎接美好新年！@青岛啤酒欢聚时刻 #肖战青岛啤酒品牌代言人# http://t.cn/AX4QzGPf ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 17
     },
     {
         "id": 1057,
@@ -1429,7 +1431,8 @@
         ],
         "description": "",
         "postText": "于方寸间打磨，在时光处沉淀。@肖战 一步步走进莫得闲的故事里#电影得闲谨制# http://t.cn/AX4aqqUF ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 195
     },
     {
         "id": 1056,
@@ -1652,7 +1655,8 @@
         ],
         "description": "",
         "postText": "#得闲谨制戏里戏外谨制如一# #得闲谨制全剧组都是细节控# 秉承一份谨制匠心，坚守一方家园净土。#电影得闲谨制# 正在热映，影院见。",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 203
     },
     {
         "id": 1131,
@@ -1671,7 +1675,8 @@
         ],
         "description": "",
         "postText": "#得闲谨制解锁抗战片不同的打开方式# 千里奔逃，路遇桃源，在戈止处安家，于灰烬中重生。#电影得闲谨制# 正在热映，影院见。",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 150
     },
     {
         "id": 1132,
@@ -1690,7 +1695,8 @@
         ],
         "description": "",
         "postText": "年末将至，和欧莱雅男士全球代言人@肖战 一起，尽情挑战，用全新上市的#欧莱雅男士淡纹家族# 守护利落有型。#欧莱雅男士全球代言人肖战# http://t.cn/AXUj7JWX ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 23
     },
     {
         "id": 1037,
@@ -1871,7 +1877,8 @@
         ],
         "description": "",
         "postText": "近距离感受莫得闲@肖战 拼死一战的巨大勇气，劫后余生的松一口气。#电影得闲谨制# http://t.cn/AXUonF6a ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 53
     },
     {
         "id": 1022,
@@ -2179,7 +2186,8 @@
         ],
         "description": "",
         "postText": "在爆炸声响起前，直击莫得闲@肖战 存留的片场痕迹。#电影得闲谨制# http://t.cn/AXUVj0vI ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 45
     },
     {
         "id": 1016,
@@ -2458,7 +2466,8 @@
         ],
         "description": "",
         "postText": "一句南京话，一场工匠梦，一段莫得闲的蜕变之路。来新浪娱乐出品《娱情实验室》，听@肖战 分享角色内外的温度与成长。#电影得闲谨制# 正在热映。 http://t.cn/AXUvRacS ​​​",
-        "url_4k": "https://assets.xz-studio-gallery.com/4k/20251212_得闲谨制_XZ-MISC-1.mp4"
+        "url_4k": "https://assets.xz-studio-gallery.com/4k/20251212_得闲谨制_XZ-MISC-1.mp4",
+        "duration": 621
     },
     {
         "id": 1136,
@@ -2476,7 +2485,8 @@
         ],
         "description": "",
         "postText": "#电影得闲谨制# 莫得闲@肖战 为家而战的故事，会被所有人看到。 http://t.cn/AXysguwg ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 11
     },
     {
         "id": 1137,
@@ -2495,7 +2505,8 @@
         ],
         "description": "",
         "postText": "温馨变成泡影的那一刻，莫得闲@肖战 听清了碎裂时的声音，是炮声。#电影得闲谨制# http://t.cn/AXyeQCbX ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 40
     },
     {
         "id": 1138,
@@ -2515,7 +2526,8 @@
         ],
         "description": "",
         "postText": "家的意义，在硝烟中愈发清晰。以小家见大家，传递“守护”的温度。#电影得闲谨制# 正在热映。@肖战",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 744
     },
     {
         "id": 1139,
@@ -2534,7 +2546,8 @@
         ],
         "description": "",
         "postText": "三次失去，一念坚守。凡躯在战争中淬炼出血性，莫得闲@肖战 的韧性，也是万千中国人的缩影。#电影得闲谨制# 正在热映。",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 158
     },
     {
         "id": 1140,
@@ -2553,7 +2566,8 @@
         ],
         "description": "",
         "postText": "亲人还在彼此身侧，对得闲@肖战 来说，就是世界上最好的事。#电影得闲谨制# http://t.cn/AXy3OQmw ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 37
     },
     {
         "id": 1141,
@@ -2572,7 +2586,8 @@
         ],
         "description": "",
         "postText": "#日常见肖战# 一年为期，感恩遇见。分享这一年中你的故事，工作室会在评论区抽取12位幸运儿送出签名专辑💿，“我们”@肖战 未完待续[抱一抱] http://t.cn/AXyus1IJ ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 14
     },
     {
         "id": 1006,
@@ -3439,7 +3454,8 @@
         ],
         "description": "",
         "postText": "#肖战得闲谨制主题曲MV上线# #肖战得闲谨制MV唱出中华儿女血性# 由@肖战 倾情献唱的#电影得闲谨制# 同名主题曲MV已上线，聆听血肉之躯的守家誓言，以一肩担当，聚万众坚守！",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 156
     },
     {
         "id": 959,
@@ -3517,7 +3533,8 @@
         ],
         "description": "",
         "postText": "#电影得闲谨制燃起百姓守家之魂# 为了身后家人，为了脚下土地，守护家园就是头等大事。@肖战 #电影得闲谨制# 12月6日，全国上映。",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 32
     },
     {
         "id": 957,
@@ -3861,7 +3878,8 @@
         ],
         "description": "",
         "postText": "与荣耀数字手机全球代言人@肖战 一起，用全新#荣耀500# 系列，动 就动真格！11月24日19:30，一起锁定@荣耀手机 2亿人像Live实况之夜，荣耀500系列新品发布会！#肖战荣耀数字手机全球代言人# http://t.cn/AX21wwNm ​​​",
-        "quality": "4k"
+        "quality": "4k",
+        "duration": 17
     },
     {
         "id": 929,
@@ -4624,7 +4642,8 @@
         ],
         "description": "",
         "postText": "和@肖战 一起探索#李宁极地太空舱#，直面峻寒挑战，亲测#李宁航天动态保暖# 硬实力。 我们一起先暖一步吧！@李宁官方微博",
-        "url_4k": "https://assets.xz-studio-gallery.com/4k/20251105_李宁_XZ-STU-1.mp4"
+        "url_4k": "https://assets.xz-studio-gallery.com/4k/20251105_李宁_XZ-STU-1.mp4",
+        "duration": 161
     },
     {
         "id": 893,
@@ -4832,7 +4851,8 @@
         ],
         "description": "",
         "postText": "安吉尔黄金比矿物质饮水机正式上市，和@安吉尔 全球品牌代言人@肖战 一起好好喝水，开启健康美好生活！#肖战安吉尔全球品牌代言人##安吉尔黄金比矿物质饮水机# http://t.cn/AXAW3Rlw ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 18
     },
     {
         "id": 1147,
@@ -4851,7 +4871,8 @@
         ],
         "description": "",
         "postText": "高山之脊，雪落无声。\n与@RalphLauren拉夫劳伦香氛 全球代言人@肖战 步入「冷杉之境」，呼吸雪后松林的透彻空气，沉浸高山生活的静谧舒适。#冷杉之境新香上市# http://t.cn/AXACUWF6 ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 30
     },
     {
         "id": 875,
@@ -5793,7 +5814,8 @@
         ],
         "description": "",
         "postText": "热力科技，倍暖升级⚡\n和@猫人MIIOW 全球品牌代言人@肖战 一起，温暖“猫”冬～#猫人暖绒绒入冬企划# http://t.cn/AXzqKg81 ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 51
     },
     {
         "id": 839,
@@ -5992,7 +6014,8 @@
         ],
         "description": "",
         "postText": "@肖战 演唱的中秋主题音乐《岁岁年年》MV暖心上线。愿旋律传递温暖，共愿家国团圆，也祝大家中秋节快乐[抱一抱]#人民日报中秋定制MV岁岁年年# #肖战中秋温暖献唱岁岁年年#  QQ音乐 http://t.cn/AX7FZbY9  酷狗音乐 http://t.cn/AX7FZbYT  酷我音乐 http://t.cn/AX7FZbYK //@肖战:感谢@人民日报 邀请， 愿大家岁岁安康，年年欢畅，中秋节快乐。#人民日报中秋定制MV岁岁年年#",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 238
     },
     {
         "id": 750,
@@ -7592,7 +7615,8 @@
         ],
         "description": "",
         "postText": "#日常见肖战# 之#小站记# 新岁寄望，隔窗轻戳漫进的阳光，翻找冰箱里的小面包。细碎日常里，藏着温柔的仪式感。\n\n抚过新一岁的日历，过往让坚硬的铠甲渐渐柔软，鲜活的童心也未被时光冰冻。工作时是利落可靠的行动派，转身溜进生活，短暂允许时间被暂停，好奇张望或兀自发呆，任凭分分秒秒在美好的光阴里流转挥洒，闲适自在。\n\n工作与生活来回不停地切换，你平衡着自己与镜中的倒影。或进或退，始终保有对世界的热爱与期盼；或走或停，令每一段旅程都能遇见新的惊喜，收获不一样的风景。\n\n时间经过这一秒，你许下新一年的愿望。\n\n新的三百六十五天，愿@肖战 有听不完的美好旋律，有看不完的精彩世界，千百种新鲜出炉的酥酥脆脆小面包在等着你。愿你依旧眼里有光、依旧闪闪发亮，透过漫漫长时光遇见更崭新的自己。#肖战1005生日快乐# http://t.cn/AX7gOgdn",
-        "url_4k": "https://assets.xz-studio-gallery.com/4k/20251005_日常见肖战之小站记_XZ-STU-1.mp4"
+        "url_4k": "https://assets.xz-studio-gallery.com/4k/20251005_日常见肖战之小站记_XZ-STU-1.mp4",
+        "duration": 221
     },
     {
         "id": 749,
@@ -7630,7 +7654,8 @@
         ],
         "description": "",
         "postText": "#谍报上不封顶杀青特辑# 多方周旋，底色暗藏。感恩相遇，任少白@肖战 且待来日再相见。#谍报上不封顶#",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 146
     },
     {
         "id": 743,
@@ -7764,7 +7789,8 @@
         ],
         "description": "",
         "postText": "#日常见肖战# \n\n‎ﮩ٨ـﮩ_ﮩ٨ــ‎ﮩ٨ـﮩﮩ٨ـﮩﮩ٨ﮩ෴ﮩ٨ـﮩ٨ـﮩﮩ٨ـﮩ٨\n\n@肖战 🕺奇幻的节奏🥁带着我们的脚步👣 重复那段旋律🎼就是～整晚的音乐！🪩 http://t.cn/AX7SAt39 ​​​",
-        "quality": "4k"
+        "quality": "4k",
+        "duration": 57
     },
     {
         "id": 1153,
@@ -7784,7 +7810,8 @@
         ],
         "description": "",
         "postText": "#湾区升明月# 歌手@肖战 火热开唱，以《整晚的音乐》共燃璀璨之夜。",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 202
     },
     {
         "id": 1154,
@@ -7802,7 +7829,8 @@
         ],
         "description": "",
         "postText": "时间轴上每个跳跃的符号，拼凑出一个完整的年；代码墙上每个标记的原点，描绘出一个充实的你。回望过去都化作成长的烙印，沉淀为前行的基石。未来还有无限的可能与未知的挑战，阔步向前，与@肖战 一起往更远望去🌠～ http://t.cn/AX7J7ZRb ​​​",
-        "url_4k": "https://assets.xz-studio-gallery.com/4k/20250929_工作室总结_XZ-STU-1.mp4"
+        "url_4k": "https://assets.xz-studio-gallery.com/4k/20250929_工作室总结_XZ-STU-1.mp4",
+        "duration": 359
     },
     {
         "id": 711,
@@ -12725,7 +12753,8 @@
         ],
         "description": "",
         "postText": "日月掌中置，惊涛袖里藏。今晚7:30和演员肖战@X玖少年团肖战DAYTOY 相约CCTV8《藏海传》，不见不散[笑哈哈]#藏海传#",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 1199
     },
     {
         "id": 462,
@@ -12947,7 +12976,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 两腿一软就是跪，请欣赏超会演的藏大人@X玖少年团肖战DAYTOY 🤲🏻#肖战藏海共执棋局进行时# http://t.cn/A6grdwAR ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 28
     },
     {
         "id": 1157,
@@ -12966,7 +12996,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 藏海@X玖少年团肖战DAYTOY 向你发送了一波表情包，请查收。#肖战藏海共执棋局进行时# http://t.cn/A6grQOqz ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 27
     },
     {
         "id": 1158,
@@ -12985,7 +13016,8 @@
             "weibo"
         ],
         "description": "",
-        "postText": "敛藏锋芒，执棋破局。今晚7:30，和演员肖战@X玖少年团肖战DAYTOY 继续锁定CCTV8《藏海传》。#藏海传#"
+        "postText": "敛藏锋芒，执棋破局。今晚7:30，和演员肖战@X玖少年团肖战DAYTOY 继续锁定CCTV8《藏海传》。#藏海传#",
+        "duration": 134
     },
     {
         "id": 450,
@@ -13225,7 +13257,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 不疯魔，不成活。@X玖少年团肖战DAYTOY #肖战藏海共执棋局进行时# http://t.cn/A6g3mWxJ ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 21
     },
     {
         "id": 1160,
@@ -13243,7 +13276,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 深渊有底，执念无岸，藏海@X玖少年团肖战DAYTOY 痛难止，何以言。#肖战藏海共执棋局进行时# http://t.cn/A6g3lSdV ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 31
     },
     {
         "id": 1161,
@@ -13261,7 +13295,8 @@
         ],
         "description": "",
         "postText": "热了，用六神。今天19:00与@六神官方微博 代言人@X玖少年团肖战DAYTOY 开启夏日清爽局，一起爽爽爽出神！#用六神爽出神# http://t.cn/A6gmlKiq ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 13
     },
     {
         "id": 429,
@@ -13644,7 +13679,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 藏海@X玖少年团肖战DAYTOY 升职记，来接事业运🫰🏻#肖战藏海共执棋局进行时#  http://t.cn/A6gnlrmT ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 30
     },
     {
         "id": 1163,
@@ -13663,7 +13699,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 新官上任三把火，藏大人@X玖少年团肖战DAYTOY 权威👍🏼#肖战藏海共执棋局进行时#  http://t.cn/A6gnafTw ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 25
     },
     {
         "id": 1164,
@@ -13683,7 +13720,8 @@
         ],
         "description": "",
         "postText": "今晚22:15，CCTV-8《剧说很好看》，看藏大人@X玖少年团肖战DAYTOY 如何步步为营，逆风翻盘。",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 30
     },
     {
         "id": 1165,
@@ -13703,7 +13741,8 @@
         ],
         "description": "",
         "postText": "#谍报上不封顶# 为信仰，以热血护家国永昌，静候任少白@X玖少年团肖战DAYTOY  #谍报上不封顶宣传片先行版# #谍报上不封顶开机# //@X玖少年团肖战DAYTOY:#谍报上不封顶宣传片先行版# #谍报上不封顶开机# 于危局中破釜重燃，你好，任少白。#谍报上不封顶# ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 22
     },
     {
         "id": 415,
@@ -13959,7 +13998,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 声如千钧，藏海@X玖少年团肖战DAYTOY 字字烙心，久久回响。#肖战藏海共执棋局进行时# http://t.cn/A6gR5k5g  ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 27
     },
     {
         "id": 1167,
@@ -13977,7 +14017,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 是非善恶，自有因果，藏海@X玖少年团肖战DAYTOY 的复仇之路又前进一步。#肖战藏海共执棋局进行时# ​​​ http://t.cn/A6g8dLWm ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 40
     },
     {
         "id": 1168,
@@ -13995,7 +14036,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 听说了吗？藏大人@X玖少年团肖战DAYTOY 其实是一只脏脏包😋#肖战藏海共执棋局进行时# http://t.cn/A6g8QSrh ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 22
     },
     {
         "id": 1169,
@@ -14013,7 +14055,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 忘本这个赛道也是给藏海@X玖少年团肖战DAYTOY 闯进来了[嘻嘻]#肖战藏海共执棋局进行时# http://t.cn/A6gHoEKM ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 22
     },
     {
         "id": 1170,
@@ -14031,7 +14074,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 藏大人@X玖少年团肖战DAYTOY 已然不知稳重为何物🫣#肖战藏海共执棋局进行时# http://t.cn/A6gHAfr9 ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 16
     },
     {
         "id": 1171,
@@ -14051,7 +14095,8 @@
         ],
         "description": "",
         "postText": "#肖战谈演一部剧带来的成长# 和演员肖战@X玖少年团肖战DAYTOY 一起，心怀美好，专注成长，活出精彩人生。#藏海传#",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 419
     },
     {
         "id": 395,
@@ -14409,7 +14454,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 藏大人@X玖少年团肖战DAYTOY 素来稳重，以下纯属意外。#肖战藏海共执棋局进行时# http://t.cn/A6gjI1qA ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 26
     },
     {
         "id": 383,
@@ -14632,7 +14678,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 痛感直击，藏海@X玖少年团肖战DAYTOY 会变得更强大 #肖战藏海共执棋局进行时# http://t.cn/A6gOy0w5 ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 29
     },
     {
         "id": 1174,
@@ -14650,7 +14697,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 家破人亡之痛，藏海@X玖少年团肖战DAYTOY 不敢忘。#肖战藏海共执棋局进行时# http://t.cn/A6g0klUl ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 37
     },
     {
         "id": 379,
@@ -14736,7 +14784,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 一声声入耳，一句句动心，藏海@X玖少年团肖战DAYTOY 万语难尽。 http://t.cn/A6gN5VyU ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 31
     },
     {
         "id": 1176,
@@ -14754,7 +14803,8 @@
         ],
         "description": "",
         "postText": "素衣白衫，是藏海@X玖少年团肖战DAYTOY 的无声之痛  #藏海传# http://t.cn/A6gNLZ4e ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 38
     },
     {
         "id": 1177,
@@ -14772,7 +14822,8 @@
         ],
         "description": "",
         "postText": "#藏海传# “好好活着”是姬伯伯教给稚奴@X玖少年团肖战DAYTOY  的最后一课。 http://t.cn/A6gCH1mo ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 53
     },
     {
         "id": 1178,
@@ -14790,7 +14841,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 白衣染血，斑驳间尽是决然@X玖少年团肖战DAYTOY http://t.cn/A6gC42Tm ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 28
     },
     {
         "id": 1179,
@@ -14808,7 +14860,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 大雍高能量藏大人 @X玖少年团肖战DAYTOY 的一天是如何度过的▶️ http://t.cn/A6gKHy3j ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 57
     },
     {
         "id": 357,
@@ -15207,7 +15260,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 以为是初遇，其实是重逢。@X玖少年团肖战DAYTOY [悲伤] http://t.cn/A6goL0oK ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 27
     },
     {
         "id": 356,
@@ -15243,7 +15297,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 欢迎进入「藏海大冒险」🙌🏻Ready？Go！🔛@X玖少年团肖战DAYTOY http://t.cn/A6g639Xo ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 52
     },
     {
         "id": 1182,
@@ -15261,7 +15316,8 @@
         ],
         "description": "",
         "postText": "藏大人@X玖少年团肖战DAYTOY 的offer藏不住啦，接藏海的事业运🤲🏻 #藏海传# http://t.cn/A6g603PF ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 62
     },
     {
         "id": 1183,
@@ -15279,7 +15335,8 @@
         ],
         "description": "",
         "postText": "一开一合之间，藏海@X玖少年团肖战DAYTOY 扭转乾坤#藏海传#  http://t.cn/A6g6VDN4 ​​​",
-        "quality": "4k"
+        "quality": "4k",
+        "duration": 6
     },
     {
         "id": 1184,
@@ -15297,7 +15354,8 @@
         ],
         "description": "",
         "postText": "#藏海传# 白切黑的藏大人@X玖少年团肖战DAYTOY  http://t.cn/A6g62iGe ​​​",
-        "quality": "4k"
+        "quality": "4k",
+        "duration": 11
     },
     {
         "id": 1185,
@@ -15318,7 +15376,8 @@
         ],
         "description": "",
         "postText": "感谢@新华社 相约，一起看#藏海传肖战访谈# 完整版，今晚#藏海传开播#，不见不散！",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 560
     },
     {
         "id": 1186,
@@ -15336,7 +15395,8 @@
         ],
         "description": "",
         "postText": "#藏海传开播# 入局藏锋，执棋为刃，以藏海@X玖少年团肖战DAYTOY 之姿，踏诡谲朝堂。#藏海传#  http://t.cn/A6giIEYS ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 19
     },
     {
         "id": 354,
@@ -15445,7 +15505,8 @@
         ],
         "description": "",
         "postText": "#藏海传官宣定档0518# 藏锋，扎根，谋局。#藏海传# //@X玖少年团肖战DAYTOY:#藏海传官宣定档0518# 韬略在心，只待开局。#藏海传# ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 83
     },
     {
         "id": 350,
@@ -15679,7 +15740,8 @@
         ],
         "description": "",
         "postText": "#日常见肖战# 攒下@X玖少年团肖战DAYTOY 工作之余的帧帧瞬间📮提前祝大家五一假期愉快[赞啊] http://t.cn/A6d05IhE ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 27
     },
     {
         "id": 328,
@@ -16226,7 +16288,8 @@
         ],
         "description": "",
         "postText": "#日常见肖战# 之#小站记# 走入人群，隐于街头。聆听孩童的嬉戏和车流，用热爱填充生活的点滴。@X玖少年团肖战DAYTOY [羞嗒嗒] http://t.cn/A6dbPUfV ​​​",
-        "url_4k": "https://assets.xz-studio-gallery.com/4k/20250423_日常见肖战之小站记_XZ-STU-1.mp4"
+        "url_4k": "https://assets.xz-studio-gallery.com/4k/20250423_日常见肖战之小站记_XZ-STU-1.mp4",
+        "duration": 180
     },
     {
         "id": 301,
@@ -16406,7 +16469,8 @@
         ],
         "description": "",
         "postText": "#肖战专辑我们# 当胶片的唱针转动，藏进音乐的故事开始显影。从无到有，从文字到乐章，是音乐描摹了生活的旋律。愿此刻的“我们”都能在这段音乐旅程中找到自己🎶@X玖少年团肖战DAYTOY  http://t.cn/A6Bd2iBu ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 563
     },
     {
         "id": 1191,
@@ -16424,7 +16488,8 @@
         ],
         "description": "",
         "postText": "#日常见肖战# 之#小站记# 在时间的缝隙里徘徊，在生活的褶皱里触摸意想不到的风。跟随@X玖少年团肖战DAYTOY 短暂放慢脚步，捡拾偶遇的惊喜🍬，珍藏时光的气息。 http://t.cn/A6BpMTzy ​​​",
-        "url_4k": "https://assets.xz-studio-gallery.com/4k/20250319_日常见肖战之小站记_XZ-STU-1.mp4"
+        "url_4k": "https://assets.xz-studio-gallery.com/4k/20250319_日常见肖战之小站记_XZ-STU-1.mp4",
+        "duration": 209
     },
     {
         "id": 300,
@@ -16460,7 +16525,8 @@
         ],
         "description": "",
         "postText": "星际绮梦，镜启未来！\n与@MOLSION陌森眼镜 携手走过的第4年，全球品牌代言人@X玖少年团肖战DAYTOY 冲破时空梦境界限，探索先锋视界的无限可能。#肖战陌森眼镜全球品牌代言人# http://t.cn/A61eXkOU ​​​",
-        "quality": "4k"
+        "quality": "4k",
+        "duration": 39
     },
     {
         "id": 1193,
@@ -16478,7 +16544,8 @@
         ],
         "description": "",
         "postText": "#日常见肖战# 恰好，恰巧，恰逢光落在@X玖少年团肖战DAYTOY 肩头。 http://t.cn/A61EReiP ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 25
     },
     {
         "id": 276,
@@ -16904,7 +16971,8 @@
         ],
         "description": "",
         "postText": "#日常见肖战# 在黑夜与白昼的衔接处，越过这趟回望🎞️@X玖少年团肖战DAYTOY http://t.cn/A61lkoDR ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 26
     },
     {
         "id": 247,
@@ -17670,7 +17738,8 @@
         ],
         "description": "",
         "postText": "#日常见肖战# 休憩片刻，和@X玖少年团肖战DAYTOY 一起迎接美好周末~ http://t.cn/A61LmxlF ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 29
     },
     {
         "id": 1196,
@@ -17689,7 +17758,8 @@
         ],
         "description": "",
         "postText": "倾心时刻，浪漫萦回。@RalphLauren拉夫劳伦香氛 全球代言人@X玖少年团肖战DAYTOY 全新广告大片，探寻爱的专属气息。#拉夫劳伦俱乐部淡香水新香上市# http://t.cn/A61Av3Px ​​​",
-        "quality": "4k"
+        "quality": "4k",
+        "duration": 30
     },
     {
         "id": 1197,
@@ -17708,7 +17778,8 @@
         ],
         "description": "",
         "postText": "#日常见肖战# 和@X玖少年团肖战DAYTOY 一起迎接五彩缤纷新一年🎊！祝大家元宵节快乐~ http://t.cn/A61ZHp4g ​​​",
-        "quality": "4k"
+        "quality": "4k",
+        "duration": 9
     },
     {
         "id": 217,
@@ -17996,7 +18067,8 @@
         ],
         "description": "",
         "postText": "纵横天下，侠骨不改。江湖尽在郭靖@X玖少年团肖战DAYTOY 掌握之中✋🏻#电影射雕英雄传侠之大者# http://t.cn/A61Pa3R1 ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 20
     },
     {
         "id": 1199,
@@ -18015,7 +18087,8 @@
         ],
         "description": "",
         "postText": "行正义之事，怀善良之心，方可称侠。@X玖少年团肖战DAYTOY #徐克肖战窦文涛文隽特别对谈下集# #射雕每个人心中都有一个侠# #电影射雕英雄传侠之大者#",
-        "url_hd": "https://assets.xz-studio-gallery.com/hd/20250210_射雕英雄传侠之大者_XZ-STU-2.mp4"
+        "url_hd": "https://assets.xz-studio-gallery.com/hd/20250210_射雕英雄传侠之大者_XZ-STU-2.mp4",
+        "duration": 2196
     },
     {
         "id": 209,
@@ -18161,7 +18234,8 @@
         ],
         "description": "",
         "postText": "无垠天际绵延不绝，辽阔草原策马向前。看郭靖@X玖少年团肖战DAYTOY 扬鞭闯江湖。#电影射雕英雄传侠之大者# http://t.cn/A63FNEQQ ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 30
     },
     {
         "id": 200,
@@ -18342,7 +18416,8 @@
         ],
         "description": "",
         "postText": "至亲至情，至深至切。@X玖少年团肖战DAYTOY #射雕至亲情特辑# #射雕里割不断的情和义# #电影射雕英雄传侠之大者#",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 192
     },
     {
         "id": 1202,
@@ -18360,7 +18435,8 @@
         ],
         "description": "",
         "postText": "且看郭靖@X玖少年团肖战DAYTOY 以梦为马闯荡，书写侠义篇章。#电影射雕英雄传侠之大者# http://t.cn/A63geq3h ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 14
     },
     {
         "id": 1203,
@@ -18378,7 +18454,8 @@
         ],
         "description": "",
         "postText": "别眨眼，郭靖@X玖少年团肖战DAYTOY 带你一步江湖[射雕]#电影射雕英雄传侠之大者# #肖战[超话]# http://t.cn/A63dvNvG ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 9
     },
     {
         "id": 187,
@@ -18632,7 +18709,8 @@
         ],
         "description": "",
         "postText": "享受创作的乐趣，接近角色的内核。郭靖@X玖少年团肖战DAYTOY 的片场工作日常大放送🤲🏻#电影射雕英雄传侠之大者# #肖战[超话]# http://t.cn/A631Tpxz ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 30
     },
     {
         "id": 172,
@@ -18920,7 +18998,8 @@
         ],
         "description": "",
         "postText": "推掌有力吞山河，脚下生风一跃起。郭靖@X玖少年团肖战DAYTOY 大侠招式加载中✋🏽#电影射雕英雄传侠之大者# #肖战[超话]# http://t.cn/A63u16ZY ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 23
     },
     {
         "id": 1206,
@@ -18939,7 +19018,8 @@
         ],
         "description": "",
         "postText": "和@X玖少年团肖战DAYTOY 一起，心怀热爱，继续前行！#非遗春节大拜年#",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 15
     },
     {
         "id": 1207,
@@ -18958,7 +19038,8 @@
         ],
         "description": "",
         "postText": "@X玖少年团肖战DAYTOY 片场练习蒙语现场直拍，认真攻克每一页蒙语台词[加油]#电影射雕英雄传侠之大者#  http://t.cn/A63m6ObY ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 26
     },
     {
         "id": 1208,
@@ -18977,7 +19058,8 @@
         ],
         "description": "",
         "postText": "大年初五迎财神，快收下@X玖少年团肖战DAYTOY 的🧧吧[比耶] http://t.cn/A63EiszP ​​​",
-        "quality": "4k"
+        "quality": "4k",
+        "duration": 15
     },
     {
         "id": 163,
@@ -19175,7 +19257,8 @@
         ],
         "description": "",
         "postText": "你们过年在家会被要求表演节目吗？[射雕] \n我猜郭靖@X玖少年团肖战DAYTOY 会[doge]#电影射雕英雄传侠之大者# #肖战[超话]# http://t.cn/A63HHeDn ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 25
     },
     {
         "id": 156,
@@ -19301,7 +19384,8 @@
         ],
         "description": "",
         "postText": "郭靖@X玖少年团肖战DAYTOY 祝大家“祥”龙十八“涨”，财运涨、福气涨、工资涨、运气涨、健康涨…样样都涨#电影射雕英雄传侠之大者##肖战[超话]# http://t.cn/A63T7zxU ​​​",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 20
     },
     {
         "id": 1211,
@@ -19320,7 +19404,8 @@
         ],
         "description": "",
         "postText": "遵循本心，无惧无畏。#射雕靖蓉筝特辑# #郭靖华筝的遗憾美学# #电影射雕英雄传侠之大者#",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 49
     },
     {
         "id": 1212,
@@ -19339,7 +19424,8 @@
         ],
         "description": "",
         "postText": "并肩而行，扶级而上。#射雕靖蓉筝特辑# #靖蓉在彼此身上看到了更宽阔的世界# #电影射雕英雄传侠之大者#",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 145
     },
     {
         "id": 131,
@@ -19817,7 +19903,8 @@
         ],
         "description": "",
         "postText": "#日常见肖战# 珍藏童心，去向心中的灯塔。@X玖少年团肖战DAYTOY 祝大家顺利健康[给你小心心]新春快乐~#肖战[超话]# http://t.cn/A63jgZak ​​​",
-        "quality": "4k"
+        "quality": "4k",
+        "duration": 114
     },
     {
         "id": 1214,
@@ -19836,7 +19923,8 @@
         ],
         "description": "",
         "postText": "#肖战灯塔画面感拉满# 跟随@X玖少年团肖战DAYTOY 奔向心中的灯塔，寻得心灵归处。#北京台春晚##我最爱的春晚舞台# http://t.cn/A63jrhtQ ​​​",
-        "url_hd": "https://assets.xz-studio-gallery.com/hd/20250129_北京台春晚灯塔_XZ-STU-1.mp4"
+        "url_hd": "https://assets.xz-studio-gallery.com/hd/20250129_北京台春晚灯塔_XZ-STU-1.mp4",
+        "duration": 262
     },
     {
         "id": 1215,
@@ -19855,7 +19943,8 @@
         ],
         "description": "",
         "postText": "#射雕英雄传侠之大者今日上映# 和郭靖@X玖少年团肖战DAYTOY 一起，在武侠中找到自己，找到心中的理想世界。#电影射雕英雄传侠之大者#",
-        "url_hd": "https://assets.xz-studio-gallery.com/hd/20250129_射雕英雄传侠之大者_XZ-STU-1.mp4"
+        "url_hd": "https://assets.xz-studio-gallery.com/hd/20250129_射雕英雄传侠之大者_XZ-STU-1.mp4",
+        "duration": 2051
     },
     {
         "id": 1216,
@@ -19872,7 +19961,8 @@
             "weibo"
         ],
         "description": "",
-        "postText": "愿年年，春风有信！#人民网乙巳新春寄语# 跟讲述人@X玖少年团肖战DAYTOY 一起心怀梦想，眉眼清扬，向未来张望！"
+        "postText": "愿年年，春风有信！#人民网乙巳新春寄语# 跟讲述人@X玖少年团肖战DAYTOY 一起心怀梦想，眉眼清扬，向未来张望！",
+        "duration": 139
     },
     {
         "id": 130,
@@ -20473,7 +20563,8 @@
         ],
         "description": "",
         "postText": "#日常见肖战# 月影将斜，晚安@X玖少年团肖战DAYTOY [月亮] http://t.cn/A63xAPCa ​​​",
-        "url_4k": "https://assets.xz-studio-gallery.com/4k/20250124_日常见肖战_XZ-STU-1.mp4"
+        "url_4k": "https://assets.xz-studio-gallery.com/4k/20250124_日常见肖战_XZ-STU-1.mp4",
+        "duration": 163
     },
     {
         "id": 1218,
@@ -20492,7 +20583,8 @@
         ],
         "description": "",
         "postText": "大年初一，走进电影院，和@X玖少年团肖战DAYTOY 一起极尽潇洒，快意江湖。@新华社",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 15
     },
     {
         "id": 61,
@@ -21326,7 +21418,8 @@
         ],
         "description": "",
         "postText": "1月24日晚20:00，我们相约#2025网络视听盛典# ，和@X玖少年团肖战DAYTOY 共同感受网络视听创造的力量与魅力。#2025网络视听盛典鹅厂阵容官宣##肖战[超话]# ​​​",
-        "quality": "4k"
+        "quality": "4k",
+        "duration": 20
     },
     {
         "id": 35,
@@ -21620,7 +21713,8 @@
         ],
         "description": "",
         "postText": "#日常见肖战# 删繁就简，向心而行。晚安[月亮]@X玖少年团肖战DAYTOY  #肖战[超话]#  http://t.cn/A6uuO2AN ​​​",
-        "quality": "4k"
+        "quality": "4k",
+        "duration": 79
     },
     {
         "id": 1,
@@ -22182,6 +22276,7 @@
         ],
         "description": "",
         "postText": "回家，#跟古驰欢乐过年# 开启新春的故事。@GUCCI",
-        "quality": "1080p"
+        "quality": "1080p",
+        "duration": 84
     }
 ]
