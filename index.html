@@ -2625,7 +2625,7 @@
 
         if (currentRenderData.length === 0) {
           document.getElementById("timelineContainer").innerHTML = `
-            <div class="timeline-empty"><h3>No photos found</h3><p>Add photoData.json to display photos.</p></div>`;
+            <div class="timeline-empty"><h3>No items found</h3><p>Add data to display.</p></div>`;
           return;
         }
 
@@ -3022,7 +3022,7 @@
         if (matchingPhotos.length === 0) {
           timelineContainer.innerHTML = `
                     <div class="timeline-empty">
-                        <h3>No photos found</h3>
+                        <h3>No items found</h3>
                         <p>No results for "${query}".</p>
                     </div>`;
           _setStats(0, 0);
@@ -3459,8 +3459,8 @@
         if (filtered.length === 0) {
           document.getElementById("timelineContainer").innerHTML = `
             <div class="timeline-empty">
-                <h3>No photos found</h3>
-                <p>No photos match this selection.</p>
+                <h3>No items found</h3>
+                <p>No items match this selection.</p>
             </div>`;
           _setStats(0, 0);
         } else {
