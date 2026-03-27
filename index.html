@@ -2319,14 +2319,18 @@
         setMediaElement(imgElement, videoElement, photo.url);
 
         // --- 6. Update Download Link ---
-        downloadBtn.href = photo.url;
+        // Default download to best available quality: 4K → HD → regular
+        const _isVid = isRealVideo(photo);
+        downloadBtn.href = (_isVid && photo.url_4k) ? photo.url_4k
+                         : (_isVid && photo.url_hd) ? photo.url_hd
+                         : photo.url;
         const badgeAlt = document.getElementById('badgeAlt');
         if (badgeAlt) {
-          if (isRealVideo(photo) && photo.url_4k) {
+          if (_isVid && photo.url_4k) {
             badgeAlt.href = photo.url_4k;
             badgeAlt.textContent = '点击下载 ↓ 4K版本';
             badgeAlt.classList.remove('hidden');
-          } else if (isRealVideo(photo) && photo.url_hd) {
+          } else if (_isVid && photo.url_hd) {
             badgeAlt.href = photo.url_hd;
             badgeAlt.textContent = '点击下载 ↓ 1080p版本';
             badgeAlt.classList.remove('hidden');
