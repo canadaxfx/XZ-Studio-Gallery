@@ -22,6 +22,77 @@
       gtag("config", "G-QP979YZW73");
     </script>
     <style>
+/* ===== PLAYLIST ===== */
+.playlist-panel{position:fixed;width:300px;max-height:420px;background:#fff;border-radius:12px;box-shadow:0 6px 28px rgba(0,0,0,.22);z-index:7999;display:flex;flex-direction:column;overflow:hidden}
+.playlist-header{display:flex;align-items:center;gap:8px;padding:12px 14px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:12px 12px 0 0;color:#fff;cursor:pointer;font-size:14px;font-weight:700;flex-shrink:0;user-select:none;letter-spacing:0.2px}
+.playlist-panel.collapsed .playlist-header{border-radius:12px}
+.playlist-count-badge{background:rgba(255,255,255,.25);border-radius:10px;padding:2px 8px;font-size:12px;font-weight:700}
+.playlist-list{overflow-y:auto;flex:1;min-height:0}
+.playlist-item{display:flex;align-items:center;gap:8px;padding:7px 10px;cursor:pointer;border-bottom:1px solid #f3f4f6;font-size:12px}
+.playlist-item:hover{background:#f9fafb}
+.playlist-item.pl-active{background:#eff6ff;border-left:3px solid #2563eb}
+.playlist-item img{width:52px;height:36px;object-fit:cover;border-radius:4px;flex-shrink:0;background:#e5e7eb}
+.playlist-item-info{flex:1;min-width:0}
+.playlist-item-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#374151;font-weight:500}
+.playlist-item-meta{color:#9ca3af;font-size:11px;margin-top:1px}
+.playlist-remove-btn{flex-shrink:0;background:#e5e7eb;border:none;cursor:pointer;color:#6b7280;font-size:14px;font-weight:700;line-height:1;padding:0;width:22px;height:22px;border-radius:50%;text-align:center;line-height:22px}
+.playlist-remove-btn:hover{background:#fecaca;color:#dc2626}
+.playlist-footer{display:flex;gap:6px;padding:8px 10px;border-top:1px solid #e5e7eb;flex-shrink:0}
+.pl-play-btn{flex:1;padding:6px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600}
+.pl-clear-btn{padding:6px 10px;background:#fee2e2;color:#dc2626;border:none;border-radius:6px;cursor:pointer;font-size:12px}
+.pl-card-add{position:absolute;bottom:32px;right:4px;background:rgba(0,0,0,.65);color:#fff;border:none;border-radius:4px;padding:2px 6px;font-size:11px;cursor:pointer;opacity:1;z-index:3;white-space:nowrap}
+.pl-card-add.pl-added{background:rgba(37,99,235,.8)}
+.pl-add-all-btn{display:none;padding:6px 11px;background:#1f2937;color:#fff;border:none;border-radius:6px;font-size:12px;cursor:pointer;white-space:nowrap;margin-top:6px}
+.pl-modal-add-btn{padding:3px 10px;background:rgba(37,99,235,.12);color:#2563eb;border:1px solid #bfdbfe;border-radius:12px;font-size:12px;cursor:pointer;display:none;white-space:nowrap}
+.pl-modal-add-btn:hover{background:#dbeafe}
+.pl-modal-add-btn.pl-in-list{background:rgba(37,99,235,.12);color:#2563eb;border-color:#93c5fd;box-shadow:0 0 0 1.5px #2563eb}
+.pl-counter-badge{background:#1f2937;color:#fff;padding:2px 9px;border-radius:10px;font-size:11px;margin-left:5px;display:none}
+#plToast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%);background:#1f2937;color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;z-index:9999;pointer-events:none;opacity:0;transition:opacity .3s}
+@media(max-width:600px){.playlist-panel{width:calc(100vw - 90px)}}
+@media(max-height:500px){.pl-fs-controls{padding:6px 12px}.pl-fs-nav-btn,.vc-btn{width:34px!important;height:34px!important}#vcPlayBtn{width:38px!important;height:38px!important}}
+@media(max-width:600px){.pl-fs-controls{flex-wrap:wrap;padding:8px 12px;gap:8px;justify-content:center}.vc-middle{order:10;flex:0 0 100%!important;min-width:100%!important}}
+.pl-fs-controls{display:none;align-items:center;gap:10px;padding:10px 18px;background:linear-gradient(180deg,#0f172a 0%,#1e293b 100%);flex-shrink:0;border-top:1px solid #334155}
+.pl-fs-nav-btn{background:#334155;color:#e2e8f0;border:1px solid #475569;border-radius:50%;width:48px;height:48px;font-size:26px;cursor:pointer;transition:all .18s;line-height:1;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700}
+.pl-fs-nav-btn:hover{background:#475569;color:#fff;border-color:#64748b}
+.pl-fs-nav-btn:disabled{opacity:.25;cursor:default}
+.pl-fs-nav-counter{color:#64748b;font-size:12px;min-width:50px;text-align:center}
+.vc-btn{background:#1e293b;color:#cbd5e1;border:1px solid #334155;border-radius:10px;width:40px;height:40px;font-size:16px;cursor:pointer;line-height:1;flex-shrink:0;transition:all .18s;display:inline-flex;align-items:center;justify-content:center}
+.vc-btn:hover{background:#334155;color:#f1f5f9;border-color:#475569}
+#vcPlayBtn{background:#2563eb;border-color:#3b82f6;border-radius:50%;width:48px;height:48px;font-size:19px;color:#fff}
+#vcPlayBtn:hover{background:#1d4ed8;border-color:#2563eb}
+#vcFsBtn{background:#0e7490;border-color:#0891b2;color:#e0f2fe;font-size:18px}
+#vcFsBtn:hover{background:#0891b2;border-color:#06b6d4;color:#fff}
+.vc-seek{flex:1;min-width:0;height:5px;accent-color:#3b82f6;cursor:pointer;border-radius:4px}
+.vc-time{color:#64748b;font-size:12px;white-space:nowrap;flex-shrink:0;font-variant-numeric:tabular-nums}
+.vc-middle{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px;justify-content:center}
+/* Floating Button Group */
+#floatBtnGroup {
+    position: fixed; right: 16px; bottom: 80px;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 8px;
+    z-index: 8000; touch-action: none; cursor: grab;
+}
+.float-btn {
+    width: 58px; height: 58px; border-radius: 50%;
+    border: 2px solid rgba(94,159,216,0.4);
+    background: #fff; color: #5E9FD8;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    cursor: pointer; box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    font-size: 22px; font-weight: 600;
+    transition: transform .18s, box-shadow .18s;
+    position: relative; flex-shrink: 0; user-select: none;
+    overflow: hidden;
+}
+.float-btn:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(0,0,0,0.22); }
+#plFloatBtn { background: linear-gradient(135deg,#2563eb,#7c3aed); color:#fff; border-color:rgba(255,255,255,0.3); font-size:20px; width:68px; height:68px; overflow:visible; }
+#plFloatBadge { position:absolute; top:-3px; right:-3px; background:#ef4444; color:#fff; border-radius:10px; font-size:10px; font-weight:700; padding:1px 5px; min-width:18px; text-align:center; display:none; line-height:1.6; }
+#backToTopFloat { opacity:0; visibility:hidden; transition:opacity .3s,visibility .3s; }
+#backToTopFloat.visible { opacity:0.88; visibility:visible; }
+.float-top-text { font-size:9px; font-weight:700; line-height:1.3; margin-top:1px; text-align:center; }
+#backToTopFloat .float-top-text { color:#4A8BC8; }
+</style>
+    <style>
       * {
         margin: 0;
         padding: 0;
@@ -353,6 +424,15 @@
         font-weight: 600;
         text-align: center;
       }
+      .photo-source {
+        display: block;
+        font-size: 10px;
+        opacity: 0.85;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 400;
+      }
 
       /* Pagination Styles */
       .year-controls {
@@ -613,12 +693,12 @@
       .modal-header {
         display: flex;
         flex-direction: column;
-        padding: 12px 24px 10px;
+        padding: 6px 14px 5px;
         border-bottom: 1px solid #e0e0e0;
         background: #f8f9fa;
         border-radius: 15px 15px 0 0;
         flex-shrink: 0;
-        gap: 6px;
+        gap: 3px;
       }
       .modal-header-top {
         display: flex;
@@ -633,7 +713,7 @@
       }
       .modal-header-bottom {
         text-align: center;
-        font-size: 13px;
+        font-size: 12px;
         color: #555;
         font-weight: 500;
       }
@@ -894,24 +974,24 @@
 
       /* Download and Action Buttons */
       .action-btn.download-btn {
-        background: linear-gradient(45deg, #4caf50, #45a049);
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
         color: white;
       }
-      .action-btn.download-btn:hover {
-        background: linear-gradient(45deg, #45a049, #3d8b40);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-      }
+      .action-btn.download-btn:hover { background: linear-gradient(135deg, #1d4ed8, #1e40af); }
 
       .action-btn.quark-btn {
-        background: linear-gradient(45deg, #ff6b35, #f7931e);
-        color: white;
+        background: transparent;
+        color: #2563eb;
+        border: 1.5px solid #2563eb;
       }
-      .action-btn.quark-btn:hover {
-        background: linear-gradient(45deg, #e55a2b, #e8851a);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+      .action-btn.quark-btn:hover { background: #eff6ff; }
+
+      .action-btn.weibo-btn {
+        background: transparent;
+        color: #2563eb;
+        border: 1.5px solid #2563eb;
       }
+      .action-btn.weibo-btn:hover { background: #eff6ff; }
 
       .badge-4k {
         position: absolute;
@@ -933,7 +1013,7 @@
         position: absolute;
         bottom: 0px;
         left: 10px;
-        background: rgba(0, 180, 80, 0.85);
+        background: rgba(37, 99, 235, 0.85);
         color: #fff;
         padding: 2px 7px;
         border-radius: 4px;
@@ -942,6 +1022,27 @@
         z-index: 11;
         letter-spacing: 0.05em;
         pointer-events: none;
+      }
+      .badge-quality.is-4k { background: rgba(124, 58, 237, 0.85); }
+      .timeline-photo.pl-in-playlist { box-shadow: 0 0 0 2.5px #2563eb, 0 2px 8px rgba(0,0,0,0.1); }
+
+      .modal-tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: flex-start;
+        padding: 0 2px;
+        min-height: 0;
+      }
+      .modal-tag-pill {
+        font-size: 10px;
+        padding: 2px 8px;
+        background-color: #f0f2f5;
+        color: #555;
+        border-radius: 15px;
+        border: 1px solid #e4e6eb;
+        white-space: nowrap;
+        transition: all 0.2s ease;
       }
 
       .action-btn:disabled {
@@ -1098,71 +1199,6 @@
         border: 1px solid #f5c6cb;
       }
 
-      /* Back to Top Button */
-      #back-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: white;
-        color: #5E9FD8;
-        width: 80px;
-        height: 90px;
-        border-radius: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 9999;
-        border: 1px solid #5E9FD8;
-        font-size: 40px;
-        font-weight: 600;
-        -webkit-text-stroke: 2px #5E9FD8;
-        text-stroke: 2px #5E9FD8;
-        padding: 4px 4px;
-      }
-      #back-to-top .arrow {
-        line-height: 1;
-      }
-      #back-to-top .text {
-        font-size: 12px;
-        font-weight: 600;
-        margin-top: 0px;
-        text-align: center;
-        line-height: 1;
-        color: #4A8BC8;
-        -webkit-text-stroke: 0;
-        text-stroke: 0;
-        -webkit-text-fill-color: #4A8BC8;
-        position: relative;
-        z-index: 1;
-      }
-
-      #back-to-top.visible {
-        opacity: 0.85;
-        visibility: visible;
-        animation: subtle-pulse-white 2s infinite ease-in-out;
-      }
-      #back-to-top:hover {
-        transform: scale(1.15);
-        box-shadow: 0 6px 25px rgba(94, 159, 216, 0.4);
-        opacity: 1;
-      }
-
-      @keyframes subtle-pulse-white {
-        0%,
-        100% {
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        }
-        50% {
-          box-shadow: 0 4px 20px rgba(94, 159, 216, 0.3);
-        }
-      }
-
       /* Search Results Styles - COPIED FROM SAMPLE.HTML */
       .search-results-container {
         max-width: 1000px;
@@ -1286,6 +1322,7 @@
           grid-template-columns: repeat(3, 1fr);
           gap: 8px;
         }
+        #floatBtnGroup { right: 8px; } .float-btn { width:50px; height:50px; font-size:18px; }
         .timeline-year-header {
           padding: 12px 15px;
           font-size: 14px;
@@ -1315,14 +1352,6 @@
         }
         .timeline-year-content {
           padding: 15px;
-        }
-        #back-to-top {
-          bottom: 30px;
-          right: 10px;
-          width: 63px;
-          height: 63px;
-          line-height: 43px;
-          font-size: 23px;
         }
         .search-summary h3 {
           font-size: 1.2rem;
@@ -1762,6 +1791,9 @@
           id="searchInput"
         />
         <button id="clearSearchBtn" class="btn">Clear Search / 返回</button>
+        <div style="max-width:1000px;margin:4px auto 0;display:flex;justify-content:flex-end;padding-right:20px">
+            <button id="plAddAllBtn" class="pl-add-all-btn" onclick="addAllFilteredVideos()">▶ Add <span id="plAddAllCount">0</span> videos to Playlist</button>
+        </div>
         <div class="timeline-container" id="timelineContainer">
           <div class="timeline-empty">
             <h3>Loading Photo Timeline...</h3>
@@ -1838,6 +1870,7 @@
           </div>
           <div class="modal-header-bottom" id="modalDateTag"></div>
           <div class="group-title" id="groupTitle" style="display:none;"></div>
+          <div id="modalTags" class="modal-tags-container"></div>
         </div>
         <div id="postTextPanel" style="display:none;">
           <p id="postTextContent" style="margin:0;"></p>
@@ -1855,9 +1888,7 @@
           <video
             id="modalVideo"
             class="modal-photo hidden"
-            controls
             playsinline
-            loop
           ></video>
           <span id="badgeQuality" class="badge-quality hidden"></span>
           <a id="badgeAlt" class="badge-4k hidden" href="#" target="_blank"></a>
@@ -1873,22 +1904,30 @@
           <div class="thumbnail-container" id="thumbnailContainer"></div>
         </div>
 
+        <!-- Video control bar (shown when a video is open) -->
+        <div class="pl-fs-controls" id="plNavBar">
+            <button class="pl-fs-nav-btn" id="plFsPrev" onclick="navigatePhoto(-1)" title="Previous">‹</button>
+            <button class="vc-btn" id="vcPlayBtn" onclick="vcTogglePlay()">▶</button>
+            <div class="vc-middle">
+                <input type="range" class="vc-seek" id="vcSeek" value="0" min="0" step="0.1">
+                <div style="display:flex;justify-content:space-between">
+                    <span class="vc-time" id="vcCurrent">0:00</span>
+                    <span class="vc-time" id="vcDuration">0:00</span>
+                </div>
+            </div>
+            <button class="vc-btn" id="vcMuteBtn" onclick="vcToggleMute()" title="Mute">🔊</button>
+            <button class="vc-btn" id="vcFsBtn" onclick="vcFullscreen()" title="Fullscreen">⛶</button>
+            <button class="pl-fs-nav-btn" id="plFsNext" onclick="navigatePhoto(1)" title="Next">›</button>
+        </div>
+
         <div class="photo-info-panel">
           <div class="download-section">
-            <div
-              style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 8px;
-              "
-            >
-              <h4 style="margin: 0; flex-grow: 1; text-align: center">
-                🔥Download Options & Links
-              </h4>
+            <div style="display:flex;align-items:center;justify-content:center;margin-bottom:6px;position:relative;">
+              <button class="pl-modal-add-btn" id="plModalAddBtn2" onclick="plModalToggle()" style="display:none;font-size:13px;padding:5px 16px;">+ 加入播放列表 Add to Playlist</button>
               <button
                 class="close-modal close-bottom-btn"
                 onclick="closeModal()"
+                style="position:absolute;right:0;"
               >
                 ×
               </button>
@@ -2132,9 +2171,16 @@
       </div>
     </div>
 
-    <div id="back-to-top">
-      <div class="arrow">▲</div>
-      <div class="text">TOP<br />回顶部</div>
+    <div id="floatBtnGroup">
+        <button id="plFloatBtn" class="float-btn" onclick="plTogglePanel()">
+            <span>🎬</span>
+            <span class="float-top-text" style="-webkit-text-fill-color:#fff;color:#fff;">Play<br>播放</span>
+            <span id="plFloatBadge">0</span>
+        </button>
+        <button id="backToTopFloat" class="float-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <span>▲</span>
+            <span class="float-top-text">TOP<br>回顶部</span>
+        </button>
     </div>
 
     <script>
@@ -2157,6 +2203,316 @@
       let currentPhotoIndex = 0;
       let touchStartX = 0;
       let touchEndX = 0;
+
+      /* ---------- Playlist State ---------- */
+      let playlist = [];
+      let playlistMode = false;
+      let filteredVideosCache = [];
+      const PL_KEY = 'xzStudioPlaylist';
+
+      function plLoad() {
+          try { playlist = JSON.parse(localStorage.getItem(PL_KEY) || '[]'); } catch(e) { playlist = []; }
+          plRender();
+      }
+      function plSave() { localStorage.setItem(PL_KEY, JSON.stringify(playlist)); }
+
+      function plCardAdd(id) {
+          const photo = photoData.find(p => p.id === id);
+          if (!photo) return;
+          const already = playlist.some(p => p.id === id);
+          if (already) {
+              playlist = playlist.filter(p => p.id !== id);
+              plSave(); plRender(); plToast('已从播放列表移除');
+          } else {
+              playlist.push(photo);
+              plSave(); plRender(); plToast('已加入播放列表');
+          }
+          const btn = document.getElementById('plcadd-' + id);
+          if (btn) plSyncCardBtn(btn, !already);
+      }
+
+      function plSyncCardBtn(btn, inList) {
+          btn.classList.toggle('pl-added', inList);
+          btn.innerHTML = inList ? '<b>✓</b> Playlist' : '<b>＋</b> Playlist';
+          const card = btn.closest('.timeline-photo');
+          if (card) card.classList.toggle('pl-in-playlist', inList);
+      }
+
+      function plSyncAllCards() {
+          document.querySelectorAll('[id^="plcadd-"]').forEach(btn => {
+              const id = parseInt(btn.id.replace('plcadd-', ''));
+              plSyncCardBtn(btn, playlist.some(p => p.id === id));
+          });
+      }
+
+      function addAllFilteredVideos() {
+          let added = 0;
+          filteredVideosCache.forEach(p => { if (!playlist.some(x => x.id === p.id)) { playlist.push(p); added++; } });
+          plSave(); plRender();
+          plToast(added ? `已加入 ${added} 个视频` : '视频已全在播放列表中');
+      }
+
+      function plRemove(id, e) {
+          e.stopPropagation();
+          playlist = playlist.filter(p => p.id !== id);
+          plSave(); plRender();
+          if (playlistMode) {
+              if (!playlist.length) { closeModal(); return; }
+              currentPhotoGroup = [...playlist];
+              if (currentPhotoIndex >= playlist.length) currentPhotoIndex = playlist.length - 1;
+              updateModalContent(); updateThumbnailsActive(); updateNavigationButtons();
+          }
+      }
+
+      function plClear() {
+          if (!playlist.length) return;
+          if (!confirm('清空播放列表？')) return;
+          playlist = []; plSave(); plRender();
+          if (playlistMode) closeModal();
+      }
+
+      function plRender() {
+          const panel   = document.getElementById('playlistPanel');
+          const list    = document.getElementById('plList');
+          const countEl = document.getElementById('plPanelCount');
+          const badge   = document.getElementById('plFloatBadge');
+          countEl.textContent = playlist.length;
+          if (badge) { badge.textContent = playlist.length; badge.style.display = playlist.length ? 'block' : 'none'; }
+          if (!playlist.length) { panel.style.display = 'none'; return; }
+          const activeId = playlistMode ? (currentPhotoGroup[currentPhotoIndex] || {}).id : null;
+          list.innerHTML = playlist.map((p, i) => `
+              <div class="playlist-item ${p.id === activeId ? 'pl-active' : ''}" onclick="plPlayItem(${i})">
+                  <img src="${generateThumbnail(p.url, 'm')}" onerror="this.style.display='none'" alt="">
+                  <div class="playlist-item-info">
+                      <div class="playlist-item-title">${p.groupName || p.date}</div>
+                      <div class="playlist-item-meta">${p.date}${p.duration ? ' · ' + fmtDuration(p.duration) : ''}</div>
+                  </div>
+                  <button class="playlist-remove-btn" onclick="plRemove(${p.id}, event)">×</button>
+              </div>`).join('');
+          // sync card "+" buttons
+          document.querySelectorAll('[id^="plcadd-"]').forEach(btn => {
+              const id = parseInt(btn.id.replace('plcadd-', ''));
+              plSyncCardBtn(btn, playlist.some(p => p.id === id));
+          });
+      }
+
+      function plTogglePanel() {
+          const panel = document.getElementById('playlistPanel');
+          if (panel.style.display === 'none') {
+              panel.style.display = 'flex';
+              setTimeout(plPositionPanel, 0);
+          } else {
+              panel.style.display = 'none';
+          }
+      }
+
+      function plPlayFromStart() {
+          if (!playlist.length) return;
+          const panel = document.getElementById('playlistPanel');
+          panel.style.display = 'flex';
+          setTimeout(plPositionPanel, 0);
+          plPlayItem(0);
+      }
+
+      function plPlayItem(index) {
+          playlistMode = true;
+          currentPhotoGroup = [...playlist];
+          currentPhotoIndex = index;
+          document.getElementById('photoModal').classList.remove('hidden');
+          updateModalContent();
+          generateThumbnails();
+          updateNavigationButtons();
+          document.addEventListener('keydown', handleKeyboardNavigation);
+          plRender();
+      }
+
+      function plModalToggle() {
+          const photo = currentPhotoGroup[currentPhotoIndex];
+          if (!photo) return;
+          const inList = playlist.some(p => p.id === photo.id);
+          if (inList) {
+              playlist = playlist.filter(p => p.id !== photo.id);
+              plToast('已从播放列表移除');
+          } else {
+              playlist.push(photo);
+              plToast('已加入播放列表');
+          }
+          plSave(); plRender(); plSyncModalAddBtn(photo);
+      }
+
+      function plSyncModalAddBtn(photo) {
+          const btn = document.getElementById('plModalAddBtn2');
+          if (!btn) return;
+          const inList = playlist.some(p => p.id === photo.id);
+          btn.classList.toggle('pl-in-list', inList);
+          btn.textContent = inList ? '✓ 在播放列表中 In Playlist' : '+ 加入播放列表 Add to Playlist';
+      }
+
+      /* ---------- Custom Video Controls ---------- */
+      function vcFmt(s) {
+          if (isNaN(s)) return '0:00';
+          const m = Math.floor(s / 60);
+          return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+      }
+
+      function vcSetup(v) {
+          const seek    = document.getElementById('vcSeek');
+          const playBtn = document.getElementById('vcPlayBtn');
+          const cur     = document.getElementById('vcCurrent');
+          const dur     = document.getElementById('vcDuration');
+          const muteBtn = document.getElementById('vcMuteBtn');
+          if (!seek) return;
+
+          // Reset
+          seek.value = 0; seek._seeking = false;
+          cur.textContent = '0:00'; dur.textContent = '0:00';
+          playBtn.textContent = v.paused ? '▶' : '⏸';
+          muteBtn.textContent = v.muted ? '🔇' : '🔊';
+
+          v.ontimeupdate = () => {
+              if (!seek._seeking) {
+                  seek.value = v.currentTime;
+                  cur.textContent = vcFmt(v.currentTime);
+              }
+          };
+          v.onloadedmetadata = () => {
+              seek.max = v.duration;
+              dur.textContent = vcFmt(v.duration);
+          };
+          v.onplay  = () => { playBtn.textContent = '⏸'; };
+          v.onpause = () => { playBtn.textContent = '▶'; };
+          v.onvolumechange = () => { muteBtn.textContent = v.muted ? '🔇' : '🔊'; };
+
+          seek.oninput  = () => { seek._seeking = true; cur.textContent = vcFmt(parseFloat(seek.value)); };
+          seek.onchange = () => { v.currentTime = parseFloat(seek.value); seek._seeking = false; };
+      }
+
+      function vcTogglePlay() {
+          const v = document.getElementById('modalVideo');
+          v.paused ? v.play() : v.pause();
+      }
+
+      function vcToggleMute() {
+          const v = document.getElementById('modalVideo');
+          v.muted = !v.muted;
+      }
+
+      function vcFullscreen() {
+          const v = document.getElementById('modalVideo');
+          const req = v.requestFullscreen || v.webkitRequestFullscreen || v.webkitEnterFullscreen;
+          if (req) req.call(v).catch(() => {});
+      }
+
+      function plToast(msg) {
+          const t = document.getElementById('plToast');
+          t.textContent = msg; t.style.opacity = '1';
+          clearTimeout(t._tid);
+          t._tid = setTimeout(() => t.style.opacity = '0', 2000);
+      }
+
+      function plUpdateAddAllBtn() {
+          const btn = document.getElementById('plAddAllBtn');
+          const countEl = document.getElementById('plAddAllCount');
+          if (!btn || !countEl) return;
+          if (filteredVideosCache.length > 0) {
+              countEl.textContent = filteredVideosCache.length;
+              btn.style.display = 'inline-block';
+          } else {
+              btn.style.display = 'none';
+          }
+      }
+
+      /* ---------- Float Group & Playlist Panel Position ---------- */
+      function setupFloatGroup() {
+          const group  = document.getElementById('floatBtnGroup');
+          const topBtn = document.getElementById('backToTopFloat');
+          const margin = 10;
+
+          // Scroll: show/hide back-to-top button
+          window.addEventListener('scroll', () => {
+              topBtn.classList.toggle('visible', window.scrollY > 300);
+          }, { passive: true });
+
+          // Restore saved vertical position
+          const saved = localStorage.getItem('floatGroupTop');
+          if (saved) {
+              try {
+                  const top = parseFloat(saved);
+                  const h = group.offsetHeight || 130;
+                  const safeTop = Math.max(margin, Math.min(top, window.innerHeight - h - margin));
+                  group.style.top = safeTop + 'px';
+                  group.style.bottom = 'auto';
+                  group.style.transform = 'none';
+              } catch(e) { localStorage.removeItem('floatGroupTop'); }
+          }
+
+          // Vertical-only drag
+          let dragging = false, startY, startTop, moved;
+
+          function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+          function convertToPixelTop() {
+              if (!group.style.top || group.style.top === '' || group.style.top === '50%') {
+                  const rect = group.getBoundingClientRect();
+                  group.style.top = rect.top + 'px';
+                  group.style.bottom = 'auto';
+                  group.style.transform = 'none';
+              }
+          }
+
+          // Suppress click after drag
+          group.addEventListener('click', function(e) {
+              if (moved) { e.stopPropagation(); e.preventDefault(); moved = false; }
+          }, true);
+
+          function pointerStart(e) {
+              const p = e.touches ? e.touches[0] : e;
+              convertToPixelTop();
+              startY = p.clientY;
+              startTop = parseFloat(group.style.top);
+              dragging = true; moved = false;
+          }
+
+          function pointerMove(e) {
+              if (!dragging) return;
+              const p = e.touches ? e.touches[0] : e;
+              const dy = p.clientY - startY;
+              if (Math.abs(dy) > 4) moved = true;
+              group.style.top = clamp(startTop + dy, margin, window.innerHeight - group.offsetHeight - margin) + 'px';
+              e.preventDefault();
+          }
+
+          function pointerEnd() {
+              if (!dragging) return;
+              dragging = false;
+              if (moved) {
+                  localStorage.setItem('floatGroupTop', parseFloat(group.style.top));
+                  plPositionPanel(); // reposition panel if open
+              }
+          }
+
+          group.addEventListener('mousedown',  pointerStart);
+          group.addEventListener('touchstart', pointerStart, { passive: false });
+          document.addEventListener('mousemove',  pointerMove);
+          document.addEventListener('touchmove',  pointerMove, { passive: false });
+          document.addEventListener('mouseup',  pointerEnd);
+          document.addEventListener('touchend', pointerEnd);
+      }
+
+      function plPositionPanel() {
+          const group = document.getElementById('floatBtnGroup');
+          const panel = document.getElementById('playlistPanel');
+          if (!panel || panel.style.display === 'none') return;
+          const rect  = group.getBoundingClientRect();
+          const gap   = 10;
+          // Always reset conflicting properties first
+          panel.style.left   = 'auto';
+          panel.style.bottom = 'auto';
+          panel.style.right  = (window.innerWidth - rect.left + gap) + 'px';
+          // Clamp top so panel stays within viewport
+          const panelH = panel.offsetHeight || 420;
+          panel.style.top = Math.max(10, Math.min(rect.top, window.innerHeight - panelH - 10)) + 'px';
+      }
 
       /* ---------- Cached DOM Elements ---------- */
       const elSearchInput    = document.getElementById("searchInput");
@@ -2300,8 +2656,6 @@
         const firstTag = Array.isArray(photo.tags) && photo.tags.length > 0 ? photo.tags[0] : '';
         modalDateTag.textContent = firstTag ? `${photo.date}  ·  ${firstTag}` : (photo.date || '');
 
-        photoCounter.textContent = `${currentPhotoIndex + 1} of ${currentPhotoGroup.length}`;
-
         // --- 4. Update "View Original Post" Button ---
         weiboBtn.className = "action-btn " + btnClass;
         weiboBtn.style.background = ""; // Reset inline style to let CSS take over
@@ -2316,11 +2670,51 @@
         }
 
         // --- 5. Handle Video vs Photo Display ---
-        setMediaElement(imgElement, videoElement, photo.url);
+        const _isVid = isRealVideo(photo);
+        if (_isVid) {
+          imgElement.classList.add("hidden");
+          videoElement.classList.remove("hidden");
+          videoElement.src = photo.url;
+          videoElement.loop = !playlistMode;
+          videoElement.onended = playlistMode ? () => navigatePhoto(1) : null;
+          vcSetup(videoElement);
+          videoElement.play().catch(e => console.log("Video autoplay prevented"));
+        } else {
+          if (videoElement) {
+            videoElement.pause();
+            videoElement.onended = null;
+            videoElement.src = "";
+            videoElement.classList.add("hidden");
+          }
+          imgElement.classList.remove("hidden");
+          imgElement.src = photo.url;
+        }
+
+        // --- playlist modal button & nav bar ---
+        const plNav = document.getElementById('plNavBar');
+        if (_isVid) {
+          const b2 = document.getElementById('plModalAddBtn2');
+          if (b2) b2.style.display = 'inline-block';
+          plSyncModalAddBtn(photo);
+          if (plNav) plNav.style.display = 'flex';
+        } else {
+          const b2 = document.getElementById('plModalAddBtn2');
+          if (b2) b2.style.display = 'none';
+          if (plNav) plNav.style.display = 'none';
+        }
+
+        // --- playlist counter ---
+        const counterText = playlistMode
+            ? `${currentPhotoIndex + 1} / ${currentPhotoGroup.length}`
+            : `${currentPhotoIndex + 1} of ${currentPhotoGroup.length}`;
+        photoCounter.textContent = counterText;
+        const fsPrev = document.getElementById('plFsPrev');
+        const fsNext = document.getElementById('plFsNext');
+        if (fsPrev) fsPrev.disabled = currentPhotoIndex === 0;
+        if (fsNext) fsNext.disabled = currentPhotoIndex === currentPhotoGroup.length - 1;
 
         // --- 6. Update Download Link ---
         // Default download to best available quality: 4K → HD → regular
-        const _isVid = isRealVideo(photo);
         downloadBtn.href = (_isVid && photo.url_4k) ? photo.url_4k
                          : (_isVid && photo.url_hd) ? photo.url_hd
                          : photo.url;
@@ -2340,18 +2734,34 @@
         }
         const badgeQuality = document.getElementById('badgeQuality');
         if (badgeQuality) {
-          if (isRealVideo(photo) && photo.quality === '4k') {
+          if (_isVid && photo.quality === '4k') {
             badgeQuality.textContent = '4K';
             badgeQuality.classList.remove('hidden');
-          } else if (isRealVideo(photo) && photo.quality === '1080p') {
+            badgeQuality.classList.add('is-4k');
+          } else if (_isVid && photo.quality === '1080p') {
             badgeQuality.textContent = '1080P';
             badgeQuality.classList.remove('hidden');
+            badgeQuality.classList.remove('is-4k');
           } else {
             badgeQuality.classList.add('hidden');
+            badgeQuality.classList.remove('is-4k');
           }
         }
 
-        // --- 7. postText pill ---
+        // --- 7. Update Tags ---
+        const tagsContainer = document.getElementById('modalTags');
+        if (tagsContainer) {
+          if (photo.tags && Array.isArray(photo.tags) && photo.tags.length > 0) {
+            tagsContainer.innerHTML = photo.tags.map(tag =>
+              `<span class="modal-tag-pill">#${tag}</span>`
+            ).join('');
+            tagsContainer.style.display = 'flex';
+          } else {
+            tagsContainer.style.display = 'none';
+          }
+        }
+
+        // --- 8. postText pill ---
         const postTextBtn     = document.getElementById("postTextBtn");
         const postTextPanel   = document.getElementById("postTextPanel");
         const postTextContent = document.getElementById("postTextContent");
@@ -2460,8 +2870,9 @@
           prevBtn.disabled = currentPhotoIndex === 0;
           nextBtn.disabled = currentPhotoIndex === currentPhotoGroup.length - 1;
 
-          // Hide arrows if only one photo
-          if (currentPhotoGroup.length <= 1) {
+          const videoVisible = !document.getElementById('modalVideo').classList.contains('hidden');
+          // Hide arrows if only one photo OR if video is visible (video uses pl-fs-controls instead)
+          if (currentPhotoGroup.length <= 1 || videoVisible) {
             prevBtn.style.display = "none";
             nextBtn.style.display = "none";
           } else {
@@ -2492,12 +2903,15 @@
       }
 
       function closeModal() {
-        // NEW: Stop video playback on close
         const videoElement = document.getElementById("modalVideo");
-        if (videoElement) videoElement.pause();
-
+        if (videoElement) {
+          videoElement.pause();
+          videoElement.onended = null;
+          videoElement.src = "";
+        }
         document.getElementById("photoModal").classList.add("hidden");
         document.removeEventListener("keydown", handleKeyboardNavigation);
+        if (playlistMode) { playlistMode = false; plRender(); }
       }
 
       /* ---------- Touch/Swipe Support ---------- */
@@ -2535,10 +2949,11 @@
         setupSearch(); // This will now use the new function
         setupClearSearch(); // ADDED: setup for the new button
         setupIntersectionObserver();
-        setupBackToTop();
+        setupFloatGroup();
         setupDateFilters();
         setupFooterToggle();
         loadPhotoData();
+        plLoad();
       });
 
       /* ---------- Data Loading ---------- */
@@ -2731,7 +3146,7 @@
               ? '<div style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>'
               : "";
             const motionBadge = isMotion
-              ? '<span style="position:absolute;right:4px;bottom:15px;background:rgba(0,150,136,0.75);color:white;border-radius:6px;padding:1px 4px;font-size:9px;font-weight:700;">' + ext + '</span>'
+              ? '<span style="position:absolute;right:4px;bottom:32px;background:rgba(0,150,136,0.75);color:white;border-radius:6px;padding:1px 4px;font-size:9px;font-weight:700;">' + ext + '</span>'
               : "";
             const durBadge = (isVideo && photo.duration)
               ? '<div style="position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 3px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>'
@@ -2747,7 +3162,11 @@
                      alt="Photo ${photo.id}"
                      class="lazy-image">
                 ${motionBadge}
-                <div class="photo-overlay">${photo.date}</div>
+                ${isVideo ? `<button class="pl-card-add" id="plcadd-${photo.id}" onclick="event.stopPropagation();plCardAdd(${photo.id})"><b>＋</b> Playlist</button>` : ''}
+                <div class="photo-overlay">
+                    <span class="photo-date">${photo.date}</span>
+                    <span class="photo-source">${Array.isArray(photo.tags) && photo.tags.length ? photo.tags[0] : ''}</span>
+                </div>
             </div>
         `;
           })
@@ -2853,6 +3272,7 @@
         photosGrid.innerHTML = generatePhotosHTML(
           yearPhotos.slice(startIndex, endIndex),
         );
+        plSyncAllCards();
 
         paginationNav.innerHTML = "";
         if (perPage !== Infinity && totalPhotos > perPage) {
@@ -3023,6 +3443,10 @@
           ),
         );
 
+        // Track filtered videos for playlist "add all"
+        filteredVideosCache = matchingPhotos.filter(p => isRealVideo(p));
+        plUpdateAddAllBtn();
+
         if (matchingPhotos.length === 0) {
           timelineContainer.innerHTML = `
                     <div class="timeline-empty">
@@ -3067,21 +3491,8 @@
 
       /* ---------- Statistics ---------- */
       function updateStats() {
-        if (!currentSearchQuery) {
-          _setStats(photoData.length, new Set(photoData.map((p) => p.year)).size);
-        } else {
-          const matchingPhotos = photoData.filter(
-            (p) =>
-              p.year.includes(currentSearchQuery) ||
-              p.month.toLowerCase().includes(currentSearchQuery) ||
-              p.date.includes(currentSearchQuery) ||
-              (Array.isArray(p.tags) &&
-                p.tags.some((t) =>
-                  String(t).toLowerCase().includes(currentSearchQuery),
-                )),
-          );
-          _setStats(matchingPhotos.length, new Set(matchingPhotos.map((p) => p.year)).size);
-        }
+        const data = currentRenderData.length ? currentRenderData : photoData;
+        _setStats(data.length, new Set(data.map((p) => p.year)).size);
       }
 
       /* ---------- Navigation ---------- */
@@ -3299,24 +3710,6 @@
         return "data:image/svg+xml," + encodeURIComponent(svg);
       }
 
-      /* ---------- Back to Top Button ---------- */
-      function setupBackToTop() {
-        const btn = document.getElementById("back-to-top");
-        if (!btn) return;
-        window.addEventListener(
-          "scroll",
-          () => {
-            window.requestAnimationFrame(() => {
-              btn.classList.toggle("visible", window.scrollY > 300);
-            });
-          },
-          { passive: true },
-        );
-        btn.addEventListener("click", () =>
-          window.scrollTo({ top: 0, behavior: "smooth" }),
-        );
-      }
-
       /* ---------- Footer Toggle Function ---------- */
       function setupFooterToggle() {
         const termsToggle = document.getElementById("terms-toggle");
@@ -3454,6 +3847,10 @@
         // 4. Update Global Render Data
         currentRenderData = filtered;
 
+        // Track filtered videos for playlist "add all"
+        filteredVideosCache = filtered.filter(p => isRealVideo(p));
+        plUpdateAddAllBtn();
+
         // 4. Clear Search Input
         elSearchInput.value = "";
         elClearSearchBtn.style.display = "none";
@@ -3570,5 +3967,21 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Playlist Panel -->
+    <div id="playlistPanel" class="playlist-panel" style="display:none">
+        <div class="playlist-header">
+            <span>🎬 Playlist 播放列表</span>
+            <span class="playlist-count-badge" id="plPanelCount">0</span>
+            <button onclick="plTogglePanel()" style="margin-left:auto;background:rgba(255,255,255,0.2);color:#fff;border:none;border-radius:50%;width:26px;height:26px;font-size:15px;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center">&times;</button>
+        </div>
+        <div class="playlist-list" id="plList"></div>
+        <div class="playlist-footer">
+            <button class="pl-play-btn" onclick="plPlayFromStart()">▶ Play All 播放全部</button>
+            <button class="pl-clear-btn" onclick="plClear()">Clear 清空</button>
+        </div>
+    </div>
+    <div id="plToast"></div>
+
   </body>
 </html>
