@@ -2245,6 +2245,11 @@
       }
 
       function addAllFilteredVideos() {
+          const MAX_VIDEOS = 50;
+          if (filteredVideosCache.length > MAX_VIDEOS) {
+              plToast(`最多只能添加 ${MAX_VIDEOS} 个视频到播放列表 / Max ${MAX_VIDEOS} videos allowed`);
+              return;
+          }
           let added = 0;
           filteredVideosCache.forEach(p => { if (!playlist.some(x => x.id === p.id)) { playlist.push(p); added++; } });
           plSave(); plRender();
