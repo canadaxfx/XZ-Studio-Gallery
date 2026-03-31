@@ -2674,8 +2674,10 @@
         }
 
         // --- 5. Handle Video vs Photo Display ---
+        // _isVid = mp4 files only (for playlist/stats); isMotionUrl = mov/gif (play in modal but managed as photos)
         const _isVid = isRealVideo(photo);
-        if (_isVid) {
+        const _isMotion = isMotionUrl(photo.url);
+        if (_isVid || _isMotion) {
           imgElement.classList.add("hidden");
           videoElement.classList.remove("hidden");
           videoElement.src = photo.url;
@@ -2695,8 +2697,9 @@
         }
 
         // --- playlist modal button & nav bar ---
+        // Only show for mp4 videos, not for mov/gif (they're managed as photos)
         const plNav = document.getElementById('plNavBar');
-        if (_isVid) {
+        if (_isVid && !_isMotion) {
           const b2 = document.getElementById('plModalAddBtn2');
           if (b2) b2.style.display = 'inline-block';
           plSyncModalAddBtn(photo);
@@ -3150,9 +3153,9 @@
               ? '<div style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>'
               : "";
             const motionBadge = isMotion
-              ? '<span style="position:absolute;right:4px;bottom:32px;background:rgba(0,150,136,0.75);color:white;border-radius:6px;padding:1px 4px;font-size:9px;font-weight:700;">' + ext + '</span>'
+              ? '<span style="position:absolute;right:4px;top:4px;background:rgba(0,0,0,0.65);color:white;border-radius:6px;padding:1px 4px;font-size:9px;font-weight:700;">' + ext + '</span>'
               : "";
-            const durBadge = (isVideo && photo.duration)
+            const durBadge = ((isVideo || isClip(photo)) && photo.duration)
               ? '<div style="position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 3px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>'
               : "";
 
