@@ -3804,7 +3804,7 @@
       function isPlayableVideo(url) { return /\.(mp4|mov)$/i.test(url); }
       function isClip(photo) { return photo.clip === true && isVideoUrl(photo.url); }
       function isRealVideo(photo) { return isVideoUrl(photo.url) && !photo.clip; }
-      function isVideoEntry(p) { return isVideoEntry(p); }
+      function isVideoEntry(p) { return isRealVideo(p) || isYouTubeUrl(p.url); }
       function fmtDuration(secs) {
         if (!secs) return '';
         secs = Math.round(secs);
