@@ -1028,6 +1028,7 @@
         pointer-events: none;
       }
       .badge-quality.is-4k { background: rgba(124, 58, 237, 0.85); }
+      .badge-youtube { position: absolute; bottom: 0px; left: 10px; background: rgba(204, 0, 0, 0.85); color: #fff; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 700; z-index: 11; letter-spacing: 0.05em; text-decoration: none; cursor: pointer; }
       .timeline-photo.pl-in-playlist { box-shadow: 0 0 0 2.5px #2563eb, 0 2px 8px rgba(0,0,0,0.1); }
 
       .modal-tags-container {
@@ -1895,6 +1896,7 @@
             playsinline
           ></video>
           <span id="badgeQuality" class="badge-quality hidden"></span>
+          <a id="badgeYT" class="badge-youtube hidden" target="_blank" rel="noopener">YouTube ↗</a>
           <a id="badgeAlt" class="badge-4k hidden" href="#" target="_blank"></a>
           <button
             class="nav-arrow next"
@@ -2793,6 +2795,8 @@
             badgeQuality.classList.remove('is-4k');
           }
         }
+        const badgeYT = document.getElementById('badgeYT');
+        if (badgeYT) { badgeYT.classList.toggle('hidden', !_isYT); if (_isYT) badgeYT.href = photo.url; }
 
         // --- 7. Update Tags ---
         const tagsContainer = document.getElementById('modalTags');
@@ -3118,7 +3122,7 @@
           yearPhotos.sort((a, b) => new Date(b.date) - new Date(a.date)),
         );
 
-        filteredVideosCache = currentRenderData.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
+        filteredVideosCache = currentRenderData.filter(p => isVideoEntry(p));
         plUpdateAddAllBtn();
         createTimelineHTML(photosByYear);
         updateStats();
@@ -3134,7 +3138,7 @@
                         ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ""}
                     </div>`;
         const expandedClass = expandedYears.has(year) ? "expanded" : "";
-        const yearVideos = photos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
+        const yearVideos = photos.filter(p => isVideoEntry(p));
         return `
                     <div class="timeline-year ${expandedClass}" data-year="${year}">
                         <div class="timeline-year-header" onclick="toggleYear('${year}')">
@@ -3196,13 +3200,13 @@
 
             // 2. Overlay badge
             const ext = (photo.url.match(/\.(\w+)$/i) || [])[1]?.toUpperCase();
-            const videoIcon = (isVideo || isYouTubeUrl(photo.url))
+            const videoIcon = isVideoEntry(photo)
               ? '<div style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>'
               : "";
             const motionBadge = isMotion
               ? '<span style="position:absolute;right:4px;top:4px;background:rgba(0,0,0,0.65);color:white;border-radius:6px;padding:1px 4px;font-size:9px;font-weight:700;">' + ext + '</span>'
               : "";
-            const durBadge = ((isVideo || isClip(photo) || isYouTubeUrl(photo.url)) && photo.duration)
+            const durBadge = ((isVideoEntry(photo) || isClip(photo)) && photo.duration)
               ? '<div style="position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 3px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>'
               : "";
 
@@ -3471,8 +3475,8 @@
 
         // 2. Filter photos by query + active media filter
         const matchingPhotos = photoData.filter((p) => {
-          if (currentMediaFilter === 'video' && !isRealVideo(p)) return false;
-          if (currentMediaFilter === 'photo' && isRealVideo(p)) return false;
+          if (currentMediaFilter === 'video' && !isVideoEntry(p)) return false;
+          if (currentMediaFilter === 'photo' && (isVideoEntry(p))) return false;
           return (
             p.year.includes(query) ||
             p.month.toLowerCase().includes(query) ||
@@ -3498,7 +3502,7 @@
         );
 
         // Track filtered videos for playlist "add all"
-        filteredVideosCache = matchingPhotos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
+        filteredVideosCache = matchingPhotos.filter(p => isVideoEntry(p));
         plUpdateAddAllBtn();
 
         if (matchingPhotos.length === 0) {
@@ -3800,6 +3804,7 @@
       function isPlayableVideo(url) { return /\.(mp4|mov)$/i.test(url); }
       function isClip(photo) { return photo.clip === true && isVideoUrl(photo.url); }
       function isRealVideo(photo) { return isVideoUrl(photo.url) && !photo.clip; }
+      function isVideoEntry(p) { return isVideoEntry(p); }
       function fmtDuration(secs) {
         if (!secs) return '';
         secs = Math.round(secs);
@@ -3811,7 +3816,7 @@
       }
 
       function mediaCountLabel(photos) {
-        const videoCount = photos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url)).length;
+        const videoCount = photos.filter(p => isVideoEntry(p)).length;
         const photoCount = photos.length - videoCount;
         const parts = [];
         if (photoCount > 0) parts.push(`${photoCount} 📷`);
@@ -3895,16 +3900,16 @@
 
         // 3. Apply media type filter
         if (currentMediaFilter === 'video') {
-          filtered = filtered.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
+          filtered = filtered.filter(p => isVideoEntry(p));
         } else if (currentMediaFilter === 'photo') {
-          filtered = filtered.filter(p => !isRealVideo(p) && !isYouTubeUrl(p.url));
+          filtered = filtered.filter(p => !isVideoEntry(p));
         }
 
         // 4. Update Global Render Data
         currentRenderData = filtered;
 
         // Track filtered videos for playlist "add all"
-        filteredVideosCache = filtered.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
+        filteredVideosCache = filtered.filter(p => isVideoEntry(p));
         plUpdateAddAllBtn();
 
         // 4. Clear Search Input
