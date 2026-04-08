@@ -2685,7 +2685,27 @@
         // _isVid = mp4 files only (for playlist/stats); isMotionUrl = mov/gif (play in modal but managed as photos)
         const _isVid = isRealVideo(photo);
         const _isMotion = isMotionUrl(photo.url);
-        if (_isVid || _isMotion) {
+        const _isYT = isYouTubeUrl(photo.url);
+
+        let ytFrame = document.getElementById('modalYouTube');
+        if (!_isYT && ytFrame) { ytFrame.src = ''; ytFrame.classList.add('hidden'); }
+
+        if (_isYT) {
+          imgElement.classList.add("hidden");
+          videoElement.classList.add("hidden");
+          if (videoElement) { videoElement.pause(); videoElement.src = ''; }
+          if (!ytFrame) {
+            ytFrame = document.createElement('iframe');
+            ytFrame.id = 'modalYouTube';
+            ytFrame.className = 'modal-photo';
+            ytFrame.style.cssText = 'border:0;background:#000;';
+            ytFrame.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+            ytFrame.setAttribute('allowfullscreen', '');
+            videoElement.parentNode.insertBefore(ytFrame, videoElement.nextSibling);
+          }
+          ytFrame.classList.remove('hidden');
+          ytFrame.src = `https://www.youtube.com/embed/${getYouTubeId(photo.url)}?autoplay=1&rel=0`;
+        } else if (_isVid || _isMotion) {
           imgElement.classList.add("hidden");
           videoElement.classList.remove("hidden");
           videoElement.src = photo.url;
@@ -2705,9 +2725,9 @@
         }
 
         // --- playlist modal button & nav bar ---
-        // Only show for mp4 videos, not for mov/gif (they're managed as photos)
+        // Only show for mp4 videos, not for mov/gif (they're managed as photos) or YouTube
         const plNav = document.getElementById('plNavBar');
-        if (_isVid && !_isMotion) {
+        if (_isVid && !_isMotion && !_isYT) {
           const b2 = document.getElementById('plModalAddBtn2');
           if (b2) b2.style.display = 'inline-block';
           plSyncModalAddBtn(photo);
@@ -2729,10 +2749,21 @@
         if (fsNext) fsNext.disabled = currentPhotoIndex === currentPhotoGroup.length - 1;
 
         // --- 6. Update Download Link ---
-        // Default download to best available quality: 4K → HD → regular
-        downloadBtn.href = (_isVid && photo.url_4k) ? photo.url_4k
-                         : (_isVid && photo.url_hd) ? photo.url_hd
-                         : photo.url;
+        if (_isYT) {
+          if (photo.download_url) {
+            downloadBtn.href = photo.download_url;
+            downloadBtn.setAttribute('download', '');
+            downloadBtn.style.display = '';
+          } else {
+            downloadBtn.style.display = 'none';
+          }
+        } else {
+          downloadBtn.style.display = '';
+          downloadBtn.href = (_isVid && photo.url_4k) ? photo.url_4k
+                           : (_isVid && photo.url_hd) ? photo.url_hd
+                           : photo.url;
+          downloadBtn.setAttribute('download', '');
+        }
         const badgeAlt = document.getElementById('badgeAlt');
         if (badgeAlt) {
           if (_isVid && photo.url_4k) {
@@ -2830,6 +2861,11 @@
       }
 
       function generateThumbnail(originalUrl, size = "m") {
+        // 0. YouTube — use YouTube CDN thumbnail
+        if (isYouTubeUrl(originalUrl)) {
+          const ytId = getYouTubeId(originalUrl);
+          return ytId ? `https://img.youtube.com/vi/${ytId}/mqdefault.jpg` : '';
+        }
         // 1. Handle New Cloudflare R2 Links
         if (originalUrl.includes("/full/")) {
           let thumbUrl = originalUrl.replace("/full/", "/thumbs/");
@@ -2924,6 +2960,8 @@
           videoElement.onended = null;
           videoElement.src = "";
         }
+        const ytFrame = document.getElementById('modalYouTube');
+        if (ytFrame) { ytFrame.src = ''; ytFrame.classList.add('hidden'); }
         document.getElementById("photoModal").classList.add("hidden");
         document.removeEventListener("keydown", handleKeyboardNavigation);
         if (playlistMode) { playlistMode = false; plRender(); }
@@ -3080,7 +3118,7 @@
           yearPhotos.sort((a, b) => new Date(b.date) - new Date(a.date)),
         );
 
-        filteredVideosCache = currentRenderData.filter(p => isRealVideo(p));
+        filteredVideosCache = currentRenderData.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
         plUpdateAddAllBtn();
         createTimelineHTML(photosByYear);
         updateStats();
@@ -3096,7 +3134,7 @@
                         ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ""}
                     </div>`;
         const expandedClass = expandedYears.has(year) ? "expanded" : "";
-        const yearVideos = photos.filter(p => isRealVideo(p));
+        const yearVideos = photos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
         return `
                     <div class="timeline-year ${expandedClass}" data-year="${year}">
                         <div class="timeline-year-header" onclick="toggleYear('${year}')">
@@ -3158,13 +3196,13 @@
 
             // 2. Overlay badge
             const ext = (photo.url.match(/\.(\w+)$/i) || [])[1]?.toUpperCase();
-            const videoIcon = isVideo
+            const videoIcon = (isVideo || isYouTubeUrl(photo.url))
               ? '<div style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>'
               : "";
             const motionBadge = isMotion
               ? '<span style="position:absolute;right:4px;top:4px;background:rgba(0,0,0,0.65);color:white;border-radius:6px;padding:1px 4px;font-size:9px;font-weight:700;">' + ext + '</span>'
               : "";
-            const durBadge = ((isVideo || isClip(photo)) && photo.duration)
+            const durBadge = ((isVideo || isClip(photo) || isYouTubeUrl(photo.url)) && photo.duration)
               ? '<div style="position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 3px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>'
               : "";
 
@@ -3460,7 +3498,7 @@
         );
 
         // Track filtered videos for playlist "add all"
-        filteredVideosCache = matchingPhotos.filter(p => isRealVideo(p));
+        filteredVideosCache = matchingPhotos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
         plUpdateAddAllBtn();
 
         if (matchingPhotos.length === 0) {
@@ -3756,6 +3794,8 @@
       }
 
       function isVideoUrl(url) { return /\.mp4$/i.test(url); }
+      function isYouTubeUrl(url) { return /youtube\.com\/watch|youtu\.be\//.test(url); }
+      function getYouTubeId(url) { const m = url.match(/[?&]v=([^&]+)/)||url.match(/youtu\.be\/([^?/]+)/); return m?m[1]:null; }
       function isMotionUrl(url) { return /\.(mov|gif)$/i.test(url); }
       function isPlayableVideo(url) { return /\.(mp4|mov)$/i.test(url); }
       function isClip(photo) { return photo.clip === true && isVideoUrl(photo.url); }
@@ -3771,7 +3811,7 @@
       }
 
       function mediaCountLabel(photos) {
-        const videoCount = photos.filter(p => isRealVideo(p)).length;
+        const videoCount = photos.filter(p => isRealVideo(p) || isYouTubeUrl(p.url)).length;
         const photoCount = photos.length - videoCount;
         const parts = [];
         if (photoCount > 0) parts.push(`${photoCount} 📷`);
@@ -3855,16 +3895,16 @@
 
         // 3. Apply media type filter
         if (currentMediaFilter === 'video') {
-          filtered = filtered.filter(p => isRealVideo(p));
+          filtered = filtered.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
         } else if (currentMediaFilter === 'photo') {
-          filtered = filtered.filter(p => !isRealVideo(p));
+          filtered = filtered.filter(p => !isRealVideo(p) && !isYouTubeUrl(p.url));
         }
 
         // 4. Update Global Render Data
         currentRenderData = filtered;
 
         // Track filtered videos for playlist "add all"
-        filteredVideosCache = filtered.filter(p => isRealVideo(p));
+        filteredVideosCache = filtered.filter(p => isRealVideo(p) || isYouTubeUrl(p.url));
         plUpdateAddAllBtn();
 
         // 4. Clear Search Input
