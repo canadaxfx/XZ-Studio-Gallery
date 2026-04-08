@@ -3079,6 +3079,8 @@
           yearPhotos.sort((a, b) => new Date(b.date) - new Date(a.date)),
         );
 
+        filteredVideosCache = currentRenderData.filter(p => isRealVideo(p));
+        plUpdateAddAllBtn();
         createTimelineHTML(photosByYear);
         updateStats();
         initializeGame();
