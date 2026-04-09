@@ -799,6 +799,8 @@
         object-fit: contain;
         transition: opacity 0.3s ease;
       }
+      .modal-youtube { width: 100%; flex: 1; border: 0; background: #000; min-height: 0; display: block; }
+      .modal-photo-container.yt-active { display: flex !important; flex-direction: column; align-items: stretch; min-height: clamp(250px, 50vh, 600px); }
 
       /* Navigation Arrows */
       .nav-arrow {
@@ -2690,7 +2692,11 @@
         const _isYT = isYouTubeUrl(photo.url);
 
         let ytFrame = document.getElementById('modalYouTube');
-        if (!_isYT && ytFrame) { ytFrame.src = ''; ytFrame.classList.add('hidden'); }
+        if (!_isYT && ytFrame) {
+          ytFrame.src = '';
+          ytFrame.classList.add('hidden');
+          ytFrame.parentNode && ytFrame.parentNode.classList.remove('yt-active');
+        }
 
         if (_isYT) {
           imgElement.classList.add("hidden");
@@ -2699,13 +2705,13 @@
           if (!ytFrame) {
             ytFrame = document.createElement('iframe');
             ytFrame.id = 'modalYouTube';
-            ytFrame.className = 'modal-photo';
-            ytFrame.style.cssText = 'border:0;background:#000;';
+            ytFrame.className = 'modal-youtube';
             ytFrame.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
             ytFrame.setAttribute('allowfullscreen', '');
             videoElement.parentNode.insertBefore(ytFrame, videoElement.nextSibling);
           }
           ytFrame.classList.remove('hidden');
+          videoElement.parentNode.classList.add('yt-active');
           ytFrame.src = `https://www.youtube.com/embed/${getYouTubeId(photo.url)}?autoplay=1&rel=0`;
         } else if (_isVid || _isMotion) {
           imgElement.classList.add("hidden");
@@ -2965,7 +2971,11 @@
           videoElement.src = "";
         }
         const ytFrame = document.getElementById('modalYouTube');
-        if (ytFrame) { ytFrame.src = ''; ytFrame.classList.add('hidden'); }
+        if (ytFrame) {
+          ytFrame.src = '';
+          ytFrame.classList.add('hidden');
+          ytFrame.parentNode && ytFrame.parentNode.classList.remove('yt-active');
+        }
         document.getElementById("photoModal").classList.add("hidden");
         document.removeEventListener("keydown", handleKeyboardNavigation);
         if (playlistMode) { playlistMode = false; plRender(); }
