@@ -362,7 +362,7 @@
         border: 1px solid rgba(255, 255, 255, 0.3);
       }
       .timeline-year-count {
-        font-size: 14px;
+        font-size: 11px;
         font-weight: 600;
         background: rgba(94, 159, 216, 0.5);
         color: white;
@@ -1346,7 +1346,7 @@
           font-size: 14px;
         }
         .timeline-year-count {
-          font-size: 12px;
+          font-size: 10px;
           padding: 4px 10px;
         }
         .preview-thumb {
@@ -3209,7 +3209,9 @@
 
             // 2. Overlay badge
             const ext = (photo.url.match(/\.(\w+)$/i) || [])[1]?.toUpperCase();
-            const videoIcon = isVideoEntry(photo)
+            const videoIcon = isYouTubeUrl(photo.url)
+              ? '<div style="position:absolute;top:4px;right:4px;background:#ff0000;color:white;border-radius:4px;width:28px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;z-index:2;">▶</div>'
+              : isVideoEntry(photo)
               ? '<div style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:white;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:12px;z-index:2;">▶</div>'
               : "";
             const motionBadge = isMotion
@@ -3861,11 +3863,13 @@
       }
 
       function mediaCountLabel(photos) {
-        const videoCount = photos.filter(p => isVideoEntry(p)).length;
-        const photoCount = photos.length - videoCount;
+        const ytCount = photos.filter(p => isYouTubeUrl(p.url)).length;
+        const videoCount = photos.filter(p => isRealVideo(p)).length;
+        const photoCount = photos.length - ytCount - videoCount;
         const parts = [];
         if (photoCount > 0) parts.push(`${photoCount} 📷`);
         if (videoCount > 0) parts.push(`${videoCount} 🎬`);
+        if (ytCount > 0) parts.push(`${ytCount} <span style="display:inline-flex;align-items:center;background:#ff0000;color:white;border-radius:3px;padding:0 4px;font-size:9px;font-weight:700;vertical-align:middle;">▶</span>`);
         return parts.join(' ') || '0 items';
       }
 
