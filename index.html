@@ -3318,6 +3318,7 @@
               (p.description && p.description.toLowerCase().includes(query)) ||
               (Array.isArray(p.tags) &&
                 p.tags.some((t) => String(t).toLowerCase().includes(query))) ||
+              (Array.isArray(p.englishTags) && p.englishTags.some(t => String(t).toLowerCase().includes(query))) ||
               (p.postText && p.postText.toLowerCase().includes(query)),
           );
         }
@@ -3493,7 +3494,9 @@
             p.month.toLowerCase().includes(query) ||
             p.date.includes(query) ||
             (Array.isArray(p.tags) &&
-              p.tags.some((t) => String(t).toLowerCase().includes(query)))
+              p.tags.some((t) => String(t).toLowerCase().includes(query))) ||
+            (Array.isArray(p.englishTags) &&
+              p.englishTags.some((t) => String(t).toLowerCase().includes(query)))
           );
         });
 
