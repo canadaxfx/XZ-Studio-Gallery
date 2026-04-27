@@ -8,6 +8,9 @@
       name="copyright"
       content="Content curation and organization © 2026 CanadaXFX. Unauthorized AI training prohibited."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,600;1,700&display=swap" rel="stylesheet">
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-QP979YZW73"
@@ -24,13 +27,13 @@
     <style>
 /* ===== PLAYLIST ===== */
 .playlist-panel{position:fixed;width:300px;max-height:420px;background:#fff;border-radius:12px;box-shadow:0 6px 28px rgba(0,0,0,.22);z-index:7999;display:flex;flex-direction:column;overflow:hidden}
-.playlist-header{display:flex;align-items:center;gap:8px;padding:12px 14px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:12px 12px 0 0;color:#fff;cursor:pointer;font-size:14px;font-weight:700;flex-shrink:0;user-select:none;letter-spacing:0.2px}
+.playlist-header{display:flex;align-items:center;gap:8px;padding:12px 14px;background:linear-gradient(135deg,#150205,#200407);border-radius:12px 12px 0 0;color:#fff;cursor:pointer;font-size:14px;font-weight:700;flex-shrink:0;user-select:none;letter-spacing:0.2px}
 .playlist-panel.collapsed .playlist-header{border-radius:12px}
 .playlist-count-badge{background:rgba(255,255,255,.25);border-radius:10px;padding:2px 8px;font-size:12px;font-weight:700}
 .playlist-list{overflow-y:auto;flex:1;min-height:0}
 .playlist-item{display:flex;align-items:center;gap:8px;padding:7px 10px;cursor:pointer;border-bottom:1px solid #f3f4f6;font-size:12px}
 .playlist-item:hover{background:#f9fafb}
-.playlist-item.pl-active{background:#eff6ff;border-left:3px solid #2563eb}
+.playlist-item.pl-active{background:#fdf6ee;border-left:3px solid #A07800}
 .playlist-item img{width:52px;height:36px;object-fit:cover;border-radius:4px;flex-shrink:0;background:#e5e7eb}
 .playlist-item-info{flex:1;min-width:0}
 .playlist-item-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#374151;font-weight:500}
@@ -38,14 +41,14 @@
 .playlist-remove-btn{flex-shrink:0;background:#e5e7eb;border:none;cursor:pointer;color:#6b7280;font-size:14px;font-weight:700;line-height:1;padding:0;width:22px;height:22px;border-radius:50%;text-align:center;line-height:22px}
 .playlist-remove-btn:hover{background:#fecaca;color:#dc2626}
 .playlist-footer{display:flex;gap:6px;padding:8px 10px;border-top:1px solid #e5e7eb;flex-shrink:0}
-.pl-play-btn{flex:1;padding:6px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600}
+.pl-play-btn{flex:1;padding:6px;background:linear-gradient(135deg,#E8C040,#B89010,#DDB820);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600}
 .pl-clear-btn{padding:6px 10px;background:#fee2e2;color:#dc2626;border:none;border-radius:6px;cursor:pointer;font-size:12px}
 .pl-card-add{position:absolute;bottom:26px;right:4px;background:rgba(0,0,0,.65);color:#fff;border:none;border-radius:4px;padding:2px 6px;font-size:11px;cursor:pointer;opacity:1;z-index:3;white-space:nowrap}
-.pl-card-add.pl-added{background:rgba(37,99,235,.8)}
-.pl-add-all-btn{display:none;padding:6px 11px;background:#1f2937;color:#fff;border:none;border-radius:6px;font-size:12px;cursor:pointer;white-space:nowrap;margin-top:6px}
-.pl-modal-add-btn{padding:3px 10px;background:rgba(37,99,235,.12);color:#2563eb;border:1px solid #bfdbfe;border-radius:12px;font-size:12px;cursor:pointer;display:none;white-space:nowrap}
-.pl-modal-add-btn:hover{background:#dbeafe}
-.pl-modal-add-btn.pl-in-list{background:rgba(37,99,235,.12);color:#2563eb;border-color:#93c5fd;box-shadow:0 0 0 1.5px #2563eb}
+.pl-card-add.pl-added{background:rgba(160,120,0,.9)}
+.pl-add-all-btn{display:none;padding:5px 14px;background:transparent;color:#A07800;border:1px solid rgba(160,120,0,0.45);border-radius:20px;font-size:11px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .2s,border-color .2s}.pl-add-all-btn:hover{background:rgba(160,120,0,0.08);border-color:rgba(160,120,0,0.75)}
+.pl-modal-add-btn{padding:3px 10px;background:rgba(160,120,0,.12);color:#A07800;border:1px solid #e8d49a;border-radius:12px;font-size:12px;cursor:pointer;display:none;white-space:nowrap}
+.pl-modal-add-btn:hover{background:rgba(160,120,0,.2)}
+.pl-modal-add-btn.pl-in-list{background:rgba(160,120,0,.12);color:#A07800;border-color:#d4b84a;box-shadow:0 0 0 1.5px #A07800}
 .pl-counter-badge{background:#1f2937;color:#fff;padding:2px 9px;border-radius:10px;font-size:11px;margin-left:5px;display:none}
 #plToast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%);background:#1f2937;color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;z-index:9999;pointer-events:none;opacity:0;transition:opacity .3s}
 @media(max-width:600px){.playlist-panel{width:calc(100vw - 90px)}}
@@ -76,8 +79,8 @@
 }
 .float-btn {
     width: 58px; height: 58px; border-radius: 50%;
-    border: 2px solid rgba(94,159,216,0.4);
-    background: #fff; color: #5E9FD8;
+    border: 2px solid rgba(196,18,48,0.6);
+    background: #380a14; color: #A07800;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     cursor: pointer; box-shadow: 0 4px 18px rgba(0,0,0,0.15);
@@ -87,11 +90,11 @@
     overflow: hidden;
 }
 .float-btn:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(0,0,0,0.22); }
-#plFloatBtn { background: linear-gradient(135deg,#2563eb,#7c3aed); color:#fff; border-color:rgba(255,255,255,0.3); font-size:20px; width:68px; height:68px; overflow:visible; }
+#plFloatBtn { background: linear-gradient(135deg,#E8C040,#B89010,#DDB820); color:#fff; border-color:rgba(255,255,255,0.3); font-size:20px; width:68px; height:68px; overflow:visible; }
 #plFloatBadge { position:absolute; top:-3px; right:-3px; background:#ef4444; color:#fff; border-radius:10px; font-size:10px; font-weight:700; padding:1px 5px; min-width:18px; text-align:center; display:none; line-height:1.6; }
 #backToTopFloat { opacity:0.88; visibility:visible; }
 .float-top-text { font-size:9px; font-weight:700; line-height:1.3; margin-top:1px; text-align:center; }
-#backToTopFloat .float-top-text { color:#4A8BC8; }
+#backToTopFloat .float-top-text { color:#A07800; }
 </style>
     <style>
       * {
@@ -101,7 +104,10 @@
       }
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #1F2937 0%, #2D3748 100%);
+        background:
+          radial-gradient(ellipse 80% 45% at 50% 0%, rgba(196, 18, 48, 0.18) 0%, transparent 100%),
+          radial-gradient(ellipse 110% 90% at 50% 50%, transparent 38%, rgba(0, 0, 0, 0.5) 100%),
+          linear-gradient(160deg, #150205 0%, #200407 100%);
         min-height: 100vh;
         color: #333;
       }
@@ -110,29 +116,121 @@
         margin: 0 auto;
         padding: 20px;
       }
+      h1 {
+        font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+        font-size: clamp(1.4rem, 4vw, 2.2rem);
+        font-weight: 400;
+        line-height: 1.35;
+        margin-bottom: 4px;
+        color: white;
+        text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+      }
+      .title-highlight {
+        font-style: italic;
+        font-weight: 700;
+        color: #A07800;
+      }
+      .title-zh {
+        font-size: 0.72em;
+        font-weight: 700;
+        font-style: normal;
+        color: rgba(255, 255, 255, 0.9);
+      }
       header {
         text-align: center;
-        padding: 16px 0;
+        padding: 12px 0 8px;
         color: white;
       }
-      h1 {
-        font-size: 1.4rem;
-        margin-bottom: 10px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      header::after {
+        content: '';
+        display: block;
+        height: 2px;
+        background: linear-gradient(90deg, transparent 0%, rgba(220, 170, 20, 0.6) 15%, rgba(220, 170, 20, 1) 50%, rgba(220, 170, 20, 0.6) 85%, transparent 100%);
+        margin-top: 10px;
       }
       .subtitle {
         font-size: 0.8rem;
         opacity: 1;
+        margin-top: 0;
+      }
+      .header-links-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        margin: 6px 0 0;
+      }
+      .header-links-desc {
+        font-size: 11.5px;
+        color: rgba(255, 255, 255, 0.55);
+        font-style: italic;
+        letter-spacing: 0.01em;
+        line-height: 1.6;
+        text-align: center;
+      }
+      .header-links-desc .desc-en,
+      .header-links-desc .desc-zh {
+        display: block;
+      }
+      .header-links-desc a {
+        color: rgba(255, 255, 255, 0.55);
+        text-decoration: underline;
+      }
+      .header-links-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .header-link-card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 7px 14px 7px 12px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 3px solid rgba(220, 170, 20, 0.75);
+        text-decoration: none;
+        transition: background 0.2s ease, border-color 0.2s ease;
+      }
+      .header-link-card:hover {
+        background: rgba(255, 255, 255, 0.09);
+        border-left-color: rgba(220, 170, 20, 1);
+      }
+      .header-link-card-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.35;
+      }
+      .card-en {
+        font-size: 12px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .card-zh {
+        font-size: 10px;
+        color: rgba(220, 170, 20, 0.8);
+      }
+      .card-arrow {
+        font-size: 13px;
+        color: rgba(220, 170, 20, 0.6);
+        flex-shrink: 0;
+      }
+      @media (max-width: 768px) {
+        .header-links-row { gap: 8px; }
+        .header-link-card { padding: 6px 11px 6px 10px; }
+        .card-en { font-size: 11px; }
       }
       .nav-buttons {
         display: flex;
         justify-content: center;
         gap: 15px;
-        margin: 10px 0 12px;
+        margin: 6px 0 12px;
       }
       .nav-btn,
       .btn {
-        padding: 15px 15px;
+        padding: 10px 15px;
         border: none;
         border-radius: 25px;
         cursor: pointer;
@@ -144,25 +242,28 @@
       }
       .nav-btn.active,
       .btn.primary {
-        background: linear-gradient(45deg, #5E9FD8, #4A8BC8);
+        background: transparent;
         color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(94, 159, 216, 0.3);
+        transform: none;
+        box-shadow: none;
+        border: 1.5px solid rgba(255, 255, 255, 0.82);
       }
       .nav-btn:not(.active) {
-        background: rgba(94, 159, 216, 0.15);
-        color: white;
-        backdrop-filter: blur(10px);
+        background: transparent;
+        color: rgba(255, 255, 255, 0.65);
+        border-color: transparent;
       }
       .nav-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        color: white;
+        transform: translateY(-1px);
+        border-color: rgba(255, 255, 255, 0.5);
+        box-shadow: none;
       }
       .content-section {
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(253, 245, 240, 0.98);
         border-radius: 20px;
         padding: 15px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 2px rgba(48, 8, 16, 0.1), 0 12px 32px -8px rgba(48, 8, 16, 0.28);
         backdrop-filter: blur(10px);
       }
       .hidden {
@@ -207,17 +308,30 @@
       .search-bar {
         width: 100%;
         max-width: 500px;
-        padding: 15px;
-        border: 2px solid #e0e0e0;
-        border-radius: 25px;
+        padding: 13px 16px 13px 44px;
+        border: 1px solid #d8ccb8;
+        background-color: #f8f4eb;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='8'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>");
+        background-repeat: no-repeat;
+        background-position: 16px center;
+        border-radius: 14px;
         font-size: 13px;
         margin: 0 auto 15px;
         display: block;
-        transition: border-color 0.3s ease;
+        transition: all 0.18s ease;
+        font-family: inherit;
+        color: #0f172a;
+      }
+      .search-bar::placeholder { color: #94a3b8; }
+      .search-bar:hover {
+        border-color: #cbd5e1;
+        background-color: #fff;
       }
       .search-bar:focus {
         outline: none;
-        border-color: #5E9FD8;
+        border-color: #A07800;
+        background-color: #fff;
+        box-shadow: 0 0 0 3px rgba(160, 120, 0, 0.2);
       }
       #clearSearchBtn {
         display: none; /* Hidden by default */
@@ -246,21 +360,24 @@
         margin: 0 auto 15px;
       }
       .stat-card {
-        background: linear-gradient(135deg, #1F2937 0%, #2D3748 100%);
+        background: linear-gradient(135deg, #420d18 0%, #300810 100%);
         color: white;
         padding: 10px 12px;
         border-radius: 15px;
         text-align: center;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(220, 170, 20, 0.25);
+        box-shadow: 0 4px 16px rgba(48, 8, 16, 0.35), inset 0 1px 0 rgba(220, 170, 20, 0.12);
       }
       .stat-number {
-        font-size: 0.75rem;
+        font-size: 0.9rem;
         font-weight: bold;
-        margin-bottom: 0px;
+        margin-bottom: 2px;
+        color: rgba(255, 255, 255, 0.95);
       }
       .stat-label {
         font-size: 9px;
-        opacity: 0.9;
+        color: rgba(220, 170, 20, 0.75);
+        font-weight: 500;
       }
 
       /* Timeline Styles */
@@ -270,14 +387,14 @@
       }
       .timeline-year {
         margin-bottom: 20px;
-        border: 1px solid #e0e0e0;
+        border: 1px solid #d8ccb8;
         border-radius: 15px;
         overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        background: #fdf5f0;
       }
       .timeline-year-header {
-        background: linear-gradient(45deg, #1F2937, #2D3748);
+        background: linear-gradient(45deg, #300810, #420d18);
         color: white;
         padding: 15px 20px 28px;
         font-size: 16px;
@@ -301,7 +418,7 @@
         white-space: nowrap;
       }
       .timeline-year-header:hover {
-        background: linear-gradient(45deg, #2D3748, #374151);
+        background: linear-gradient(45deg, #300810, #420d18);
         transform: translateY(-1px);
       }
       .year-header-content {
@@ -314,8 +431,11 @@
         margin-bottom: 10px;
       }
       .year-title {
-        font-size: 16px;
-        font-weight: bold;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 22px;
+        font-weight: 700;
+        font-style: italic;
+        color: #A07800;
         display: flex;
         align-items: center;
         gap: 8px;
@@ -323,12 +443,15 @@
       .gallery-id-badge {
         font-size: 9px;
         font-weight: 800;
+        font-style: normal;
+        font-family: "Segoe UI", sans-serif;
         letter-spacing: 0.05em;
         text-transform: uppercase;
         padding: 2px 7px;
         border-radius: 8px;
-        background: #3B82F6;
+        background: linear-gradient(135deg, #E8C040 0%, #B89010 100%);
         color: white;
+        border: none;
       }
       .year-preview {
         display: flex;
@@ -364,7 +487,7 @@
       .timeline-year-count {
         font-size: 11px;
         font-weight: 600;
-        background: rgba(94, 159, 216, 0.5);
+        background: linear-gradient(135deg, #E8C040 0%, #B89010 50%, #DDB820 100%);
         color: white;
         padding: 5px 12px;
         border-radius: 20px;
@@ -379,7 +502,7 @@
       }
       .timeline-year-content {
         padding: 20px;
-        background: white;
+        background: #fdf5f0;
         display: none;
       }
       .timeline-year.expanded .timeline-year-content {
@@ -455,8 +578,8 @@
       .year-controls select {
         padding: 6px 10px;
         border-radius: 8px;
-        border: 1px solid #ccc;
-        background-color: #f8f9fa;
+        border: 1px solid #d8ccb8;
+        background-color: #f8f4eb;
         font-size: 13px;
         cursor: pointer;
       }
@@ -472,17 +595,17 @@
         min-width: 40px;
         padding: 10px;
         font-size: 13px;
-        background: rgba(94, 159, 216, 0.1);
-        color: #5E9FD8;
-        border: 1px solid #5E9FD8;
+        background: rgba(160, 120, 0, 0.1);
+        color: #A07800;
+        border: 1px solid #A07800;
       }
       .pagination-nav .btn:hover {
-        background: rgba(94, 159, 216, 0.2);
+        background: rgba(160, 120, 0, 0.2);
         transform: translateY(-2px);
       }
       .pagination-nav .btn.primary,
       .pagination-nav .btn[disabled] {
-        background: linear-gradient(45deg, #5E9FD8, #4A8BC8);
+        background: linear-gradient(135deg, #E8C040 0%, #B89010 50%, #DDB820 100%);
         color: white;
         transform: none;
         cursor: default;
@@ -544,12 +667,12 @@
         text-align: center;
         padding: 60px 20px;
         color: #666;
-        background: white;
+        background: #fdf5f0;
         border-radius: 15px;
-        border: 2px dashed #e0e0e0;
+        border: 2px dashed #d8ccb8;
       }
       .timeline-empty h3 {
-        color: #5E9FD8;
+        color: #A07800;
         margin-bottom: 10px;
       }
 
@@ -563,19 +686,52 @@
         flex-wrap: wrap;
       }
 
-      .media-filter-tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 15px; }
-      .media-tab { background: #f0f4f8; color: #111; border: 1px solid #d0d8e0; border-radius: 20px; padding: 4px 16px; font-size: 13px; cursor: pointer; transition: all 0.2s; }
-      .media-tab:hover { background: #e0eaf4; color: #2c5f8a; border-color: #5E9FD8; }
-      .media-tab.active { background: linear-gradient(45deg, #5E9FD8, #4A8BC8); color: white; font-weight: 600; border-color: transparent; }
+      .media-filter-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        margin: 0 auto 15px;
+        padding: 4px;
+        background: #ede7d6;
+        border: 1px solid #d8ccb8;
+        border-radius: 12px;
+        width: fit-content;
+        max-width: 100%;
+      }
+      .media-filter-tabs-wrap { display: flex; justify-content: center; }
+      .media-tab {
+        background: transparent;
+        color: #5a4f3d;
+        border: none;
+        border-radius: 9px;
+        padding: 6px 16px;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.18s ease;
+        font-family: inherit;
+      }
+      .media-tab:hover { background: rgba(244, 63, 94, 0.1); color: #f43f5e; }
+      .media-tab.active {
+        background: linear-gradient(135deg, #E8C040 0%, #B89010 50%, #DDB820 100%);
+        color: white;
+        font-weight: 600;
+        box-shadow: 0 1px 3px rgba(160, 120, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.06);
+      }
+      .media-tab.active:hover { background: #7a6000; }
 
       .date-select-wrapper {
         display: flex;
         gap: 5px;
-        background: white;
+        background: #fdf5f0;
         padding: 5px 10px;
         border-radius: 25px;
-        border: 2px solid #e0e0e0; /* Matches your search bar style */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        border: 1.5px solid rgba(160, 120, 0, 0.35);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        transition: border-color 0.2s ease;
+      }
+      .date-select-wrapper:focus-within {
+        border-color: rgba(160, 120, 0, 0.7);
       }
 
       .date-select-wrapper select {
@@ -590,7 +746,7 @@
       }
 
       .date-select-wrapper select:focus {
-        color: #5E9FD8;
+        color: #A07800;
       }
 
       .reset-date-btn {
@@ -598,7 +754,7 @@
         height: 30px;
         border-radius: 50%;
         border: none;
-        background: linear-gradient(45deg, #5E9FD8, #4A8BC8);
+        background: linear-gradient(135deg, #E8C040 0%, #B89010 50%, #DDB820 100%);
         color: white;
         cursor: pointer;
         font-weight: bold;
@@ -680,7 +836,7 @@
       }
 
       .modal-content {
-        background: white;
+        background: #fdf5f0;
         border-radius: 15px;
         max-width: 700px;
         max-height: 90vh;
@@ -698,8 +854,8 @@
         display: flex;
         flex-direction: column;
         padding: 6px 14px 5px;
-        border-bottom: 1px solid #e0e0e0;
-        background: #f8f9fa;
+        border-bottom: 1px solid #d8ccb8;
+        background: #ede7d6;
         border-radius: 15px 15px 0 0;
         flex-shrink: 0;
         gap: 3px;
@@ -723,8 +879,8 @@
       }
 
       .photo-counter {
-        font-weight: 600;
-        color: #5E9FD8;
+        font-weight: 700;
+        color: #A07800;
         font-size: 12px;
         width: 50px;
         flex-shrink: 0;
@@ -754,20 +910,20 @@
       .post-text-pill {
         font-size: 11px;
         padding: 3px 10px;
-        background: #e0e7ff;
-        color: #4338ca;
+        background: #ede7d6;
+        color: #7a5f1a;
         border-radius: 12px;
-        border: 1px solid #c7d2fe;
+        border: 1px solid #d8ccb8;
         cursor: pointer;
         transition: all 0.2s ease;
         font-family: inherit;
         white-space: nowrap;
       }
-      .post-text-pill:hover { background-color: #e0e7ff; filter: brightness(0.95); }
+      .post-text-pill:hover { background-color: #ede7d6; filter: brightness(0.95); }
       #postTextPanel {
         padding: 1px 16px;
-        background: #f0f4ff;
-        border-bottom: 1px solid #c7d2fe;
+        background: #f0ead8;
+        border-bottom: 1px solid #d8ccb8;
         text-align: left;
         font-size: 13px;
         line-height: 1.3;
@@ -852,8 +1008,8 @@
       /* Thumbnail Strip */
       .thumbnail-strip {
         padding: 15px 20px;
-        background: #f8f9fa;
-        border-top: 1px solid #e0e0e0;
+        background: #ede7d6;
+        border-top: 1px solid #d8ccb8;
         overflow-x: auto;
         white-space: nowrap;
         border-radius: 0 0 15px 15px;
@@ -880,19 +1036,19 @@
 
       .thumbnail:hover {
         transform: scale(1.1);
-        border-color: #5E9FD8;
+        border-color: #A07800;
       }
 
       .thumbnail.active {
-        border-color: #5E9FD8;
-        box-shadow: 0 0 0 2px rgba(94, 159, 216, 0.3);
+        border-color: #A07800;
+        box-shadow: 0 0 0 2px rgba(160, 120, 0, 0.35);
       }
 
       /* Photo Actions Panel */
       .photo-info-panel {
         padding: 8px 10px;
-        background: white;
-        border-top: 1px solid #e0e0e0;
+        background: #fdf5f0;
+        border-top: 1px solid #d8ccb8;
         max-height: 250px;
         overflow-y: auto;
         flex-shrink: 0;
@@ -918,11 +1074,11 @@
 
       /* Enhanced Download Section */
       .download-section {
-        background: #f8f9fa;
+        background: #ede7d6;
         border-radius: 15px;
         padding: 8px;
         margin-top: 0px;
-        border: 2px solid #e9ecef;
+        border: 2px solid #d8ccb8;
       }
 
       .download-section h4 {
@@ -958,46 +1114,45 @@
       }
 
       .source-btn.weibo {
-        background-color: #f5c518; /* Weibo Gold */
-        color: #000; /* Black text for contrast on yellow */
-        border: 1px solid #e0b000;
+        background: linear-gradient(135deg, #3a0910 0%, #500f1c 100%);
+        color: white;
+        border: none;
       }
 
       .source-btn.weibo:hover {
-        background-color: #e0b000;
+        background: linear-gradient(135deg, #500f1c, #420d18);
       }
 
-      /* RedNote Button - Red */
       .source-btn.rednote {
-        background-color: #ff2442; /* RedNote Red */
+        background: linear-gradient(135deg, #3a0910 0%, #500f1c 100%);
         color: white;
-        border: 1px solid #d91c36;
+        border: none;
       }
 
       .source-btn.rednote:hover {
-        background-color: #d91c36;
+        background: linear-gradient(135deg, #500f1c, #420d18);
       }
 
       /* Download and Action Buttons */
       .action-btn.download-btn {
-        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        background: linear-gradient(135deg, #3a0910 0%, #500f1c 100%);
         color: white;
       }
-      .action-btn.download-btn:hover { background: linear-gradient(135deg, #1d4ed8, #1e40af); }
+      .action-btn.download-btn:hover { background: linear-gradient(135deg, #500f1c, #420d18); }
 
       .action-btn.quark-btn {
-        background: transparent;
-        color: #2563eb;
-        border: 1.5px solid #2563eb;
+        background: linear-gradient(135deg, #3a0910 0%, #500f1c 100%);
+        color: white;
+        border: none;
       }
-      .action-btn.quark-btn:hover { background: #eff6ff; }
+      .action-btn.quark-btn:hover { background: linear-gradient(135deg, #500f1c, #420d18); }
 
       .action-btn.weibo-btn {
-        background: transparent;
-        color: #2563eb;
-        border: 1.5px solid #2563eb;
+        background: linear-gradient(135deg, #3a0910 0%, #500f1c 100%);
+        color: white;
+        border: none;
       }
-      .action-btn.weibo-btn:hover { background: #eff6ff; }
+      .action-btn.weibo-btn:hover { background: linear-gradient(135deg, #500f1c, #420d18); }
 
       .badge-4k {
         position: absolute;
@@ -1019,7 +1174,7 @@
         position: absolute;
         bottom: 0px;
         left: 10px;
-        background: rgba(37, 99, 235, 0.85);
+        background: rgba(160, 120, 0, 0.9);
         color: #fff;
         padding: 2px 7px;
         border-radius: 4px;
@@ -1031,7 +1186,7 @@
       }
       .badge-quality.is-4k { background: rgba(124, 58, 237, 0.85); }
       .badge-youtube { position: absolute; bottom: 0px; left: 10px; background: rgba(204, 0, 0, 0.85); color: #fff; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 700; z-index: 11; letter-spacing: 0.05em; text-decoration: none; cursor: pointer; }
-      .timeline-photo.pl-in-playlist { box-shadow: 0 0 0 2.5px #2563eb, 0 2px 8px rgba(0,0,0,0.1); }
+      .timeline-photo.pl-in-playlist { box-shadow: 0 0 0 2.5px #A07800, 0 2px 8px rgba(0,0,0,0.1); }
 
       .modal-tags-container {
         display: flex;
@@ -1137,7 +1292,7 @@
         flex-wrap: wrap;
       }
       .stat {
-        background: linear-gradient(45deg, #5E9FD8, #4A8BC8);
+        background: linear-gradient(135deg, #E8C040 0%, #B89010 50%, #DDB820 100%);
         color: white;
         padding: 15px 20px;
         border-radius: 15px;
@@ -1165,8 +1320,8 @@
       }
       .option-btn {
         padding: 15px;
-        border: 2px solid #e0e0e0;
-        background: white;
+        border: 2px solid #d8ccb8;
+        background: #fdf5f0;
         border-radius: 15px;
         cursor: pointer;
         font-size: 16px;
@@ -1174,8 +1329,8 @@
         transition: all 0.3s ease;
       }
       .option-btn:hover {
-        border-color: #5E9FD8;
-        background: #f8f9ff;
+        border-color: #f43f5e;
+        background: #fdf6ee;
         transform: translateY(-2px);
       }
       .option-btn.correct {
@@ -1214,11 +1369,7 @@
 
       /* This is the new search result presentation that uses timeline year structure */
       .search-year-header {
-        background: linear-gradient(
-          45deg,
-          #5E9FD8,
-          #4A8BC8
-        ); /* Using red gradient from sample for search results */
+        background: linear-gradient(45deg, #300810, #420d18);
         color: white;
         padding: 15px 20px;
         font-size: 16px;
@@ -1239,13 +1390,13 @@
       }
 
       .search-summary {
-        background: white;
+        background: #fdf5f0;
         padding: 15px 20px 5px;
-        border-bottom: 2px solid #e0e0e0;
+        border-bottom: 2px solid #d8ccb8;
         text-align: center;
       }
       .search-summary h3 {
-        color: #5E9FD8;
+        color: #A07800;
         font-size: 1.5rem;
         margin-bottom: 10px;
       }
@@ -1318,8 +1469,8 @@
           gap: 15px;
         }
         .nav-btn {
-          padding: 10px 12px;
-          font-size: 13px;
+          padding: 8px 12px;
+          font-size: 11px;
         }
         .year-photos-grid {
           grid-template-columns: repeat(3, 1fr);
@@ -1343,7 +1494,7 @@
           margin-bottom: 8px;
         }
         .year-title {
-          font-size: 14px;
+          font-size: 18px;
         }
         .timeline-year-count {
           font-size: 10px;
@@ -1631,7 +1782,7 @@
 
       /* Footer Styles */
       .site-footer {
-        background: linear-gradient(135deg, #1F2937 0%, #2D3748 100%);
+        background: linear-gradient(160deg, #150205 0%, #200407 100%);
         color: white;
         padding: 10px 0;
         margin-top: 50px;
@@ -1683,32 +1834,29 @@
   <body>
     <div class="container">
       <header>
-        <h1>Xiao Zhan Studio Gallery<br />肖战工作室高清图库</h1>
-        <p
-          class="subtitle"
-          style="font-weight: 600; font-size: clamp(11px, 2.5vw, 16px); color: white; line-height: 1.8"
-        >
-          * High-resolution media from <a href="https://weibo.com/u/6643123988" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">XZ Studio</a><br />
-          * 其他来源分类高清图库请点击下方链接<br />
-          <span style="white-space: nowrap"
-            >*
-            <a
-              href="https://canadaxfx.github.io/XZ-HD-Gallery-Misc/"
-              target="_blank"
-              style="color: white; text-decoration: underline"
-              >Click here for XZ HD Gallery Misc 肖战高清图库-其他</a
-            ></span
-          ><br />
-          <span style="white-space: nowrap"
-            >*
-            <a
-              href="https://canadaxfx.github.io/XZ-social-media-archive/"
-              target="_blank"
-              style="color: white; text-decoration: underline"
-              >Click here for XZ Social Media Archive 肖战社交媒体存档</a
-            ></span
-          ><br />
-        </p>
+        <h1>Xiao Zhan <span class="title-highlight">Studio Gallery</span><br /><span class="title-zh">肖战工作室高清图库</span></h1>
+        <div class="header-links-section">
+          <span class="header-links-desc">
+            <span class="desc-en">High-resolution media from <a href="https://weibo.com/u/6643123988" target="_blank" rel="noopener">XZ Studio</a></span>
+            <span class="desc-zh">其他来源分类高清图库请点击下方链接</span>
+          </span>
+          <div class="header-links-row">
+            <a href="https://canadaxfx.github.io/XZ-HD-Gallery-Misc/" target="_blank" class="header-link-card">
+              <div class="header-link-card-text">
+                <span class="card-en">HD Gallery Misc</span>
+                <span class="card-zh">肖战高清图库-其他</span>
+              </div>
+              <span class="card-arrow">↗</span>
+            </a>
+            <a href="https://canadaxfx.github.io/XZ-social-media-archive/" target="_blank" class="header-link-card">
+              <div class="header-link-card-text">
+                <span class="card-en">Social Media Archive</span>
+                <span class="card-zh">肖战社交媒体存档</span>
+              </div>
+              <span class="card-arrow">↗</span>
+            </a>
+          </div>
+        </div>
       </header>
       <nav class="nav-buttons">
         <button class="nav-btn active" data-section="gallery">
@@ -1798,7 +1946,7 @@
           id="searchInput"
         />
         <button id="clearSearchBtn" class="btn">Clear Search / 返回</button>
-        <div style="max-width:1000px;margin:4px auto 0;display:flex;justify-content:flex-end;padding-right:20px">
+        <div style="max-width:1000px;margin:4px auto 0;display:flex;justify-content:center;">
             <button id="plAddAllBtn" class="pl-add-all-btn" onclick="addAllFilteredVideos()">▶ Add <span id="plAddAllCount">0</span> videos to Playlist</button>
         </div>
         <div class="timeline-container" id="timelineContainer">
@@ -1973,7 +2121,7 @@
         </button>
         <div class="report-form-container" style="padding: 10px">
           <div style="text-align: center; margin-bottom: 20px">
-            <h3 style="color: #5E9FD8; margin-bottom: 10px">
+            <h3 style="color: #A07800; margin-bottom: 10px">
               🔧 Report an Issue
             </h3>
             <p style="color: #666; font-size: 14px">
@@ -3778,7 +3926,7 @@
       }
 
       function createDefaultGameImage() {
-        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5E9FD8"/><stop offset="100%" stop-color="#4A8BC8"/></linearGradient></defs><rect width="400" height="300" fill="url(#g)"/><text x="200" y="150" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="white">Game Photo Here</text></svg>`;
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#A07800"/><stop offset="100%" stop-color="#7a6000"/></linearGradient></defs><rect width="400" height="300" fill="url(#g)"/><text x="200" y="150" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="white">Game Photo Here</text></svg>`;
         return "data:image/svg+xml," + encodeURIComponent(svg);
       }
 
@@ -4098,7 +4246,7 @@
 
 <!-- DL UNLOCK PROMPT -->
 <div id="dlUnlockOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:99999;align-items:center;justify-content:center;">
-  <div style="background:white;border-radius:14px;padding:28px 24px;max-width:340px;width:90%;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,0.25);">
+  <div style="background:#f8f4eb;border-radius:14px;padding:28px 24px;max-width:340px;width:90%;text-align:center;box-shadow:0 8px 32px rgba(14,10,31,0.4);">
     <div style="font-size:36px;margin-bottom:8px;">🔒</div>
     <div style="font-weight:700;font-size:16px;margin-bottom:6px;">受保护内容 Protected Content</div>
     <div style="font-size:13px;color:#6b7280;margin-bottom:18px;">请联系管理员获取下载密码<br>Contact admin for download password</div>
