@@ -225,8 +225,9 @@
       .nav-buttons {
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 0;
         margin: 6px 0 12px;
+        border-bottom: 1px solid rgba(220,170,20,0.18);
       }
       .nav-btn,
       .btn {
@@ -267,6 +268,27 @@
         border-color: rgba(255, 255, 255, 0.5);
         box-shadow: none;
       }
+      /* Underline tab style — scoped to main nav only */
+      nav.nav-buttons .nav-btn {
+        border-radius: 0; border: none; border-bottom: 2px solid transparent;
+        margin-bottom: -1px; padding: 10px 32px 12px;
+        color: rgba(255,255,255,0.55); text-align: center; line-height: 1.35;
+        transition: color 0.25s ease, border-color 0.25s ease; background: transparent;
+      }
+      nav.nav-buttons .nav-btn.active {
+        color: white; border-bottom: 2px solid rgba(220,170,20,1);
+        background: transparent; box-shadow: none; transform: none;
+      }
+      nav.nav-buttons .nav-btn:hover {
+        color: rgba(255,255,255,0.9); border-bottom-color: rgba(220,170,20,0.45);
+        transform: none; box-shadow: none;
+      }
+      nav.nav-buttons .tab-en { display: block; color: rgba(255,255,255,0.9); font-weight: 600; font-size: 13px; }
+      nav.nav-buttons .tab-zh { display: block; color: rgba(220,170,20,0.75); font-weight: 500; font-size: 11px; }
+      nav.nav-buttons .nav-btn:not(.active) .tab-en { color: rgba(255,255,255,0.45); }
+      nav.nav-buttons .nav-btn:not(.active) .tab-zh { color: rgba(220,170,20,0.3); }
+      nav.nav-buttons .nav-btn:hover .tab-en { color: rgba(255,255,255,0.9); }
+      nav.nav-buttons .nav-btn:hover .tab-zh { color: rgba(220,170,20,0.65); }
       .content-section {
         background: rgba(253, 245, 240, 0.98);
         border-radius: 20px;
@@ -1479,8 +1501,8 @@
         .nav-buttons {
           gap: 15px;
         }
-        .nav-btn {
-          padding: 8px 12px;
+        nav.nav-buttons .nav-btn {
+          padding: 8px 18px 10px;
           font-size: 11px;
         }
         .year-photos-grid {
@@ -1870,12 +1892,8 @@
         </div>
       </header>
       <nav class="nav-buttons">
-        <button class="nav-btn active" data-section="gallery">
-          Photo Timeline<br />时间线相册
-        </button>
-        <button class="nav-btn" data-section="game">
-          Time Game<br />时间游戏
-        </button>
+        <button class="nav-btn active" data-section="gallery"><span class="tab-en">Photo Timeline</span><span class="tab-zh">时间线相册</span></button>
+        <button class="nav-btn" data-section="game"><span class="tab-en">Time Game</span><span class="tab-zh">时间游戏</span></button>
       </nav>
 
       <div id="gallery-section" class="content-section">
