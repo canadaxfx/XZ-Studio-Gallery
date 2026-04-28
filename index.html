@@ -249,8 +249,6 @@
         border: 1.5px solid rgba(255, 255, 255, 0.82);
       }
       .game-controls .btn.primary {
-        background: linear-gradient(135deg, #E8C040 0%, #B89010 50%, #DDB820 100%);
-        color: white;
         border: none;
         box-shadow: 0 2px 8px rgba(160, 120, 0, 0.35);
       }
@@ -1301,9 +1299,12 @@
         margin: 20px 0;
         flex-wrap: wrap;
       }
-      .stat {
+      .stat,
+      .game-controls .btn.primary {
         background: linear-gradient(135deg, #E8C040 0%, #B89010 50%, #DDB820 100%);
         color: white;
+      }
+      .stat {
         padding: 15px 20px;
         border-radius: 15px;
         font-size: 14px;
