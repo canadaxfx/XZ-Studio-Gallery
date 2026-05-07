@@ -411,9 +411,18 @@
         box-shadow: none;
         border: 1.5px solid rgba(255, 255, 255, 0.82);
       }
+      .game-controls {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+      }
       .game-controls .btn.primary {
         border: none;
         box-shadow: 0 2px 8px rgba(var(--gold-dr), 0.35);
+        padding: 8px 14px;
+        font-size: 12px;
       }
       .game-controls .btn.primary:hover {
         background: var(--grad-gold-h);
@@ -1509,17 +1518,17 @@
       .options {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 10px;
         max-width: 500px;
-        margin: 30px auto;
+        margin: 20px auto;
       }
       .option-btn {
-        padding: 15px;
+        padding: 10px;
         border: 2px solid var(--border);
         background: var(--surface-0);
         border-radius: 15px;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 13px;
         font-weight: 600;
         transition: all 0.3s ease;
       }
@@ -2279,13 +2288,13 @@
 
             <div id="gameOptions" class="options"></div>
             <div id="gameResult" class="game-result hidden"></div>
-            <button id="nextQuestion" class="btn primary hidden">
-              Next Question 下一题
-            </button>
           </div>
           <div class="game-controls">
             <button id="startGame" class="btn primary">
               Start Game 开始游戏！
+            </button>
+            <button id="nextQuestion" class="btn primary hidden">
+              Next Question 下一题
             </button>
             <button id="newGame" class="btn primary hidden">
               New Game 重新开始
