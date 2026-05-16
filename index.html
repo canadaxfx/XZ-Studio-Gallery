@@ -1334,6 +1334,16 @@
         background: var(--grad-red-h);
       }
 
+      .source-btn.douyin {
+        background: linear-gradient(135deg, #010101, #2d2d2d);
+        color: white;
+        border: none;
+      }
+
+      .source-btn.douyin:hover {
+        background: linear-gradient(135deg, #2d2d2d, #010101);
+      }
+
       /* Download and Action Buttons */
       .action-btn.download-btn {
         background: var(--grad-red);
@@ -2213,6 +2223,7 @@
               <option value="all">Source</option>
               <option value="weibo">Weibo</option>
               <option value="rednote">RedNote</option>
+              <option value="douyin">Douyin</option>
             </select>
           </div>
 
@@ -3091,16 +3102,15 @@
           }
         }
 
-        // Determine if it is RedNote/Xiaohongshu
-        const isRedNote =
-          rawSource === "rednote" || rawSource === "xiaohongshu";
+        // Determine source type
+        const isRedNote = rawSource === "rednote" || rawSource === "xiaohongshu";
+        const isDouyin = rawSource === "douyin";
 
         // --- 2. Set Variables for Badge and Buttons ---
-        let badgeText = isRedNote ? "REDNOTE" : "WEIBO";
-        // Use your existing CSS classes
-        let badgeClass = isRedNote ? "badge-rednote" : "badge-weibo";
-        let btnClass = isRedNote ? "source-btn rednote" : "source-btn weibo";
-        let sourceNameFull = isRedNote ? "RedNote 小红书" : "Weibo 微博";
+        let badgeText = isDouyin ? "DOUYIN" : isRedNote ? "REDNOTE" : "WEIBO";
+        let badgeClass = isDouyin ? "badge-douyin" : isRedNote ? "badge-rednote" : "badge-weibo";
+        let btnClass = isDouyin ? "source-btn douyin" : isRedNote ? "source-btn rednote" : "source-btn weibo";
+        let sourceNameFull = isDouyin ? "Douyin 抖音" : isRedNote ? "RedNote 小红书" : "Weibo 微博";
 
         // --- 3. Update the Header Badge & Title ---
         const titleText = photo.groupName || `${photo.month} ${photo.year}`;
@@ -3153,7 +3163,7 @@
           ytFrame.classList.remove('hidden');
           videoElement.parentNode.classList.add('yt-active');
           ytFrame.src = `https://www.youtube.com/embed/${getYouTubeId(photo.url)}?autoplay=1&rel=0`;
-        } else if (_isVid || _isMotion) {
+        } else if (_isVid || _isMotion || isClip(photo)) {
           imgElement.classList.add("hidden");
           videoElement.classList.remove("hidden");
           videoElement.src = photo.url;
