@@ -13392,6 +13392,26 @@
         ]
     },
     {
+        "id": 492,
+        "url": "https://assets.xz-studio-gallery.com/full/20220102_DY_XZ-1.mp4",
+        "date": "2022-01-02",
+        "month": "January",
+        "year": "2022",
+        "tags": [
+            "王牌部队"
+        ],
+        "groupName": "20220102",
+        "quality": "1080p",
+        "duration": 43,
+        "link": "https://www.douyin.com/video/7048628683350740238",
+        "sourceType": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "#王牌部队千仞无枝束自我品行，暴风成长当以身作则。班长顾一野@肖战 报到！",
+        "englishTags": []
+    },
+    {
         "id": 489,
         "url": "https://assets.xz-studio-gallery.com/full/20220101_王牌部队_XZ-STU-1.mp4",
         "date": "2022-01-01",
@@ -13449,5 +13469,25 @@
             "chinese drama",
             "military drama"
         ]
+    },
+    {
+        "id": 491,
+        "url": "https://assets.xz-studio-gallery.com/full/20220101_DY_XZ-1.mp4",
+        "date": "2022-01-01",
+        "month": "January",
+        "year": "2022",
+        "tags": [
+            "王牌部队"
+        ],
+        "groupName": "20220101",
+        "quality": "1080p",
+        "duration": 23,
+        "link": "https://www.douyin.com/video/7048221903567424798",
+        "sourceType": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "#王牌部队不抛弃不放弃，一腔热血，报效国家。是每天都在努力训练的顾一野@肖战 ",
+        "englishTags": []
     }
 ]
