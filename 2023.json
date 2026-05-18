@@ -20637,6 +20637,26 @@
         ]
     },
     {
+        "id": 967,
+        "url": "https://assets.xz-studio-gallery.com/full/20230325_DY_XZ-1.mp4",
+        "date": "2023-03-25",
+        "month": "March",
+        "year": "2023",
+        "tags": [
+            "微博之夜"
+        ],
+        "groupName": "20230325",
+        "quality": "1080p",
+        "duration": 60,
+        "link": "https://www.douyin.com/video/7214514074174967095",
+        "sourceType": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "恰好@肖战 走入，光与暗相逢，晚安～",
+        "englishTags": []
+    },
+    {
         "id": 696,
         "url": "https://assets.xz-studio-gallery.com/full/fiLmzF1.jpeg",
         "date": "2023-03-16",
@@ -21042,13 +21062,31 @@
         ]
     },
     {
+        "id": 966,
+        "url": "https://assets.xz-studio-gallery.com/full/20230316_DY_XZ-1.mp4",
+        "date": "2023-03-16",
+        "month": "March",
+        "year": "2023",
+        "tags": [],
+        "groupName": "20230316",
+        "quality": "1080p",
+        "duration": 59,
+        "link": "https://www.douyin.com/video/7211045631383571769",
+        "sourceType": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "慵懒漫步在街头，@肖战 化身风景的捕捉器，沉浸于这一份惬意自在中。",
+        "englishTags": []
+    },
+    {
         "id": 954,
         "url": "https://assets.xz-studio-gallery.com/full/20230306_陌森_XZ-1.mp4",
         "date": "2023-03-06",
         "month": "March",
         "year": "2023",
         "tags": [
-            "微博之夜"
+            "陌森"
         ],
         "groupName": "20230306",
         "quality": "1080p",
@@ -21056,7 +21094,6 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "多元瞩目风格，随心恣意切换，与@MOLSION陌森眼镜 品牌代言人@X玖少年团肖战DAYTOY 即刻启程，再邂逅闪耀瞬间。#肖战陌森眼镜品牌代言人# 肖战工作室的微博视频",
         "duration": 25,
         "englishTags": [
@@ -21066,7 +21103,8 @@
             "xiao zhan glasses brand",
             "xiao zhan eyewear",
             "xiao zhan eyewear brand"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 955,
@@ -21093,6 +21131,26 @@
             "xiao zhan everyday life",
             "xiao zhan pixelated video"
         ]
+    },
+    {
+        "id": 965,
+        "url": "https://assets.xz-studio-gallery.com/full/20230301_DY_XZ-1.mp4",
+        "date": "2023-03-01",
+        "month": "March",
+        "year": "2023",
+        "tags": [
+            "欧莱雅PRO"
+        ],
+        "groupName": "20230301",
+        "quality": "1080p",
+        "duration": 11,
+        "link": "https://www.douyin.com/video/7205687035376471355",
+        "sourceType": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "头发瞬顺，生活顺顺！ 和品牌代言人@肖战 一起焕发每一丝可能。#肖战欧莱雅PRO品牌代言人",
+        "englishTags": []
     },
     {
         "id": 711,
