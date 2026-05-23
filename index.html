@@ -3704,10 +3704,9 @@
             yearPaginationSettings[year] = { perPage: 21, currentPage: 1 };
           }
           // Ensure the select box is set correctly
-          document.getElementById(`per-page-${year}`).value =
-            yearPaginationSettings[year].perPage === Infinity
-              ? "all"
-              : yearPaginationSettings[year].perPage;
+          const perPageSelect = document.getElementById(`per-page-${year}`);
+          if (perPageSelect) perPageSelect.value =
+            yearPaginationSettings[year].perPage === Infinity ? "all" : yearPaginationSettings[year].perPage;
           renderYearPage(year);
         } else {
           expandedYears.delete(year);
@@ -3979,14 +3978,7 @@
           return;
         }
 
-        // 5. Auto-expand the latest year if none are currently expanded
-        if (sortedYears.length > 0 && !sortedYears.some(y => expandedYears.has(y))) {
-          const firstYear = sortedYears[0];
-          expandedYears.add(firstYear);
-          yearPaginationSettings[firstYear] = yearPaginationSettings[firstYear] || { perPage: 21, currentPage: 1 };
-        }
-
-        // 6. Generate Search Results HTML
+        // 5. Generate Search Results HTML
         const searchResultsHTML = sortedYears
           .map((year) => {
             yearPaginationSettings[year] = yearPaginationSettings[year] || { perPage: 21, currentPage: 1 };
@@ -4338,6 +4330,7 @@
       function setMediaFilter(type) {
         currentMediaFilter = type;
         expandedYears.clear();
+        yearPaginationSettings = {};
         document.querySelectorAll('.media-tab').forEach(btn => {
           btn.classList.toggle('active', btn.dataset.media === type);
         });
@@ -4442,17 +4435,6 @@
             acc[photo.year].push(photo);
             return acc;
           }, {});
-
-          if (fromMediaTab) {
-            // Pre-add the latest year to expandedYears so createTimelineHTML renders it expanded
-            const firstYear = Object.keys(photosByYear).sort((a, b) => b - a)[0];
-            if (firstYear) {
-              expandedYears.add(firstYear);
-              if (!yearPaginationSettings[firstYear]) {
-                yearPaginationSettings[firstYear] = { perPage: 21, currentPage: 1 };
-              }
-            }
-          }
 
           createTimelineHTML(photosByYear);
 
