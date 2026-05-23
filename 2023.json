@@ -13573,6 +13573,27 @@
         ]
     },
     {
+        "id": 1047,
+        "url": "https://assets.xz-studio-gallery.com/full/20230711_DY_XZ-1.mp4",
+        "date": "2023-07-11",
+        "month": "July",
+        "year": "2023",
+        "tags": [
+            "玉骨遥",
+            "大片"
+        ],
+        "groupName": "20230711",
+        "quality": "1080p",
+        "duration": 86,
+        "link": "https://www.douyin.com/video/7254545214809935165",
+        "sourceType": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "#玉骨遥 时针转动，与杀青前的时影@肖战 于大漠中相遇📸#肖战",
+        "englishTags": []
+    },
+    {
         "id": 465,
         "url": "https://assets.xz-studio-gallery.com/full/O4HASQL.jpeg",
         "date": "2023-07-10",
@@ -13691,7 +13712,6 @@
         "month": "July",
         "year": "2023",
         "tags": [
-            "肖战",
             "玉骨遥"
         ],
         "groupName": "20230710",
@@ -13701,9 +13721,9 @@
         "sourceType": [
             "douyin"
         ],
-        "description": "",
         "postText": "少司命时影 @肖战 的心愿与期许✊#肖战 #玉骨遥",
-        "englishTags": []
+        "englishTags": [],
+        "source": []
     },
     {
         "id": 468,
