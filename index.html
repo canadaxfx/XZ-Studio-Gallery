@@ -3979,10 +3979,16 @@
           return;
         }
 
-        // 5. Generate Search Results HTML
+        // 5. Auto-expand the latest year if none are currently expanded
+        if (sortedYears.length > 0 && !sortedYears.some(y => expandedYears.has(y))) {
+          const firstYear = sortedYears[0];
+          expandedYears.add(firstYear);
+          yearPaginationSettings[firstYear] = yearPaginationSettings[firstYear] || { perPage: 21, currentPage: 1 };
+        }
+
+        // 6. Generate Search Results HTML
         const searchResultsHTML = sortedYears
           .map((year) => {
-            // Ensure pagination state exists for search results
             yearPaginationSettings[year] = yearPaginationSettings[year] || { perPage: 21, currentPage: 1 };
             return buildYearCardHTML(year, photosByYear[year]);
           })
@@ -4437,13 +4443,20 @@
             return acc;
           }, {});
 
+          if (fromMediaTab) {
+            // Pre-add the latest year to expandedYears so createTimelineHTML renders it expanded
+            const firstYear = Object.keys(photosByYear).sort((a, b) => b - a)[0];
+            if (firstYear) {
+              expandedYears.add(firstYear);
+              if (!yearPaginationSettings[firstYear]) {
+                yearPaginationSettings[firstYear] = { perPage: 21, currentPage: 1 };
+              }
+            }
+          }
+
           createTimelineHTML(photosByYear);
 
-          if (fromMediaTab) {
-            // Media tab filter: collapse all, open only latest year
-            const firstYear = Object.keys(photosByYear).sort((a, b) => b - a)[0];
-            if (firstYear) setTimeout(() => toggleYear(firstYear), 100);
-          } else {
+          if (!fromMediaTab) {
             // Date/source filter: expand all years to show results immediately
             Object.keys(photosByYear).forEach((year) => {
               if (!expandedYears.has(year)) toggleYear(year);
