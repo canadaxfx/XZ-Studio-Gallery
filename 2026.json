@@ -17167,5 +17167,25 @@
             "ge zhi town",
             "gezhi town"
         ]
+    },
+    {
+        "id": 746,
+        "url": "https://assets.xz-studio-gallery.com/full/20260101_DY_XZ-1.mp4",
+        "date": "2026-01-01",
+        "month": "January",
+        "year": "2026",
+        "tags": [
+            "东方卫视跨年"
+        ],
+        "groupName": "20260101",
+        "quality": "1080p",
+        "duration": 228,
+        "link": "https://www.douyin.com/video/7590287981879222265",
+        "sourceType": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "@肖战 不要回头！#肖战 #东方卫视跨年",
+        "englishTags": []
     }
 ]
