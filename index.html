@@ -4394,7 +4394,11 @@
         document.querySelectorAll('.media-tab').forEach(btn => {
           btn.classList.toggle('active', btn.dataset.media === type);
         });
-        applyDateFilter(true);
+        if (currentSearchQuery) {
+          performSearch(currentSearchQuery);
+        } else {
+          applyDateFilter(true);
+        }
       }
 
       function applyDateFilter(fromMediaTab = false) {
