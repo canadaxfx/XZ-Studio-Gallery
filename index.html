@@ -3133,6 +3133,62 @@
         document.addEventListener("keydown", handleKeyboardNavigation);
       }
 
+      /* ---------- Platform Popup ---------- */
+      function _getPlatformPop() {
+        let pop = document.getElementById('platformPopover');
+        if (!pop) {
+          pop = document.createElement('div');
+          pop.id = 'platformPopover';
+          pop.onclick = e => e.stopPropagation();
+          pop.style.cssText = 'display:none;position:fixed;z-index:999999;background:var(--bg-float,rgba(22,18,38,0.97));border:1px solid rgba(var(--gold-rgb,180,140,40),0.45);border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,0.6);padding:6px;min-width:160px';
+          document.body.appendChild(pop);
+        }
+        return pop;
+      }
+      function setPlatformBtnBehavior(btn, mainLink, extraLinks) {
+        const existingPop = document.getElementById('platformPopover');
+        if (existingPop) existingPop.style.display = 'none';
+        const links = [];
+        const w = mainLink ? String(mainLink).trim() : '';
+        if (w) links.push({label: 'Weibo 微博', url: /^https?/i.test(w) ? w : 'https://' + w});
+        if (extraLinks && typeof extraLinks === 'object') {
+          const lmap = {weibo:'Weibo 微博',douyin:'Douyin 抖音',youtube:'YouTube',bilibili:'Bilibili',ins:'Instagram',xiaohongshu:'RedNote 小红书',xhs:'RedNote 小红书'};
+          Object.entries(extraLinks).forEach(([k, v]) => { if (v) links.push({label: lmap[k] || k, url: String(v)}); });
+        }
+        if (!links.length) { btn.style.display = 'none'; return; }
+        btn.style.display = 'inline-block';
+        btn.onclick = null;
+        btn.removeAttribute('href');
+        if (links.length === 1) {
+          btn.setAttribute('href', links[0].url);
+          btn.setAttribute('target', '_blank');
+        } else {
+          btn.onclick = (e) => { e.preventDefault(); e.stopPropagation(); showPlatformPopover(btn, links); };
+        }
+      }
+      function showPlatformPopover(triggerBtn, links) {
+        const pop = _getPlatformPop();
+        const cs = getComputedStyle(triggerBtn);
+        pop.style.backgroundImage = cs.backgroundImage;
+        pop.style.backgroundColor = cs.backgroundColor;
+        pop.style.borderRadius    = cs.borderRadius;
+        pop.style.border          = cs.border;
+        pop.style.boxShadow       = '0 4px 20px rgba(0,0,0,0.45)';
+        pop.innerHTML = links.map(l =>
+          `<a href="${l.url}" target="_blank" style="display:block;padding:9px 18px;text-decoration:none;color:rgba(255,255,255,0.95);border-radius:5px;font-size:13px;font-weight:600;white-space:nowrap;letter-spacing:0.02em" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background=''">${l.label}</a>`
+        ).join('');
+        pop.style.display = 'block';
+        const r = triggerBtn.getBoundingClientRect();
+        const pw = pop.offsetWidth || 160;
+        const ph = pop.offsetHeight || 80;
+        let left = r.left + r.width / 2 - pw / 2;
+        let top  = r.top - ph - 10;
+        if (top < 8) top = r.bottom + 10;
+        pop.style.left = Math.max(8, Math.min(left, window.innerWidth - pw - 8)) + 'px';
+        pop.style.top  = top + 'px';
+        setTimeout(() => document.addEventListener('click', () => { pop.style.display = 'none'; }, {once: true}), 0);
+      }
+
       /* ---------- Enhanced Modal Functions ---------- */
       function updateModalContent() {
         const photo = currentPhotoGroup[currentPhotoIndex];
@@ -3184,15 +3240,8 @@
         // --- 4. Update "View Original Post" Button ---
         weiboBtn.className = "action-btn " + btnClass;
         weiboBtn.style.background = ""; // Reset inline style to let CSS take over
-
-        if (photo.link && String(photo.link).trim()) {
-          const w = photo.link.trim();
-          weiboBtn.href = /^https?:\/\//i.test(w) ? w : `https://${w}`;
-          weiboBtn.style.display = "inline-block";
-          weiboBtn.innerHTML = `📱 View on Platform<br><small style="opacity: 1">查看原帖</small>`;
-        } else {
-          weiboBtn.style.display = "none";
-        }
+        weiboBtn.innerHTML = `📱 View on Platform<br><small style="opacity: 1">查看原帖</small>`;
+        setPlatformBtnBehavior(weiboBtn, photo.link, photo.platform_links);
 
         // --- 5. Handle Video vs Photo Display ---
         // _isVid = mp4 files only (for playlist/stats); isMotionUrl = mov/gif (play in modal but managed as photos)
