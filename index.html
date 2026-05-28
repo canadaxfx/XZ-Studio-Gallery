@@ -1446,6 +1446,7 @@
         letter-spacing: 0.05em;
         pointer-events: none;
       }
+      .badge-quality.is-2k { background: rgba(99, 102, 241, 0.85); }
       .badge-quality.is-4k { background: rgba(124, 58, 237, 0.85); }
       .badge-youtube { position: absolute; bottom: 0px; left: 10px; background: rgba(204, 0, 0, 0.85); color: #fff; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 700; z-index: 11; letter-spacing: 0.05em; text-decoration: none; cursor: pointer; }
       .timeline-photo.pl-in-playlist { box-shadow: 0 0 0 2.5px var(--gold), 0 2px 8px rgba(0,0,0,0.1); }
@@ -3297,15 +3298,18 @@
         if (badgeQuality) {
           if (_isVid && photo.quality === '4k') {
             badgeQuality.textContent = '4K';
-            badgeQuality.classList.remove('hidden');
+            badgeQuality.classList.remove('hidden', 'is-2k');
             badgeQuality.classList.add('is-4k');
+          } else if (_isVid && photo.quality === '2k') {
+            badgeQuality.textContent = '2K';
+            badgeQuality.classList.remove('hidden', 'is-4k');
+            badgeQuality.classList.add('is-2k');
           } else if (_isVid && photo.quality === '1080p') {
             badgeQuality.textContent = '1080P';
-            badgeQuality.classList.remove('hidden');
-            badgeQuality.classList.remove('is-4k');
+            badgeQuality.classList.remove('hidden', 'is-4k', 'is-2k');
           } else {
             badgeQuality.classList.add('hidden');
-            badgeQuality.classList.remove('is-4k');
+            badgeQuality.classList.remove('is-4k', 'is-2k');
           }
         }
         const badgeYT = document.getElementById('badgeYT');
