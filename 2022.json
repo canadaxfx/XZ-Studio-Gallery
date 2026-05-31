@@ -415,6 +415,7 @@
         "month": "December",
         "year": "2022",
         "tags": [
+            "BUBLY",
             "蓝色",
             "衬衫",
             "商务"
@@ -429,7 +430,8 @@
             "blue shirt",
             "weibo",
             "business attire"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 20,
@@ -438,6 +440,7 @@
         "month": "December",
         "year": "2022",
         "tags": [
+            "BUBLY",
             "蓝色",
             "衬衫",
             "商务"
@@ -451,7 +454,8 @@
         "englishTags": [
             "blue shirt",
             "business attire"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 19,
