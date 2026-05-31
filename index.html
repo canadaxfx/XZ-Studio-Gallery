@@ -3271,7 +3271,7 @@
           ytFrame.classList.remove('hidden');
           videoElement.parentNode.classList.add('yt-active');
           ytFrame.src = `https://www.youtube.com/embed/${getYouTubeId(photo.url)}?autoplay=1&rel=0`;
-        } else if (_isVid || _isMotion || isClip(photo)) {
+        } else if (_isVid || isPlayableVideo(photo.url) || isClip(photo)) {
           imgElement.classList.add("hidden");
           videoElement.classList.remove("hidden");
           videoElement.src = photo.url;
