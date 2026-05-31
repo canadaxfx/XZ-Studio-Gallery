@@ -1399,7 +1399,6 @@
         "month": "December",
         "year": "2020",
         "tags": [
-            "腾讯",
             "星光大赏",
             "奖",
             "舞台",
@@ -1419,7 +1418,8 @@
             "stage performance",
             "vip star",
             "white suit"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 38,
@@ -1428,7 +1428,6 @@
         "month": "December",
         "year": "2020",
         "tags": [
-            "腾讯",
             "星光大赏",
             "奖",
             "舞台",
@@ -1448,7 +1447,8 @@
             "stage performance",
             "vip star",
             "white suit"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 277,
