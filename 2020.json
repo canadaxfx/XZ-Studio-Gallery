@@ -2126,7 +2126,8 @@
         "month": "October",
         "year": "2020",
         "tags": [
-            "小鹿茶luckintea"
+            "小鹿茶",
+            "luckintea"
         ],
         "groupName": "20201015",
         "quality": "1080p",
@@ -2134,7 +2135,6 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "#赞！小陨石系列来了# 晴朗秋日，看百变@X玖少年团肖战DAYTOY 化身吸猫官，要吸猫更要吸“小陨石”～今天就去@小鹿茶luckintea 吸一杯吧🥤小鹿茶luckintea的微博视频",
         "duration": 54,
         "englishTags": [
@@ -2143,7 +2143,8 @@
             "cat",
             "drink",
             "commercial"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 274,
