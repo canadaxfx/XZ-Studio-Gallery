@@ -8874,14 +8874,14 @@
         "month": "September",
         "year": "2024",
         "tags": [
-            "WEDGWOOD威基伍德"
+            "WEDGWOOD",
+            "威基伍德"
         ],
         "groupName": "20240907",
         "link": "https://weibo.com/6643123988/OvQLq3liJ",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "与@WEDGWOOD威基伍德官方 全球品牌代言人@X玖少年团肖战DAYTOY 一同悠享惬意“瓷”刻， 定格“莓”好时光。 http://t.cn/A6RTLAk7 ​​​",
         "quality": "1080p",
         "duration": 44,
@@ -8889,7 +8889,8 @@
             "wedgwood",
             "brand ambassador",
             "berries"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 359,
@@ -9531,14 +9532,14 @@
         "month": "August",
         "year": "2024",
         "tags": [
-            "RIO锐澳鸡尾酒"
+            "RIO",
+            "锐澳鸡尾酒"
         ],
         "groupName": "20240817",
         "link": "https://weibo.com/6643123988/OsEN0pCDb",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "与 @RIO锐澳鸡尾酒 全球品牌代言人@X玖少年团肖战DAYTOY 一起，体验和美食超配的RIO清爽！#RIO清爽气泡鸡尾酒新品上市# http://t.cn/A6RP1gaa ​​​",
         "quality": "1080p",
         "duration": 16,
@@ -9547,7 +9548,8 @@
             "cocktail",
             "brand ambassador",
             "food pairing"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 370,
