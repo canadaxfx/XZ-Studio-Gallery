@@ -3204,9 +3204,10 @@
         // --- 1. ROBUST SOURCE DETECTION (Fixes the RedNote Issue) ---
         let rawSource = "weibo"; // Default
 
-        // Check if 'source' exists (Legacy)
-        if (photo.source) {
-          rawSource = String(photo.source).toLowerCase();
+        // Check if 'source' exists (Legacy) — skip empty arrays (studio entries have source:[])
+        const _src0 = Array.isArray(photo.source) ? photo.source[0] : photo.source;
+        if (_src0) {
+          rawSource = String(_src0).toLowerCase();
         }
         // Check if 'sourceType' exists (From your 2025.json)
         else if (photo.sourceType) {
@@ -4500,9 +4501,10 @@
           // --- SOURCE CHECK (FIXED) ---
           let itemSource = "weibo"; // Default fallback
 
-          // A. Check legacy 'source' property
-          if (item.source) {
-            itemSource = String(item.source).toLowerCase();
+          // A. Check legacy 'source' property — skip empty arrays
+          const _isrc0 = Array.isArray(item.source) ? item.source[0] : item.source;
+          if (_isrc0) {
+            itemSource = String(_isrc0).toLowerCase();
           }
           // B. Check new 'sourceType' property (Array or String) from 2025.json
           else if (item.sourceType) {
