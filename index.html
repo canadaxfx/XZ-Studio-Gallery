@@ -4558,6 +4558,11 @@
             return acc;
           }, {});
 
+          // Reset pagination to page 1 for all years — filter changed, old page may be out of range
+          Object.keys(yearPaginationSettings).forEach(yr => {
+            yearPaginationSettings[yr].currentPage = 1;
+          });
+
           createTimelineHTML(photosByYear);
 
           if (!fromMediaTab) {
