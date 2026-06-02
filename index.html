@@ -4081,6 +4081,9 @@
         filteredVideosCache = matchingPhotos.filter(p => isVideoEntry(p));
         plUpdateAddAllBtn();
 
+        // Sync currentRenderData so renderYearPage uses search results, not stale filter data
+        currentRenderData = matchingPhotos;
+
         if (matchingPhotos.length === 0) {
           timelineContainer.innerHTML = `
                     <div class="timeline-empty">
