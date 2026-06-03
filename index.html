@@ -4061,17 +4061,29 @@
       }
 
       function setupLazyLoadingForYear(year) {
-        document
-          .querySelectorAll(`#photos-${year} .lazy-image[data-src]`)
-          .forEach((img) => {
-            img.classList.add("loading-placeholder");
-            if (imageObserver) imageObserver.observe(img);
-          });
+        const imgs = Array.from(document.querySelectorAll(`#photos-${year} .lazy-image[data-src]`));
+        imgs.forEach((img) => {
+          img.classList.add("loading-placeholder");
+          if (imageObserver) imageObserver.observe(img);
+        });
+        // IntersectionObserver fires asynchronously and can miss elements just made
+        // visible via display:none→block. Force-load images already in the viewport.
+        const vh = window.innerHeight;
+        imgs.forEach((img) => {
+          if (img.src) return;
+          const rect = img.getBoundingClientRect();
+          if (rect.width > 0 && rect.top < vh + 100 && rect.bottom > -100) {
+            img.src = img.dataset.src;
+            img.onload  = () => img.classList.remove("loading-placeholder");
+            img.onerror = () => img.classList.remove("loading-placeholder");
+            if (imageObserver) imageObserver.unobserve(img);
+          }
+        });
       }
 
       function unloadYearImages(year) {
         document.querySelectorAll(`#photos-${year} img`).forEach((img) => {
-          img.src = "";
+          img.removeAttribute("src");
           img.classList.add("loading-placeholder");
         });
       }
