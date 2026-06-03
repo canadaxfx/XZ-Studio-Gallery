@@ -13743,14 +13743,17 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "冷澈翩然，心系苍生，神官时影@X玖少年团肖战DAYTOY 与你共赴空桑！#玉骨遥# http://t.cn/A6pkhEsq ​​​",
+        "postText": "冷澈翩然，心系苍生，神官时影@X玖少年团肖战DAYTOY 与你共赴空桑！#玉骨遥# http://t.cn/A6pkhEsq ​​\n抖音：冷澈翩然，心系苍生，神官时影@肖战 与你共赴空桑！# 玉骨遥",
         "duration": 22,
         "englishTags": [
             "the longest promise",
             "shi ying",
             "drama promotion"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://v.douyin.com/YKN4LbCGy2M/"
+        },
+        "source": []
     },
     {
         "id": 921,
