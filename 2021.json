@@ -383,30 +383,6 @@
         ]
     },
     {
-        "id": 531,
-        "url": "https://assets.xz-studio-gallery.com/full/20211228_DY_王牌部队_XZ-1.mp4",
-        "date": "2021-12-28",
-        "month": "December",
-        "year": "2021",
-        "tags": [
-            "王牌部队"
-        ],
-        "groupName": "20211228",
-        "quality": "1080p",
-        "duration": 37,
-        "link": "https://www.douyin.com/video/7046647341994036516",
-        "sourceType": [
-            "douyin"
-        ],
-        "description": "",
-        "postText": "#王牌部队思绪清晰、强力输出@肖战 带你领略#顾一野的语言艺术   ",
-        "englishTags": [
-            "ace troops",
-            "douyin",
-            "gu yiye"
-        ]
-    },
-    {
         "id": 465,
         "url": "https://assets.xz-studio-gallery.com/full/20211228_王牌部队_XZ-STU-1.mp4",
         "date": "2021-12-28",
@@ -422,14 +398,17 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#王牌部队# 可以是思绪清晰的“顾讲理”，也可以是强力输出的“顾会怼”，点击视频，带你领略一个更加立体的顾一野@X玖少年团肖战DAYTOY  #顾一野语言的艺术# 肖战工作室的微博视频",
+        "postText": "#王牌部队# 可以是思绪清晰的“顾讲理”，也可以是强力输出的“顾会怼”，点击视频，带你领略一个更加立体的顾一野@X玖少年团肖战DAYTOY  #顾一野语言的艺术# 肖战工作室的微博视频\n抖音：#王牌部队思绪清晰、强力输出@肖战 带你领略#顾一野的语言艺术",
         "duration": 37,
         "englishTags": [
             "ace troops",
             "gu yiye",
             "drama promotion"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7046647341994036516"
+        },
+        "source": []
     },
     {
         "id": 15,
