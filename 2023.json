@@ -12628,18 +12628,20 @@
             "手环"
         ],
         "groupName": "20230715",
-        "quality": "2k",
         "link": "https://weibo.com/6643123988/N9YcwBM3w",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#玉骨遥# get了时影@X玖少年团肖战DAYTOY 同款灵识手环[哇] http://t.cn/A60yiBL9 ​​​",
+        "postText": "微博：#玉骨遥# get了时影@X玖少年团肖战DAYTOY 同款灵识手环[哇] http://t.cn/A60yiBL9\n​​​抖音：肖战用了时影同款灵识手环 get时影同款灵识手环，做和时影有心灵感应的人！# 玉骨遥同款灵识草环 # 玉骨遥 # 肖战",
         "duration": 9,
         "englishTags": [
             "jade bone dynasty",
             "bracelet"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://v.douyin.com/ul4yO5ejlxY/"
+        },
+        "source": []
     },
     {
         "id": 910,
