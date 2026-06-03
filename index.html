@@ -1170,7 +1170,7 @@
         background: rgba(40,40,40,0.82);
         color: #fff;
         border-radius: 12px;
-        border: none;
+        border: 1px solid rgba(255,255,255,0.25);
         cursor: pointer;
         transition: all 0.2s ease;
         font-family: inherit;
@@ -2403,7 +2403,7 @@
           <div class="group-title" id="groupTitle" style="display:none;"></div>
           <div class="modal-tags-row">
             <div id="modalTags" class="modal-tags-container"></div>
-            <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文</button>
+            <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文 ▼</button>
           </div>
         </div>
         <div id="postTextPanel" style="display:none;">
@@ -3488,7 +3488,7 @@
           postTextContent.textContent = photo.postText;
           postTextBtn.style.display = "";
           postTextPanel.style.display = "none";
-          postTextBtn.textContent = "📋 原文";
+          postTextBtn.textContent = "📋 原文 ▼";
         } else {
           postTextBtn.style.display = "none";
           postTextPanel.style.display = "none";
@@ -3500,7 +3500,7 @@
         const btn   = document.getElementById("postTextBtn");
         const open  = panel.style.display !== "none";
         panel.style.display = open ? "none" : "block";
-        btn.textContent = open ? "📋 原文" : "📋 收起";
+        btn.textContent = open ? "📋 原文 ▼" : "📋 收起 ▲";
       }
 
       /* ---------- FIX: Use 'm' instead of 's' ---------- */
