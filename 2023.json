@@ -24176,9 +24176,9 @@
         "groupName": "20230207",
         "link": "https://weibo.com/6643123988/MrW4HxzfQ",
         "sourceType": [
-            "weibo"
+            "weibo",
+            "douyin"
         ],
-        "description": "",
         "postText": "#日常见肖战# 之#载入像素中# 穿梭于熟悉的街头巷尾，记录着点滴生活中的温暖瞬间。抟心揖志，笃行致远。心有暖阳，沐光向前。@X玖少年团肖战DAYTOY 与平行世界的盛阳相遇，感受别样的精彩人生。圆满杀青，期待更好的遇见🌻 肖战工作室的微博视频",
         "url_4k": "https://assets.xz-studio-gallery.com/4k/20230207_日常见肖战之载入像素中_XZ-STU-1.mp4",
         "duration": 300,
@@ -24187,7 +24187,11 @@
             "casual",
             "the brightest star in the sky",
             "photoshoot"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://v.douyin.com/1NmNq7MYWCA/"
+        },
+        "source": []
     },
     {
         "id": 807,
