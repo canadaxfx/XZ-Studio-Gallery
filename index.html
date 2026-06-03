@@ -2308,6 +2308,12 @@
           >
             ✕
           </button>
+          <button
+            id="expandAllBtn"
+            onclick="toggleExpandAll()"
+            title="Expand / Collapse all years"
+            style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--gold);opacity:0.75;padding:2px 4px;white-space:nowrap"
+          >▼ All</button>
         </div>
 
         <div class="media-filter-tabs">
@@ -3906,6 +3912,19 @@
           .join("");
       }
 
+      function toggleExpandAll() {
+        const allYears = [...document.querySelectorAll('[data-year]')].map(el => el.dataset.year);
+        const allExpanded = allYears.every(y => expandedYears.has(y));
+        const btn = document.getElementById('expandAllBtn');
+        if (allExpanded) {
+          allYears.forEach(y => { if (expandedYears.has(y)) toggleYear(y); });
+          if (btn) btn.textContent = '▼ All';
+        } else {
+          allYears.forEach(y => { if (!expandedYears.has(y)) toggleYear(y); });
+          if (btn) btn.textContent = '▲ All';
+        }
+      }
+
       function toggleYear(year) {
         const yearElement = document.querySelector(`[data-year="${year}"]`);
         if (!yearElement) return;
@@ -4674,12 +4693,6 @@
 
           createTimelineHTML(photosByYear);
 
-          if (!fromMediaTab) {
-            // Date/source filter: expand all years to show results immediately
-            Object.keys(photosByYear).forEach((year) => {
-              if (!expandedYears.has(year)) toggleYear(year);
-            });
-          }
 
           _setStats(filtered.length, Object.keys(photosByYear).length);
         }
