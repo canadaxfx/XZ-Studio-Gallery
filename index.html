@@ -3221,14 +3221,14 @@
         }
         return pop;
       }
-      function setPlatformBtnBehavior(btn, mainLink, extraLinks) {
+      function setPlatformBtnBehavior(btn, mainLink, extraLinks, primarySource) {
         const existingPop = document.getElementById('platformPopover');
         if (existingPop) existingPop.style.display = 'none';
+        const lmap = {weibo:'Weibo 微博',douyin:'Douyin 抖音',youtube:'YouTube',bilibili:'Bilibili',ins:'Instagram',xiaohongshu:'RedNote 小红书',xhs:'RedNote 小红书',rednote:'RedNote 小红书'};
         const links = [];
         const w = mainLink ? String(mainLink).trim() : '';
-        if (w) links.push({label: 'Weibo 微博', url: /^https?/i.test(w) ? w : 'https://' + w});
+        if (w) links.push({label: lmap[primarySource] || 'Weibo 微博', url: /^https?/i.test(w) ? w : 'https://' + w});
         if (extraLinks && typeof extraLinks === 'object') {
-          const lmap = {weibo:'Weibo 微博',douyin:'Douyin 抖音',youtube:'YouTube',bilibili:'Bilibili',ins:'Instagram',xiaohongshu:'RedNote 小红书',xhs:'RedNote 小红书'};
           Object.entries(extraLinks).forEach(([k, v]) => { if (v) links.push({label: lmap[k] || k, url: String(v)}); });
         }
         if (!links.length) { btn.style.display = 'none'; return; }
@@ -3344,7 +3344,7 @@
         weiboBtn.className = "action-btn " + btnClass;
         weiboBtn.style.background = ""; // Reset inline style to let CSS take over
         weiboBtn.innerHTML = `📱 View on Platform<br><small style="opacity: 1">查看原帖</small>`;
-        setPlatformBtnBehavior(weiboBtn, photo.link, photo.platform_links);
+        setPlatformBtnBehavior(weiboBtn, photo.link, photo.platform_links, rawSource);
 
         // --- 5. Handle Video vs Photo Display ---
         // _isVid = mp4 files only (for playlist/stats); isMotionUrl = mov/gif (play in modal but managed as photos)
