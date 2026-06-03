@@ -525,13 +525,13 @@
       /* Source Badge Styles */
       .source-badge {
         display: inline-block;
-        padding: 2px 8px;
-        border-radius: 12px;
-        font-size: 11px;
+        padding: 2px 6px;
+        border-radius: 10px;
+        font-size: 10px;
         color: white;
         font-weight: bold;
-        margin-right: 5px;
         vertical-align: middle;
+        white-space: nowrap;
       }
       /* WEIBO: Changed to Gold/Yellow */
       .badge-weibo {
@@ -1119,7 +1119,8 @@
       .modal-header-controls {
         display: flex;
         align-items: center;
-        gap: 8px;
+        flex-wrap: wrap;
+        gap: 4px;
         flex: 1;
         justify-content: center;
       }
@@ -1165,6 +1166,7 @@
       .post-text-pill {
         font-size: 11px;
         padding: 3px 10px;
+        flex-shrink: 0;
         background: var(--surface-w);
         color: #7a5f1a;
         border-radius: 12px;
@@ -1454,13 +1456,21 @@
       .badge-youtube { position: absolute; bottom: 0px; left: 10px; background: rgba(204, 0, 0, 0.85); color: #fff; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 700; z-index: 11; letter-spacing: 0.05em; text-decoration: none; cursor: pointer; }
       .timeline-photo.pl-in-playlist { box-shadow: 0 0 0 2.5px var(--gold), 0 2px 8px rgba(0,0,0,0.1); }
 
+      .modal-tags-row {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        overflow: hidden;
+        min-height: 0;
+      }
       .modal-tags-container {
         display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-        justify-content: flex-start;
-        padding: 0 2px;
-        min-height: 0;
+        flex-wrap: nowrap;
+        gap: 4px;
+        overflow: hidden;
+        flex: 1;
+        min-width: 0;
+        align-items: center;
       }
       .modal-tag-pill {
         font-size: 10px;
@@ -2384,14 +2394,16 @@
           <div class="modal-header-top">
             <div class="photo-counter" id="photoCounter">1 of 5</div>
             <div class="modal-header-controls">
-              <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文</button>
               <span id="sourceBadge"></span>
             </div>
             <button class="close-modal" onclick="closeModal()">&times;</button>
           </div>
           <div class="modal-header-bottom" id="modalDateTag"></div>
           <div class="group-title" id="groupTitle" style="display:none;"></div>
-          <div id="modalTags" class="modal-tags-container"></div>
+          <div class="modal-tags-row">
+            <div id="modalTags" class="modal-tags-container"></div>
+            <button class="post-text-pill" id="postTextBtn" onclick="togglePostText()" style="display:none;">📋 原文</button>
+          </div>
         </div>
         <div id="postTextPanel" style="display:none;">
           <p id="postTextContent" style="margin:0;"></p>
@@ -3291,11 +3303,37 @@
         let btnClass = isDouyin ? "source-btn douyin" : isRedNote ? "source-btn rednote" : "source-btn weibo";
         let sourceNameFull = isDouyin ? "Douyin 抖音" : isRedNote ? "RedNote 小红书" : "Weibo 微博";
 
-        // --- 3. Update the Header Badge & Title ---
+        // --- 3. Update the Header Badges (all platforms) & Title ---
         const titleText = photo.groupName || `${photo.month} ${photo.year}`;
 
-        // Row 1: source badge
-        sourceBadge.innerHTML = `<span class="source-badge ${badgeClass}">${badgeText}</span>`;
+        // Row 1: all platform badges
+        const _BADGE_DEFS = {
+            weibo:       { cls: 'badge-weibo',    text: 'WEIBO' },
+            rednote:     { cls: 'badge-rednote',  text: 'REDNOTE' },
+            xiaohongshu: { cls: 'badge-rednote',  text: 'REDNOTE' },
+            douyin:      { cls: 'badge-douyin',   text: 'DOUYIN' },
+            twitter:     { cls: 'badge-twitter',  text: 'TWITTER' },
+            ins:         { cls: 'badge-other',    text: 'INS' },
+            instagram:   { cls: 'badge-instagram','text': 'INS' },
+            youtube:     { cls: 'badge-other',    text: 'YOUTUBE' },
+            bilibili:    { cls: 'badge-other',    text: 'BILI' },
+        };
+        const _seenBadges = new Set();
+        const _badgeHtml = [];
+        const _addBadge = (k) => {
+            const key = String(k).toLowerCase().trim();
+            if (_seenBadges.has(key)) return;
+            _seenBadges.add(key);
+            const def = _BADGE_DEFS[key] || { cls: 'badge-other', text: key.toUpperCase().slice(0, 8) };
+            _badgeHtml.push(`<span class="source-badge ${def.cls}">${def.text}</span>`);
+        };
+        const _stypes = Array.isArray(photo.sourceType) ? photo.sourceType : (photo.sourceType ? [photo.sourceType] : []);
+        _stypes.forEach(_addBadge);
+        if (photo.platform_links && typeof photo.platform_links === 'object') {
+            Object.keys(photo.platform_links).forEach(_addBadge);
+        }
+        if (!_badgeHtml.length) _addBadge(rawSource);
+        sourceBadge.innerHTML = _badgeHtml.join('');
 
         // Row 2: date · first tag
         const firstTag = Array.isArray(photo.tags) && photo.tags.length > 0 ? photo.tags[0] : '';
@@ -4573,28 +4611,23 @@
           if (mVal !== "all" && pMonth !== mVal) return false;
           if (dVal !== "all" && pDay !== dVal) return false;
 
-          // --- SOURCE CHECK (FIXED) ---
-          let itemSource = "weibo"; // Default fallback
-
-          // A. Check legacy 'source' property — skip empty arrays
+          // --- SOURCE CHECK ---
+          // Collect ALL platforms for this item (sourceType array + platform_links keys)
+          const _itemPlatforms = new Set();
           const _isrc0 = Array.isArray(item.source) ? item.source[0] : item.source;
           if (_isrc0) {
-            itemSource = String(_isrc0).toLowerCase();
+            _itemPlatforms.add(String(_isrc0).toLowerCase());
+          } else if (item.sourceType) {
+            const _st = Array.isArray(item.sourceType) ? item.sourceType : [item.sourceType];
+            _st.forEach(t => _itemPlatforms.add(String(t).toLowerCase()));
           }
-          // B. Check new 'sourceType' property (Array or String) from 2025.json
-          else if (item.sourceType) {
-            if (Array.isArray(item.sourceType) && item.sourceType.length > 0) {
-              itemSource = String(item.sourceType[0]).toLowerCase();
-            } else if (typeof item.sourceType === "string") {
-              itemSource = item.sourceType.toLowerCase();
-            }
+          if (item.platform_links && typeof item.platform_links === 'object') {
+            Object.keys(item.platform_links).forEach(k => _itemPlatforms.add(String(k).toLowerCase()));
           }
+          if (!_itemPlatforms.size) _itemPlatforms.add('weibo');
+          if (_itemPlatforms.has('xiaohongshu')) _itemPlatforms.add('rednote');
 
-          // C. Normalize RedNote variations
-          if (itemSource === "xiaohongshu") itemSource = "rednote";
-
-          // D. Compare with filter value
-          if (sVal !== "all" && itemSource !== sVal) return false;
+          if (sVal !== "all" && !_itemPlatforms.has(sVal)) return false;
 
           return true;
         });
