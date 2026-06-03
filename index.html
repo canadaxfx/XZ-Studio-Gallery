@@ -2705,6 +2705,66 @@
     </div>
 
     <script>
+// ============================================================
+// XZ Studio Gallery — index.html  JS MAP
+// (search: /* ---------- SECTION ---------- */ to jump to each)
+//
+// CONSTANTS & STATE
+//   Core Variables          ~2708  photoData, currentFilter, expandedYears,
+//                                  yearPaginationSettings, DL_KEY
+//   Modal Variables         ~2722  currentPhotoGroup, currentPhotoIndex
+//   Playlist State          ~2728  playlist[], filteredVideosCache, PL_KEY='xzStudioPlaylist'
+//
+// PLAYLIST                  ~2734  plLoad/Save, plCardAdd, plSyncAllCards,
+//                                  addAllFilteredVideos, addYearToPlaylist,
+//                                  plRemove, plRender, plTogglePanel, plPlayItem
+//
+// FLOAT GROUP               ~2954  setupFloatGroup, plPositionPanel
+//
+// CACHED DOM / HELPERS      ~3046  Shared helpers, utility functions,
+//                                  mediaCountLabel, isVideoUrl, isRealVideo,
+//                                  isVideoEntry, isClip, isMotionUrl,
+//                                  isYouTubeUrl, fmtDuration, getYouTubeId
+//                                  dlIsLocked/Unlocked (NAS download lock)
+//
+// MODAL                     ~3117  openPhotoModal, updateModalContent,
+//                                  generateThumbnails, generateThumbnail,
+//                                  goToPhoto, navigatePhoto, togglePostText,
+//                                  closeModal, handleKeyboardNavigation
+//                                  Touch/swipe support ~3548
+//
+// INITIALIZATION            ~3577  init() — calls setupNavigation, setupSearch,
+//                                  setupIntersectionObserver, loadPhotoData
+//
+// DATA LOADING              ~3591  loadPhotoData() — fetches {year}.json files
+//
+// TIMELINE                  ~3669  initializeTimeline, buildYearCardHTML,
+//                                  createTimelineHTML, generatePhotosHTML,
+//                                  toggleYear, renderYearPage, goToPage,
+//                                  jumpToPage, createPaginationButtons
+//
+// LAZY LOADING              ~3972  setupIntersectionObserver, setupLazyLoading,
+//                                  setupLazyLoadingForYear, unloadYearImages
+//
+// SEARCH                    ~4019  setupSearch, setupClearSearch, performSearch
+//
+// STATS                     ~4132  updateStats
+//
+// NAVIGATION                ~4138  setupNavigation, showSection
+//
+// FILTERS                   ~4372  setupDateFilters, applyDateFilter, resetDateFilter
+//                                  setMediaFilter, applyFilter
+//                                  NOTE: Studio uses sourceType array on entries
+//                                  (weibo/rednote/douyin/etc.) — no SOURCE_SECTIONS
+//
+// GAME TAB                  ~4216  initializeGame, startGame, nextQuestion,
+//                                  generateOptions, selectOption, updateGameStats,
+//                                  createDefaultGameImage
+//
+// THEME & MAGNOLIA          ~4593  applyTheme, mgCombined, mgBuildTiles, mgApply
+//
+// ============================================================
+
       /* ---------- Core Variables ---------- */
       let photoData = [];
       let currentRenderData = [];
