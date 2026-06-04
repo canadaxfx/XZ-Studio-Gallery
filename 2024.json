@@ -595,15 +595,18 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#肖战专辑我们# 于梦境“漂流”🪞寻觅与现实交汇的轨迹。@X玖少年团肖战DAYTOY #我们的多棱镜##肖战[超话]# http://t.cn/A6mJFRyc ​​​",
+        "postText": "微博：#肖战专辑我们# 于梦境“漂流”🪞寻觅与现实交汇的轨迹。@X玖少年团肖战DAYTOY #我们的多棱镜##肖战[超话]# http://t.cn/A6mJFRyc\n抖音：# 肖战漂流 🪞于梦境之中寻觅“漂流”的轨迹 @肖战 # 肖战",
         "quality": "1080p",
         "duration": 15,
         "englishTags": [
             "album",
             "drifting",
             "our song"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7444036434840849714"
+        },
+        "source": []
     },
     {
         "id": 810,
@@ -935,7 +938,8 @@
         "platform_links": {
             "douyin": "https://www.douyin.com/video/7442350971063258425"
         },
-        "source": []
+        "source": [],
+        "quality": "2k"
     },
     {
         "id": 37,
