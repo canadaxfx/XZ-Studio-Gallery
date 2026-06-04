@@ -1160,15 +1160,18 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#肖战专辑我们# 向着光的方向，直面自我，大步向前，“不要回头”@X玖少年团肖战DAYTOY #我们的多棱镜##肖战[超话]# http://t.cn/A6m43750 ​​​",
+        "postText": "微博：#肖战专辑我们# 向着光的方向，直面自我，大步向前，“不要回头”@X玖少年团肖战DAYTOY #我们的多棱镜##肖战[超话]# http://t.cn/A6m43750\n抖音：# 肖战不要回头 @肖战 向着光🏃🏻‍♂️坚定向前 # 肖战",
         "quality": "4k",
         "duration": 26,
         "englishTags": [
             "album",
             "we",
             "dont look back"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7441614715182189859"
+        },
+        "source": []
     },
     {
         "id": 64,
