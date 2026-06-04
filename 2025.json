@@ -22562,9 +22562,9 @@
             "LIVE"
         ],
         "sourceType": [
-            "rednote"
+            "douyin"
         ],
-        "link": "https://www.xiaohongshu.com/explore/6807bac6000000000f033151?xsec_token=ABOMdL0ymbn-So5d60NtqcirTHXSxIRqPXq6QzT5b2c60=&xsec_source=pc_user",
+        "link": "https://www.douyin.com/note/7496421268640648508",
         "groupName": "20250423",
         "clip": true,
         "quality": "1080p",
@@ -22575,7 +22575,10 @@
             "rednote"
         ],
         "source": [],
-        "postText": "📷🤓#肖战 🥐🌆"
+        "postText": "📷🤓#肖战 🥐🌆",
+        "platform_links": {
+            "rednote": "https://www.xiaohongshu.com/user/profile/651e4de6000000002402db4c"
+        }
     },
     {
         "id": 326,
