@@ -1177,22 +1177,25 @@
         "month": "November",
         "year": "2024",
         "tags": [
+            "不要回头",
             "专辑我们",
-            "黑胶",
-            "不要回头"
+            "黑胶"
         ],
         "groupName": "20241126-1",
         "link": "https://weibo.com/6643123988/P24DUzHdq",
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 不掩饰、不隐藏@X玖少年团肖战DAYTOY “不回头”地奔向每个细小的角落，找寻本真的可贵。#我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 不掩饰、不隐藏@X玖少年团肖战DAYTOY “不回头”地奔向每个细小的角落，找寻本真的可贵。#我们的多棱镜##肖战[超话]#\n抖音：# 肖战不要回头 未来不论去往哪个方向，只管向前🚶🏻@肖战",
         "englishTags": [
             "album",
             "vinyl",
             "our song"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7441612961640140091"
+        }
     },
     {
         "id": 63,
@@ -1862,9 +1865,7 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#肖战专辑我们# 人生是座孤岛，我们独自“漂流”探索着，无论去往哪个方向，只管向前。@X玖少年团肖战DAYTOY  #我们的多棱镜#  http://t.cn/A6mwgVxt ​​​",
-        "quality": "2k",
+        "postText": "微博：#肖战专辑我们# 人生是座孤岛，我们独自“漂流”探索着，无论去往哪个方向，只管向前。@X玖少年团肖战DAYTOY  #我们的多棱镜#  http://t.cn/A6mwgVxt\n抖音：# 肖战我们 人生像一场“漂流”，未知的前方，大胆向前。@肖战 # 肖战",
         "duration": 27,
         "englishTags": [
             "album",
@@ -1872,7 +1873,11 @@
             "drifting",
             "don't look back",
             "music"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7440839806323526947"
+        },
+        "source": []
     },
     {
         "id": 815,
@@ -1888,8 +1893,7 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#肖战专辑我们# 孤舟上的「夜行人」，望着《灯塔》的方向，《漂流》变得不再漫长。@X玖少年团肖战DAYTOY  #我们的多棱镜#  http://t.cn/A6m7A8ia ​​​",
+        "postText": "微博：#肖战专辑我们# 孤舟上的「夜行人」，望着《灯塔》的方向，《漂流》变得不再漫长。@X玖少年团肖战DAYTOY  #我们的多棱镜#  http://t.cn/A6m7A8ia\n抖音：# 肖战专辑我们 「夜行人」乘着心灵的《漂流》之旅，追逐着《灯塔》的光芒，是希望，也是归宿。@肖战# 肖战",
         "quality": "4k",
         "duration": 43,
         "englishTags": [
@@ -1897,7 +1901,11 @@
             "our song",
             "lighthouse",
             "drifting"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7440037099425877298"
+        },
+        "source": []
     },
     {
         "id": 817,
@@ -1906,16 +1914,15 @@
         "month": "November",
         "year": "2024",
         "tags": [
-            "专辑我们",
-            "灯塔纯享版"
+            "灯塔纯享版",
+            "专辑我们"
         ],
         "groupName": "20241122",
         "link": "https://weibo.com/6643123988/P1rX0uMUR",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#肖战专辑我们# 跟着@X玖少年团肖战DAYTOY 逆风前行，去向大海的中心。点击来看《灯塔》纯享版🌅#我们的多棱镜##肖战[超话]# \nhttp://t.cn/A6mPV4Kp ​​​",
+        "postText": "微博：#肖战专辑我们# 跟着@X玖少年团肖战DAYTOY 逆风前行，去向大海的中心。点击来看《灯塔》纯享版🌅#我们的多棱镜##肖战[超话]# http://t.cn/A6mPV4Kp\n抖音：# 肖战灯塔 奔向心中的灯塔，就算荆棘遍布脚下。@肖战 # 肖战",
         "url_4k": "https://assets.xz-studio-gallery.com/4k/20241122_专辑我们_XZ-STU-2.mp4",
         "quality": "1080p",
         "duration": 270,
@@ -1923,7 +1930,11 @@
             "album",
             "lighthouse",
             "music video"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7439663796798360882"
+        },
+        "source": []
     },
     {
         "id": 816,
@@ -1940,14 +1951,16 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#肖战专辑我们# 前路如行舟，“灯塔”照亮我们的人生航线🌅@X玖少年团肖战DAYTOY #我们的多棱镜##肖战[超话]# http://t.cn/A6m7Pedt ​​​",
-        "quality": "2k",
+        "postText": "微博：#肖战专辑我们# 前路如行舟，“灯塔”照亮我们的人生航线🌅@X玖少年团肖战DAYTOY #我们的多棱镜##肖战[超话]# http://t.cn/A6m7Pedt\n抖音：# 肖战灯塔不惧风暴，终会打破迷茫🌤️@肖战# 肖战",
         "duration": 19,
         "englishTags": [
             "album",
             "lighthouse"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7439671678633807131"
+        },
+        "source": []
     },
     {
         "id": 78,
@@ -2303,16 +2316,15 @@
         "month": "November",
         "year": "2024",
         "tags": [
-            "专辑我们",
-            "漂流纯享版"
+            "漂流纯享版",
+            "专辑我们"
         ],
         "groupName": "20241121",
         "link": "https://weibo.com/6643123988/P1iwFkwSn",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#肖战专辑我们# 画面来回切换，梦境或梦想，都是漂流途中的风景。点击收获《漂流》纯享版。@X玖少年团肖战DAYTOY #我们的多棱镜##肖战[超话]# http://t.cn/A6nsu8oJ ​​​",
+        "postText": "微博：#肖战专辑我们# 画面来回切换，梦境或梦想，都是漂流途中的风景。点击收获《漂流》纯享版。@X玖少年团肖战DAYTOY #我们的多棱镜##肖战[超话]# http://t.cn/A6nsu8oJ\n抖音：# 肖战漂流 朝着远方或急或缓地“漂”，打破随波逐“流”，眺望更好的自己@肖战 # 肖战",
         "url_4k": "https://assets.xz-studio-gallery.com/4k/20241121_专辑我们_XZ-STU-1.mp4",
         "quality": "1080p",
         "duration": 322,
@@ -2320,7 +2332,11 @@
             "album",
             "drifting",
             "music video"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7439312937438809381"
+        },
+        "source": []
     },
     {
         "id": 96,
@@ -2788,13 +2804,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "album",
             "drifting",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 113,
@@ -2812,13 +2831,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "drifting",
             "album",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 112,
@@ -2836,13 +2858,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "drifting",
             "album",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 111,
@@ -2860,13 +2885,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "drifting",
             "album",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 110,
@@ -2884,13 +2912,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "album",
             "drifting",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 109,
@@ -2908,13 +2939,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "drifting",
             "album",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 108,
@@ -2932,13 +2966,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "album",
             "drifting",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 107,
@@ -2956,13 +2993,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "drifting",
             "album",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 106,
@@ -2980,13 +3020,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "album",
             "drifting",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 105,
@@ -3004,13 +3047,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "album",
             "drifting",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 104,
@@ -3028,13 +3074,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "album",
             "drifting",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 103,
@@ -3052,13 +3101,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "album",
             "drifting",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 102,
@@ -3076,13 +3128,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "album",
             "drifting",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 101,
@@ -3100,13 +3155,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "album",
             "drifting",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 100,
@@ -3124,13 +3182,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "drifting",
             "album",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 99,
@@ -3148,13 +3209,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "drifting",
             "album",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 98,
@@ -3172,13 +3236,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "album",
             "drifting",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 97,
@@ -3196,13 +3263,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​",
+        "postText": "微博：#肖战专辑我们# 一起化身探险家，珍惜与世界万物相遇的每一个瞬间；聆听、探索、发现...此时用镜头定格下《漂流》一瞬与@X玖少年团肖战DAYTOY 对话🙌 #我们的多棱镜##肖战[超话]# ​​​\n抖音：# 肖战漂流 记录梦境的每一面，抵达光的彼岸。@肖战 # 肖战",
         "englishTags": [
             "album",
             "drifting",
             "vinyl"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7439645991478824251"
+        }
     },
     {
         "id": 872,
@@ -3244,15 +3314,17 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#肖战专辑我们#  “我们”越过荒原，“漂流”到陌生的孤岛。@X玖少年团肖战DAYTOY  #我们的多棱镜#  http://t.cn/A6ndOmEG ​​​",
-        "quality": "2k",
+        "postText": "微博：#肖战专辑我们#  “我们”越过荒原，“漂流”到陌生的孤岛。@X玖少年团肖战DAYTOY  #我们的多棱镜#  http://t.cn/A6ndOmEG\n抖音：# 肖战漂流随风“漂流”到属于“我们”的孤岛。@肖战# 肖战",
         "duration": 23,
         "englishTags": [
             "album",
             "our song",
             "music"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7438212484982492416"
+        },
+        "source": []
     },
     {
         "id": 820,
@@ -3268,15 +3340,18 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#肖战专辑我们# 《我们》如同夜空中不起眼的星星，但每一颗《都一样》拥有闪耀的权利。愿时光能将那些被遗忘的《荧》光拾起，《还原》成世间最热忱的诗篇。@X玖少年团肖战DAYTOY #我们的多棱镜#  http://t.cn/A6n3TkzE ​​​",
+        "postText": "微博：#肖战专辑我们# 《我们》如同夜空中不起眼的星星，但每一颗《都一样》拥有闪耀的权利。愿时光能将那些被遗忘的《荧》光拾起，《还原》成世间最热忱的诗篇。@X玖少年团肖战DAYTOY #我们的多棱镜http://t.cn/A6n3TkzE\n抖音：# 肖战我们 尽管《我们》的故事不同，但却如同万千《荧》光，《都一样》可以《还原》成世间精彩的篇章。@肖战# 肖战",
         "quality": "4k",
         "duration": 62,
         "englishTags": [
             "album",
             "we",
             "music"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7437383821781208371"
+        },
+        "source": []
     },
     {
         "id": 822,
@@ -3285,8 +3360,8 @@
         "month": "November",
         "year": "2024",
         "tags": [
-            "专辑我们",
             "都一样",
+            "专辑我们",
             "纯享版"
         ],
         "groupName": "20241114",
@@ -3294,15 +3369,18 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#肖战专辑我们# 生命长河如街道，走过不停留，面对彷徨与失意时，你我都一样。@X玖少年团肖战DAYTOY #我们的多棱镜# http://t.cn/A6nngGg5 ​​​",
+        "postText": "微博：#肖战专辑我们# 生命长河如街道，走过不停留，面对彷徨与失意时，你我都一样。@X玖少年团肖战DAYTOY #我们的多棱镜# http://t.cn/A6nngGg5\n抖音：# 肖战都一样 行人来往，时光流放，你我都一样。@肖战 # 肖战",
         "url_4k": "https://assets.xz-studio-gallery.com/4k/20241114_专辑我们_XZ-STU-2.mp4",
         "duration": 274,
         "englishTags": [
             "album",
             "we are all the same",
             "music video"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436794400602131747"
+        },
+        "source": []
     },
     {
         "id": 821,
@@ -3311,24 +3389,26 @@
         "month": "November",
         "year": "2024",
         "tags": [
-            "专辑我们",
-            "都一样"
+            "都一样",
+            "专辑我们"
         ],
         "groupName": "20241114",
         "link": "https://weibo.com/6643123988/P0i4fnsKd",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#肖战专辑我们# 于时间流动中肆意穿行，在惬意烟火中感受人间，你我都一样。@X玖少年团肖战DAYTOY 🌃 #我们的多棱镜##为都一样制作mv# http://t.cn/A6nuVCGf ​​​",
-        "quality": "2k",
+        "postText": "微博：#肖战专辑我们# 于时间流动中肆意穿行，在惬意烟火中感受人间，你我都一样。@X玖少年团肖战DAYTOY 🌃 #我们的多棱镜##为都一样制作mv# http://t.cn/A6nuVCGf\n抖音：肖战都一样 行人步履匆忙，思绪万千，但其实都一样。@肖战 # 肖战",
         "duration": 27,
         "englishTags": [
             "album",
             "we are all the same",
             "music video",
             "promotional content"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7437043380263161139"
+        },
+        "source": []
     },
     {
         "id": 123,
@@ -4002,13 +4082,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 158,
@@ -4025,13 +4108,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 157,
@@ -4048,13 +4134,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 156,
@@ -4071,7 +4160,7 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "xiao zhan album we",
             "xiao zhan we",
@@ -4080,7 +4169,10 @@
             "xiao zhan songs",
             "xiao zhan 2024"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 155,
@@ -4097,13 +4189,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 154,
@@ -4120,13 +4215,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 153,
@@ -4143,13 +4241,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 152,
@@ -4166,7 +4267,7 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "xiao zhan album we",
             "xiao zhan we",
@@ -4175,7 +4276,10 @@
             "xiao zhan songs",
             "xiao zhan 2024"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 151,
@@ -4192,7 +4296,7 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "xiao zhan album we",
             "xiao zhan we",
@@ -4201,7 +4305,10 @@
             "xiao zhan songs",
             "xiao zhan 2024"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 150,
@@ -4218,13 +4325,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 149,
@@ -4241,13 +4351,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 148,
@@ -4264,13 +4377,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 147,
@@ -4287,13 +4403,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 146,
@@ -4310,13 +4429,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 145,
@@ -4333,13 +4455,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 144,
@@ -4356,13 +4481,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 143,
@@ -4379,13 +4507,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 142,
@@ -4402,13 +4533,16 @@
         "sourceType": [
             "weibo"
         ],
-        "postText": "#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜# ​​​",
+        "postText": "微博：#肖战专辑我们# 在无尽旷野中找寻广袤之地，在至简世界中回归本真自我。现在一起走进@X玖少年团肖战DAYTOY 与《我们》的共处时间🏜️#我们的多棱镜#\n抖音：# 肖战我们 坦然寻觅未知的旅途，@肖战 与“我们”一起点亮____ # 肖战",
         "englishTags": [
             "album",
             "our song",
             "weibo music"
         ],
-        "source": []
+        "source": [],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7436679145175731516"
+        }
     },
     {
         "id": 875,
