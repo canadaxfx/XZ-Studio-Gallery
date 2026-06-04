@@ -13,15 +13,18 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#东方卫视跨年# 是谁在🎤，@肖战 已就位✌🏼 http://t.cn/AX41UXoH ​​​",
+        "postText": "微博：#东方卫视跨年# 是谁在🎤，@肖战 已就位✌🏼 http://t.cn/AX41UXoH\n抖音：# 东方卫视跨年 是谁在🎤，@肖战 已就位✌🏼# 肖战",
         "quality": "4k",
         "duration": 48,
         "englishTags": [
             "new year gala",
             "rehearsal",
             "stage performance"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7589977646885326129"
+        },
+        "source": []
     },
     {
         "id": 1126,
@@ -1920,14 +1923,17 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "于方寸间打磨，在时光处沉淀。@肖战 一步步走进莫得闲的故事里#电影得闲谨制# http://t.cn/AX4aqqUF ​​​",
+        "postText": "微博：于方寸间打磨，在时光处沉淀。@肖战 一步步走进莫得闲的故事里#电影得闲谨制# http://t.cn/AX4aqqUF\n抖音：一起走进莫得闲@肖战 的世界。# 肖战 # 电影得闲谨制",
         "quality": "1080p",
         "duration": 195,
         "englishTags": [
             "movie",
             "the leisure life"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7588352168086173349"
+        },
+        "source": []
     },
     {
         "id": 1056,
@@ -1997,13 +2003,17 @@
         ],
         "link": "https://weibo.com/6643123988/QjiN9pDB1",
         "groupName": "20251220",
-        "postText": "光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬 ​​​",
+        "postText": "微博：光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬\n抖音：在片场的莫得闲@肖战 # 电影得闲谨制 # 肖战",
         "englishTags": [
             "get free",
             "movie set",
             "behind the scenes"
         ],
-        "quality": "1080p"
+        "quality": "1080p",
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7585895825622027569"
+        },
+        "source": []
     },
     {
         "id": 1054,
@@ -2021,13 +2031,16 @@
         ],
         "link": "https://weibo.com/6643123988/QjiN9pDB1",
         "groupName": "20251220",
-        "postText": "光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬 ​​​",
+        "postText": "微博：光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬\n抖音：在片场的莫得闲@肖战 # 电影得闲谨制 # 肖战",
         "englishTags": [
             "get free",
             "movie set",
             "behind the scenes"
         ],
-        "quality": "1080p"
+        "quality": "1080p",
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7585895825622027569"
+        }
     },
     {
         "id": 1053,
@@ -2045,7 +2058,7 @@
         ],
         "link": "https://weibo.com/6643123988/QjiN9pDB1",
         "groupName": "20251220",
-        "postText": "光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬 ​​​",
+        "postText": "微博：光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬\n抖音：在片场的莫得闲@肖战 # 电影得闲谨制 # 肖战",
         "clip": true,
         "quality": "1080p",
         "duration": 2,
@@ -2053,7 +2066,10 @@
             "get free",
             "movie",
             "behind the scenes"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7585895825622027569"
+        }
     },
     {
         "id": 1052,
@@ -2071,13 +2087,16 @@
         ],
         "link": "https://weibo.com/6643123988/QjiN9pDB1",
         "groupName": "20251220",
-        "postText": "光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬 ​​​",
+        "postText": "微博：光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬\n抖音：在片场的莫得闲@肖战 # 电影得闲谨制 # 肖战",
         "englishTags": [
             "movie",
             "behind the scenes",
             "the leisure life"
         ],
-        "quality": "1080p"
+        "quality": "1080p",
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7585895825622027569"
+        }
     },
     {
         "id": 1051,
@@ -2095,13 +2114,16 @@
         ],
         "link": "https://weibo.com/6643123988/QjiN9pDB1",
         "groupName": "20251220",
-        "postText": "光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬 ​​​",
+        "postText": "微博：光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬\n抖音：在片场的莫得闲@肖战 # 电影得闲谨制 # 肖战",
         "englishTags": [
             "get free",
             "movie set",
             "behind the scenes"
         ],
-        "quality": "1080p"
+        "quality": "1080p",
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7585895825622027569"
+        }
     },
     {
         "id": 1050,
@@ -2119,13 +2141,16 @@
         ],
         "link": "https://weibo.com/6643123988/QjiN9pDB1",
         "groupName": "20251220",
-        "postText": "光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬 ​​​",
+        "postText": "微博：光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬\n抖音：在片场的莫得闲@肖战 # 电影得闲谨制 # 肖战",
         "englishTags": [
             "get free",
             "movie set",
             "behind the scenes"
         ],
-        "quality": "1080p"
+        "quality": "1080p",
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7585895825622027569"
+        }
     },
     {
         "id": 1049,
@@ -2143,7 +2168,7 @@
         ],
         "link": "https://weibo.com/6643123988/QjiN9pDB1",
         "groupName": "20251220",
-        "postText": "光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬 ​​​",
+        "postText": "微博：光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬\n抖音：在片场的莫得闲@肖战 # 电影得闲谨制 # 肖战",
         "clip": true,
         "quality": "1080p",
         "duration": 2,
@@ -2151,7 +2176,10 @@
             "get free",
             "movie set",
             "behind the scenes"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7585895825622027569"
+        }
     },
     {
         "id": 1048,
@@ -2169,13 +2197,16 @@
         ],
         "link": "https://weibo.com/6643123988/QjiN9pDB1",
         "groupName": "20251220",
-        "postText": "光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬 ​​​",
+        "postText": "微博：光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬\n抖音：在片场的莫得闲@肖战 # 电影得闲谨制 # 肖战",
         "englishTags": [
             "get free",
             "movie set",
             "behind the scenes"
         ],
-        "quality": "1080p"
+        "quality": "1080p",
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7585895825622027569"
+        }
     },
     {
         "id": 1047,
@@ -2193,7 +2224,7 @@
         ],
         "link": "https://weibo.com/6643123988/QjiN9pDB1",
         "groupName": "20251220",
-        "postText": "光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬 ​​​",
+        "postText": "微博：光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬\n抖音：在片场的莫得闲@肖战 # 电影得闲谨制 # 肖战",
         "clip": true,
         "quality": "1080p",
         "duration": 2,
@@ -2201,7 +2232,10 @@
             "movie",
             "behind the scenes",
             "the leisure life"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7585895825622027569"
+        }
     },
     {
         "id": 1046,
@@ -2219,13 +2253,16 @@
         ],
         "link": "https://weibo.com/6643123988/QjiN9pDB1",
         "groupName": "20251220",
-        "postText": "光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬 ​​​",
+        "postText": "微博：光影之间，希望永存。莫得闲@肖战 #电影得闲谨制# 片场日常放送🎬\n抖音：在片场的莫得闲@肖战 # 电影得闲谨制 # 肖战",
         "englishTags": [
             "movie set",
             "the golden hour",
             "behind the scenes"
         ],
-        "quality": "1080p"
+        "quality": "1080p",
+        "platform_links": {
+            "douyin": "https://www.douyin.com/note/7585895825622027569"
+        }
     },
     {
         "id": 1132,
@@ -2500,15 +2537,18 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "近距离感受莫得闲@肖战 拼死一战的巨大勇气，劫后余生的松一口气。#电影得闲谨制# http://t.cn/AXUonF6a ​​​",
+        "postText": "微博：近距离感受莫得闲@肖战 拼死一战的巨大勇气，劫后余生的松一口气。#电影得闲谨制# http://t.cn/AXUonF6a\n抖音：绝境中奋力反击，守住脚下这一寸土地。@肖战 # 肖战 # 电影得闲谨制",
         "quality": "1080p",
         "duration": 53,
         "englishTags": [
             "movie",
             "the legend of the condor heroes",
             "wuxia"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7584636634538708283"
+        },
+        "source": []
     },
     {
         "id": 1036,
@@ -2893,15 +2933,18 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "在爆炸声响起前，直击莫得闲@肖战 存留的片场痕迹。#电影得闲谨制# http://t.cn/AXUVj0vI ​​​",
+        "postText": "微博：在爆炸声响起前，直击莫得闲@肖战 存留的片场痕迹。#电影得闲谨制# http://t.cn/AXUVj0vI\n抖音：这场轰炸戏的背后，是得闲@肖战 这个家最后的完整时刻。# 肖战 # 电影得闲谨制",
         "quality": "1080p",
         "duration": 45,
         "englishTags": [
             "movie",
             "behind the scenes",
             "the leisure life"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7583898531519630641"
+        },
+        "source": []
     },
     {
         "id": 1021,
@@ -3424,15 +3467,18 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "温馨变成泡影的那一刻，莫得闲@肖战 听清了碎裂时的声音，是炮声。#电影得闲谨制# http://t.cn/AXyeQCbX ​​​",
+        "postText": "微博：温馨变成泡影的那一刻，莫得闲@肖战 听清了碎裂时的声音，是炮声。#电影得闲谨制# http://t.cn/AXyeQCbX\n抖音：方寸安宁，碎于一声炮响@肖战 # 肖战 # 电影得闲谨制",
         "quality": "1080p",
         "duration": 40,
         "englishTags": [
             "movie",
             "promotional material",
             "get a life"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7582518725845323057"
+        },
+        "source": []
     },
     {
         "id": 1141,
@@ -3472,14 +3518,17 @@
         "sourceType": [
             "weibo"
         ],
-        "description": "",
-        "postText": "亲人还在彼此身侧，对得闲@肖战 来说，就是世界上最好的事。#电影得闲谨制# http://t.cn/AXy3OQmw ​​​",
+        "postText": "微博：亲人还在彼此身侧，对得闲@肖战 来说，就是世界上最好的事。#电影得闲谨制# http://t.cn/AXy3OQmw\n抖音：家才不是回不去的地方。@肖战 # 肖战 # 电影得闲谨制",
         "quality": "1080p",
         "duration": 37,
         "englishTags": [
             "movie",
             "promotional poster"
-        ]
+        ],
+        "platform_links": {
+            "douyin": "https://www.douyin.com/video/7582149785755929905"
+        },
+        "source": []
     },
     {
         "id": 1006,
