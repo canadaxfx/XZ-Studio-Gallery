@@ -6516,20 +6516,20 @@
         "tags": [
             "北京2022年冬奥会"
         ],
-        "groupName": "20200101",
+        "groupName": "20200101-1",
         "quality": "1080p",
         "link": "https://weibo.com/6643123988/Insjgv2Lc",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "两个奥运，同样精彩！和@X玖少年团肖战DAYTOY 一起为#北京2022#年冬奥会加油助威！#冬奥一起来# //@X玖少年团肖战DAYTOY:#北京2022#关注北京2022年冬奥会和冬残奥会，我们一起期待！@北京2022年冬奥会",
         "duration": 40,
         "englishTags": [
             "beijing olympics",
             "winter olympics",
             "olympics"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 249,
@@ -6543,7 +6543,7 @@
             "总结",
             "海报"
         ],
-        "groupName": "20200101",
+        "groupName": "20200101-2",
         "link": "https://weibo.com/6643123988/Inu0z6gMe",
         "sourceType": [
             "weibo"
@@ -6568,7 +6568,7 @@
             "总结",
             "海报"
         ],
-        "groupName": "20200101",
+        "groupName": "20200101-2",
         "link": "https://weibo.com/6643123988/Inu0z6gMe",
         "sourceType": [
             "weibo"
