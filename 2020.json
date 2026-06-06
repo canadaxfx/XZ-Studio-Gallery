@@ -3719,13 +3719,12 @@
             "李宇春",
             "人民日报"
         ],
-        "groupName": "20200208",
+        "groupName": "20200208-1",
         "quality": "1080p",
         "link": "https://weibo.com/6643123988/ItdO0kEso",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "#点亮心愿 岁岁平安# 唯愿岁岁平安。//@X玖少年团肖战DAYTOY:#点亮心愿 岁岁平安# 感谢@李宇春 春春老师的邀请，很荣幸一同完成《岁岁平安》这首歌曲。愿大家岁岁平安，无论天涯海角，同根同源的我们，牵挂在心中。 //@李宇春:#点亮心愿 岁岁平安# 愿亲人 都平安 春暖 艳阳天",
         "duration": 302,
         "englishTags": [
@@ -3733,7 +3732,8 @@
             "li yuchun",
             "duet",
             "charity song"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 150,
