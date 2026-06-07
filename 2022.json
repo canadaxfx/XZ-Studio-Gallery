@@ -1559,20 +1559,20 @@
         "tags": [
             "微博视界大会"
         ],
-        "groupName": "20221129",
+        "groupName": "20221129-V",
         "quality": "1080p",
         "duration": 32,
         "link": "https://www.douyin.com/video/7171508682847538446",
         "sourceType": [
             "douyin"
         ],
-        "description": "",
         "postText": "初冬入苏，与@肖战 一起寻光向前，早安",
         "englishTags": [
             "douyin",
             "weibo tv festival",
             "red carpet"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 86,
