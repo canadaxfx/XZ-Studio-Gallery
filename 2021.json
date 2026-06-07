@@ -4411,13 +4411,12 @@
             "李宁",
             "乒乒乓乓请接招"
         ],
-        "groupName": "20210819",
+        "groupName": "20210819-1",
         "quality": "1080p",
         "link": "https://weibo.com/6643123988/Ku9rI5v0a",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "老板@X玖少年团肖战DAYTOY 也来参加#乒乒乓乓请接招#挑战啦，这个“球拍”也是没想到@李宁运动生活  肖战工作室的微博视频",
         "duration": 71,
         "englishTags": [
@@ -4425,7 +4424,8 @@
             "ping ping pang pang",
             "sports",
             "weibo video"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 481,
