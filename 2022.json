@@ -11405,13 +11405,12 @@
             "TODS",
             "秋冬男士系列发布"
         ],
-        "groupName": "20220115",
+        "groupName": "20220115-1",
         "quality": "1080p",
         "link": "https://weibo.com/6643123988/LaV1G2E5A",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "@TODS 的邀请总是来得特别准时，明晚17:30 ， 和老板@X玖少年团肖战DAYTOY 一起关注TOD‘S 2022秋冬男士系列发布。#TodsItalianRoutes# 肖战工作室的微博视频",
         "duration": 15,
         "englishTags": [
@@ -11419,7 +11418,8 @@
             "menswear",
             "fall winter",
             "brand ambassador"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 415,
@@ -11456,21 +11456,21 @@
         "tags": [
             "王牌部队"
         ],
-        "groupName": "20220114",
+        "groupName": "20220114-V",
         "quality": "1080p",
         "duration": 33,
         "link": "https://www.douyin.com/video/7053047674672532772",
         "sourceType": [
             "douyin"
         ],
-        "description": "",
         "postText": "#王牌部队行稳致远，进而有为，看顾一野@肖战训练场上挥汗雨，稳扎稳打积实力。",
         "englishTags": [
             "ace troops",
             "douyin",
             "gu yiye",
             "military uniform"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 418,
