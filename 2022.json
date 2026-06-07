@@ -11922,12 +11922,11 @@
         "tags": [
             "京东电器"
         ],
-        "groupName": "20220110",
+        "groupName": "20220110-1",
         "link": "https://weibo.com/6643123988/La5eknn7o",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "#我和我的后背# 最绚烂是新年烟火，最温暖是背后灯火。@京东电器 肖战工作室的微博视频",
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20220110_京东电器_XZ-STU-1.mp4",
         "duration": 760,
@@ -11935,7 +11934,8 @@
             "jd electronics",
             "weibo",
             "commercial"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 484,
