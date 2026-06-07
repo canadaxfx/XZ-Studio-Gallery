@@ -3229,13 +3229,12 @@
         "tags": [
             "双立人"
         ],
-        "groupName": "20210920",
+        "groupName": "20210920-1",
         "quality": "1080p",
         "link": "https://weibo.com/6643123988/Kz0Lgy8N6",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "@X玖少年团肖战DAYTOY 与@德国双立人 一起演绎国风艺术，共同#向中式烹饪致敬#，让生活每一面都精彩。  肖战工作室的微博视频",
         "duration": 44,
         "englishTags": [
@@ -3243,7 +3242,8 @@
             "endorsement",
             "cooking",
             "traditional chinese style"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 477,
