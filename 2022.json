@@ -12570,13 +12570,12 @@
         "tags": [
             "上汽奥迪"
         ],
-        "groupName": "20220101",
+        "groupName": "20220101-1",
         "quality": "1080p",
         "link": "https://weibo.com/6643123988/L8M7kb2Le",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "祝贺@上汽奥迪 Audi House of Progress进取汇 上海 盛大揭幕。期待未来@X玖少年团肖战DAYTOY 与上汽奥迪一起#进取新生# #上汽奥迪品牌代言人肖战#  肖战工作室的微博视频",
         "duration": 37,
         "englishTags": [
@@ -12584,7 +12583,8 @@
             "brand ambassador",
             "audi house of progress",
             "shanghai"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 489,
