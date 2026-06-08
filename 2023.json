@@ -8882,21 +8882,21 @@
             "YSL",
             "圣罗兰美妆"
         ],
-        "groupName": "20230908",
+        "groupName": "20230908-1",
         "quality": "1080p",
         "duration": 10,
         "link": "https://www.douyin.com/video/7276641516519509304",
         "sourceType": [
             "douyin"
         ],
-        "description": "",
         "postText": "高能，日夜相护。与@YSL圣罗兰美妆 护肤全球代言人@肖战 一同见证高能焕肤时刻。",
         "englishTags": [
             "ysl",
             "douyin",
             "skincare",
             "brand ambassador"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 1064,
