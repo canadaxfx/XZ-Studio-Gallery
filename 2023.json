@@ -9574,21 +9574,21 @@
         "tags": [
             "NARS"
         ],
-        "groupName": "20230904",
+        "groupName": "20230904-1",
         "quality": "1080p",
         "duration": 16,
         "link": "https://www.douyin.com/video/7274862211384888628",
         "sourceType": [
             "douyin"
         ],
-        "description": "",
         "postText": "和@NARS 全球品牌代言人@肖战 一起开启寻光之旅，探索自然光下的清透底妆吧！#肖战NARS全球品牌代言人",
         "englishTags": [
             "nars",
             "douyin",
             "brand ambassador",
             "makeup"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 896,
