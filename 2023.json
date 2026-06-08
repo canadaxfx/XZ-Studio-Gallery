@@ -12935,14 +12935,13 @@
             "玉骨遥",
             "大片"
         ],
-        "groupName": "20230711",
+        "groupName": "20230711-V",
         "quality": "1080p",
         "duration": 86,
         "link": "https://www.douyin.com/video/7254545214809935165",
         "sourceType": [
             "douyin"
         ],
-        "description": "",
         "postText": "#玉骨遥 时针转动，与杀青前的时影@肖战 于大漠中相遇📸#肖战",
         "englishTags": [
             "the longest promise",
@@ -12950,7 +12949,8 @@
             "desert",
             "photoshoot",
             "shiying"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 464,
