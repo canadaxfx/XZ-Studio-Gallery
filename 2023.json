@@ -8632,13 +8632,12 @@
             "央视专访",
             "CCTV电视剧"
         ],
-        "groupName": "20230909",
+        "groupName": "20230909-V",
         "quality": "1080p",
         "link": "https://weibo.com/6643123988/Niwsr6x6l",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "揭秘盛阳背后的故事，寻找坚定与开阔的未来，听@X玖少年团肖战DAYTOY 讲述[收到]，明晚继续～",
         "duration": 280,
         "englishTags": [
@@ -8646,7 +8645,8 @@
             "sheng yang",
             "cctv interview",
             "drama"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 889,
