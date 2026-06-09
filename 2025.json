@@ -19627,12 +19627,11 @@
             "开机",
             "宣传片先行版"
         ],
-        "groupName": "20250525",
+        "groupName": "20250525-1",
         "link": "https://weibo.com/6643123988/Ptqd4fmeB",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "#谍报上不封顶# 为信仰，以热血护家国永昌，静候任少白@X玖少年团肖战DAYTOY  #谍报上不封顶宣传片先行版# #谍报上不封顶开机# //@X玖少年团肖战DAYTOY:#谍报上不封顶宣传片先行版# #谍报上不封顶开机# 于危局中破釜重燃，你好，任少白。#谍报上不封顶# ​​​",
         "quality": "1080p",
         "duration": 22,
@@ -19641,7 +19640,8 @@
             "spy thriller",
             "filming start",
             "promotional video"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 1164,
@@ -20625,12 +20625,11 @@
             "人民日报",
             "采访"
         ],
-        "groupName": "20250523",
+        "groupName": "20250523-V",
         "link": "https://weibo.com/6643123988/Pt7VznVOE",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "#肖战谈演一部剧带来的成长# 和演员肖战@X玖少年团肖战DAYTOY 一起，心怀美好，专注成长，活出精彩人生。#藏海传#",
         "quality": "1080p",
         "duration": 419,
@@ -20638,7 +20637,8 @@
             "zang hai zhuan",
             "people's daily",
             "interview"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 1170,
