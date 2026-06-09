@@ -15472,13 +15472,12 @@
             "肖春生",
             "央视专访"
         ],
-        "groupName": "20230615",
+        "groupName": "20230615-V",
         "quality": "1080p",
         "link": "https://weibo.com/6643123988/N5rJPE22n",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "来听演员@X玖少年团肖战DAYTOY 分享《梦中的那片海》背后的故事～",
         "duration": 280,
         "englishTags": [
@@ -15488,7 +15487,8 @@
             "xiao zhan",
             "sean xiao",
             "drama"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 932,
