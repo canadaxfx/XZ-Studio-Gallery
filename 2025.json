@@ -22774,14 +22774,13 @@
             "圣罗兰美妆",
             "夜皇后精华"
         ],
-        "groupName": "20250513",
+        "groupName": "20250513-1",
         "quality": "1080p",
         "duration": 21,
         "link": "https://www.douyin.com/video/7503962892459429158",
         "sourceType": [
             "douyin"
         ],
-        "description": "",
         "postText": "一夜见证，天亮脸更亮。@YSL圣罗兰美妆 携手YSL护肤全球代言人@肖战 探索去黄神器 #YSL夜皇后精华 。",
         "englishTags": [
             "ysl",
@@ -22789,7 +22788,8 @@
             "night reboot serum",
             "douyin",
             "brand ambassador"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 1187,
