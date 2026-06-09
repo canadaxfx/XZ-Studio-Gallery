@@ -17513,13 +17513,12 @@
         "tags": [
             "梦中的那片海"
         ],
-        "groupName": "20250601",
+        "groupName": "20250601-1",
         "quality": "1080p",
         "link": "https://weibo.com/6643123988/PuupYivHG",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "#梦中的那片海开播2周年# #梦中的那片海未公开花絮# 冰场上的欢笑，是这场追梦的路途的起点，坚定向前，不负热血初心。遇见肖春生@X玖少年团肖战DAYTOY 2周年！#梦中的那片海#",
         "englishTags": [
             "where dreams begin",
@@ -17527,7 +17526,8 @@
             "anniversary",
             "behind the scenes"
         ],
-        "duration": 78
+        "duration": 78,
+        "source": []
     },
     {
         "id": 1280,
