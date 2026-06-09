@@ -19654,12 +19654,11 @@
             "CCTV电视剧",
             "剧说很好看"
         ],
-        "groupName": "20250525",
+        "groupName": "20250525-V",
         "link": "https://weibo.com/6643123988/PtqAleaGb",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "今晚22:15，CCTV-8《剧说很好看》，看藏大人@X玖少年团肖战DAYTOY 如何步步为营，逆风翻盘。",
         "quality": "1080p",
         "duration": 30,
@@ -19667,7 +19666,8 @@
             "cctv",
             "cang hai zhuan",
             "drama showcase"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 1163,
