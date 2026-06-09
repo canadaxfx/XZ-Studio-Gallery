@@ -18881,8 +18881,7 @@
             "新华社"
         ],
         "link": "https://weibo.com/6643123988/QqI31cTfP",
-        "groupName": "202602",
-        "note": "",
+        "groupName": "202602-1",
         "sourceType": [
             "weibo"
         ],
@@ -18893,7 +18892,8 @@
             "official announcement",
             "poster",
             "xinhua news agency"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 52,
