@@ -29552,12 +29552,11 @@
             "射雕英雄传侠之大者",
             "新华社"
         ],
-        "groupName": "20250124",
+        "groupName": "20250124-2",
         "link": "https://weibo.com/6643123988/Pb3zRBpB8",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "大年初一，走进电影院，和@X玖少年团肖战DAYTOY 一起极尽潇洒，快意江湖。@新华社",
         "quality": "1080p",
         "duration": 15,
@@ -29566,7 +29565,8 @@
             "movie",
             "xinhua news agency",
             "cny"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 1217,
