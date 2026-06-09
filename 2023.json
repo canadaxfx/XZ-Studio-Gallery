@@ -15572,12 +15572,11 @@
         "tags": [
             "李宁"
         ],
-        "groupName": "20230614",
+        "groupName": "20230614-1",
         "link": "https://weibo.com/6643123988/N5fyShkCe",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "#自有天地# 不拘一格。 6月20日#中国李宁24春夏潮流发布#，一同见证中国李宁于自我场域中展开的先锋创想！",
         "quality": "2k",
         "duration": 39,
@@ -15586,7 +15585,8 @@
             "weibo",
             "fashion show",
             "promotional"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 934,
