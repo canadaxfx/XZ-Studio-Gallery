@@ -18201,12 +18201,11 @@
         "tags": [
             "蒙牛"
         ],
-        "groupName": "20240203",
+        "groupName": "20240203-1",
         "link": "https://weibo.com/6643123988/NEOtYlbZm",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "新的一年，一起邂逅精选的美好，和@蒙牛精选牧场 品牌代言人@X玖少年团肖战DAYTOY 一起，享受精选的阳光，#迎接新年精选好光彩# 吧！ http://t.cn/A6jnQSnT ​​​",
         "quality": "4k",
         "duration": 22,
@@ -18214,7 +18213,8 @@
             "mengniu",
             "brand endorsement",
             "new year"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 721,
