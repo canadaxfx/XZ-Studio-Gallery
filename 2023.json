@@ -19595,13 +19595,12 @@
             "腾讯音乐公益计划",
             "TME星河守护者"
         ],
-        "groupName": "20230402",
+        "groupName": "20230402-V",
         "quality": "1080p",
         "link": "https://weibo.com/6643123988/MA6i2kCZt",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "和腾讯音乐公益计划「TME星河守护者」@X玖少年团肖战DAYTOY  一起，向每一位孤独症儿童分享你心中与音乐有关的模样，希望每一颗星星都能在他的成长过程中，尽情享受音乐、色彩与爱。肖战工作室的微博视频",
         "duration": 25,
         "englishTags": [
@@ -19609,7 +19608,8 @@
             "charity",
             "autism awareness",
             "music"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 640,
