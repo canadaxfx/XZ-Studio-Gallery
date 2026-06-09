@@ -3131,12 +3131,11 @@
             "娱情实验室",
             "采访"
         ],
-        "groupName": "20251212",
+        "groupName": "20251212-V",
         "link": "https://weibo.com/6643123988/Qi3wpDBLq",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "一句南京话，一场工匠梦，一段莫得闲的蜕变之路。来新浪娱乐出品《娱情实验室》，听@肖战 分享角色内外的温度与成长。#电影得闲谨制# 正在热映。 http://t.cn/AXUvRacS ​​​",
         "url_4k": "https://assets.xz-studio-gallery.com/4k/20251212_得闲谨制_XZ-MISC-1.mp4",
         "duration": 621,
@@ -3144,7 +3143,8 @@
             "interview",
             "movie",
             "de xian jin zhi"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 1015,
