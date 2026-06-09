@@ -18632,12 +18632,11 @@
             "央视新闻",
             "专访"
         ],
-        "groupName": "20250528",
+        "groupName": "20250528-V",
         "link": "https://weibo.com/6643123988/PtSHIiqnb",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "日月掌中置，惊涛袖里藏。今晚7:30和演员肖战@X玖少年团肖战DAYTOY 相约CCTV8《藏海传》，不见不散[笑哈哈]#藏海传#",
         "quality": "1080p",
         "duration": 1199,
@@ -18645,7 +18644,8 @@
             "cang hai zhuan",
             "cctv8",
             "interview"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 483,
