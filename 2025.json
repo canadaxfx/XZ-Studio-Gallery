@@ -3436,12 +3436,11 @@
             "主创专访",
             "新华社"
         ],
-        "groupName": "20251211",
+        "groupName": "20251211-V",
         "link": "https://weibo.com/6643123988/QhVuq9FxK",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "家的意义，在硝烟中愈发清晰。以小家见大家，传递“守护”的温度。#电影得闲谨制# 正在热映。@肖战",
         "quality": "1080p",
         "duration": 744,
@@ -3450,7 +3449,8 @@
             "interview",
             "xinhua news agency",
             "movie"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 1137,
