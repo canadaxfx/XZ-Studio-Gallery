@@ -12075,12 +12075,11 @@
             "李宁",
             "以我为名"
         ],
-        "groupName": "20240531",
+        "groupName": "20240531-1",
         "link": "https://weibo.com/6643123988/OgNsh23pP",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "#以我为名#，一切皆有可能。一起见证@X玖少年团肖战DAYTOY  完成@李宁官方微博 创新科技挑战，感受科技赋能，创造运动精彩。http://t.cn/A6HY6RhN ​​​",
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20240531_李宁_XZ-STU-1.mp4",
         "duration": 527,
@@ -12088,7 +12087,8 @@
             "lining",
             "sports",
             "campaign"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 457,
