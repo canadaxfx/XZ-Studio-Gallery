@@ -22514,12 +22514,11 @@
             "采访",
             "开播"
         ],
-        "groupName": "20250518",
+        "groupName": "20250518-V",
         "link": "https://weibo.com/6643123988/Pspg2r2sF",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "感谢@新华社 相约，一起看#藏海传肖战访谈# 完整版，今晚#藏海传开播#，不见不散！",
         "quality": "1080p",
         "duration": 560,
@@ -22528,7 +22527,8 @@
             "xinhua news agency",
             "interview",
             "premiere"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 1184,
