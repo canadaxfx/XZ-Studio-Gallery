@@ -27261,21 +27261,21 @@
             "欧莱雅PRO",
             "超蓬云朵精华"
         ],
-        "groupName": "20250205",
+        "groupName": "20250205-1",
         "quality": "1080p",
         "duration": 18,
         "link": "https://www.douyin.com/video/7467881427938348351",
         "sourceType": [
             "douyin"
         ],
-        "description": "",
         "postText": "与@欧莱雅PRO 品牌全球代言人@肖战共同探索首款控油头皮精华，#欧莱雅PRO超蓬云朵精华 吸油小磁铁，养好头皮，养出持久蓬松发。",
         "englishTags": [
             "l'oréal pro",
             "douyin",
             "brand ambassador",
             "hair care"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 1228,
@@ -27462,7 +27462,7 @@
             "射雕英雄传侠之大者",
             "片场工作日常"
         ],
-        "groupName": "20250205",
+        "groupName": "20250205-V",
         "link": "https://weibo.com/6643123988/PcSnFfMdW",
         "sourceType": [
             "weibo"
