@@ -5269,20 +5269,20 @@
             "新华社",
             "采访"
         ],
-        "groupName": "20260503",
+        "groupName": "20260503-V1",
         "quality": "1080p",
         "duration": 343,
         "link": "https://weibo.com/6643123988/QDHqEcpbN",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "感谢@新华社 相约，和演员@肖战 一起奔赴不设限的未来",
         "englishTags": [
             "college student film festival",
             "xinhua news agency",
             "interview"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 626,
