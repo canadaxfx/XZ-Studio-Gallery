@@ -27791,12 +27791,11 @@
             "人民日报",
             "非遗春节大拜年"
         ],
-        "groupName": "20250204",
+        "groupName": "20250204-1",
         "link": "https://weibo.com/6643123988/PcHc53MRX",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "和@X玖少年团肖战DAYTOY 一起，心怀热爱，继续前行！#非遗春节大拜年#",
         "quality": "1080p",
         "duration": 15,
@@ -27804,7 +27803,8 @@
             "people's daily",
             "intangible cultural heritage",
             "chinese new year"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 1205,
