@@ -26712,12 +26712,11 @@
             "射雕英雄传侠之大者",
             "徐克肖战窦文涛文隽特别对谈"
         ],
-        "groupName": "20250210",
+        "groupName": "20250210-V",
         "link": "https://weibo.com/6643123988/PdBXhcCRI",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "行正义之事，怀善良之心，方可称侠。@X玖少年团肖战DAYTOY #徐克肖战窦文涛文隽特别对谈下集# #射雕每个人心中都有一个侠# #电影射雕英雄传侠之大者#",
         "url_hd": "https://assets.xz-studio-gallery.com/hd/20250210_射雕英雄传侠之大者_XZ-STU-2.mp4",
         "duration": 2196,
@@ -26726,7 +26725,8 @@
             "movie",
             "interview",
             "tsui hark"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 1198,
