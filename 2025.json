@@ -10766,12 +10766,11 @@
             "湾区升明月",
             "人民日报"
         ],
-        "groupName": "20250929",
+        "groupName": "20250929-1",
         "link": "https://weibo.com/6643123988/Q6ItQ4Jiv",
         "sourceType": [
             "weibo"
         ],
-        "description": "",
         "postText": "#湾区升明月# 歌手@肖战 火热开唱，以《整晚的音乐》共燃璀璨之夜。",
         "quality": "1080p",
         "duration": 202,
@@ -10779,7 +10778,8 @@
             "bay area moonlit gala",
             "people's daily",
             "music performance"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 1152,
