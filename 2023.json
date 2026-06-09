@@ -20579,20 +20579,20 @@
         "tags": [
             "微博之夜"
         ],
-        "groupName": "20230325",
+        "groupName": "20230325-V",
         "quality": "1080p",
         "duration": 60,
         "link": "https://www.douyin.com/video/7214514074174967095",
         "sourceType": [
             "douyin"
         ],
-        "description": "",
         "postText": "恰好@肖战 走入，光与暗相逢，晚安～",
         "englishTags": [
             "weibo night",
             "douyin",
             "red carpet"
-        ]
+        ],
+        "source": []
     },
     {
         "id": 953,
