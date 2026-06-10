@@ -2721,7 +2721,7 @@
 //
 // FILTERS                   ~4372  setupDateFilters, applyDateFilter, resetDateFilter
 //                                  setMediaFilter, applyFilter
-//                                  NOTE: Studio uses sourceType array on entries
+//                                  NOTE: Studio uses platform array on entries
 //                                  (weibo/rednote/douyin/etc.) — no SOURCE_SECTIONS
 //
 // GAME TAB                  ~4216  initializeGame, startGame, nextQuestion,
@@ -3231,21 +3231,12 @@
         const sourceBadge = document.getElementById("sourceBadge");
         const modalDateTag = document.getElementById("modalDateTag");
 
-        // --- 1. ROBUST SOURCE DETECTION (Fixes the RedNote Issue) ---
+        // --- 1. PLATFORM DETECTION ---
         let rawSource = "weibo"; // Default
 
-        // Check if 'source' exists (Legacy) — skip empty arrays (studio entries have source:[])
-        const _src0 = Array.isArray(photo.source) ? photo.source[0] : photo.source;
+        const _src0 = Array.isArray(photo.platform) ? photo.platform[0] : photo.platform;
         if (_src0) {
           rawSource = String(_src0).toLowerCase();
-        }
-        // Check if 'sourceType' exists (From your 2025.json)
-        else if (photo.sourceType) {
-          if (Array.isArray(photo.sourceType) && photo.sourceType.length > 0) {
-            rawSource = String(photo.sourceType[0]).toLowerCase();
-          } else if (typeof photo.sourceType === "string") {
-            rawSource = photo.sourceType.toLowerCase();
-          }
         }
 
         // Determine source type
@@ -3282,7 +3273,7 @@
             const def = _BADGE_DEFS[key] || { cls: 'badge-other', text: key.toUpperCase().slice(0, 8) };
             _badgeHtml.push(`<span class="source-badge ${def.cls}">${def.text}</span>`);
         };
-        const _stypes = Array.isArray(photo.sourceType) ? photo.sourceType : (photo.sourceType ? [photo.sourceType] : []);
+        const _stypes = Array.isArray(photo.platform) ? photo.platform : (photo.platform ? [photo.platform] : []);
         _stypes.forEach(_addBadge);
         if (photo.platform_links && typeof photo.platform_links === 'object') {
             Object.keys(photo.platform_links).forEach(_addBadge);
@@ -4776,11 +4767,10 @@
           if (mVal !== "all" && pMonth !== mVal) return false;
           if (dVal !== "all" && pDay !== dVal) return false;
 
-          // --- SOURCE (PLATFORM) CHECK ---
-          // Platform is in sourceType field; source field now holds category names
+          // --- PLATFORM CHECK ---
           const _itemPlatforms = new Set();
-          if (item.sourceType) {
-            const _st = Array.isArray(item.sourceType) ? item.sourceType : [item.sourceType];
+          if (item.platform) {
+            const _st = Array.isArray(item.platform) ? item.platform : [item.platform];
             _st.forEach(t => _itemPlatforms.add(String(t).toLowerCase()));
           }
           if (item.platform_links && typeof item.platform_links === 'object') {
