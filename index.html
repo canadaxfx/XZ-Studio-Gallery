@@ -464,23 +464,6 @@
         box-shadow: none;
         border: 1.5px solid rgba(255, 255, 255, 0.82);
       }
-      .game-controls {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-top: 16px;
-      }
-      .game-controls .btn.primary {
-        border: none;
-        box-shadow: 0 2px 8px rgba(var(--gold-dr), 0.35);
-        padding: 8px 14px;
-        font-size: 12px;
-      }
-      .game-controls .btn.primary:hover {
-        background: var(--grad-gold-h);
-        transform: translateY(-1px);
-      }
       .nav-btn:not(.active) {
         background: transparent;
         color: rgba(255, 255, 255, 0.65);
@@ -570,7 +553,7 @@
         background-position: 16px center;
         border-radius: 14px;
         font-size: 13px;
-        margin: 0 auto 15px;
+        margin: 12px auto 15px;
         display: block;
         transition: all 0.18s ease;
         font-family: inherit;
@@ -944,7 +927,7 @@
         display: flex;
         justify-content: center;
         gap: 4px;
-        margin: 0 auto 15px;
+        margin: 0 auto 8px;
         padding: 4px;
         background: var(--surface-w);
         border: 1px solid var(--border);
@@ -1559,90 +1542,6 @@
         margin: 0;
       }
 
-      /* Game Section */
-      .game-container {
-        text-align: center;
-      }
-      .game-stats {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin: 20px 0;
-        flex-wrap: wrap;
-      }
-      .stat,
-      .game-controls .btn.primary {
-        background: var(--grad-gold);
-        color: white;
-      }
-      .stat {
-        padding: 15px 20px;
-        border-radius: 15px;
-        font-size: 14px;
-        font-weight: 600;
-      }
-      .game-photo {
-        max-width: 400px;
-        max-height: 400px;
-        width: 100%;
-        height: 300px;
-        object-fit: contain;
-        background: #f5f5f7;
-        border-radius: 15px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        margin: 20px auto;
-        display: block;
-      }
-      .options {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        max-width: 500px;
-        margin: 20px auto;
-      }
-      .option-btn {
-        padding: 10px;
-        border: 2px solid var(--border);
-        background: var(--surface-0);
-        border-radius: 15px;
-        cursor: pointer;
-        font-size: 13px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-      }
-      .option-btn:hover {
-        border-color: #f43f5e;
-        background: #fdf6ee;
-        transform: translateY(-2px);
-      }
-      .option-btn.correct {
-        background: linear-gradient(45deg, #2ed573, #1dd1a1);
-        color: white;
-        border-color: #2ed573;
-      }
-      .option-btn.incorrect {
-        background: linear-gradient(45deg, #ff4757, #ff3742);
-        color: white;
-        border-color: #ff4757;
-      }
-      .game-result {
-        margin: 20px 0;
-        padding: 15px;
-        border-radius: 10px;
-        font-weight: 600;
-        font-size: 14px;
-      }
-      .game-result.correct {
-        background: #d4edda;
-        color: #155724;
-        border: 1px solid #c3e6cb;
-      }
-      .game-result.incorrect {
-        background: #f8d7da;
-        color: #721c24;
-        border: 1px solid #f5c6cb;
-      }
-
       /* Search Results Styles - COPIED FROM SAMPLE.HTML */
       .search-results-container {
         max-width: 1000px;
@@ -1799,11 +1698,6 @@
         .clear-search-btn-search-page {
           padding: 10px 20px;
           font-size: 13px;
-        }
-        .game-stats {
-          flex-wrap: nowrap;
-          gap: 8px;
-          margin: 15px 0;
         }
         .stat {
           padding: 10px 12px;
@@ -2204,6 +2098,100 @@
       [data-theme="washi-slate"]  #backToTopFloat { color: rgba(255,255,255,0.92); }
       [data-theme="washi-garnet"] #backToTopFloat .float-top-text,
       [data-theme="washi-slate"]  #backToTopFloat .float-top-text { color: rgba(255,255,255,0.92); }
+
+      /* ---------- By Category tab: source section headers ---------- */
+      .source-section { margin-bottom: 16px; }
+      .source-section-header {
+          display: flex; align-items: center;
+          padding: 14px 20px; border-radius: 12px; cursor: pointer;
+          background: var(--surface-m);
+          border: 1px solid rgba(var(--gold-rgb), 0.45);
+          border-left: 8px solid var(--gold);
+          border-top: 3px solid rgba(var(--gold-rgb), 0.6);
+          box-shadow: 0 4px 16px rgba(var(--shad-rgb), 0.22);
+          user-select: none; transition: all 0.2s;
+      }
+      .source-section-header:hover {
+          border-color: rgba(var(--gold-rgb), 0.75);
+          border-left-color: var(--gold);
+          border-top-color: rgba(var(--gold-rgb), 0.85);
+          box-shadow: 0 6px 20px rgba(var(--shad-rgb), 0.32);
+          transform: translateY(-1px);
+      }
+      .source-section-main { flex: 1; min-width: 0; }
+      .source-section-title {
+          font-family: 'Cormorant Garamond', Georgia, serif;
+          font-size: 20px; font-weight: 700; font-style: italic;
+          color: var(--bg-dark); margin-bottom: 7px;
+      }
+      .source-section-pills { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+      .src-pill {
+          font-size: 11px; padding: 2px 9px; border-radius: 20px;
+          background: rgba(var(--gold-rgb), 0.15);
+          border: 1px solid rgba(var(--gold-rgb), 0.35);
+          color: var(--bg-dark); white-space: nowrap; opacity: 0.85;
+      }
+      .src-pill-more {
+          font-size: 11px; padding: 2px 9px; border-radius: 20px;
+          background: rgba(var(--gold-rgb), 0.28);
+          border: 1px solid rgba(var(--gold-rgb), 0.55);
+          color: var(--bg-dark); white-space: nowrap; font-weight: 700;
+      }
+      .source-section-right {
+          display: flex; flex-direction: column; align-items: flex-end;
+          gap: 5px; flex-shrink: 0; padding-left: 16px;
+      }
+      .source-section-meta { font-size: 12px; color: var(--bg-dark); opacity: 0.75; white-space: nowrap; }
+      .source-section-chevron { font-size: 16px; color: var(--bg-dark); opacity: 0.8; transition: transform 0.25s; display: block; }
+      .source-section:not(.collapsed) .source-section-chevron { transform: rotate(90deg); }
+      .source-section-body { padding-left: 12px; border-left: 3px solid rgba(var(--gold-rgb), 0.35); margin-top: 8px; }
+      .source-section.collapsed .source-section-body { display: none; }
+      #sourcesContainer { max-width: 1000px; margin: 0 auto; }
+      #sources-section .year-title { font-size: 16px; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; }
+      #sources-section .year-header-top > div { gap: 4px; flex-shrink: 0; }
+
+      /* ---------- Category filter chips ---------- */
+      .source-filters {
+          display: flex; border: 1.5px solid #ccc; border-radius: 12px;
+          overflow: hidden; margin: 0 auto; max-width: 900px;
+      }
+      .chip-en { display: block; font-size: 13px; font-weight: 600; line-height: 1.2; }
+      .chip-zh { display: block; font-size: 11px; opacity: 0.7; line-height: 1.2; margin-top: 3px; }
+      .source-chip {
+          flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;
+          padding: 11px 6px; background: #f8f9fa; color: var(--bg-dark);
+          border: none; border-right: 1px solid #ddd; border-radius: 0;
+          cursor: pointer; transition: background 0.2s ease, color 0.2s ease;
+      }
+      .source-chip:last-child { border-right: none; }
+      .source-chip:hover { background: #e9ecef; }
+      .source-chip.active { background: var(--grad-gold); color: white; border-right-color: rgba(255,255,255,0.3); }
+      .filter-divider { display: flex; align-items: center; gap: 8px; margin: 8px 0; }
+      .filter-divider::before, .filter-divider::after { content: ''; flex: 1; height: 1px; background: #e0e8f0; }
+      .filter-divider span { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9aa5b4; white-space: nowrap; }
+
+      /* ---------- Game launch button ---------- */
+      /* ---------- Mobile overrides for category / source section ---------- */
+      @media (max-width: 600px) {
+          .source-section-header { position: relative; padding-right: 36px; }
+          .source-section-main { width: 100%; }
+          .source-section-right { position: absolute; top: 12px; right: 14px; flex-direction: row; gap: 6px; align-items: center; padding-left: 0; }
+          .source-section-meta { display: none; }
+          .source-section-title { font-size: 15px; margin-bottom: 5px; }
+          .source-section-pills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+          .src-pill { font-size: 10px; padding: 2px 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: center; max-width: none; color: var(--bg-dark); opacity: 1; }
+          .src-pill-more { grid-column: 1 / -1; font-size: 10px; padding: 2px 4px; width: fit-content; }
+          .source-chip { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 9px 4px; flex-direction: column; gap: 0; }
+          .source-chip:nth-child(3n) { border-right: none; }
+          .source-chip:nth-child(4), .source-chip:nth-child(5), .source-chip:nth-child(6) { border-bottom: none; }
+          .source-filters { display: grid; grid-template-columns: repeat(3, 1fr); border-radius: 10px; margin: 6px 10px; }
+          .chip-en { font-size: 11px; }
+          .chip-zh { font-size: 9px; margin-top: 1px; }
+      }
+
+      /* ---------- Washi theme overrides for category chips ---------- */
+      [data-theme="washi-garnet"] .source-chip.active { border-color: #7A2030; }
+      [data-theme="washi-slate"] .source-chip.active { border-color: #3A4860; }
     </style>
   </head>
   <body>
@@ -2242,7 +2230,7 @@
       </header>
       <nav class="nav-buttons">
         <button class="nav-btn active" data-section="gallery"><span class="tab-en">Media Timeline</span><span class="tab-zh">时间线图库</span></button>
-        <button class="nav-btn" data-section="game"><span class="tab-en">Time Game</span><span class="tab-zh">时间游戏</span></button>
+        <button class="nav-btn" data-section="sources"><span class="tab-en">By Category</span><span class="tab-zh">按类别</span></button>
       </nav>
 
       <div id="gallery-section" class="content-section">
@@ -2260,7 +2248,6 @@
             <div class="stat-label">Years Expanded</div>
           </div>
         </div>
-
         <div class="date-filter-container">
           <div class="date-select-wrapper">
             <select id="filterYear" onchange="applyDateFilter()">
@@ -2290,13 +2277,9 @@
             <select
               id="filterSource"
               onchange="applyDateFilter()"
-              style="
-                border-left: 1px solid #eee;
-                padding-left: 10px;
-                margin-left: 5px;
-              "
+              style="border-left:1px solid #eee;padding-left:10px;margin-left:5px;"
             >
-              <option value="all">Source</option>
+              <option value="all">Platform</option>
               <option value="weibo">Weibo</option>
               <option value="douyin">Douyin</option>
               <option value="rednote">RedNote</option>
@@ -2307,9 +2290,7 @@
             id="resetDateBtn"
             class="reset-date-btn hidden"
             onclick="resetDateFilter()"
-          >
-            ✕
-          </button>
+          >✕</button>
           <button
             id="expandAllBtn"
             onclick="toggleExpandAll()"
@@ -2322,6 +2303,15 @@
           <button class="media-tab active" data-media="all" onclick="setMediaFilter('all')">All 全部</button>
           <button class="media-tab" data-media="photo" onclick="setMediaFilter('photo')">📷 Photos 图片</button>
           <button class="media-tab" data-media="video" onclick="setMediaFilter('video')">🎬 Videos 视频</button>
+        </div>
+
+        <div class="source-filters">
+          <div class="source-chip active" data-filter="all"><span class="chip-en">All</span><span class="chip-zh">全部</span></div>
+          <div class="source-chip" data-filter="drama"><span class="chip-en">Dramas</span><span class="chip-zh">影视</span></div>
+          <div class="source-chip" data-filter="event"><span class="chip-en">Stages/Events</span><span class="chip-zh">舞台/活动</span></div>
+          <div class="source-chip" data-filter="variety"><span class="chip-en">Variety/Other</span><span class="chip-zh">综艺/其他</span></div>
+          <div class="source-chip" data-filter="endorsement"><span class="chip-en">Endorsements</span><span class="chip-zh">品牌代言</span></div>
+          <div class="source-chip" data-filter="magazine"><span class="chip-en">Magazines</span><span class="chip-zh">杂志</span></div>
         </div>
 
         <input
@@ -2342,58 +2332,13 @@
         </div>
       </div>
 
-      <div id="game-section" class="content-section hidden">
-        <div class="game-container">
-          <h2 class="section-title">When Was This Photo Posted?</h2>
-          <p style="font-size: 13px; color: var(--gold)">
-            Click "Start Game" to begin!
-          </p>
-          <div
-            style="
-              background: var(--surface-w);
-              padding: 15px;
-              border-radius: 10px;
-              margin: 20px auto;
-              max-width: 500px;
-              border-left: 4px solid var(--gold);
-            "
-          >
-            <p style="margin: 0; font-size: 12px; color: #5a4020">
-              <strong>💡 猜猜看:</strong>
-              这张照片在什么时候发布？<br />点击"开始游戏！"，测试你的眼力吧！
-            </p>
-          </div>
-          <div class="game-stats">
-            <div class="stat">Score: <span id="score">0</span></div>
-            <div class="stat">Streak: <span id="streak">0</span></div>
-            <div class="stat">Total: <span id="totalQuestions">0</span></div>
-          </div>
-          <div id="gameContent">
-            <img id="gamePhoto" class="game-photo" alt="Guess the date" />
-            <video
-              id="gameVideo"
-              class="game-photo hidden"
-              autoplay
-              loop
-              muted
-              playsinline
-            ></video>
-
-            <div id="gameOptions" class="options"></div>
-            <div id="gameResult" class="game-result hidden"></div>
-          </div>
-          <div class="game-controls">
-            <button id="startGame" class="btn primary">
-              Start Game 开始游戏！
-            </button>
-            <button id="nextQuestion" class="btn primary hidden">
-              Next Question 下一题
-            </button>
-            <button id="newGame" class="btn primary hidden">
-              New Game 重新开始
-            </button>
-          </div>
+      <div id="sources-section" class="content-section hidden">
+        <div class="media-filter-tabs" id="sourcesMediaFilterTabs">
+          <button class="media-tab active" data-media="all" onclick="setMediaFilter('all')">All 全部</button>
+          <button class="media-tab" data-media="photo" onclick="setMediaFilter('photo')">📷 Photos 图片</button>
+          <button class="media-tab" data-media="video" onclick="setMediaFilter('video')">🎬 Videos 视频</button>
         </div>
+        <div id="sourcesContainer"></div>
       </div>
     </div>
 
@@ -2790,16 +2735,15 @@
       /* ---------- Core Variables ---------- */
       let photoData = [];
       let currentRenderData = [];
-      let gameScore = 0,
-        gameStreak = 0,
-        totalQuestions = 0,
-        currentPhoto = null,
-        gameActive = false;
       let expandedYears = new Set();
-      let yearPaginationSettings = {}; // Stores { perPage: number, currentPage: number } for each year
+      let yearPaginationSettings = {};
       let imageObserver = null;
-      let currentSearchQuery = ""; // ADDED: Global search query variable
+      let currentSearchQuery = "";
       let currentMediaFilter = "all";
+      let currentFilter = 'all';
+      let expandedSources = new Set();
+      let expandedSectionKeys = new Set();
+      let sourcePaginationSettings = {};
 
       /* ---------- Enhanced Modal Variables ---------- */
       let currentPhotoGroup = [];
@@ -3686,8 +3630,9 @@
       /* ---------- Initialization ---------- */
       document.addEventListener("DOMContentLoaded", () => {
         setupNavigation();
-        setupSearch(); // This will now use the new function
-        setupClearSearch(); // ADDED: setup for the new button
+        setupSearch();
+        setupClearSearch();
+        setupSourceFilters();
         setupIntersectionObserver();
         setupFloatGroup();
         setupDateFilters();
@@ -3809,8 +3754,6 @@
         plUpdateAddAllBtn();
         createTimelineHTML(photosByYear);
         updateStats();
-        initializeGame();
-
       }
 
       function buildYearCardHTML(year, photos) {
@@ -4150,6 +4093,352 @@
         });
       }
 
+      /* ---------- By Category Tab — Section Config ---------- */
+      const SOURCE_SECTIONS = {
+    _sections: ['drama', 'event', 'variety', 'endorsement', 'magazine', 'custom_1780713600813'],
+    _section_labels: {
+        drama: '影视 Dramas',
+        event: '舞台/活动 Stages/Events',
+        variety: '综艺/其他 Variety & Other',
+        endorsement: '品牌代言 Endorsements',
+        magazine: '杂志 Magazines',
+        custom_1780713600813: '其他未分类 Others',
+    },
+    '斗罗大陆': 'drama',
+    '陈情令': 'drama',
+    '玉骨遥': 'drama',
+    '藏海传': 'drama',
+    '超星星学园': 'drama',
+    '诛仙': 'drama',
+    '骄阳伴我': 'drama',
+    '狼殿下': 'drama',
+    '梦中的那片海': 'drama',
+    '哦我的皇帝陛下': 'drama',
+    '射雕英雄传侠之大者': 'drama',
+    '十日终焉': 'drama',
+    '王牌部队': 'drama',
+    '小城良方': 'drama',
+    '余生请多指教': 'drama',
+    '谍报上不封顶': 'drama',
+    '得闲谨制': 'drama',
+    'Dramas Misc': 'drama',
+    '电视剧品质盛典': 'event',
+    '湾区升明月': 'event',
+    '网络视听盛典': 'event',
+    '中国电视剧年度盛典': 'event',
+    '活动 / Events': 'event',
+    '舞台 / Stages': 'event',
+    '我们的歌': 'event',
+    '东方卫视舞台': 'event',
+    '北京台舞台': 'event',
+    '微博活动': 'event',
+    '专辑我们': 'event',
+    '光点': 'event',
+    '官方推广 / Official Promo': 'variety',
+    '访谈 / Interviews': 'variety',
+    '名人 / Celebrity': 'variety',
+    '媒体 / Ent. Hub': 'variety',
+    '其他 / Other': 'variety',
+    '生日': 'variety',
+    '新年': 'variety',
+    '日常见肖战 & VLOG': 'variety',
+    '其他节日': 'variety',
+    'TODS': 'endorsement',
+    '宝诗龙Boucheron': 'endorsement',
+    'YSL圣罗兰美妆': 'endorsement',
+    'GUCCI': 'endorsement',
+    'NARS': 'endorsement',
+    '李宁': 'endorsement',
+    '欧莱雅PRO': 'endorsement',
+    '欧莱雅男士': 'endorsement',
+    '荣耀HONOR': 'endorsement',
+    '羽西': 'endorsement',
+    '拉夫劳伦香氛RalphLauren': 'endorsement',
+    'Endorsement Misc': 'endorsement',
+    'ELLE': 'magazine',
+    'ELLEMEN': 'magazine',
+    'GQ': 'magazine',
+    'COSMO': 'magazine',
+    'VOGUE': 'magazine',
+    '时尚芭莎': 'magazine',
+    '博客天下': 'magazine',
+    '嘉人': 'magazine',
+    '人物': 'magazine',
+    '时尚先生': 'magazine',
+    '文档公告': 'custom_1780713600813',
+};
+
+      function getPhotoSection(p) {
+          const sources = Array.isArray(p.source) ? p.source : (p.source ? [p.source] : []);
+          for (const s of sources) {
+              const sec = SOURCE_SECTIONS[s];
+              if (sec) return sec;
+          }
+          return '_unassigned';
+      }
+
+      /* ---------- By Category Tab Functions ---------- */
+
+      function getSourceSafeId(sourceName) {
+          if (!sourceName) return 'unknown';
+          let hash = 5381;
+          for (let i = 0; i < sourceName.length; i++) {
+              hash = ((hash << 5) + hash) + sourceName.charCodeAt(i);
+          }
+          return 'source-id-' + (hash & 0x7FFFFFFF);
+      }
+
+      function loadSourcesView() {
+          let filteredForSources = photoData;
+          if (currentMediaFilter === 'video') {
+              filteredForSources = photoData.filter(p => isVideoEntry(p));
+          } else if (currentMediaFilter === 'photo') {
+              filteredForSources = photoData.filter(p => !isVideoEntry(p));
+          }
+          const sourceGroups = filteredForSources.reduce((acc, photo) => {
+              const sources = Array.isArray(photo.source) ? photo.source : [photo.source || 'Unknown'];
+              sources.forEach(sourceName => {
+                  if (!sourceName) return;
+                  if (!acc[sourceName]) acc[sourceName] = { photos: [], name: sourceName };
+                  acc[sourceName].photos.push(photo);
+              });
+              return acc;
+          }, {});
+          const sections = SOURCE_SECTIONS._sections;
+          const labels   = SOURCE_SECTIONS._section_labels;
+          const buckets  = {};
+          sections.forEach(s => buckets[s] = []);
+          buckets['_unassigned'] = [];
+          Object.values(sourceGroups)
+              .sort((a, b) => b.photos.length - a.photos.length)
+              .forEach(group => {
+                  const sec = SOURCE_SECTIONS[group.name] || '';
+                  (buckets[sec] || buckets['_unassigned']).push(group);
+              });
+          const renderSourceCard = (group) => {
+              const sourceName = group.name;
+              const photos = group.photos;
+              const safeId = getSourceSafeId(sourceName);
+              const escapedSourceName = sourceName.replace(/'/g, "\\'");
+              const previewPhotos = photos.slice(0, 4);
+              const previewHTML = `<div class="year-preview">
+                  ${previewPhotos.map(p => `<img src="${generateThumbnail(p.url, 'm')}" alt="" class="preview-thumb">`).join('')}
+                  ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
+              </div>`;
+              const sourceVideos = photos.filter(p => isRealVideo(p));
+              return `
+                  <div class="timeline-year" data-source="${safeId}">
+                      <div class="timeline-year-header" onclick="toggleSource('${escapedSourceName}')">
+                          <div class="year-header-content">
+                              <div class="year-header-top">
+                                  <span class="year-title">${sourceName}</span>
+                                  <div style="display:flex;align-items:center;gap:4px;">
+                                      <span class="timeline-year-count">${mediaCountLabel(photos)}</span>
+                                      <span class="expand-icon">▼</span>
+                                  </div>
+                              </div>
+                              ${previewHTML}
+                              ${sourceVideos.length ? `<button class="yr-pl-btn" onclick="event.stopPropagation();addSourceGroupToPlaylist('${escapedSourceName}')">＋ Add ${sourceVideos.length} video${sourceVideos.length > 1 ? 's' : ''} to playlist</button>` : ''}
+                          </div>
+                      </div>
+                      <div class="timeline-year-content">
+                          <div class="year-controls">
+                              <label for="per-page-source-${safeId}">Photos per page:</label>
+                              <select id="per-page-source-${safeId}" onchange="changeSourcePhotosPerPage('${escapedSourceName}', this.value)">
+                                  <option value="21">21</option>
+                                  <option value="42">42</option>
+                                  <option value="84">84</option>
+                                  <option value="all">All</option>
+                              </select>
+                          </div>
+                          <div class="year-photos-grid" id="photos-source-${safeId}"></div>
+                          <div class="pagination-nav" id="pagination-nav-source-${safeId}"></div>
+                      </div>
+                  </div>`;
+          };
+          const renderSection = (key, label, groups) => {
+              if (!groups.length) return '';
+              const totalPhotos = groups.reduce((n, g) => n + g.photos.length, 0);
+              const isCollapsed = !expandedSectionKeys.has(key);
+              const previewNames = groups.slice(0, 3).map(g => `<span class="src-pill">${g.name}</span>`).join('');
+              const moreCount = groups.length - 3;
+              const morePill = moreCount > 0 ? `<span class="src-pill-more">+${moreCount} more</span>` : '';
+              return `
+                  <div class="source-section${isCollapsed ? ' collapsed' : ''}" data-section-key="${key}">
+                      <div class="source-section-header" onclick="toggleSourceSection('${key}')">
+                          <div class="source-section-main">
+                              <div class="source-section-title">${label}</div>
+                              <div class="source-section-pills">${previewNames}${morePill}</div>
+                          </div>
+                          <div class="source-section-right">
+                              <span class="source-section-meta">${groups.length} sources · ${totalPhotos} items</span>
+                              <span class="source-section-chevron">▶</span>
+                          </div>
+                      </div>
+                      <div class="source-section-body">
+                          ${groups.map(renderSourceCard).join('')}
+                      </div>
+                  </div>`;
+          };
+          const container = document.getElementById('sourcesContainer');
+          let html = sections.map(key => renderSection(key, labels[key] || key, buckets[key])).join('');
+          if (buckets['_unassigned'].length) {
+              html += renderSection('_unassigned', '未分类 Uncategorized', buckets['_unassigned']);
+          }
+          container.innerHTML = html;
+      }
+
+      function toggleSourceSection(key) {
+          const el = document.querySelector(`.source-section[data-section-key="${key}"]`);
+          if (!el) return;
+          const isNowCollapsed = el.classList.toggle('collapsed');
+          if (isNowCollapsed) expandedSectionKeys.delete(key);
+          else expandedSectionKeys.add(key);
+      }
+
+      function toggleSource(sourceName) {
+          const safeId = getSourceSafeId(sourceName);
+          const sourceElement = document.querySelector(`[data-source="${safeId}"]`);
+          if (!sourceElement) return;
+          const isExpanded = sourceElement.classList.toggle('expanded');
+          if (isExpanded) {
+              expandedSources.add(sourceName);
+              if (!sourcePaginationSettings[sourceName]) {
+                  sourcePaginationSettings[sourceName] = { perPage: 21, currentPage: 1 };
+              }
+              const sel = document.getElementById(`per-page-source-${safeId}`);
+              if (sel) sel.value = sourcePaginationSettings[sourceName].perPage === Infinity ? 'all' : sourcePaginationSettings[sourceName].perPage;
+              renderSourcePage(sourceName);
+          } else {
+              expandedSources.delete(sourceName);
+              unloadImages(`photos-source-${safeId}`);
+          }
+      }
+
+      function changeSourcePhotosPerPage(sourceName, perPageValue) {
+          const perPage = perPageValue === 'all' ? Infinity : parseInt(perPageValue, 10);
+          sourcePaginationSettings[sourceName] = { perPage, currentPage: 1 };
+          renderSourcePage(sourceName);
+      }
+
+      function renderSourcePage(sourceName) {
+          if (!sourcePaginationSettings[sourceName]) {
+              sourcePaginationSettings[sourceName] = { perPage: 21, currentPage: 1 };
+          }
+          const { perPage, currentPage } = sourcePaginationSettings[sourceName];
+          let sourcePhotos = photoData.filter(p =>
+              Array.isArray(p.source) ? p.source.includes(sourceName) : p.source === sourceName
+          );
+          if (currentMediaFilter === 'video') {
+              sourcePhotos = sourcePhotos.filter(p => isVideoEntry(p));
+          } else if (currentMediaFilter === 'photo') {
+              sourcePhotos = sourcePhotos.filter(p => !isVideoEntry(p));
+          }
+          const totalPhotos = sourcePhotos.length;
+          const safeId = getSourceSafeId(sourceName);
+          const photosGrid = document.getElementById(`photos-source-${safeId}`);
+          const paginationNav = document.getElementById(`pagination-nav-source-${safeId}`);
+          if (!photosGrid || !paginationNav) return;
+          let startIndex, endIndex;
+          if (perPage === Infinity) {
+              startIndex = 0; endIndex = totalPhotos;
+          } else {
+              startIndex = (currentPage - 1) * perPage;
+              endIndex = Math.min(startIndex + perPage, totalPhotos);
+          }
+          const pagePhotos = sourcePhotos.slice(startIndex, endIndex);
+          photosGrid.innerHTML = pagePhotos.map(photo => {
+              const isVid = isRealVideo(photo);
+              const thumbUrl = generateThumbnail(photo.url, 'm');
+              return `<div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
+                  <div style="position:relative;">
+                      <img data-src="${thumbUrl}" alt="" class="lazy-image loading-placeholder" onerror="this.style.display='none'">
+                      ${isVid ? '<div class="video-badge-overlay">▶</div>' : ''}
+                  </div>
+              </div>`;
+          }).join('');
+          // Observe newly created lazy images
+          photosGrid.querySelectorAll('.lazy-image[data-src]').forEach(img => {
+              if (imageObserver) imageObserver.observe(img);
+          });
+          const totalPages = perPage === Infinity ? 1 : Math.ceil(totalPhotos / perPage);
+          if (totalPages > 1) {
+              let navHtml = '';
+              if (currentPage > 1) navHtml += `<button onclick="changeSourcePage('${sourceName}',${currentPage - 1})">‹ Prev</button>`;
+              navHtml += `<span style="padding:0 8px;font-size:12px;">${currentPage} / ${totalPages}</span>`;
+              if (currentPage < totalPages) navHtml += `<button onclick="changeSourcePage('${sourceName}',${currentPage + 1})">Next ›</button>`;
+              paginationNav.innerHTML = navHtml;
+          } else {
+              paginationNav.innerHTML = '';
+          }
+      }
+
+      function changeSourcePage(sourceName, page) {
+          if (!sourcePaginationSettings[sourceName]) {
+              sourcePaginationSettings[sourceName] = { perPage: 21, currentPage: 1 };
+          }
+          sourcePaginationSettings[sourceName].currentPage = page;
+          renderSourcePage(sourceName);
+          const safeId = getSourceSafeId(sourceName);
+          const el = document.querySelector(`[data-source="${safeId}"]`);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function addSourceGroupToPlaylist(sourceName) {
+          const videos = photoData.filter(p => isRealVideo(p) && (Array.isArray(p.source) ? p.source.includes(sourceName) : p.source === sourceName));
+          let added = 0;
+          videos.forEach(p => { if (!playlist.some(x => x.id === p.id)) { playlist.push(p); added++; } });
+          plSave(); plRender();
+          plToast(added ? `已加入 ${added} 个视频` : '该来源视频已全在播放列表中');
+      }
+
+      function unloadImages(containerId) {
+          document.querySelectorAll(`#${containerId} img`).forEach(img => {
+              img.removeAttribute('src');
+              img.classList.add('loading-placeholder');
+          });
+      }
+
+      /* ---------- Category Filter (timeline) ---------- */
+      function setupSourceFilters() {
+          document.querySelectorAll('.source-chip').forEach(chip => {
+              chip.addEventListener('click', function() {
+                  document.querySelectorAll('.source-chip').forEach(c => c.classList.remove('active'));
+                  this.classList.add('active');
+                  currentFilter = this.dataset.filter;
+                  currentSearchQuery = '';
+                  document.getElementById('searchInput').value = '';
+                  document.getElementById('clearSearchBtn').style.display = 'none';
+                  applyFilter();
+              });
+          });
+      }
+
+      function applyFilter() {
+          let filteredPhotos = currentFilter === 'all'
+              ? photoData
+              : photoData.filter(p => getPhotoSection(p) === currentFilter);
+          if (currentMediaFilter === 'video') {
+              filteredPhotos = filteredPhotos.filter(p => isVideoEntry(p));
+          } else if (currentMediaFilter === 'photo') {
+              filteredPhotos = filteredPhotos.filter(p => !isVideoEntry(p));
+          }
+          currentRenderData = filteredPhotos;
+          filteredVideosCache = filteredPhotos.filter(p => isVideoEntry(p));
+          plUpdateAddAllBtn();
+          if (filteredPhotos.length > 0) {
+              const photosByYear = filteredPhotos.reduce((acc, photo) => {
+                  if (!acc[photo.year]) acc[photo.year] = [];
+                  acc[photo.year].push(photo);
+                  return acc;
+              }, {});
+              createTimelineHTML(photosByYear);
+          } else {
+              document.getElementById('timelineContainer').innerHTML = '<div class="timeline-empty"><h3>No items found</h3><p>No items for this category.</p></div>';
+          }
+          updateStats();
+      }
+
       /* ---------- Search Functions - COPIED/MODIFIED FROM SAMPLE.HTML ---------- */
       function setupSearch() {
         let searchTimeout;
@@ -4195,6 +4484,8 @@
               p.tags.some((t) => String(t).toLowerCase().includes(query))) ||
             (Array.isArray(p.englishTags) &&
               p.englishTags.some((t) => String(t).toLowerCase().includes(query))) ||
+            (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
+            (SOURCE_SECTIONS._section_labels[getPhotoSection(p)] || '').toLowerCase().includes(query) ||
             (p.description && p.description.toLowerCase().includes(query)) ||
             (p.postText && p.postText.toLowerCase().includes(query))
           );
@@ -4289,7 +4580,7 @@
         document
           .getElementById(section + "-section")
           .classList.remove("hidden");
-        if (section === "game") initializeGame();
+        if (section === "sources") loadSourcesView();
       }
 
       /* ---------- Report Form Functions ---------- */
@@ -4347,146 +4638,7 @@
           // Don't re-enable - let FormSubmit.co handle the redirect
         });
 
-      /* ---------- Game Functions ---------- */
-      document.getElementById("startGame").addEventListener("click", startGame);
-      document.getElementById("newGame").addEventListener("click", newGame);
-      document
-        .getElementById("nextQuestion")
-        .addEventListener("click", nextQuestion);
-
-      function initializeGame() {
-        const startBtn = document.getElementById("startGame");
-        const imgElement = document.getElementById("gamePhoto");
-        const videoElement = document.getElementById("gameVideo");
-
-        // Reset visibility to show image container by default
-        if (imgElement) imgElement.classList.remove("hidden");
-        if (videoElement) {
-          videoElement.classList.add("hidden");
-          videoElement.pause();
-        }
-
-        if (photoData.length === 0) {
-          imgElement.src = createDefaultGameImage();
-          startBtn.textContent = "Add Photos First";
-          startBtn.disabled = true;
-        } else if (!gameActive) {
-          imgElement.src = createDefaultGameImage();
-        }
-      }
-
-      function startGame() {
-        if (photoData.length === 0) return;
-        gameActive = true;
-        document.getElementById("startGame").classList.add("hidden");
-        document.getElementById("newGame").classList.remove("hidden");
-        nextQuestion();
-      }
-
-      function newGame() {
-        gameScore = gameStreak = totalQuestions = 0;
-        updateGameStats();
-        nextQuestion();
-      }
-
-      function nextQuestion() {
-        if (photoData.length === 0) return;
-
-        // Reset UI states
-        document.getElementById("gameResult").classList.add("hidden");
-        document.getElementById("nextQuestion").classList.add("hidden");
-
-        // Pick a random photo
-        currentPhoto = photoData[Math.floor(Math.random() * photoData.length)];
-
-        // Get Elements
-        const imgElement = document.getElementById("gamePhoto");
-        const videoElement = document.getElementById("gameVideo");
-
-        setMediaElement(imgElement, videoElement, currentPhoto.url);
-
-        displayGameOptions(generateOptions(currentPhoto));
-      }
-
-      function generateOptions(photo) {
-        // Get the correct date (YYYY-MM)
-        const correctDate = photo.date.substring(0, 7);
-        const options = new Set([correctDate]);
-
-        // Generate 3 random incorrect dates
-        while (options.size < 4) {
-          const randomPhoto =
-            photoData[Math.floor(Math.random() * photoData.length)];
-          const randomDate = randomPhoto.date.substring(0, 7);
-          // Ensure we don't pick the same date twice
-          if (randomDate !== correctDate) {
-            options.add(randomDate);
-          }
-        }
-
-        // Convert to array and shuffle
-        return Array.from(options).sort(() => Math.random() - 0.5);
-      }
-
-      function displayGameOptions(options) {
-        const container = document.getElementById("gameOptions");
-        container.innerHTML = ""; // Clear previous buttons
-
-        options.forEach((option) => {
-          const btn = document.createElement("button");
-          btn.className = "option-btn";
-          btn.textContent = option;
-          btn.onclick = () => selectOption(option);
-          container.appendChild(btn);
-        });
-      }
-
-      function selectOption(selected) {
-        const correctAnswer = currentPhoto.date.substring(0, 7);
-        const isCorrect = selected === correctAnswer;
-        totalQuestions++;
-        if (isCorrect) {
-          gameScore++;
-          gameStreak++;
-          showGameResult("Correct! 正确!", "correct");
-        } else {
-          gameStreak = 0;
-          showGameResult(`Wrong! It was ${correctAnswer}`, "incorrect");
-        }
-        updateGameStats();
-        highlightOptions(selected, correctAnswer);
-        document.getElementById("nextQuestion").classList.remove("hidden");
-      }
-
-      function showGameResult(message, type) {
-        const resultDiv = document.getElementById("gameResult");
-        resultDiv.textContent = message;
-        resultDiv.className = `game-result ${type}`;
-        resultDiv.classList.remove("hidden");
-      }
-
-      function highlightOptions(selected, correct) {
-        document.querySelectorAll(".option-btn").forEach((btn) => {
-          btn.disabled = true;
-          if (btn.textContent === correct) btn.classList.add("correct");
-          else if (btn.textContent === selected) btn.classList.add("incorrect");
-        });
-      }
-
-      function updateGameStats() {
-        document.getElementById("score").textContent = gameScore;
-        document.getElementById("streak").textContent = gameStreak;
-        document.getElementById("totalQuestions").textContent = totalQuestions;
-      }
-
-      function createDefaultGameImage() {
-        const cs = getComputedStyle(document.documentElement);
-        const c1 = (cs.getPropertyValue('--bg-mid') || '#420d18').trim();
-        const c2 = (cs.getPropertyValue('--bg-dark') || '#300810').trim();
-        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${c1}"/><stop offset="100%" stop-color="${c2}"/></linearGradient></defs><rect width="400" height="300" fill="url(#g)"/><text x="200" y="150" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="white">Game Photo Here</text></svg>`;
-        return "data:image/svg+xml," + encodeURIComponent(svg);
-      }
-
+      /* ---------- Footer Toggle Function ---------- */
       /* ---------- Footer Toggle Function ---------- */
       function setupFooterToggle() {
         const termsToggle = document.getElementById("terms-toggle");
@@ -4588,6 +4740,11 @@
         document.querySelectorAll('.media-tab').forEach(btn => {
           btn.classList.toggle('active', btn.dataset.media === type);
         });
+        const sourcesSection = document.getElementById('sources-section');
+        if (sourcesSection && !sourcesSection.classList.contains('hidden')) {
+          loadSourcesView();
+          return;
+        }
         if (currentSearchQuery) {
           performSearch(currentSearchQuery);
         } else {
@@ -4612,8 +4769,7 @@
           resetBtn.classList.remove("hidden");
         } else {
           resetBtn.classList.add("hidden");
-          // If only media filter is active, still need to filter (don't early-return)
-          if (currentMediaFilter === 'all') {
+          if (currentMediaFilter === 'all' && currentFilter === 'all') {
             currentRenderData = photoData;
             initializeTimeline();
             return;
@@ -4635,13 +4791,10 @@
           if (mVal !== "all" && pMonth !== mVal) return false;
           if (dVal !== "all" && pDay !== dVal) return false;
 
-          // --- SOURCE CHECK ---
-          // Collect ALL platforms for this item (sourceType array + platform_links keys)
+          // --- SOURCE (PLATFORM) CHECK ---
+          // Platform is in sourceType field; source field now holds category names
           const _itemPlatforms = new Set();
-          const _isrc0 = Array.isArray(item.source) ? item.source[0] : item.source;
-          if (_isrc0) {
-            _itemPlatforms.add(String(_isrc0).toLowerCase());
-          } else if (item.sourceType) {
+          if (item.sourceType) {
             const _st = Array.isArray(item.sourceType) ? item.sourceType : [item.sourceType];
             _st.forEach(t => _itemPlatforms.add(String(t).toLowerCase()));
           }
@@ -4656,14 +4809,19 @@
           return true;
         });
 
-        // 3. Apply media type filter
+        // 3. Apply category filter
+        if (currentFilter !== 'all') {
+          filtered = filtered.filter(p => getPhotoSection(p) === currentFilter);
+        }
+
+        // 4. Apply media type filter
         if (currentMediaFilter === 'video') {
           filtered = filtered.filter(p => isVideoEntry(p));
         } else if (currentMediaFilter === 'photo') {
           filtered = filtered.filter(p => !isVideoEntry(p));
         }
 
-        // 4. Update Global Render Data
+        // 5. Update Global Render Data
         currentRenderData = filtered;
 
         // Track filtered videos for playlist "add all"
@@ -4718,10 +4876,6 @@
           else document.documentElement.dataset.theme = t;
           document.querySelectorAll('.theme-dot').forEach(b => b.classList.toggle('tdot-active', b.dataset.t === t));
           if (window.mgUpdateTone) window.mgUpdateTone(t);
-          const gp = document.getElementById('gamePhoto');
-          if (gp && gp.src && gp.src.startsWith('data:image/svg+xml')) {
-            requestAnimationFrame(() => { gp.src = createDefaultGameImage(); });
-          }
         }
         const saved = localStorage.getItem(KEY) || 'washi-slate';
         if (saved === 'red') document.documentElement.removeAttribute('data-theme');
@@ -4745,6 +4899,13 @@
           target="_blank"
           rel="noopener"
           >Screen Arts of Xiao Zhan</a
+        >
+        <a
+          class="footer-link"
+          href="game.html"
+          target="_blank"
+          rel="noopener"
+          >🎮 Time Game 时间游戏</a
         >
         <a
           class="footer-link"
