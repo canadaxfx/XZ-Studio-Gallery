@@ -544,7 +544,7 @@
       /* Search and Filter Styles - COPIED FROM SAMPLE.HTML */
       .search-bar {
         width: 100%;
-        max-width: 500px;
+        max-width: 1000px;
         padding: 13px 16px 13px 44px;
         border: 1px solid var(--border);
         background-color: var(--surface-m);
@@ -579,7 +579,7 @@
           #495057
         ); /* Grey gradient from sample.html */
         color: white;
-        max-width: 500px;
+        max-width: 1000px;
         width: 100%;
       }
       #clearSearchBtn:hover {
@@ -599,22 +599,23 @@
       .stat-card {
         background: linear-gradient(135deg, var(--bg-mid) 0%, var(--bg-dark) 100%);
         color: white;
-        padding: 10px 12px;
+        padding: 8px 8px;
         border-radius: 15px;
         text-align: center;
         border: 1px solid rgba(var(--gold-rgb), 0.25);
         box-shadow: 0 4px 16px rgba(var(--shad-rgb), 0.35), inset 0 1px 0 rgba(var(--gold-rgb), 0.12);
       }
       .stat-number {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         font-weight: bold;
-        margin-bottom: 2px;
+        margin-bottom: 0px;
         color: rgba(255, 255, 255, 0.95);
       }
       .stat-label {
-        font-size: 9px;
+        font-size: 8px;
         color: rgba(var(--gold-rgb), 0.75);
         font-weight: 500;
+        white-space: nowrap;
       }
 
       /* Timeline Styles */
@@ -925,18 +926,18 @@
 
       .media-filter-tabs {
         display: flex;
-        justify-content: center;
         gap: 4px;
         margin: 0 auto 8px;
         padding: 4px;
         background: var(--surface-w);
         border: 1px solid var(--border);
         border-radius: 12px;
-        width: fit-content;
-        max-width: 100%;
+        width: 100%;
+        max-width: 1000px;
       }
       .media-filter-tabs-wrap { display: flex; justify-content: center; }
       .media-tab {
+        flex: 1;
         background: transparent;
         color: #5a4f3d;
         border: none;
@@ -947,6 +948,7 @@
         cursor: pointer;
         transition: all 0.18s ease;
         font-family: inherit;
+        text-align: center;
       }
       .media-tab:hover { background: rgba(244, 63, 94, 0.1); color: #f43f5e; }
       .media-tab.active {
@@ -980,6 +982,8 @@
         color: #555;
         cursor: pointer;
         outline: none;
+        text-align: center;
+        text-align-last: center;
       }
 
       .date-select-wrapper select:focus {
@@ -1030,13 +1034,7 @@
           font-size: 12px;
           padding: 6px 0;
           letter-spacing: -0.5px;
-          width: 25%; /* Force exactly 25% width per item */
-          max-width: none; /* Remove max-width restriction */
-          flex: 1; /* Grow to fill space */
-          text-align: center; /* Center the text */
-          text-align-last: center; /* Force centering for mobile browsers */
-          appearance: none; /* Remove default styling to save space (optional) */
-          -webkit-appearance: none;
+          flex: 1;
           background: transparent;
         }
 
@@ -1645,6 +1643,7 @@
       @media (max-width: 768px) {
         .container {
           padding: 15px;
+          padding-top: 20px;
         }
         .nav-buttons {
           gap: 15px;
@@ -1658,7 +1657,7 @@
           gap: 8px;
         }
         .stats-grid {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           gap: 8px;
         }
         #floatBtnGroup { right: 8px; } .float-btn { width:50px; height:50px; font-size:18px; }
@@ -2153,7 +2152,7 @@
       /* ---------- Category filter chips ---------- */
       .source-filters {
           display: flex; border: 1.5px solid #ccc; border-radius: 12px;
-          overflow: hidden; margin: 0 auto; max-width: 900px;
+          overflow: hidden; margin: 0 auto; max-width: 1000px;
       }
       .chip-en { display: block; font-size: 13px; font-weight: 600; line-height: 1.2; }
       .chip-zh { display: block; font-size: 11px; opacity: 0.7; line-height: 1.2; margin-top: 3px; }
@@ -2184,7 +2183,7 @@
           .source-chip { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 9px 4px; flex-direction: column; gap: 0; }
           .source-chip:nth-child(3n) { border-right: none; }
           .source-chip:nth-child(4), .source-chip:nth-child(5), .source-chip:nth-child(6) { border-bottom: none; }
-          .source-filters { display: grid; grid-template-columns: repeat(3, 1fr); border-radius: 10px; margin: 6px 10px; }
+          .source-filters { display: grid; grid-template-columns: repeat(3, 1fr); border-radius: 10px; margin: 6px 0; }
           .chip-en { font-size: 11px; }
           .chip-zh { font-size: 9px; margin-top: 1px; }
       }
@@ -2238,6 +2237,10 @@
           <div class="stat-card">
             <div class="stat-number" id="totalPhotosDisplay">0</div>
             <div class="stat-label">Total Items</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="totalSourcesDisplay">0</div>
+            <div class="stat-label">Sources</div>
           </div>
           <div class="stat-card">
             <div class="stat-number" id="yearsSpanDisplay">0</div>
@@ -2677,58 +2680,55 @@
 // (search: /* ---------- SECTION ---------- */ to jump to each)
 //
 // CONSTANTS & STATE
-//   Core Variables          ~2708  photoData, currentFilter, expandedYears,
-//                                  yearPaginationSettings, DL_KEY
-//   Modal Variables         ~2722  currentPhotoGroup, currentPhotoIndex
-//   Playlist State          ~2728  playlist[], filteredVideosCache, PL_KEY='xzStudioPlaylist'
+//   Core Variables          photoData, currentFilter, expandedYears,
+//                           yearPaginationSettings, DL_KEY
+//   Modal Variables         currentPhotoGroup, currentPhotoIndex
+//   Playlist State          playlist[], filteredVideosCache, PL_KEY='xzStudioPlaylist'
 //
-// PLAYLIST                  ~2734  plLoad/Save, plCardAdd, plSyncAllCards,
-//                                  addAllFilteredVideos, addYearToPlaylist,
-//                                  plRemove, plRender, plTogglePanel, plPlayItem
+// PLAYLIST                  plLoad/Save, plCardAdd, plSyncAllCards,
+//                           addAllFilteredVideos, addYearToPlaylist,
+//                           plRemove, plRender, plTogglePanel, plPlayItem
 //
-// FLOAT GROUP               ~2954  setupFloatGroup, plPositionPanel
+// FLOAT GROUP               setupFloatGroup, plPositionPanel
 //
-// CACHED DOM / HELPERS      ~3046  Shared helpers, utility functions,
-//                                  mediaCountLabel, isVideoUrl, isRealVideo,
-//                                  isVideoEntry, isClip, isMotionUrl,
-//                                  isYouTubeUrl, fmtDuration, getYouTubeId
-//                                  dlIsLocked/Unlocked (NAS download lock)
+// CACHED DOM                Cached DOM element references
 //
-// MODAL                     ~3117  openPhotoModal, updateModalContent,
-//                                  generateThumbnails, generateThumbnail,
-//                                  goToPhoto, navigatePhoto, togglePostText,
-//                                  closeModal, handleKeyboardNavigation
-//                                  Touch/swipe support ~3548
+// MODAL                     openPhotoModal, updateModalContent,
+//                           generateThumbnails, generateThumbnail,
+//                           goToPhoto, navigatePhoto, togglePostText,
+//                           closeModal, handleKeyboardNavigation
+//                           Touch/swipe support
 //
-// INITIALIZATION            ~3577  init() — calls setupNavigation, setupSearch,
-//                                  setupIntersectionObserver, loadPhotoData
+// INITIALIZATION            DOMContentLoaded — calls loadPhotoData,
+//                           setupSearch, setupIntersectionObserver
 //
-// DATA LOADING              ~3591  loadPhotoData() — fetches {year}.json files
+// DATA LOADING              loadPhotoData() — fetches {year}.json files
 //
-// TIMELINE                  ~3669  initializeTimeline, buildYearCardHTML,
-//                                  createTimelineHTML, generatePhotosHTML,
-//                                  toggleYear, renderYearPage, goToPage,
-//                                  jumpToPage, createPaginationButtons
+// TIMELINE                  initializeTimeline, buildYearCardHTML,
+//                           createTimelineHTML, generatePhotosHTML,
+//                           toggleYear, renderYearPage, goToPage,
+//                           jumpToPage, createPaginationButtons
 //
-// LAZY LOADING              ~3972  setupIntersectionObserver, setupLazyLoading,
-//                                  setupLazyLoadingForYear, unloadYearImages
+// LAZY LOADING              setupIntersectionObserver, setupLazyLoading,
+//                           setupLazyLoadingForYear, unloadYearImages
 //
-// SEARCH                    ~4019  setupSearch, setupClearSearch, performSearch
+// FILTERS                   applyFilter
 //
-// STATS                     ~4132  updateStats
+// SEARCH                    setupSearch, setupClearSearch, performSearch
 //
-// NAVIGATION                ~4138  setupNavigation, showSection
+// STATS                     updateStats
 //
-// FILTERS                   ~4372  setupDateFilters, applyDateFilter, resetDateFilter
-//                                  setMediaFilter, applyFilter
-//                                  NOTE: Studio uses platform array on entries
-//                                  (weibo/rednote/douyin/etc.) — no SOURCE_SECTIONS
+// NAVIGATION                setupNavigation, showSection
 //
-// GAME TAB                  ~4216  initializeGame, startGame, nextQuestion,
-//                                  generateOptions, selectOption, updateGameStats,
-//                                  createDefaultGameImage
+// DATE & MEDIA FILTERS      setupDateFilters, applyDateFilter, resetDateFilter
+//                           isVideoUrl, isRealVideo, isVideoEntry, isClip,
+//                           isMotionUrl, isYouTubeUrl, fmtDuration,
+//                           mediaCountLabel, setMediaFilter
+//                           dlIsLocked/Unlocked (NAS download lock)
+//                           NOTE: Studio uses platform array on entries
+//                           (weibo/rednote/douyin/etc.) — no SOURCE_SECTIONS
 //
-// THEME & MAGNOLIA          ~4593  applyTheme, mgCombined, mgBuildTiles, mgApply
+// THEME & MAGNOLIA          applyTheme, mgCombined, mgBuildTiles, mgApply
 //
 // ============================================================
 
@@ -2757,6 +2757,7 @@
       let filteredVideosCache = [];
       const PL_KEY = 'xzStudioPlaylist';
 
+      /* ---------- Playlist Functions ---------- */
       function plLoad() {
           try { playlist = JSON.parse(localStorage.getItem(PL_KEY) || '[]'); } catch(e) { playlist = []; }
           plRender();
@@ -3074,6 +3075,7 @@
       const elSearchInput    = document.getElementById("searchInput");
       const elClearSearchBtn = document.getElementById("clearSearchBtn");
       const elTotalPhotos    = document.getElementById("totalPhotosDisplay");
+      const elTotalSources   = document.getElementById("totalSourcesDisplay");
       const elYearsSpan      = document.getElementById("yearsSpanDisplay");
       const elExpandedYears  = document.getElementById("expandedYearsDisplay");
       const elFilterYear     = document.getElementById("filterYear");
@@ -3084,6 +3086,7 @@
       /* ---------- Shared Helpers ---------- */
       function _setStats(photoCount, yearCount) {
         elTotalPhotos.textContent   = Number(photoCount).toLocaleString();
+        elTotalSources.textContent  = photoCount === 0 ? 0 : new Set(currentRenderData.flatMap(p => Array.isArray(p.source) ? p.source : (p.source ? [p.source] : []))).size;
         elYearsSpan.textContent     = yearCount;
         elExpandedYears.textContent = expandedYears.size;
       }
@@ -4843,6 +4846,7 @@
         applyDateFilter(); // This will trigger the "all" check and run initializeTimeline()
       }
 
+      /* ---------- Theme & Magnolia ---------- */
       // ── Theme Switcher ──
       (function(){
         const KEY = 'xzTheme';
@@ -4870,19 +4874,19 @@
         <div style="margin-bottom: 10px; font-weight: 700">Explore more</div>
         <a
           class="footer-link"
-          href="https://canadaxfx.github.io/XZworks/"
-          target="_blank"
-          rel="noopener"
-          >Screen Arts of Xiao Zhan</a
-        >
-        <a
-          class="footer-link"
           href="game.html"
           target="_blank"
           rel="noopener"
           >🎮 Time Game 时间游戏</a
         >
         <a
+          class="footer-link"
+          href="https://canadaxfx.github.io/XZworks/"
+          target="_blank"
+          rel="noopener"
+          >Screen Arts of Xiao Zhan</a
+        >
+        <
           class="footer-link"
           href="https://www.youtube.com/@CanadaXFX"
           target="_blank"
