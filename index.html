@@ -3817,14 +3817,9 @@
         });
       }
 
-      function generatePhotosHTML(photos) {
-        return photos
-          .map((photo) => {
-            // 1. Check media type
-            const isVideo = isRealVideo(photo);
+      function renderPhotoCard(photo) {
+            const isVideo  = isRealVideo(photo);
             const isMotion = isMotionUrl(photo.url) || isClip(photo);
-
-            // 2. Overlay badge
             const ext = (photo.url.match(/\.(\w+)$/i) || [])[1]?.toUpperCase();
             const videoIcon = isYouTubeUrl(photo.url)
               ? '<div style="position:absolute;top:4px;right:4px;background:rgba(200,0,0,0.6);color:white;border-radius:4px;width:24px;height:16px;display:flex;align-items:center;justify-content:center;font-size:10px;z-index:2;">▶</div>'
@@ -3837,8 +3832,6 @@
             const durBadge = ((isVideoEntry(photo) || isClip(photo)) && photo.duration)
               ? '<div style="position:absolute;top:4px;left:4px;background:rgba(0,0,0,0.65);color:white;border-radius:4px;padding:1px 3px;font-size:10px;font-weight:600;z-index:2;letter-spacing:0.2px;">' + fmtDuration(photo.duration) + '</div>'
               : "";
-
-            // 3. Return the HTML card
             return `
             <div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
                 ${videoIcon}
@@ -3853,10 +3846,11 @@
                     <span class="photo-date">${photo.date}</span>
                     <span class="photo-source">${Array.isArray(photo.tags) && photo.tags.length ? photo.tags[0] : ''}</span>
                 </div>
-            </div>
-        `;
-          })
-          .join("");
+            </div>`;
+      }
+
+      function generatePhotosHTML(photos) {
+        return photos.map(renderPhotoCard).join("");
       }
 
       function toggleExpandAll() {
@@ -4347,16 +4341,7 @@
               endIndex = Math.min(startIndex + perPage, totalPhotos);
           }
           const pagePhotos = sourcePhotos.slice(startIndex, endIndex);
-          photosGrid.innerHTML = pagePhotos.map(photo => {
-              const isVid = isRealVideo(photo);
-              const thumbUrl = generateThumbnail(photo.url, 'm');
-              return `<div class="timeline-photo" onclick="openPhotoModal(${photo.id})">
-                  <div style="position:relative;">
-                      <img data-src="${thumbUrl}" alt="" class="lazy-image loading-placeholder" onerror="this.style.display='none'">
-                      ${isVid ? '<div class="video-badge-overlay">▶</div>' : ''}
-                  </div>
-              </div>`;
-          }).join('');
+          photosGrid.innerHTML = pagePhotos.map(renderPhotoCard).join('');
           // Observe newly created lazy images
           photosGrid.querySelectorAll('.lazy-image[data-src]').forEach(img => {
               if (imageObserver) imageObserver.observe(img);
