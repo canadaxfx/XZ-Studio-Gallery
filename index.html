@@ -926,6 +926,7 @@
 
       .media-filter-tabs {
         display: flex;
+        flex-wrap: nowrap;
         gap: 4px;
         margin: 0 auto 8px;
         padding: 4px;
@@ -938,6 +939,7 @@
       .media-filter-tabs-wrap { display: flex; justify-content: center; }
       .media-tab {
         flex: 1;
+        min-width: 0;
         background: transparent;
         color: #5a4f3d;
         border: none;
@@ -949,6 +951,9 @@
         transition: all 0.18s ease;
         font-family: inherit;
         text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .media-tab:hover { background: rgba(244, 63, 94, 0.1); color: #f43f5e; }
       .media-tab.active {
@@ -1012,46 +1017,13 @@
 
       /* Mobile Adjustment - Optimized Single Line */
       @media (max-width: 480px) {
-        .media-filter-tabs { gap: 4px; margin-bottom: 10px; }
-        .media-tab { font-size: 11px; padding: 3px 10px; }
+        .media-filter-tabs { gap: 2px; padding: 3px; margin-bottom: 8px; }
+        .media-tab { font-size: 10px; padding: 4px 8px; }
 
-        .date-filter-container {
-          flex-wrap: nowrap; /* Force single line */
-          gap: 2px;
-          padding: 0 5px; /* Add slight padding to container */
-        }
-
-        .date-select-wrapper {
-          padding: 0;
-          gap: 0;
-          flex: 1;
-          min-width: 0;
-          display: flex; /* Ensure flex behavior */
-          justify-content: space-between; /* Distribute items */
-        }
-
-        .date-select-wrapper select {
-          font-size: 12px;
-          padding: 6px 0;
-          letter-spacing: -0.5px;
-          flex: 1;
-          background: transparent;
-        }
-
-        /* Fix specific spacing for the Source dropdown */
-        #filterSource {
-          padding-left: 0 !important;
-          margin-left: 0 !important;
-          border-left: none !important; /* Remove the divider line on mobile to save space */
-        }
-
-        .reset-date-btn {
-          width: 24px;
-          height: 24px;
-          font-size: 12px;
-          flex-shrink: 0;
-          margin-left: 2px;
-        }
+        .date-filter-container { flex-wrap: nowrap; gap: 2px; padding: 0 5px; }
+        .date-select-wrapper { padding: 0; gap: 0; flex: 1; min-width: 0; display: flex; justify-content: space-between; }
+        .date-select-wrapper select { font-size: 12px; padding: 6px 0; letter-spacing: -0.5px; flex: 1; background: transparent; }
+        .reset-date-btn { width: 24px; height: 24px; font-size: 12px; flex-shrink: 0; margin-left: 2px; padding: 0; }
       }
 
       /* Enhanced Modal Styles - Mobile Optimized */
@@ -2253,6 +2225,13 @@
         </div>
         <div class="date-filter-container">
           <div class="date-select-wrapper">
+            <select id="filterSource" onchange="applyDateFilter()">
+              <option value="all">Platform</option>
+              <option value="weibo">Weibo</option>
+              <option value="douyin">Douyin</option>
+              <option value="rednote">RedNote</option>
+            </select>
+
             <select id="filterYear" onchange="applyDateFilter()">
               <option value="all">Year</option>
             </select>
@@ -2275,17 +2254,6 @@
 
             <select id="filterDay" onchange="applyDateFilter()">
               <option value="all">Day</option>
-            </select>
-
-            <select
-              id="filterSource"
-              onchange="applyDateFilter()"
-              style="border-left:1px solid #eee;padding-left:10px;margin-left:5px;"
-            >
-              <option value="all">Platform</option>
-              <option value="weibo">Weibo</option>
-              <option value="douyin">Douyin</option>
-              <option value="rednote">RedNote</option>
             </select>
           </div>
 
