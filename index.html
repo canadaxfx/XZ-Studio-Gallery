@@ -1416,6 +1416,25 @@
       .badge-quality.is-4k { background: rgba(124, 58, 237, 0.85); }
       .badge-youtube { position: absolute; bottom: 0px; left: 10px; background: rgba(204, 0, 0, 0.85); color: #fff; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 700; z-index: 11; letter-spacing: 0.05em; text-decoration: none; cursor: pointer; }
       .timeline-photo.pl-in-playlist { box-shadow: 0 0 0 2.5px var(--gold), 0 2px 8px rgba(0,0,0,0.1); }
+      .source-hover-tip {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0,0,0,0.72);
+        color: #fff;
+        font-size: 10px; font-weight: 600;
+        padding: 5px 8px;
+        border-radius: 6px;
+        line-height: 1.5;
+        text-align: center;
+        white-space: nowrap;
+        z-index: 3;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.18s ease;
+      }
+      @media (hover: hover) {
+        .timeline-photo:hover .source-hover-tip { opacity: 1; }
+      }
 
       .modal-tags-row {
         display: flex;
@@ -3819,6 +3838,7 @@
                      class="lazy-image">
                 ${motionBadge}
                 ${isVideo ? `<button class="pl-card-add" id="plcadd-${photo.id}" onclick="event.stopPropagation();plCardAdd(${photo.id})"><b>＋</b> Playlist</button>` : ''}
+                ${(Array.isArray(photo.source) && photo.source.length) ? `<div class="source-hover-tip">${photo.source.join(' · ')}</div>` : (photo.source ? `<div class="source-hover-tip">${photo.source}</div>` : '')}
                 <div class="photo-overlay">
                     <span class="photo-date">${photo.date}</span>
                     <span class="photo-source">${Array.isArray(photo.tags) && photo.tags.length ? photo.tags[0] : ''}</span>
