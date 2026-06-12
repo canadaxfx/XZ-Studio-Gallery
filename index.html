@@ -3197,8 +3197,10 @@
         if (links.length === 1) {
           btn.setAttribute('href', links[0].url);
           btn.setAttribute('target', '_blank');
+          btn.innerHTML = `📱 View on Platform<br><small style="opacity:1">查看原帖</small>`;
         } else {
           btn.onclick = (e) => { e.preventDefault(); e.stopPropagation(); showPlatformPopover(btn, links); };
+          btn.innerHTML = `📱 View on Platform <span style="font-size:10px;opacity:0.75">🔗</span><br><small style="opacity:1">多链接</small>`;
         }
       }
       function showPlatformPopover(triggerBtn, links) {
@@ -3293,7 +3295,6 @@
         // --- 4. Update "View Original Post" Button ---
         weiboBtn.className = "action-btn " + btnClass;
         weiboBtn.style.background = ""; // Reset inline style to let CSS take over
-        weiboBtn.innerHTML = `📱 View on Platform<br><small style="opacity: 1">查看原帖</small>`;
         setPlatformBtnBehavior(weiboBtn, photo.link, photo.platform_links, rawSource);
 
         // --- 5. Handle Video vs Photo Display ---
