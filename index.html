@@ -4122,6 +4122,7 @@
     '我们的歌': 'event',
     '东方卫视舞台': 'event',
     '北京台舞台': 'event',
+    '央视舞台': 'event',
     '微博活动': 'event',
     '专辑我们': 'event',
     '光点': 'event',
@@ -4344,15 +4345,7 @@
               if (imageObserver) imageObserver.observe(img);
           });
           const totalPages = perPage === Infinity ? 1 : Math.ceil(totalPhotos / perPage);
-          if (totalPages > 1) {
-              let navHtml = '';
-              if (currentPage > 1) navHtml += `<button onclick="changeSourcePage('${sourceName}',${currentPage - 1})">‹ Prev</button>`;
-              navHtml += `<span style="padding:0 8px;font-size:12px;">${currentPage} / ${totalPages}</span>`;
-              if (currentPage < totalPages) navHtml += `<button onclick="changeSourcePage('${sourceName}',${currentPage + 1})">Next ›</button>`;
-              paginationNav.innerHTML = navHtml;
-          } else {
-              paginationNav.innerHTML = '';
-          }
+          paginationNav.innerHTML = totalPages > 1 ? createSourcePaginationButtons(sourceName, currentPage, totalPages) : '';
       }
 
       function changeSourcePage(sourceName, page) {
@@ -4364,6 +4357,62 @@
           const safeId = getSourceSafeId(sourceName);
           const el = document.querySelector(`[data-source="${safeId}"]`);
           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function jumpToSourcePage(sourceName, totalPages) {
+          const safeId = getSourceSafeId(sourceName);
+          const inputElement = document.getElementById(`jump-to-input-source-${safeId}`);
+          if (!inputElement) return;
+          const pageNum = parseInt(inputElement.value, 10);
+          if (isNaN(pageNum) || pageNum < 1 || pageNum > totalPages) return;
+          changeSourcePage(sourceName, pageNum);
+      }
+
+      function createSourcePaginationButtons(sourceName, currentPage, totalPages) {
+          const safeId = getSourceSafeId(sourceName);
+          const esc = sourceName.replace(/'/g, "\\'");
+          const maxPagesToShow = 5;
+          let html = '';
+          let startPage, endPage;
+          if (totalPages <= maxPagesToShow) {
+              startPage = 1;
+              endPage = totalPages;
+          } else {
+              const maxBefore = Math.floor(maxPagesToShow / 2);
+              const maxAfter = Math.ceil(maxPagesToShow / 2) - 1;
+              if (currentPage <= maxBefore) {
+                  startPage = 1;
+                  endPage = maxPagesToShow;
+              } else if (currentPage + maxAfter >= totalPages) {
+                  startPage = totalPages - maxPagesToShow + 1;
+                  endPage = totalPages;
+              } else {
+                  startPage = currentPage - maxBefore;
+                  endPage = currentPage + maxAfter;
+              }
+          }
+          if (currentPage > 1)
+              html += `<button class="btn" onclick="changeSourcePage('${esc}',${currentPage - 1})">‹ Prev</button>`;
+          if (startPage > 1) {
+              html += `<button class="btn" onclick="changeSourcePage('${esc}',1)">1</button>`;
+              if (startPage > 2) html += `<span>...</span>`;
+          }
+          for (let i = startPage; i <= endPage; i++) {
+              html += `<button class="btn ${i === currentPage ? 'primary' : ''}" ${i === currentPage ? 'disabled' : `onclick="changeSourcePage('${esc}',${i})"`}>${i}</button>`;
+          }
+          if (endPage < totalPages) {
+              if (endPage < totalPages - 1) html += `<span>...</span>`;
+              html += `<button class="btn" onclick="changeSourcePage('${esc}',${totalPages})">${totalPages}</button>`;
+          }
+          if (currentPage < totalPages)
+              html += `<button class="btn" onclick="changeSourcePage('${esc}',${currentPage + 1})">Next ›</button>`;
+          html += `
+              <div class="jump-to-page">
+                  <input type="number" id="jump-to-input-source-${safeId}" min="1" max="${totalPages}" placeholder="Page #" title="Enter page number and press Go or Enter" onkeydown="if(event.key==='Enter'){event.preventDefault();jumpToSourcePage('${esc}',${totalPages})}">
+                  <button class="btn" onclick="jumpToSourcePage('${esc}',${totalPages})">Go</button>
+              </div>
+          `;
+          return html;
       }
 
       function addSourceGroupToPlaylist(sourceName) {
