@@ -2738,6 +2738,7 @@
 // ============================================================
 
       /* ---------- Core Variables ---------- */
+      const DATA_VER = '20260619'; // bump when pushing new JSON to GitHub
       let photoData = [];
       let currentRenderData = [];
       let expandedYears = new Set();
@@ -3660,9 +3661,7 @@
           // Load year files
           for (const year of yearFiles) {
             try {
-              const res = await fetch(`${year}.json?v=${Date.now()}`, {
-                cache: "no-store",
-              });
+              const res = await fetch(`${year}.json?v=${DATA_VER}`);
               if (res.ok) {
                 const yearData = await res.json();
                 if (Array.isArray(yearData)) allPhotos.push(...yearData);
@@ -3675,9 +3674,7 @@
           // Load custom files
           for (const customFile of customFiles) {
             try {
-              const res = await fetch(`${customFile}.json?v=${Date.now()}`, {
-                cache: "no-store",
-              });
+              const res = await fetch(`${customFile}.json?v=${DATA_VER}`);
               if (res.ok) {
                 const customData = await res.json();
                 if (Array.isArray(customData)) allPhotos.push(...customData);
@@ -3690,9 +3687,7 @@
           // Fallback to photoData.json if nothing loaded
           if (allPhotos.length === 0) {
             console.log("No files found, trying photoData.json...");
-            const res = await fetch(`photoData.json?v=${Date.now()}`, {
-              cache: "no-store",
-            });
+            const res = await fetch(`photoData.json?v=${DATA_VER}`);
             if (res.ok) allPhotos = await res.json();
           }
 
