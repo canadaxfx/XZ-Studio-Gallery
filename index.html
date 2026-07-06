@@ -4085,18 +4085,21 @@
           img.classList.add("loading-placeholder");
           if (imageObserver) imageObserver.observe(img);
         });
-        // IntersectionObserver fires asynchronously and can miss elements just made
-        // visible via display:none→block. Force-load images already in the viewport.
-        const vh = window.innerHeight;
-        imgs.forEach((img) => {
-          if (img.src) return;
-          const rect = img.getBoundingClientRect();
-          if (rect.width > 0 && rect.top < vh + 100 && rect.bottom > -100) {
-            img.src = img.dataset.src;
-            img.onload  = () => img.classList.remove("loading-placeholder");
-            img.onerror = () => img.classList.remove("loading-placeholder");
-            if (imageObserver) imageObserver.unobserve(img);
-          }
+        // Viewport force-load runs after requestAnimationFrame to ensure layout is
+        // computed — getBoundingClientRect() returns zero width when the DOM was just
+        // rebuilt, causing the IO to miss already-visible images intermittently.
+        requestAnimationFrame(() => {
+          const vh = window.innerHeight;
+          document.querySelectorAll(`#photos-${year} .lazy-image[data-src]`).forEach((img) => {
+            if (img.src) return;
+            const rect = img.getBoundingClientRect();
+            if (rect.width > 0 && rect.top < vh + 100 && rect.bottom > -100) {
+              img.src = img.dataset.src;
+              img.onload  = () => img.classList.remove("loading-placeholder");
+              img.onerror = () => img.classList.remove("loading-placeholder");
+              if (imageObserver) imageObserver.unobserve(img);
+            }
+          });
         });
       }
 
