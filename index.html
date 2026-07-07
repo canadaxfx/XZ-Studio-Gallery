@@ -4600,12 +4600,11 @@
             `;
         timelineContainer.innerHTML = finalHTML;
 
-        // Re-render expanded years after placing them in the DOM
-        sortedYears.forEach((year) => {
-          if (expandedYears.has(year)) {
-            renderYearPage(year);
-          }
-        });
+        // Auto-expand all result years + reset IO for clean lazy loading
+        if (imageObserver) imageObserver.disconnect();
+        setupIntersectionObserver();
+        sortedYears.forEach(y => expandedYears.add(y));
+        sortedYears.forEach(year => renderYearPage(year));
 
         _setStats(matchingPhotos.length, sortedYears.length);
       }
