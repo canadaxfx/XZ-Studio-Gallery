@@ -2310,7 +2310,9 @@
             "drama",
             "tencent",
             "character short"
-        ]
+        ],
+        "duration": 80,
+        "size_mb": 7.36
     },
     {
         "id": 844,
