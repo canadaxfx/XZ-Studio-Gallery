@@ -2203,7 +2203,7 @@
         "source": [
             "专辑我们"
         ],
-        "quality": "2k",
+        "quality": "4k",
         "platform": [
             "weibo"
         ],
@@ -3821,7 +3821,7 @@
         "source": [
             "专辑我们"
         ],
-        "quality": "2k",
+        "quality": "4k",
         "platform": [
             "weibo"
         ],
@@ -4189,7 +4189,7 @@
         "source": [
             "专辑我们"
         ],
-        "quality": "2k",
+        "quality": "4k",
         "platform": [
             "weibo"
         ],
@@ -5204,7 +5204,6 @@
             "专辑我们"
         ],
         "groupName": "20241111",
-        "quality": "4k",
         "link": "https://www.douyin.com/video/7436039841013304611",
         "description": "",
         "postText": "#肖战专辑我们  返璞归真，寂静中聆听希望，旷野中寻找《我们》。@肖战  #肖战",
@@ -13889,7 +13888,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 67.4
+        "size_mb": 67.4,
+        "quality_hd": "1080p"
     },
     {
         "id": 457,
