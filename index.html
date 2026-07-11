@@ -3441,7 +3441,7 @@
             badgeAlt.classList.remove('hidden');
           } else if (_isVid && photo.url_hd) {
             badgeAlt.href = photo.url_hd;
-            badgeAlt.textContent = '点击下载 ↓ 1080p版本';
+            badgeAlt.textContent = '点击下载 ↓ ' + (photo.quality_hd || '1080p').toUpperCase() + '版本';
             badgeAlt.classList.remove('hidden');
           } else {
             badgeAlt.classList.add('hidden');
