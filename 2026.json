@@ -3021,7 +3021,8 @@
             "endorsement",
             "brand ambassador"
         ],
-        "size_mb": 1.07
+        "size_mb": 2.9,
+        "quality": "1080p"
     },
     {
         "id": 812,
@@ -19017,7 +19018,7 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 21.27
+        "size_mb": 21.3
     },
     {
         "id": 232,
@@ -26621,7 +26622,7 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 73.77
+        "size_mb": 73.8
     },
     {
         "id": 351,
@@ -26685,7 +26686,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 70.97
+        "size_mb": 71.0,
+        "quality": "1080p"
     },
     {
         "id": 746,
