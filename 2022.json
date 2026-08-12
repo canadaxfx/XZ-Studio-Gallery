@@ -26,7 +26,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 64.03
+        "size_mb": 64.03,
+        "size_hd": 128.96
     },
     {
         "id": 1,
@@ -13866,7 +13867,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 79.87
+        "size_mb": 79.87,
+        "size_hd": 144.68
     },
     {
         "id": 486,
