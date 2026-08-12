@@ -3811,7 +3811,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 50.52
+        "size_mb": 50.52,
+        "size_4k": 250.06
     },
     {
         "id": 1136,
@@ -7382,7 +7383,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 17.19
+        "size_mb": 17.19,
+        "size_4k": 140.57
     },
     {
         "id": 893,
@@ -12065,7 +12067,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 31.64
+        "size_mb": 31.64,
+        "size_4k": 337.48
     },
     {
         "id": 749,
@@ -12388,7 +12391,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 39.18
+        "size_mb": 39.18,
+        "size_4k": 211.87
     },
     {
         "id": 711,
@@ -13353,7 +13357,7 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 0.23
+        "size_mb": 0.27
     },
     {
         "id": 1321,
@@ -13385,7 +13389,7 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 0.28
+        "size_mb": 0.34
     },
     {
         "id": 1322,
@@ -13417,7 +13421,7 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 0.19
+        "size_mb": 0.24
     },
     {
         "id": 1323,
@@ -13449,7 +13453,7 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 0.21
+        "size_mb": 0.25
     },
     {
         "id": 1324,
@@ -13481,7 +13485,7 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 0.35
+        "size_mb": 0.39
     },
     {
         "id": 1325,
@@ -13513,7 +13517,7 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 0.26
+        "size_mb": 0.29
     },
     {
         "id": 1326,
@@ -13545,7 +13549,7 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 0.16
+        "size_mb": 0.2
     },
     {
         "id": 1327,
@@ -13576,7 +13580,7 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 0.24
+        "size_mb": 0.33
     },
     {
         "id": 1328,
@@ -13608,7 +13612,7 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 0.31
+        "size_mb": 0.35
     },
     {
         "id": 1329,
@@ -13640,7 +13644,7 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 0.09
+        "size_mb": 0.13
     },
     {
         "id": 1330,
@@ -13672,7 +13676,7 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 0.08
+        "size_mb": 0.13
     },
     {
         "id": 695,
@@ -14537,7 +14541,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 2.97
+        "size_mb": 2.97,
+        "size_4k": 174.27
     },
     {
         "id": 668,
@@ -16362,7 +16367,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 15.16
+        "size_mb": 15.16,
+        "size_4k": 173.19
     },
     {
         "id": 615,
@@ -27540,7 +27546,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 22.41
+        "size_mb": 22.41,
+        "size_4k": 144.02
     },
     {
         "id": 301,
@@ -27896,7 +27903,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 20.08
+        "size_mb": 20.08,
+        "size_4k": 121.79
     },
     {
         "id": 1231,
@@ -30762,7 +30770,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 193.04
+        "size_mb": 193.04,
+        "size_hd": 356.44
     },
     {
         "id": 209,
@@ -33815,7 +33824,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 59.28
+        "size_mb": 59.28,
+        "size_hd": 115.4
     },
     {
         "id": 1215,
@@ -33844,7 +33854,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 176.14
+        "size_mb": 99.04,
+        "size_hd": 324.96
     },
     {
         "id": 1216,
@@ -34786,7 +34797,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 16.87
+        "size_mb": 16.87,
+        "size_4k": 103.6
     },
     {
         "id": 1218,
