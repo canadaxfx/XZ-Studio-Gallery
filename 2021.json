@@ -307,7 +307,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 62.42
+        "size_mb": 62.42,
+        "size_hd": 296.83
     },
     {
         "id": 11,
@@ -1433,7 +1434,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 57.16
+        "size_mb": 57.16,
+        "size_hd": 289.08
     },
     {
         "id": 42,
@@ -2381,7 +2383,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 56.42
+        "size_mb": 56.42,
+        "size_hd": 124.95
     },
     {
         "id": 529,
@@ -5381,7 +5384,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 68.1
+        "size_mb": 68.1,
+        "size_hd": 149.9
     },
     {
         "id": 487,
@@ -12868,7 +12872,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 20.81
+        "size_mb": 20.81,
+        "size_hd": 103.65
     },
     {
         "id": 398,
@@ -14925,7 +14930,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 42.51
+        "size_mb": 42.51,
+        "size_hd": 140.77
     },
     {
         "id": 505,
