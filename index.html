@@ -1990,6 +1990,19 @@
         }
       }
 
+      /* Game button (fixed pill, top-left) */
+      body:has(#photoModal:not(.hidden)) #gameBtn { display: none; }
+      #gameBtn {
+        position: fixed; top: 2px; left: 8px; z-index: 9000;
+        display: flex; align-items: center;
+        padding: 5px 10px; border-radius: 20px;
+        background: rgba(0,0,0,0.35); backdrop-filter: blur(8px);
+        border: 1px solid rgba(255,255,255,0.1);
+        text-decoration: none; transition: opacity .3s;
+      }
+      #gameBtn span { font-size:10px; color:rgba(255,255,255,.75); letter-spacing:.06em; white-space:nowrap; }
+      #gameBtn.ts-scrolled { opacity: 0; pointer-events: none; }
+
       /* Footer Styles */
       .site-footer {
         background: linear-gradient(160deg, var(--bg-base) 0%, var(--bg-base-2) 100%);
@@ -2250,6 +2263,9 @@
     </style>
   </head>
   <body>
+    <a id="gameBtn" href="game.html" target="_blank" rel="noopener">
+      <span>🎮 Time Game 时间游戏 ↗</span>
+    </a>
     <div class="container">
       <header>
       <div id="mgLayer">
@@ -5037,13 +5053,18 @@
         else document.documentElement.dataset.theme = saved;
         document.addEventListener('DOMContentLoaded', () => {
           const ts = document.getElementById('themeSwitcher');
+          const gameBtn = document.getElementById('gameBtn');
           document.querySelectorAll('.theme-dot').forEach(btn => {
             btn.classList.toggle('tdot-active', btn.dataset.t === saved);
             btn.addEventListener('click', () => { applyTheme(btn.dataset.t); localStorage.setItem(KEY, btn.dataset.t); ts.classList.remove('ts-open'); });
           });
           ts.addEventListener('click', e => { if (!ts.classList.contains('ts-open')) { ts.classList.add('ts-open'); e.stopPropagation(); } });
           document.addEventListener('click', e => { if (!ts.contains(e.target)) ts.classList.remove('ts-open'); });
-          window.addEventListener('scroll', () => { ts.classList.toggle('ts-scrolled', window.scrollY > 80); }, { passive: true });
+          window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY > 80;
+            ts.classList.toggle('ts-scrolled', scrolled);
+            if (gameBtn) gameBtn.classList.toggle('ts-scrolled', scrolled);
+          }, { passive: true });
         });
       })();
 
@@ -5057,12 +5078,6 @@
             <div class="hub-title">🌐 Xiao Zhan Universe ↗</div>
             <div class="hub-subtitle" style="font-size:12px;margin-bottom:6px">肖战粉丝站 · 全站导航</div>
             <div class="hub-cta" style="font-size:12px;line-height:1.6;transition:color .2s">Galleries · Video · Articles · Social Media<br>Explore all 8 fan sites →</div>
-            <span class="hc-corner hc-bl"></span><span class="hc-corner hc-br"></span>
-          </a>
-          <a class="hub-card" href="game.html" target="_blank" rel="noopener" style="flex:1 1 220px;max-width:260px;justify-content:center">
-            <span class="hc-corner hc-tl"></span><span class="hc-corner hc-tr"></span>
-            <div class="hub-title" style="font-size:13px;margin-bottom:4px">🎮 Time Game 时间游戏 ↗</div>
-            <div class="hub-subtitle" style="font-size:11px">Studio photo quiz</div>
             <span class="hc-corner hc-bl"></span><span class="hc-corner hc-br"></span>
           </a>
         </div>
