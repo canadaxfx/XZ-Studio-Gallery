@@ -210,18 +210,34 @@
     }
 
     /* Theme switcher */
-    .theme-row {
-      display: flex; justify-content: center; align-items: center;
-      gap: 6px; padding: 10px 16px; flex-wrap: wrap;
-      background: rgba(0,0,0,0.15);
+    #gameSkinBtn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 5px 12px; border-radius: 20px;
+      border: 1px solid rgba(var(--gold-rgb), 0.35);
+      cursor: pointer; flex-shrink: 0;
+      transition: all 0.2s;
     }
-    [data-theme="washi-garnet"] .theme-row,
-    [data-theme="washi-slate"] .theme-row { background: var(--surface-d); }
-    .theme-row span { font-size: 11px; color: rgba(var(--gold-rgb),0.7); margin-right: 2px; }
+    #gameSkinBtn:hover { background: rgba(var(--gold-rgb), 0.1); border-color: var(--gold); }
+    [data-theme="washi-garnet"] #gameSkinBtn,
+    [data-theme="washi-slate"]  #gameSkinBtn { border-color: rgba(var(--gold-rgb),0.5); }
+    #gameSkinLabel {
+      font-size: 13px; font-weight: 600; color: rgba(var(--gold-rgb), 0.9);
+      letter-spacing: .02em; white-space: nowrap; pointer-events: none; user-select: none;
+    }
+    [data-theme="washi-garnet"] #gameSkinLabel,
+    [data-theme="washi-slate"]  #gameSkinLabel { color: var(--bg-dark); }
+    #gameSkinLabel::after { content: ' ▾'; font-size: 8px; opacity: .7; }
+    #gameSkinBtn.ts-open #gameSkinLabel::after { content: ' ▴'; }
+    .game-ts-expand {
+      display: flex; gap: 5px; align-items: center;
+      max-width: 0; overflow: hidden; opacity: 0;
+      transition: max-width .28s ease, opacity .2s ease;
+    }
+    #gameSkinBtn.ts-open .game-ts-expand { max-width: 200px; opacity: 1; }
     .theme-dot {
       width: 18px; height: 18px; border-radius: 50%; border: 2px solid transparent;
       cursor: pointer; transition: transform 0.15s, border-color 0.15s;
-      position: relative;
+      flex-shrink: 0;
     }
     .theme-dot:hover { transform: scale(1.2); }
     .theme-dot.tdot-active { border-color: white; box-shadow: 0 0 0 1px rgba(255,255,255,0.5); }
@@ -242,17 +258,17 @@
 
   <div class="back-bar">
     <a class="back-link" href="index.html" target="_blank" rel="noopener">← Gallery 图库</a>
-    <div class="theme-row">
-      <span>Style</span>
-      <div class="theme-dot tdot-active" data-t="red"          title="China Red"          style="background:#8B0010"></div>
-      <div class="theme-dot"             data-t="sakura"        title="Sakura Night"        style="background:#2A1018"></div>
-      <div class="theme-dot"             data-t="sapphire"      title="Midnight Sapphire"   style="background:#1A3FAA"></div>
-      <div class="theme-dot"             data-t="lunar"         title="Lunar"               style="background:#3A5890"></div>
-      <div class="theme-dot"             data-t="violet"        title="Imperial Violet"     style="background:#5A0FA0"></div>
-      <div class="theme-dot"             data-t="washi-garnet"  title="Washi · Garnet"
-           style="background:linear-gradient(135deg,#EAEAEC 50%,#7A2030 50%)"></div>
-      <div class="theme-dot"             data-t="washi-slate"   title="Washi · Slate"
-           style="background:linear-gradient(135deg,#ECEDF1 50%,#3A4860 50%)"></div>
+    <div id="gameSkinBtn">
+      <span id="gameSkinLabel">换肤 Skin</span>
+      <div class="game-ts-expand">
+        <div class="theme-dot" data-t="red"         title="China Red"        style="background:#8B0010"></div>
+        <div class="theme-dot" data-t="sakura"       title="Sakura Night"     style="background:#2A1018"></div>
+        <div class="theme-dot" data-t="sapphire"     title="Midnight Sapphire" style="background:#1A3FAA"></div>
+        <div class="theme-dot" data-t="lunar"        title="Lunar"            style="background:#3A5890"></div>
+        <div class="theme-dot" data-t="violet"       title="Imperial Violet"  style="background:#5A0FA0"></div>
+        <div class="theme-dot" data-t="washi-garnet" title="Washi · Garnet"   style="background:linear-gradient(135deg,#EAEAEC 50%,#7A2030 50%)"></div>
+        <div class="theme-dot" data-t="washi-slate"  title="Washi · Slate"    style="background:linear-gradient(135deg,#ECEDF1 50%,#3A4860 50%)"></div>
+      </div>
     </div>
   </div>
 
@@ -300,6 +316,7 @@
       const saved = localStorage.getItem(THEME_KEY) || 'washi-slate';
       if (saved === 'red') document.documentElement.removeAttribute('data-theme');
       else document.documentElement.dataset.theme = saved;
+      const ts = document.getElementById('gameSkinBtn');
       document.querySelectorAll('.theme-dot').forEach(d => {
         d.classList.toggle('tdot-active', d.dataset.t === saved);
         d.addEventListener('click', () => {
@@ -308,9 +325,12 @@
           else document.documentElement.dataset.theme = t;
           document.querySelectorAll('.theme-dot').forEach(x => x.classList.toggle('tdot-active', x.dataset.t === t));
           localStorage.setItem(THEME_KEY, t);
+          ts.classList.remove('ts-open');
           if (!gameActive && photoData.length) showDefaultPhoto();
         });
       });
+      ts.addEventListener('click', e => { if (!ts.classList.contains('ts-open')) { ts.classList.add('ts-open'); e.stopPropagation(); } });
+      document.addEventListener('click', e => { if (!ts.contains(e.target)) ts.classList.remove('ts-open'); });
     })();
 
     /* ---------- Data loading ---------- */
