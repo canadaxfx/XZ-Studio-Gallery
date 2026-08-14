@@ -3987,8 +3987,8 @@
         yearPaginationSettings[year].currentPage = parseInt(page, 10);
         renderYearPage(year);
         document
-          .getElementById(`photos-${year}`)
-          .scrollIntoView({ behavior: "smooth", block: "start" });
+          .getElementById(`pagination-nav-${year}`)
+          .scrollIntoView({ behavior: "smooth", block: "nearest" });
       }
 
       function jumpToPage(year, totalPages) {
