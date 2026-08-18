@@ -27,7 +27,8 @@
             "weibo"
         ],
         "size_mb": 64.03,
-        "size_hd": 128.96
+        "size_hd": 128.96,
+        "quality": "720p"
     },
     {
         "id": 1,
@@ -2590,7 +2591,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 54.35
+        "size_mb": 54.35,
+        "quality": "720p"
     },
     {
         "id": 87,
@@ -6736,7 +6738,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 12.27
+        "size_mb": 12.27,
+        "quality": "720p"
     },
     {
         "id": 462,
@@ -6763,7 +6766,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 4.76
+        "size_mb": 4.76,
+        "quality": "720p"
     },
     {
         "id": 225,
@@ -10687,7 +10691,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 2.74
+        "size_mb": 2.74,
+        "quality": "480p"
     },
     {
         "id": 334,
@@ -12784,7 +12789,8 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 5.56
+        "size_mb": 5.56,
+        "quality": "low"
     },
     {
         "id": 504,
@@ -13868,7 +13874,8 @@
             "weibo"
         ],
         "size_mb": 79.87,
-        "size_hd": 144.68
+        "size_hd": 144.68,
+        "quality": "720p"
     },
     {
         "id": 486,
