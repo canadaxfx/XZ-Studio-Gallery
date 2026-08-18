@@ -1649,6 +1649,32 @@
         "size_mb": 3.07
     },
     {
+        "id": 267,
+        "url": "https://assets.xz-studio-gallery.com/full/20191228_XZ-Weibo-3.mp4",
+        "date": "2019-12-28",
+        "month": "December",
+        "year": "2019",
+        "tags": [
+            "北京台春晚"
+        ],
+        "groupName": "20191228",
+        "link": "",
+        "source": [
+            "北京台舞台"
+        ],
+        "platform": [
+            "weibo"
+        ],
+        "description": "",
+        "postText": "不见不散！[给你小心心]",
+        "size_mb": 18.46,
+        "englishTags": [
+            "beijing tv",
+            "stage performance",
+            "new year gala"
+        ]
+    },
+    {
         "id": 54,
         "url": "https://assets.xz-studio-gallery.com/full/20191227_斗罗大陆_XZ-STU-1.jpg",
         "date": "2019-12-27",
