@@ -3776,7 +3776,7 @@
     },
     {
         "id": 872,
-        "url": "https://assets.xz-studio-gallery.com/full/20241119_DY_漂流MV_XZ-1.mp4",
+        "url": "https://assets.xz-studio-gallery.com/full/20241120_XZ-Weibo-1.mp4",
         "date": "2024-11-19",
         "month": "November",
         "year": "2024",
@@ -3785,10 +3785,7 @@
             "专辑我们"
         ],
         "groupName": "20241119",
-        "quality": "1080p",
-        "duration": 330,
         "link": "https://www.douyin.com/video/7439068805667622179",
-        "description": "",
         "postText": "#肖战漂流 《漂流》着，随波逐流；行走着，找回自我。@肖战 #肖战",
         "englishTags": [
             "drifting",
@@ -3802,7 +3799,12 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 56.7
+        "hidden": "",
+        "url_4k": "https://assets.xz-studio-gallery.com/4k/20241120_XZ-Weibo-1.mp4",
+        "duration": 330,
+        "size_mb": 40.29,
+        "size_4k": 175.08,
+        "quality": "720p"
     },
     {
         "id": 819,
