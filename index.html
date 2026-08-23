@@ -4669,7 +4669,11 @@
         // Auto-expand all result years + reset IO for clean lazy loading
         if (imageObserver) imageObserver.disconnect();
         setupIntersectionObserver();
-        sortedYears.forEach(y => expandedYears.add(y));
+        sortedYears.forEach(y => {
+          expandedYears.add(y);
+          const el = document.querySelector(`.timeline-year[data-year="${y}"]`);
+          if (el) el.classList.add('expanded');
+        });
         sortedYears.forEach(year => renderYearPage(year));
 
         _setStats(matchingPhotos.length, sortedYears.length);
