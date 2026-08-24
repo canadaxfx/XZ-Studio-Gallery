@@ -3726,6 +3726,52 @@
         plLoad();
       });
 
+      /* ---------- Deep-link params (?q=&platform=&year=&month=&day=&media=) ----------
+         Read on load so links from the unified XZ Gallery All-in-One search site land
+         here with the same keyword + filters already applied. Purely additive — has no
+         effect when the site is opened normally (no query string). */
+      function applyDeepLinkParams() {
+        const params = new URLSearchParams(location.search);
+        const q = params.get('q');
+        const platform = params.get('platform');
+        const year = params.get('year');
+        const month = params.get('month');
+        const day = params.get('day');
+        const media = params.get('media');
+        if (!q && !platform && !year && !month && !day && !media) return false;
+
+        if (platform && elFilterSource.querySelector(`option[value="${platform}"]`)) {
+          elFilterSource.value = platform;
+          if (window.cselBuild) window.cselBuild('filterSource');
+        }
+        if (year && elFilterYear.querySelector(`option[value="${year}"]`)) {
+          elFilterYear.value = year;
+          if (window.cselBuild) window.cselBuild('filterYear');
+        }
+        if (month && elFilterMonth.querySelector(`option[value="${month}"]`)) {
+          elFilterMonth.value = month;
+          if (window.cselBuild) window.cselBuild('filterMonth');
+        }
+        if (day && elFilterDay.querySelector(`option[value="${day}"]`)) {
+          elFilterDay.value = day;
+          if (window.cselBuild) window.cselBuild('filterDay');
+        }
+        if (media === 'photo' || media === 'video') {
+          currentMediaFilter = media;
+          document.querySelectorAll('.media-tab').forEach(btn => btn.classList.toggle('active', btn.dataset.media === media));
+        }
+        if (q) {
+          currentSearchQuery = q.toLowerCase();
+          if (elSearchInput) elSearchInput.value = q;
+        }
+
+        const filtersPanel = document.getElementById('filtersPanel');
+        if (filtersPanel && (platform || year || month || day)) filtersPanel.classList.remove('hidden');
+
+        applyAllFilters();
+        return true;
+      }
+
       /* ---------- Data Loading ---------- */
       async function loadPhotoData() {
         try {
@@ -3792,7 +3838,7 @@
           });
           if (window.cselBuild) window.cselBuild('filterYear');
 
-          initializeTimeline();
+          if (!applyDeepLinkParams()) initializeTimeline();
         } catch (err) {
           console.error("Failed to load photo data:", err);
           document.getElementById("timelineContainer").innerHTML = `
@@ -3801,11 +3847,10 @@
       }
 
       /* ---------- Timeline & Pagination Functions ---------- */
+      // The plain "browse everything" view — only called by applyAllFilters()
+      // when no search/filter is active (it handles the filtered case itself).
       function initializeTimeline() {
-        // Reset currentRenderData to full list only when no filters are active
-        if (!currentSearchQuery && currentMediaFilter === 'all') {
-          currentRenderData = photoData;
-        }
+        currentRenderData = photoData;
 
         if (currentRenderData.length === 0) {
           document.getElementById("timelineContainer").innerHTML = `
@@ -3813,13 +3858,6 @@
           return;
         }
 
-        // If there's a search query, run the search
-        if (currentSearchQuery) {
-          performSearch(currentSearchQuery);
-          return;
-        }
-
-        // Use currentRenderData instead of photoData
         const photosByYear = currentRenderData.reduce((acc, photo) => {
           if (!acc[photo.year]) acc[photo.year] = [];
           acc[photo.year].push(photo);
@@ -4579,75 +4617,131 @@
         elClearSearchBtn.addEventListener("click", () => {
           currentSearchQuery = "";
           elSearchInput.value = "";
-          elClearSearchBtn.style.display = "none";
-          initializeTimeline();
+          applyAllFilters(); // respects any dropdown/media filters still active
         });
       }
 
+      /* ---------- Unified filter + search (combines dropdowns, media filter,
+         and keyword search into one predicate — previously these were two
+         separate, non-combining code paths; also powers the ?q= deep-link
+         reader below, which arrives from the unified search site) ---------- */
+      function hasActiveDropdownFilters() {
+        return elFilterYear.value !== 'all' || elFilterMonth.value !== 'all' ||
+               elFilterDay.value !== 'all' || elFilterSource.value !== 'all';
+      }
+
+      function matchesActiveFilters(item) {
+        if (currentMediaFilter === 'video' && !isVideoEntry(item)) return false;
+        if (currentMediaFilter === 'photo' && isVideoEntry(item)) return false;
+        if (currentFilter !== 'all' && getPhotoSection(item) !== currentFilter) return false;
+
+        const yVal = elFilterYear.value, mVal = elFilterMonth.value, dVal = elFilterDay.value, sVal = elFilterSource.value;
+        if (yVal !== 'all' || mVal !== 'all' || dVal !== 'all') {
+          if (!item.date) return false;
+          const parts = String(item.date).split(/[-/.]/);
+          if (parts.length < 3) return false;
+          const pYear = parts[0], pMonth = parts[1].padStart(2, '0'), pDay = String(parseInt(parts[2])).padStart(2, '0');
+          if (yVal !== 'all' && pYear !== yVal) return false;
+          if (mVal !== 'all' && pMonth !== mVal) return false;
+          if (dVal !== 'all' && pDay !== dVal) return false;
+        }
+        if (sVal !== 'all') {
+          const _itemPlatforms = new Set();
+          if (item.platform) {
+            const _st = Array.isArray(item.platform) ? item.platform : [item.platform];
+            _st.forEach(t => _itemPlatforms.add(String(t).toLowerCase()));
+          }
+          if (item.platform_links && typeof item.platform_links === 'object') {
+            Object.keys(item.platform_links).forEach(k => _itemPlatforms.add(String(k).toLowerCase()));
+          }
+          if (!_itemPlatforms.size) _itemPlatforms.add('weibo');
+          if (_itemPlatforms.has('xiaohongshu')) _itemPlatforms.add('rednote');
+          if (!_itemPlatforms.has(sVal)) return false;
+        }
+        return true;
+      }
+
+      function matchesSearchText(item, query) {
+        return (
+          item.year.includes(query) ||
+          item.month.toLowerCase().includes(query) ||
+          item.date.includes(query) ||
+          (Array.isArray(item.tags) && item.tags.some((t) => String(t).toLowerCase().includes(query))) ||
+          (Array.isArray(item.englishTags) && item.englishTags.some(t => String(t).toLowerCase().includes(query))) ||
+          (Array.isArray(item.source) && item.source.some(s => s.toLowerCase().includes(query))) ||
+          (SOURCE_SECTIONS._section_labels[getPhotoSection(item)] || '').toLowerCase().includes(query) ||
+          (item.description && item.description.toLowerCase().includes(query)) ||
+          (item.postText && item.postText.toLowerCase().includes(query))
+        );
+      }
+
       function performSearch(query) {
-        const timelineContainer = document.getElementById("timelineContainer");
+        currentSearchQuery = query;
+        applyAllFilters();
+      }
 
-        // 1. Show/hide clear button
-        elClearSearchBtn.style.display = query ? "block" : "none";
+      function applyDateFilter(fromMediaTab = false) {
+        applyAllFilters();
+      }
 
-        if (!query) {
-          // If query is empty, reset to full timeline
+      // Single entry point for every filter/search change — replaces the old
+      // separate performSearch/applyDateFilter paths that didn't combine.
+      function applyAllFilters() {
+        const resetBtn = document.getElementById("resetDateBtn");
+        resetBtn.classList.toggle('hidden', !hasActiveDropdownFilters());
+        elClearSearchBtn.style.display = currentSearchQuery ? "block" : "none";
+
+        const filtersActive = hasActiveDropdownFilters() || currentMediaFilter !== 'all' || currentFilter !== 'all';
+
+        if (!filtersActive && !currentSearchQuery) {
           initializeTimeline();
           return;
         }
 
-        // 2. Filter photos by query + active media filter
-        const matchingPhotos = photoData.filter((p) => {
-          if (currentMediaFilter === 'video' && !isVideoEntry(p)) return false;
-          if (currentMediaFilter === 'photo' && (isVideoEntry(p))) return false;
-          return (
-            p.year.includes(query) ||
-            p.month.toLowerCase().includes(query) ||
-            p.date.includes(query) ||
-            (Array.isArray(p.tags) &&
-              p.tags.some((t) => String(t).toLowerCase().includes(query))) ||
-            (Array.isArray(p.englishTags) &&
-              p.englishTags.some((t) => String(t).toLowerCase().includes(query))) ||
-            (Array.isArray(p.source) && p.source.some(s => s.toLowerCase().includes(query))) ||
-            (SOURCE_SECTIONS._section_labels[getPhotoSection(p)] || '').toLowerCase().includes(query) ||
-            (p.description && p.description.toLowerCase().includes(query)) ||
-            (p.postText && p.postText.toLowerCase().includes(query))
-          );
-        });
-
-        // 3. Group filtered photos by year
-        const photosByYear = matchingPhotos.reduce((acc, photo) => {
-          if (!acc[photo.year]) acc[photo.year] = [];
-          acc[photo.year].push(photo);
-          return acc;
-        }, {});
-
-        // 4. Sort years and photos within years
-        const sortedYears = sortedYearKeys(photosByYear);
-        sortedYears.forEach((year) =>
-          photosByYear[year].sort(
-            (a, b) => new Date(b.date) - new Date(a.date),
-          ),
+        const query = currentSearchQuery;
+        const filtered = photoData.filter((item) =>
+          matchesActiveFilters(item) && (!query || matchesSearchText(item, query))
         );
 
-        // Track filtered videos for playlist "add all"
-        filteredVideosCache = matchingPhotos.filter(p => isVideoEntry(p));
+        currentRenderData = filtered;
+        filteredVideosCache = filtered.filter(p => isVideoEntry(p));
         plUpdateAddAllBtn();
 
-        // Sync currentRenderData so renderYearPage uses search results, not stale filter data
-        currentRenderData = matchingPhotos;
+        const timelineContainer = document.getElementById("timelineContainer");
 
-        if (matchingPhotos.length === 0) {
+        if (filtered.length === 0) {
           timelineContainer.innerHTML = `
                     <div class="timeline-empty">
                         <h3>No items found</h3>
-                        <p>No results for "${query}".</p>
+                        <p>${query ? `No results for "${query}".` : 'No items match this selection.'}</p>
                     </div>`;
           _setStats(0, 0);
           return;
         }
 
-        // 5. Generate Search Results HTML
+        const photosByYear = filtered.reduce((acc, photo) => {
+          if (!acc[photo.year]) acc[photo.year] = [];
+          acc[photo.year].push(photo);
+          return acc;
+        }, {});
+
+        if (!query) {
+          // Filter-only (no keyword): keep the normal collapsible timeline look
+          Object.values(photosByYear).forEach((yearPhotos) =>
+            yearPhotos.sort((a, b) => new Date(b.date) - new Date(a.date)),
+          );
+          Object.keys(yearPaginationSettings).forEach(yr => { yearPaginationSettings[yr].currentPage = 1; });
+          createTimelineHTML(photosByYear);
+          _setStats(filtered.length, Object.keys(photosByYear).length);
+          return;
+        }
+
+        // Keyword present: auto-expanded results view (same as before)
+        const sortedYears = sortedYearKeys(photosByYear);
+        sortedYears.forEach((year) =>
+          photosByYear[year].sort((a, b) => new Date(b.date) - new Date(a.date)),
+        );
+
         const searchResultsHTML = sortedYears
           .map((year) => {
             yearPaginationSettings[year] = yearPaginationSettings[year] || { perPage: 21, currentPage: 1 };
@@ -4655,19 +4749,16 @@
           })
           .join("");
 
-        // Add a summary header to the results
-        const finalHTML = `
+        timelineContainer.innerHTML = `
                 <div class="search-summary">
                     <h3>Search Results for "${query}"</h3>
-                    <p>${matchingPhotos.length} photos found across ${sortedYears.length} year(s)</p>
+                    <p>${filtered.length} photos found across ${sortedYears.length} year(s)</p>
                 </div>
                 <div class="search-results-container">
                     ${searchResultsHTML}
                 </div>
             `;
-        timelineContainer.innerHTML = finalHTML;
 
-        // Auto-expand all result years + reset IO for clean lazy loading
         if (imageObserver) imageObserver.disconnect();
         setupIntersectionObserver();
         sortedYears.forEach(y => {
@@ -4677,7 +4768,7 @@
         });
         sortedYears.forEach(year => renderYearPage(year));
 
-        _setStats(matchingPhotos.length, sortedYears.length);
+        _setStats(filtered.length, sortedYears.length);
       }
 
 
@@ -4920,118 +5011,7 @@
           loadSourcesView();
           return;
         }
-        if (currentSearchQuery) {
-          performSearch(currentSearchQuery);
-        } else {
-          applyDateFilter(true);
-        }
-      }
-
-      function applyDateFilter(fromMediaTab = false) {
-        const yVal = elFilterYear.value;
-        const mVal = elFilterMonth.value;
-        const dVal = elFilterDay.value;
-        const sVal = elFilterSource.value;
-        const resetBtn = document.getElementById("resetDateBtn");
-
-        // 1. Manage Reset Button Visibility
-        if (
-          yVal !== "all" ||
-          mVal !== "all" ||
-          dVal !== "all" ||
-          sVal !== "all"
-        ) {
-          resetBtn.classList.remove("hidden");
-        } else {
-          resetBtn.classList.add("hidden");
-          if (currentMediaFilter === 'all' && currentFilter === 'all') {
-            currentRenderData = photoData;
-            initializeTimeline();
-            return;
-          }
-        }
-
-        // 2. Filter the Data
-        let filtered = photoData.filter((item) => {
-          // --- DATE CHECK ---
-          if (!item.date) return false;
-          const parts = String(item.date).split(/[-/.]/);
-          if (parts.length < 3) return false;
-
-          const pYear = parts[0];
-          const pMonth = parts[1].padStart(2, "0");
-          const pDay = String(parseInt(parts[2])).padStart(2, "0");
-
-          if (yVal !== "all" && pYear !== yVal) return false;
-          if (mVal !== "all" && pMonth !== mVal) return false;
-          if (dVal !== "all" && pDay !== dVal) return false;
-
-          // --- PLATFORM CHECK ---
-          const _itemPlatforms = new Set();
-          if (item.platform) {
-            const _st = Array.isArray(item.platform) ? item.platform : [item.platform];
-            _st.forEach(t => _itemPlatforms.add(String(t).toLowerCase()));
-          }
-          if (item.platform_links && typeof item.platform_links === 'object') {
-            Object.keys(item.platform_links).forEach(k => _itemPlatforms.add(String(k).toLowerCase()));
-          }
-          if (!_itemPlatforms.size) _itemPlatforms.add('weibo');
-          if (_itemPlatforms.has('xiaohongshu')) _itemPlatforms.add('rednote');
-
-          if (sVal !== "all" && !_itemPlatforms.has(sVal)) return false;
-
-          return true;
-        });
-
-        // 3. Apply category filter
-        if (currentFilter !== 'all') {
-          filtered = filtered.filter(p => getPhotoSection(p) === currentFilter);
-        }
-
-        // 4. Apply media type filter
-        if (currentMediaFilter === 'video') {
-          filtered = filtered.filter(p => isVideoEntry(p));
-        } else if (currentMediaFilter === 'photo') {
-          filtered = filtered.filter(p => !isVideoEntry(p));
-        }
-
-        // 5. Update Global Render Data
-        currentRenderData = filtered;
-
-        // Track filtered videos for playlist "add all"
-        filteredVideosCache = filtered.filter(p => isVideoEntry(p));
-        plUpdateAddAllBtn();
-
-        // 4. Clear Search Input
-        elSearchInput.value = "";
-        elClearSearchBtn.style.display = "none";
-        currentSearchQuery = "";
-
-        // 5. Update UI
-        if (filtered.length === 0) {
-          document.getElementById("timelineContainer").innerHTML = `
-            <div class="timeline-empty">
-                <h3>No items found</h3>
-                <p>No items match this selection.</p>
-            </div>`;
-          _setStats(0, 0);
-        } else {
-          const photosByYear = filtered.reduce((acc, photo) => {
-            if (!acc[photo.year]) acc[photo.year] = [];
-            acc[photo.year].push(photo);
-            return acc;
-          }, {});
-
-          // Reset pagination to page 1 for all years — filter changed, old page may be out of range
-          Object.keys(yearPaginationSettings).forEach(yr => {
-            yearPaginationSettings[yr].currentPage = 1;
-          });
-
-          createTimelineHTML(photosByYear);
-
-
-          _setStats(filtered.length, Object.keys(photosByYear).length);
-        }
+        applyAllFilters();
       }
 
       function resetDateFilter() {
@@ -5040,7 +5020,7 @@
         elFilterDay.value = "all";
         elFilterSource.value = "all";
         ['filterSource','filterYear','filterMonth','filterDay'].forEach(function(id){if(window.cselReset)window.cselReset(id);});
-        applyDateFilter(); // This will trigger the "all" check and run initializeTimeline()
+        applyAllFilters(); // keeps any active search/media filter, only clears the dropdowns
       }
 
       /* ---------- Theme & Magnolia ---------- */
