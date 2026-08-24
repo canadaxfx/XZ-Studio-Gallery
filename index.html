@@ -3350,8 +3350,9 @@
         };
         const _seenBadges = new Set();
         const _badgeHtml = [];
+        const _normPlat = p => { const k = String(p).toLowerCase().trim(); return (k==='xiaohongshu'||k==='xhs') ? 'rednote' : k==='instagram' ? 'ins' : k; };
         const _addBadge = (k) => {
-            const key = String(k).toLowerCase().trim();
+            const key = _normPlat(k);
             if (_seenBadges.has(key)) return;
             _seenBadges.add(key);
             const def = _BADGE_DEFS[key] || { cls: 'badge-other', text: key.toUpperCase().slice(0, 8) };
