@@ -999,7 +999,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 11.33
+        "size_mb": 11.33,
+        "quality": "720p"
     },
     {
         "id": 38,
@@ -1673,7 +1674,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 6.5
+        "size_mb": 6.5,
+        "quality": "720p"
     },
     {
         "id": 250,
@@ -1951,7 +1953,8 @@
             "weibo"
         ],
         "size_mb": 24.22,
-        "size_hd": 219.32
+        "size_hd": 219.32,
+        "quality": "480p"
     },
     {
         "id": 276,
@@ -1979,7 +1982,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 2.02
+        "size_mb": 2.02,
+        "quality": "480p"
     },
     {
         "id": 68,
@@ -2481,7 +2485,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 17.17
+        "size_mb": 17.17,
+        "quality": "720p"
     },
     {
         "id": 81,
@@ -2992,7 +2997,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 2.22
+        "size_mb": 2.22,
+        "quality": "720p"
     },
     {
         "id": 255,
@@ -3155,7 +3161,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 4.71
+        "size_mb": 4.71,
+        "quality": "720p"
     },
     {
         "id": 256,
@@ -3184,7 +3191,8 @@
             "weibo"
         ],
         "size_mb": 21.14,
-        "size_hd": 163.41
+        "size_hd": 163.41,
+        "quality": "480p"
     },
     {
         "id": 271,
@@ -3210,7 +3218,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 4.75
+        "size_mb": 4.75,
+        "quality": "720p"
     },
     {
         "id": 104,
@@ -3827,7 +3836,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 3.61
+        "size_mb": 3.61,
+        "quality": "720p"
     },
     {
         "id": 258,
@@ -3993,7 +4003,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 1.02
+        "size_mb": 1.02,
+        "quality": "480p"
     },
     {
         "id": 268,
@@ -4021,7 +4032,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 2.29
+        "size_mb": 2.29,
+        "quality": "720p"
     },
     {
         "id": 128,
@@ -4293,7 +4305,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 2.94
+        "size_mb": 2.94,
+        "quality": "480p"
     },
     {
         "id": 136,
@@ -6109,7 +6122,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 4.51
+        "size_mb": 4.51,
+        "quality": "480p"
     },
     {
         "id": 198,
@@ -6553,7 +6567,8 @@
         "platform": [
             "douyin"
         ],
-        "size_mb": 5.07
+        "size_mb": 5.07,
+        "quality": "480p"
     },
     {
         "id": 214,
