@@ -2360,7 +2360,7 @@
               <span class="mini-nav-dot">·</span>
               <a href="https://xz-hd-gallery-misc.pages.dev/" target="_blank" rel="noopener">HD Misc 高清-其他</a>
               <span class="mini-nav-dot">·</span>
-              <a href="https://xz-social-media-archive.pages.dev/" target="_blank" rel="noopener">Archive 社媒存档</a>
+              <a href="https://xz-social-media-archive.pages.dev/" target="_blank" rel="noopener">Social Archive 社媒存档</a>
             </div>
           </nav>
         </div>
@@ -2858,6 +2858,7 @@
       let currentRenderData = [];
       let expandedYears = new Set();
       let yearPaginationSettings = {};
+      let _yearPhotosCache = {};
       let imageObserver = null;
       let currentSearchQuery = "";
       let currentMediaFilter = "all";
@@ -2865,6 +2866,7 @@
       let expandedSources = new Set();
       let expandedSectionKeys = new Set();
       let sourcePaginationSettings = {};
+      let _sourcePhotosCache = {};
 
       /* ---------- Enhanced Modal Variables ---------- */
       let currentPhotoGroup = [];
@@ -3322,7 +3324,7 @@
       function setPlatformBtnBehavior(btn, mainLink, extraLinks, primarySource) {
         const existingPop = document.getElementById('platformPopover');
         if (existingPop) existingPop.style.display = 'none';
-        const lmap = {weibo:'Weibo 微博',douyin:'Douyin 抖音',youtube:'YouTube',bilibili:'Bilibili',ins:'Instagram',xiaohongshu:'RedNote 小红书',xhs:'RedNote 小红书',rednote:'RedNote 小红书'};
+        const lmap = {weibo:'Weibo 微博',douyin:'Douyin 抖音',youtube:'YouTube',bilibili:'Bilibili',ins:'Instagram',xiaohongshu:'RedNote 小红书',xhs:'RedNote 小红书',rednote:'RedNote 小红书',qq:'QQ 腾讯',wx:'WeChat 微信',wechat:'WeChat 微信',mgtv:'MGTV 芒果TV'};
         const links = [];
         const w = mainLink ? String(mainLink).trim() : '';
         if (w) links.push({label: lmap[primarySource] || 'Weibo 微博', url: /^https?/i.test(w) ? w : 'https://' + w});
@@ -3937,6 +3939,13 @@
       }
 
       function buildYearCardHTML(year, photos) {
+        const distinctMonths = [...new Set(photos.map((p) => p.month))].filter(Boolean);
+        const monthJumpHTML = distinctMonths.length > 1
+          ? `<select id="month-jump-${year}" onchange="jumpToMonth('${year}', this.value)">
+                                    <option value="">Jump to month ▾</option>
+                                    ${distinctMonths.map((m) => `<option value="${m}">${m}</option>`).join("")}
+                                </select>`
+          : '';
         const previewPhotos = photos.slice(0, 4);
         const previewHTML = `
                     <div class="year-preview">
@@ -3965,12 +3974,12 @@
                         </div>
                         <div class="timeline-year-content">
                             <div class="year-controls">
-                                <label for="per-page-${year}">Photos per page:</label>
+                                ${monthJumpHTML}
                                 <select id="per-page-${year}" onchange="changePhotosPerPage('${year}', this.value)">
-                                    <option value="21">21</option>
-                                    <option value="42">42</option>
-                                    <option value="84">84</option>
-                                    <option value="all">All</option>
+                                    <option value="21">21 / page</option>
+                                    <option value="42">42 / page</option>
+                                    <option value="84">84 / page</option>
+                                    <option value="all">Show All</option>
                                 </select>
                             </div>
                             <div class="year-photos-grid" id="photos-${year}"></div>
@@ -4092,6 +4101,26 @@
           .scrollIntoView({ behavior: "smooth", block: "nearest" });
       }
 
+      // "Jump to month" dropdown on a year box — finds the first item belonging to
+      // the chosen month and pages straight there (ported from XZ Gallery Navigator).
+      // Reads _yearPhotosCache (populated by renderYearPage) rather than re-deriving
+      // the year+search filter here, so it can't silently drift out of sync with it.
+      function jumpToMonth(year, monthValue) {
+        if (!monthValue) return;
+        const yearPhotos = _yearPhotosCache[year] || currentRenderData.filter((p) => p.year === year);
+        const idx = yearPhotos.findIndex((p) => p.month === monthValue);
+        if (idx === -1) return;
+        const settings = yearPaginationSettings[year] || { perPage: 21, currentPage: 1 };
+        if (settings.perPage === Infinity) {
+          const grid = document.getElementById(`photos-${year}`);
+          const card = grid ? grid.children[idx] : null;
+          if (card) card.scrollIntoView({ behavior: "smooth", block: "center" });
+          return;
+        }
+        const page = Math.floor(idx / settings.perPage) + 1;
+        goToPage(year, page);
+      }
+
       function jumpToPage(year, totalPages) {
         const inputElement = document.getElementById(`jump-to-input-${year}`);
         if (!inputElement) return;
@@ -4132,6 +4161,10 @@
               (p.postText && p.postText.toLowerCase().includes(query)),
           );
         }
+
+        // Cached so jumpToMonth() can find the right index without re-deriving
+        // (and risking drift from) this function's own year+search filtering.
+        _yearPhotosCache[year] = yearPhotos;
 
         const totalPhotos = yearPhotos.length;
         const photosGrid = document.getElementById(`photos-${year}`);
@@ -4405,6 +4438,13 @@
               const photos = group.photos;
               const safeId = getSourceSafeId(sourceName);
               const escapedSourceName = sourceName.replace(/'/g, "\\'");
+              const distinctYears = [...new Set(photos.map((p) => p.year))].filter(Boolean).sort((a, b) => b - a);
+              const yearJumpHTML = distinctYears.length > 1
+                ? `<select id="year-jump-source-${safeId}" onchange="jumpToSourceYear('${escapedSourceName}', this.value)">
+                                    <option value="">Jump to year ▾</option>
+                                    ${distinctYears.map((y) => `<option value="${y}">${y}</option>`).join("")}
+                                </select>`
+                : '';
               const previewPhotos = photos.slice(0, 4);
               const previewHTML = `<div class="year-preview">
                   ${previewPhotos.map(p => `<img src="${generateThumbnail(p.url, 'm')}" alt="" class="preview-thumb">`).join('')}
@@ -4428,12 +4468,12 @@
                       </div>
                       <div class="timeline-year-content">
                           <div class="year-controls">
-                              <label for="per-page-source-${safeId}">Photos per page:</label>
+                              ${yearJumpHTML}
                               <select id="per-page-source-${safeId}" onchange="changeSourcePhotosPerPage('${escapedSourceName}', this.value)">
-                                  <option value="21">21</option>
-                                  <option value="42">42</option>
-                                  <option value="84">84</option>
-                                  <option value="all">All</option>
+                                  <option value="21">21 / page</option>
+                                  <option value="42">42 / page</option>
+                                  <option value="84">84 / page</option>
+                                  <option value="all">Show All</option>
                               </select>
                           </div>
                           <div class="year-photos-grid" id="photos-source-${safeId}"></div>
@@ -4519,6 +4559,9 @@
           } else if (currentMediaFilter === 'photo') {
               sourcePhotos = sourcePhotos.filter(p => !isVideoEntry(p));
           }
+          // Cached so jumpToSourceYear() reads the exact same (media-filtered) list
+          // this function just computed, instead of re-deriving it separately.
+          _sourcePhotosCache[sourceName] = sourcePhotos;
           const totalPhotos = sourcePhotos.length;
           const safeId = getSourceSafeId(sourceName);
           const photosGrid = document.getElementById(`photos-source-${safeId}`);
@@ -4550,6 +4593,29 @@
           const safeId = getSourceSafeId(sourceName);
           const el = document.querySelector(`[data-source="${safeId}"]`);
           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // "Jump to year" dropdown on a By Source box (ported from XZ Gallery Navigator's
+      // gallery-result cards — a By Source box is Studio's own equivalent: one box
+      // spanning multiple years). Reads _sourcePhotosCache so it can't drift from
+      // renderSourcePage's own filtering.
+      function jumpToSourceYear(sourceName, yearValue) {
+          if (!yearValue) return;
+          const sourcePhotos = _sourcePhotosCache[sourceName] || photoData.filter(p =>
+              Array.isArray(p.source) ? p.source.includes(sourceName) : p.source === sourceName
+          );
+          const idx = sourcePhotos.findIndex(p => String(p.year) === String(yearValue));
+          if (idx === -1) return;
+          const settings = sourcePaginationSettings[sourceName] || { perPage: 21, currentPage: 1 };
+          if (settings.perPage === Infinity) {
+              const safeId = getSourceSafeId(sourceName);
+              const grid = document.getElementById(`photos-source-${safeId}`);
+              const card = grid ? grid.children[idx] : null;
+              if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              return;
+          }
+          const page = Math.floor(idx / settings.perPage) + 1;
+          changeSourcePage(sourceName, page);
       }
 
       function jumpToSourcePage(sourceName, totalPages) {
