@@ -2853,7 +2853,7 @@
 // ============================================================
 
       /* ---------- Core Variables ---------- */
-      const DATA_VER = '20260630-1'; // bump when pushing new JSON to GitHub
+      const DATA_VER = '20260828-1'; // bump when pushing new JSON to GitHub
       let photoData = [];
       let currentRenderData = [];
       let expandedYears = new Set();
@@ -3427,7 +3427,15 @@
         if (photo.platform_links && typeof photo.platform_links === 'object') {
             Object.keys(photo.platform_links).forEach(_addBadge);
         }
-        if (!_badgeHtml.length) _addBadge(rawSource);
+        // Fall back to the citation link's implied platform (rawSource, default
+        // 'weibo') only when the entry's own `platform` array was empty --
+        // NOT when the merged badge list happens to be non-empty (fixed Aug
+        // 2026, same bug found and fixed on Navigator — see its CLAUDE.md).
+        // The old `if (!_badgeHtml.length)` guard skipped this fallback
+        // whenever platform_links had already contributed ANY badge (e.g. a
+        // douyin cross-post link), which would silently hide the weibo badge
+        // for an entry whose primary citation genuinely is a Weibo URL.
+        if (_stypes.length === 0) _addBadge(rawSource);
         sourceBadge.innerHTML = _badgeHtml.join('');
 
         // Row 2: date · first tag
