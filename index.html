@@ -4837,23 +4837,28 @@
         return true;
       }
 
-      function matchesSearchText(item, query) {
-        // Every branch below lowercases the field it's checking, but not the
-        // query itself — so a capital letter in the search never matched
-        // lowercase content even when it was clearly present in the data.
-        // Normalize once here instead of at every call site.
-        query = query.toLowerCase();
+      // Multiple space-separated keywords are AND'd together (added Aug
+      // 2026) — "花絮 GUCCI" now matches an item where "花絮" appears
+      // anywhere (e.g. postText) AND "GUCCI" appears anywhere else (e.g.
+      // tags), rather than requiring that exact phrase-with-space as one
+      // literal substring, which almost never occurs since the two keywords
+      // are typically in different fields.
+      function _matchesSingleToken(item, token) {
         return (
-          item.year.includes(query) ||
-          item.month.toLowerCase().includes(query) ||
-          item.date.includes(query) ||
-          (Array.isArray(item.tags) && item.tags.some((t) => String(t).toLowerCase().includes(query))) ||
-          (Array.isArray(item.englishTags) && item.englishTags.some(t => String(t).toLowerCase().includes(query))) ||
-          (Array.isArray(item.source) && item.source.some(s => s.toLowerCase().includes(query))) ||
-          (SOURCE_SECTIONS._section_labels[getPhotoSection(item)] || '').toLowerCase().includes(query) ||
-          (item.description && item.description.toLowerCase().includes(query)) ||
-          (item.postText && item.postText.toLowerCase().includes(query))
+          item.year.includes(token) ||
+          item.month.toLowerCase().includes(token) ||
+          item.date.includes(token) ||
+          (Array.isArray(item.tags) && item.tags.some((t) => String(t).toLowerCase().includes(token))) ||
+          (Array.isArray(item.englishTags) && item.englishTags.some(t => String(t).toLowerCase().includes(token))) ||
+          (Array.isArray(item.source) && item.source.some(s => s.toLowerCase().includes(token))) ||
+          (SOURCE_SECTIONS._section_labels[getPhotoSection(item)] || '').toLowerCase().includes(token) ||
+          (item.description && item.description.toLowerCase().includes(token)) ||
+          (item.postText && item.postText.toLowerCase().includes(token))
         );
+      }
+      function matchesSearchText(item, query) {
+        const tokens = query.toLowerCase().split(/\s+/).filter(Boolean);
+        return tokens.every((token) => _matchesSingleToken(item, token));
       }
 
       function performSearch(query) {
