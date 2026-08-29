@@ -3056,6 +3056,7 @@
           const vcBadge = document.getElementById('vcPlBadge');
           if (vcBadge) { vcBadge.textContent = playlist.length; vcBadge.style.display = playlist.length ? 'block' : 'none'; }
           plSyncBulkButtons();
+          plSyncAllCards();
           if (!playlist.length) { panel.style.display = 'none'; return; }
           const activeId = playlistMode ? (currentPhotoGroup[currentPhotoIndex] || {}).id : null;
           list.innerHTML = playlist.map((p, i) => `
