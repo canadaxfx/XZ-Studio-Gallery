@@ -1283,9 +1283,15 @@
       .vc-fs-wrap:-webkit-full-screen {
         width: 100vw; height: 100vh; background: #000;
       }
+      /* !important needed to beat the @media(max-height:600px/480px) short-screen rules below,
+         which force a tiny height!important on .modal-photo-container — those fire on ANY
+         short viewport including a landscape phone, which is exactly when fullscreen is most
+         likely to be used, so without !important here fullscreen landscape showed only a
+         sliver of video with a big black gap below (fixed Aug 2026, caught via user report:
+         "landscape playing only half screen"). */
       .vc-fs-wrap:fullscreen .modal-photo-container,
       .vc-fs-wrap:-webkit-full-screen .modal-photo-container {
-        flex: 1; max-height: none; height: auto; min-height: 0;
+        flex: 1 !important; max-height: none !important; height: auto !important; min-height: 0 !important;
       }
       .vc-fs-wrap:fullscreen .thumbnail-strip,
       .vc-fs-wrap:-webkit-full-screen .thumbnail-strip {
