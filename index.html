@@ -1273,6 +1273,29 @@
         height: 60vh;
       }
 
+      /* vcFullscreen() fullscreens THIS wrapper (not the bare <video>), so plNavBar's
+         Prev/Next/play/mute/playlist controls stay visible in fullscreen. The thumbnail
+         strip is part of the wrapper (so no DOM reordering vs. the normal modal layout)
+         but is hidden while fullscreen — a strip of other clips has no place in a true
+         fullscreen video view. */
+      .vc-fs-wrap { display: flex; flex-direction: column; min-height: 0; }
+      .vc-fs-wrap:fullscreen,
+      .vc-fs-wrap:-webkit-full-screen {
+        width: 100vw; height: 100vh; background: #000;
+      }
+      .vc-fs-wrap:fullscreen .modal-photo-container,
+      .vc-fs-wrap:-webkit-full-screen .modal-photo-container {
+        flex: 1; max-height: none; height: auto; min-height: 0;
+      }
+      .vc-fs-wrap:fullscreen .thumbnail-strip,
+      .vc-fs-wrap:-webkit-full-screen .thumbnail-strip {
+        display: none;
+      }
+      .vc-fs-wrap:fullscreen .pl-fs-controls,
+      .vc-fs-wrap:-webkit-full-screen .pl-fs-controls {
+        border-radius: 0;
+      }
+
       .modal-photo {
         max-width: 100%;
         max-height: 100%;
@@ -2483,6 +2506,11 @@
           <p id="postTextContent" style="margin:0;"></p>
         </div>
 
+        <!-- vc-fs-wrap is the fullscreen target (see vcFullscreen()) instead of the bare
+             <video> — so plNavBar's Prev/Next/play/mute/playlist controls stay visible and
+             usable in fullscreen instead of disappearing along with everything outside
+             whatever element got fullscreened. -->
+        <div class="vc-fs-wrap" id="vcFsWrap">
         <div class="modal-photo-container">
           <button
             class="nav-arrow prev"
@@ -2530,6 +2558,7 @@
             <button class="vc-btn" id="vcFsBtn" onclick="vcFullscreen()" title="Fullscreen"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg></button>
             <button class="pl-fs-nav-btn" id="plFsNext" onclick="navigatePhoto(1)" title="Next"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
             <button id="vcPlBtn" onclick="plTogglePanel()" title="Playlist 播放列表">🎬<span id="vcPlBadge"></span></button>
+        </div>
         </div>
 
         <div class="photo-info-panel">
@@ -3094,10 +3123,21 @@
           v.muted = !v.muted;
       }
 
+      // Fullscreens #vcFsWrap (photo/video area + thumbnail strip + pl-fs-controls), not the
+      // bare <video> — fullscreening just the video would take plNavBar's Prev/Next/play/
+      // mute/playlist controls along with everything else outside the video, hiding them.
       function vcFullscreen() {
+          const wrap = document.getElementById('vcFsWrap');
+          if (document.fullscreenElement || document.webkitFullscreenElement) {
+              (document.exitFullscreen || document.webkitExitFullscreen || function () {}).call(document);
+              return;
+          }
+          if (wrap && wrap.requestFullscreen) { wrap.requestFullscreen().catch(() => {}); return; }
+          if (wrap && wrap.webkitRequestFullscreen) { wrap.webkitRequestFullscreen(); return; }
+          // Fallback for older iOS Safari, which only supports fullscreen on <video> itself —
+          // Prev/Next won't be reachable in that fallback path, but basic fullscreen still works.
           const v = document.getElementById('modalVideo');
-          const req = v.requestFullscreen || v.webkitRequestFullscreen || v.webkitEnterFullscreen;
-          if (req) req.call(v).catch(() => {});
+          if (v && v.webkitEnterFullscreen) v.webkitEnterFullscreen();
       }
 
       function plToast(msg) {
