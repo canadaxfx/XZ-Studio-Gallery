@@ -3839,6 +3839,7 @@
           updateModalContent();
           updateThumbnailsActive();
           updateNavigationButtons();
+          if (playlistMode) plRender();   // keep the playlist panel's active-item highlight in sync
         }
       }
 
