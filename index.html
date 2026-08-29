@@ -48,6 +48,8 @@
 .pl-card-add{position:absolute;bottom:26px;right:4px;background:rgba(0,0,0,.65);color:#fff;border:none;border-radius:4px;padding:2px 6px;font-size:11px;cursor:pointer;opacity:1;z-index:3;white-space:nowrap}
 .pl-card-add.pl-added{background:rgba(var(--gold-dr), 0.9)}
 .pl-add-all-btn{display:none;padding:5px 14px;background:transparent;color:var(--gold);border:1px solid rgba(var(--gold-dr), 0.45);border-radius:20px;font-size:11px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .2s,border-color .2s}.pl-add-all-btn:hover{background:rgba(var(--gold-dr), 0.08);border-color:rgba(var(--gold-dr), 0.75)}
+.pl-add-all-btn.pl-added{background:rgba(var(--gold-dr), 0.9);color:#fff;border-color:rgba(var(--gold-dr), 0.9)}
+.pl-add-all-btn.pl-added:hover{background:rgba(var(--gold-dr), 0.75)}
 .pl-modal-add-btn{padding:3px 10px;background:rgba(var(--gold-dr), 0.12);color:var(--gold);border:1px solid #e8d49a;border-radius:12px;font-size:12px;cursor:pointer;display:none;white-space:nowrap}
 .pl-modal-add-btn:hover{background:rgba(var(--gold-dr), 0.2)}
 .pl-modal-add-btn.pl-in-list{background:rgba(var(--gold-dr), 0.12);color:var(--gold);border-color:#d4b84a;box-shadow:0 0 0 1.5px var(--gold)}
@@ -734,6 +736,8 @@
       }
       .yr-pl-btn{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.9);font-size:10px;cursor:pointer;padding:3px 9px;font-style:italic;display:inline-block;border-radius:10px;margin-top:6px;transition:background .15s,border-color .15s}
       .yr-pl-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.55);color:#fff}
+      .yr-pl-btn.pl-added{background:rgba(var(--gold-dr),0.55);border-color:rgba(var(--gold-dr),0.8);color:#fff}
+      .yr-pl-btn.pl-added:hover{background:rgba(var(--gold-dr),0.7)}
       .year-preview-zone {
         background: var(--grad-year);
         margin: 8px -20px 0;
@@ -2951,19 +2955,77 @@
           });
       }
 
+      // Whether every video in a bounded list is already queued — every bulk add/remove
+      // button below toggles based on this, mirroring the individual "+"/"✓" card toggle.
+      function plAllVideosIn(videos) {
+          return videos.length > 0 && videos.every(p => playlist.some(x => x.id === p.id));
+      }
+
+      // Shared label text for a "bulk add/remove N videos" button — used both at initial
+      // render (so a page reload with a bounded set already fully queued shows "Remove"
+      // immediately) and in plSyncBulkButtons() (so later playlist changes keep it correct).
+      function plBulkBtnLabel(videos, suffix) {
+          const n = videos.length;
+          const allIn = plAllVideosIn(videos);
+          const word = n > 1 ? 's' : '';
+          return {
+              allIn,
+              text: allIn
+                  ? `✓ Remove ${n} video${word} from playlist${suffix || ''}`
+                  : `＋ Add ${n} video${word} to playlist${suffix || ''}`
+          };
+      }
+
       function addAllFilteredVideos() {
-          let added = 0;
-          filteredVideosCache.forEach(p => { if (!playlist.some(x => x.id === p.id)) { playlist.push(p); added++; } });
-          plSave(); plRender();
-          plToast(added ? `已加入 ${added} 个视频` : '视频已全在播放列表中');
+          if (plAllVideosIn(filteredVideosCache)) {
+              const removeIds = new Set(filteredVideosCache.map(p => p.id));
+              playlist = playlist.filter(x => !removeIds.has(x.id));
+              plSave(); plRender();
+              plToast(`已从播放列表移除 ${filteredVideosCache.length} 个视频`);
+          } else {
+              let added = 0;
+              filteredVideosCache.forEach(p => { if (!playlist.some(x => x.id === p.id)) { playlist.push(p); added++; } });
+              plSave(); plRender();
+              plToast(added ? `已加入 ${added} 个视频` : '视频已全在播放列表中');
+          }
       }
 
       function addYearToPlaylist(year) {
           const videos = filteredVideosCache.filter(p => String(p.year) === String(year));
-          let added = 0;
-          videos.forEach(p => { if (!playlist.some(x => x.id === p.id)) { playlist.push(p); added++; } });
-          plSave(); plRender();
-          plToast(added ? `已加入 ${year} 年 ${added} 个视频` : `${year} 年视频已全在播放列表中`);
+          if (plAllVideosIn(videos)) {
+              const removeIds = new Set(videos.map(p => p.id));
+              playlist = playlist.filter(x => !removeIds.has(x.id));
+              plSave(); plRender();
+              plToast(`已从播放列表移除 ${videos.length} 个视频`);
+          } else {
+              let added = 0;
+              videos.forEach(p => { if (!playlist.some(x => x.id === p.id)) { playlist.push(p); added++; } });
+              plSave(); plRender();
+              plToast(added ? `已加入 ${year} 年 ${added} 个视频` : `${year} 年视频已全在播放列表中`);
+          }
+      }
+
+      // Re-syncs every bulk add/remove button's label + pl-added state against the current
+      // playlist — called from plRender() so ANY playlist mutation (individual card, another
+      // bulk button, the playlist panel's own remove/clear) keeps all of them correct, not
+      // just the one that was actually clicked.
+      function plSyncBulkButtons() {
+          plUpdateAddAllBtn();
+          document.querySelectorAll('.yr-pl-btn[data-year]').forEach(btn => {
+              const year = btn.getAttribute('data-year');
+              const videos = filteredVideosCache.filter(p => String(p.year) === String(year));
+              const l = plBulkBtnLabel(videos, plAllVideosIn(videos) ? ' · 移出播放列表' : ' · 加入播放列表');
+              btn.classList.toggle('pl-added', l.allIn);
+              btn.textContent = l.text;
+          });
+          document.querySelectorAll('.yr-pl-btn[data-source-id]').forEach(btn => {
+              const sourceName = (window._sourceNameById || {})[btn.getAttribute('data-source-id')];
+              if (sourceName === undefined) return;
+              const videos = photoData.filter(p => isRealVideo(p) && (Array.isArray(p.source) ? p.source.includes(sourceName) : p.source === sourceName));
+              const l = plBulkBtnLabel(videos);
+              btn.classList.toggle('pl-added', l.allIn);
+              btn.textContent = l.text;
+          });
       }
 
       function plRemove(id, e) {
@@ -2993,6 +3055,7 @@
           if (badge) { badge.textContent = playlist.length; badge.style.display = playlist.length ? 'block' : 'none'; }
           const vcBadge = document.getElementById('vcPlBadge');
           if (vcBadge) { vcBadge.textContent = playlist.length; vcBadge.style.display = playlist.length ? 'block' : 'none'; }
+          plSyncBulkButtons();
           if (!playlist.length) { panel.style.display = 'none'; return; }
           const activeId = playlistMode ? (currentPhotoGroup[currentPhotoIndex] || {}).id : null;
           list.innerHTML = playlist.map((p, i) => `
@@ -3171,11 +3234,14 @@
 
       function plUpdateAddAllBtn() {
           const btn = document.getElementById('plAddAllBtn');
-          const countEl = document.getElementById('plAddAllCount');
-          if (!btn || !countEl) return;
+          if (!btn) return;
           if (filteredVideosCache.length > 0) {
-              countEl.textContent = filteredVideosCache.length;
               btn.style.display = 'inline-block';
+              const allIn = plAllVideosIn(filteredVideosCache);
+              btn.classList.toggle('pl-added', allIn);
+              btn.innerHTML = allIn
+                  ? `✓ Remove <span id="plAddAllCount">${filteredVideosCache.length}</span> videos from Playlist`
+                  : `▶ Add <span id="plAddAllCount">${filteredVideosCache.length}</span> videos to Playlist`;
           } else {
               btn.style.display = 'none';
           }
@@ -4048,7 +4114,7 @@
                                 </div>
                                 <div class="year-preview-zone">
                                     ${previewHTML}
-                                    ${yearVideos.length ? `<button class="yr-pl-btn" onclick="event.stopPropagation();addYearToPlaylist('${year}')">＋ Add ${yearVideos.length} video${yearVideos.length > 1 ? 's' : ''} to playlist · 加入播放列表</button>` : ''}
+                                    ${yearVideos.length ? `<button class="yr-pl-btn${plAllVideosIn(yearVideos) ? ' pl-added' : ''}" data-year="${year}" onclick="event.stopPropagation();addYearToPlaylist('${year}')">${plBulkBtnLabel(yearVideos, plAllVideosIn(yearVideos) ? ' · 移出播放列表' : ' · 加入播放列表').text}</button>` : ''}
                                     <div class="year-hint">Click thumbnails for high-res · 点击缩略图打开高清</div>
                                 </div>
                             </div>
@@ -4596,6 +4662,11 @@
                   ${photos.length > 4 ? `<div class="preview-more">+${photos.length - 4}</div>` : ''}
               </div>`;
               const sourceVideos = photos.filter(p => isRealVideo(p));
+              // Lets plSyncBulkButtons() recover the real (possibly-Chinese, quote-unsafe-
+              // for-an-attribute) source name from this button later, without needing to
+              // HTML/JS-escape it a second way just for a data-* attribute.
+              window._sourceNameById = window._sourceNameById || {};
+              window._sourceNameById[safeId] = sourceName;
               return `
                   <div class="timeline-year" data-source="${safeId}">
                       <div class="timeline-year-header" onclick="toggleSource('${escapedSourceName}')">
@@ -4608,7 +4679,7 @@
                                   </div>
                               </div>
                               ${previewHTML}
-                              ${sourceVideos.length ? `<button class="yr-pl-btn" onclick="event.stopPropagation();addSourceGroupToPlaylist('${escapedSourceName}')">＋ Add ${sourceVideos.length} video${sourceVideos.length > 1 ? 's' : ''} to playlist</button>` : ''}
+                              ${sourceVideos.length ? `<button class="yr-pl-btn${plAllVideosIn(sourceVideos) ? ' pl-added' : ''}" data-source-id="${safeId}" onclick="event.stopPropagation();addSourceGroupToPlaylist('${escapedSourceName}')">${plBulkBtnLabel(sourceVideos).text}</button>` : ''}
                           </div>
                       </div>
                       <div class="timeline-year-content">
@@ -4821,10 +4892,17 @@
 
       function addSourceGroupToPlaylist(sourceName) {
           const videos = photoData.filter(p => isRealVideo(p) && (Array.isArray(p.source) ? p.source.includes(sourceName) : p.source === sourceName));
-          let added = 0;
-          videos.forEach(p => { if (!playlist.some(x => x.id === p.id)) { playlist.push(p); added++; } });
-          plSave(); plRender();
-          plToast(added ? `已加入 ${added} 个视频` : '该来源视频已全在播放列表中');
+          if (plAllVideosIn(videos)) {
+              const removeIds = new Set(videos.map(p => p.id));
+              playlist = playlist.filter(x => !removeIds.has(x.id));
+              plSave(); plRender();
+              plToast(`已从播放列表移除 ${videos.length} 个视频`);
+          } else {
+              let added = 0;
+              videos.forEach(p => { if (!playlist.some(x => x.id === p.id)) { playlist.push(p); added++; } });
+              plSave(); plRender();
+              plToast(added ? `已加入 ${added} 个视频` : '该来源视频已全在播放列表中');
+          }
       }
 
       function unloadImages(containerId) {
