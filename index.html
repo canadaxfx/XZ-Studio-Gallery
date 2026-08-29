@@ -1339,6 +1339,47 @@
       .vc-fs-wrap:fullscreen #vcHideBarBtn,
       .vc-fs-wrap:-webkit-full-screen #vcHideBarBtn { display: flex; }
 
+      /* "Up Next" — compact jump-ahead list; only in fullscreen, only when toggled via 🎬.
+         Rendered inside .vc-fs-wrap so it paints in the fullscreen top layer (no exit needed). */
+      #vcUpNext { display: none; }
+      .vc-fs-wrap:fullscreen #vcUpNext.open,
+      .vc-fs-wrap:-webkit-full-screen #vcUpNext.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 20px;
+        right: 16px;
+        bottom: auto;
+        width: min(300px, calc(100% - 32px));
+        max-height: calc(100% - 120px);
+        overflow-y: auto;
+        background: rgba(15,15,20,.92);
+        border-radius: 12px;
+        padding: 8px;
+        gap: 5px;
+        z-index: 20;
+        box-shadow: 0 6px 22px rgba(0,0,0,.5);
+      }
+      #vcUpNext .vcun-title {
+        color: #cbd5e1; font-size: 10.5px; font-weight: 700; letter-spacing: .08em;
+        padding: 2px 4px 5px;
+      }
+      #vcUpNext .vcun-item {
+        display: flex; align-items: center; gap: 8px; padding: 5px; border-radius: 8px;
+        cursor: pointer; width: 100%; border: none; text-align: left;
+        background: rgba(255,255,255,.05); font-family: inherit;
+      }
+      #vcUpNext .vcun-item:hover { background: rgba(255,255,255,.14); }
+      #vcUpNext .vcun-item img {
+        width: 58px; height: 34px; object-fit: cover; border-radius: 4px; flex-shrink: 0; background: #333;
+      }
+      #vcUpNext .vcun-item-t {
+        flex: 1; min-width: 0; color: #f3f4f6; font-size: 12px;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      }
+      #vcUpNext .vcun-item-m { color: #9ca3af; font-size: 10px; }
+      #vcUpNext .vcun-empty { color: #9ca3af; font-size: 12px; padding: 10px 6px; }
+
       .modal-photo {
         max-width: 100%;
         max-height: 100%;
@@ -2603,6 +2644,7 @@
             <button class="pl-fs-nav-btn" id="plFsNext" onclick="navigatePhoto(1)" title="Next"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
             <button id="vcPlBtn" onclick="vcOpenPlaylist()" title="Playlist 播放列表">🎬<span id="vcPlBadge"></span></button>
         </div>
+        <div id="vcUpNext"><div class="vcun-title">接下来 · Up Next</div><div id="vcUpNextList"></div></div>
         </div>
 
         <div class="photo-info-panel">
@@ -3301,7 +3343,11 @@
       function vcSyncFsBtn() {
           const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
           const wrap = document.getElementById('vcFsWrap');
-          if (wrap && !isFs) wrap.classList.remove('bar-hidden');   // don't carry hidden-bar state out of fullscreen
+          if (wrap && !isFs) {
+              wrap.classList.remove('bar-hidden');   // don't carry hidden-bar state out of fullscreen
+              const un = document.getElementById('vcUpNext');
+              if (un) un.classList.remove('open');
+          }
           const btn = document.getElementById('vcFsBtn');
           if (!btn) return;
           btn.innerHTML = isFs ? _VC_FS_ICON_EXIT : _VC_FS_ICON_ENTER;
@@ -3310,35 +3356,64 @@
       document.addEventListener('fullscreenchange', vcSyncFsBtn);
       document.addEventListener('webkitfullscreenchange', vcSyncFsBtn);
 
+      function _vcInFs() { return !!(document.fullscreenElement || document.webkitFullscreenElement); }
+      function _vcCloseUpNext() { const un = document.getElementById('vcUpNext'); if (un) un.classList.remove('open'); }
+
       // ⌄ — collapse the control bar for a truly unobstructed fullscreen view.
       function vcToggleBar() {
           const w = document.getElementById('vcFsWrap');
-          if (w) w.classList.toggle('bar-hidden');
+          if (!w) return;
+          const hiding = !w.classList.contains('bar-hidden');
+          w.classList.toggle('bar-hidden', hiding);
+          if (hiding) _vcCloseUpNext();   // the Up Next overlay is anchored above the bar
       }
-      // Tap the video (in fullscreen) to hide/show the bar.
+      // Tap the video (in fullscreen): close the Up Next overlay if open, else toggle the bar.
       (function () {
           const mc = document.querySelector('.modal-photo-container');
           if (!mc) return;
           mc.addEventListener('click', (e) => {
-              if (!(document.fullscreenElement || document.webkitFullscreenElement)) return;
-              if (e.target.closest('.nav-arrow, .pl-fs-controls, #postTextPanel')) return;
+              if (!_vcInFs()) return;
+              if (e.target.closest('.nav-arrow, .pl-fs-controls, #postTextPanel, #vcUpNext')) return;
+              const un = document.getElementById('vcUpNext');
+              if (un && un.classList.contains('open')) { un.classList.remove('open'); return; }
               const w = document.getElementById('vcFsWrap');
               if (w) w.classList.toggle('bar-hidden');
           });
       })();
-      // 🎬 in fullscreen: the playlist panel lives outside the fullscreened element and can't
-      // paint on top of it — so leave fullscreen first, then open the panel.
+
+      // 🎬 — in fullscreen it toggles a compact "Up Next" list (rendered inside the fullscreened
+      // element, so no exit needed); outside fullscreen it opens the full playlist panel.
       function vcOpenPlaylist() {
-          const fsEl = document.fullscreenElement || document.webkitFullscreenElement;
-          if (fsEl) {
-              (document.exitFullscreen || document.webkitExitFullscreen || function () {}).call(document);
-              setTimeout(() => {
-                  const p = document.getElementById('playlistPanel');
-                  if (p) { p.style.display = 'flex'; try { plPositionPanel(); } catch (e) {} }
-              }, 90);
-          } else {
-              plTogglePanel();
+          if (!_vcInFs()) { plTogglePanel(); return; }
+          const box = document.getElementById('vcUpNext');
+          if (!box) return;
+          const willOpen = !box.classList.contains('open');
+          if (willOpen) vcRenderUpNext();
+          box.classList.toggle('open', willOpen);
+      }
+      // Build the Up Next list from the current play order, starting just after the current item.
+      function vcRenderUpNext() {
+          const list = document.getElementById('vcUpNextList');
+          if (!list) return;
+          const g = currentPhotoGroup || [];
+          const rows = [];
+          for (let i = currentPhotoIndex + 1; i < g.length && rows.length < 40; i++) {
+              const p = g[i] || {};
+              const label = (p.tags && p.tags.length) ? ('#' + p.tags[0]) : (p.groupName || p.date || '');
+              rows.push(
+                  '<button class="vcun-item" onclick="vcJumpTo(' + i + ')">' +
+                    '<img src="' + generateThumbnail(p.url, 'm') + '" onerror="this.style.visibility=\'hidden\'" alt="">' +
+                    '<span class="vcun-item-t">' + label +
+                      '<span class="vcun-item-m"> · ' + (p.date || '') + (p.duration ? ' · ' + fmtDuration(p.duration) : '') + '</span>' +
+                    '</span>' +
+                  '</button>'
+              );
           }
+          list.innerHTML = rows.length ? rows.join('') : '<div class="vcun-empty">已是最后一个 · End of queue</div>';
+      }
+      function vcJumpTo(i) {
+          _vcCloseUpNext();
+          goToPhoto(i);
       }
 
       function plToast(msg) {
@@ -3944,6 +4019,8 @@
           updateThumbnailsActive();
           updateNavigationButtons();
           if (playlistMode) plRender();   // keep the playlist panel's active-item highlight in sync
+          const _un = document.getElementById('vcUpNext');
+          if (_un && _un.classList.contains('open')) vcRenderUpNext();   // keep "Up Next" current
         }
       }
 
