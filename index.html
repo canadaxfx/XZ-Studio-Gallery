@@ -1354,9 +1354,15 @@
         transform: translateX(-50%) translateY(140%);
         pointer-events: none;
       }
+      /* the corner exit fades out with the bar too — one tap toggles ALL chrome, like every player */
+      .vc-fs-wrap.bar-hidden #vcFsClose {
+        opacity: 0;
+        transform: translateY(-8px);
+        pointer-events: none;
+      }
 
-      /* top-right corner exit — the lightbox/overlay convention; stays visible even when the
-         control bar is hidden, so there's always an obvious way out (plus Esc). */
+      /* top-right corner exit — the lightbox/overlay convention. Toggles with the rest of the
+         chrome when you tap the video; Esc always exits too. */
       #vcFsClose { display: none; }
       .vc-fs-wrap:fullscreen #vcFsClose,
       .vc-fs-wrap:-webkit-full-screen #vcFsClose {
@@ -1364,7 +1370,7 @@
         position: absolute; top: 14px; right: 14px; z-index: 31;
         width: 40px; height: 40px; border-radius: 50%;
         background: rgba(0,0,0,0.5); border: none; color: #fff; cursor: pointer;
-        transition: background .15s;
+        transition: background .15s, opacity .2s ease, transform .2s ease;
       }
       .vc-fs-wrap:fullscreen #vcFsClose:hover,
       .vc-fs-wrap:-webkit-full-screen #vcFsClose:hover { background: rgba(0,0,0,0.72); }
