@@ -1322,13 +1322,31 @@
         left: 50%;
         bottom: 16px;
         transform: translateX(-50%);
-        width: min(720px, calc(100% - 32px));
+        width: min(600px, calc(100% - 24px));   /* narrower bar → shorter seek, room for buttons */
         box-sizing: border-box;
+        gap: 11px;                              /* roomier spacing so buttons aren't cramped */
+        padding: 8px 16px;
         border-top: none;
         border-radius: 12px;
         box-shadow: 0 6px 22px rgba(0,0,0,.45);
         transition: opacity .2s ease, transform .2s ease;
         z-index: 5;
+      }
+      /* cap the seek bar so the extra width goes to button spacing, not a giant scrubber.
+         !important + order:0 override the base @media(max-width:600px) rule that otherwise
+         drops the seek onto its own full-width second row in fullscreen. */
+      .vc-fs-wrap:fullscreen .pl-fs-controls,
+      .vc-fs-wrap:-webkit-full-screen .pl-fs-controls { flex-wrap: nowrap; }
+      .vc-fs-wrap:fullscreen .vc-middle,
+      .vc-fs-wrap:-webkit-full-screen .vc-middle {
+        flex: 1 1 auto !important;
+        max-width: 260px !important;
+        min-width: 56px !important;
+        order: 0 !important;
+      }
+      @media (max-width: 600px) {
+        .vc-fs-wrap:fullscreen .pl-fs-controls,
+        .vc-fs-wrap:-webkit-full-screen .pl-fs-controls { gap: 6px; padding: 6px 10px; width: calc(100% - 16px); }
       }
       /* ⌄ hide-bar toggle → true unobstructed fullscreen; tap the video to bring it back */
       .vc-fs-wrap.bar-hidden .pl-fs-controls {
@@ -1339,6 +1357,21 @@
       #vcHideBarBtn { display: none; }
       .vc-fs-wrap:fullscreen #vcHideBarBtn,
       .vc-fs-wrap:-webkit-full-screen #vcHideBarBtn { display: flex; }
+
+      /* top-right corner exit — the lightbox/overlay convention; stays visible even when the
+         control bar is hidden, so there's always an obvious way out (plus Esc). */
+      #vcFsClose { display: none; }
+      .vc-fs-wrap:fullscreen #vcFsClose,
+      .vc-fs-wrap:-webkit-full-screen #vcFsClose {
+        display: flex; align-items: center; justify-content: center;
+        position: absolute; top: 14px; right: 14px; z-index: 31;
+        width: 40px; height: 40px; border-radius: 50%;
+        background: rgba(0,0,0,0.5); border: none; color: #fff; cursor: pointer;
+        transition: background .15s;
+      }
+      .vc-fs-wrap:fullscreen #vcFsClose:hover,
+      .vc-fs-wrap:-webkit-full-screen #vcFsClose:hover { background: rgba(0,0,0,0.72); }
+      #vcFsClose svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; }
 
       /* hide the quality / file-size / download-version badges over the video in fullscreen */
       .vc-fs-wrap:fullscreen #badgeQuality, .vc-fs-wrap:-webkit-full-screen #badgeQuality,
@@ -1389,8 +1422,7 @@
       }
       #vcUpNext .vcun-item:hover { background: rgba(255,255,255,.14); }
       #vcUpNext .vcun-now {
-        position: sticky; top: 0; z-index: 1;
-        background: #24242e; border-left: 3px solid #e0955a; cursor: default;
+        background: #2c2c38; border-left: 3px solid #e0955a;
       }
       #vcUpNext .vcun-item img {
         width: 58px; height: 34px; object-fit: cover; border-radius: 4px; flex-shrink: 0; background: #333;
@@ -2661,12 +2693,13 @@
                 </div>
             </div>
             <button class="vc-btn" id="vcMuteBtn" onclick="vcToggleMute()" title="Mute"><svg viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
-            <button class="vc-btn" id="vcFsBtn" onclick="vcFullscreen()" title="Fullscreen"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg></button>
             <button class="vc-btn" id="vcHideBarBtn" onclick="vcToggleBar()" title="隐藏控制栏 / Hide bar"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <button class="pl-fs-nav-btn" id="plFsNext" onclick="navigatePhoto(1)" title="下一个 Next"><svg viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M16.6 6H19v12h-2.4z M5 6l11 6-11 6z"/></svg></button>
             <button id="vcPlBtn" onclick="vcOpenPlaylist()" title="Playlist 播放列表">🎬<span id="vcPlBadge"></span></button>
+            <button class="vc-btn" id="vcFsBtn" onclick="vcFullscreen()" title="Fullscreen"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg></button>
         </div>
-        <div id="vcUpNext"><div class="vcun-head"><span class="vcun-title">接下来 · Up Next</span><button id="vcUnLoop" class="vcun-hbtn" onclick="plToggleLoop()" title="循环播放 Loop">🔁</button><button id="vcUnExit" class="vcun-hbtn" onclick="vcExitFs()" title="退出全屏 Exit fullscreen"><svg viewBox="0 0 24 24"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/></svg></button></div><div id="vcUpNextList"></div></div>
+        <div id="vcUpNext"><div class="vcun-head"><span class="vcun-title">接下来 · Up Next</span><button id="vcUnLoop" class="vcun-hbtn" onclick="plToggleLoop()" title="循环播放 Loop">🔁</button></div><div id="vcUpNextList"></div></div>
+        <button id="vcFsClose" onclick="vcExitFs()" title="退出全屏 Exit fullscreen"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
         </div>
 
         <div class="photo-info-panel">
@@ -3410,9 +3443,9 @@
           if (!_vcInFs()) { plTogglePanel(); return; }
           const box = document.getElementById('vcUpNext');
           if (!box) return;
-          const willOpen = !box.classList.contains('open');
-          if (willOpen) vcRenderUpNext();
-          box.classList.toggle('open', willOpen);
+          if (box.classList.contains('open')) { box.classList.remove('open'); return; }
+          box.classList.add('open');     // display it first, then render — so the scroll-centre maths is valid
+          vcRenderUpNext();
       }
       // Build the Up Next list from the current play order, starting just after the current item.
       function _vcUnLabel(p) {
@@ -3422,31 +3455,31 @@
           const list = document.getElementById('vcUpNextList');
           if (!list) return;
           const g = currentPhotoGroup || [];
-          const cur = g[currentPhotoIndex] || {};
           const titleEl = document.querySelector('#vcUpNext .vcun-title');
           if (titleEl) titleEl.textContent = '接下来 · Up Next · ' + (currentPhotoIndex + 1) + ' / ' + g.length;
           _plSyncLoopBtn();   // reflect current loop state on the overlay's 🔁
-          // current item, pinned + highlighted so you can see where you are in the queue
-          let html =
-              '<div class="vcun-item vcun-now">' +
-                '<img src="' + generateThumbnail(cur.url, 'm') + '" onerror="this.style.visibility=\'hidden\'" alt="">' +
-                '<span class="vcun-item-t">▶ ' + _vcUnLabel(cur) +
-                  '<span class="vcun-item-m"> · 正在播放 Now playing</span>' +
-                '</span>' +
-              '</div>';
-          const rows = [];
-          for (let i = currentPhotoIndex + 1; i < g.length && rows.length < 40; i++) {
+          // render the WHOLE queue (not just what's ahead) so you can scroll up to replay
+          // something already played; the current item is highlighted and centred on open.
+          let html = '';
+          for (let i = 0; i < g.length; i++) {
               const p = g[i] || {};
-              rows.push(
-                  '<button class="vcun-item" onclick="vcJumpTo(' + i + ')">' +
+              const now = (i === currentPhotoIndex);
+              html +=
+                  '<button class="vcun-item' + (now ? ' vcun-now' : '') + '" onclick="vcJumpTo(' + i + ')">' +
                     '<img src="' + generateThumbnail(p.url, 'm') + '" onerror="this.style.visibility=\'hidden\'" alt="">' +
-                    '<span class="vcun-item-t">' + _vcUnLabel(p) +
-                      '<span class="vcun-item-m"> · ' + (p.date || '') + (p.duration ? ' · ' + fmtDuration(p.duration) : '') + '</span>' +
+                    '<span class="vcun-item-t">' + (now ? '▶ ' : '') + _vcUnLabel(p) +
+                      '<span class="vcun-item-m"> · ' + (now ? '正在播放 Now playing'
+                          : ((p.date || '') + (p.duration ? ' · ' + fmtDuration(p.duration) : ''))) + '</span>' +
                     '</span>' +
-                  '</button>'
-              );
+                  '</button>';
           }
-          list.innerHTML = html + (rows.length ? rows.join('') : '<div class="vcun-empty">已是最后一个 · End of queue</div>');
+          list.innerHTML = html || '<div class="vcun-empty">播放列表为空 · Empty</div>';
+          // centre the current item so you can scroll up for history / down for what's coming
+          const box = document.getElementById('vcUpNext');
+          requestAnimationFrame(() => {
+              const n = list.querySelector('.vcun-now');
+              if (box && n) box.scrollTop = Math.max(0, n.offsetTop - box.clientHeight / 2 + n.offsetHeight / 2);
+          });
       }
       function vcJumpTo(i) {
           _vcCloseUpNext();
