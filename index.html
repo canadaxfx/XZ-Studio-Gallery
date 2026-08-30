@@ -1354,9 +1354,6 @@
         transform: translateX(-50%) translateY(140%);
         pointer-events: none;
       }
-      #vcHideBarBtn { display: none; }
-      .vc-fs-wrap:fullscreen #vcHideBarBtn,
-      .vc-fs-wrap:-webkit-full-screen #vcHideBarBtn { display: flex; }
 
       /* top-right corner exit — the lightbox/overlay convention; stays visible even when the
          control bar is hidden, so there's always an obvious way out (plus Esc). */
@@ -2701,7 +2698,6 @@
                 </div>
             </div>
             <button class="vc-btn" id="vcMuteBtn" onclick="vcToggleMute()" title="Mute"><svg viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
-            <button class="vc-btn" id="vcHideBarBtn" onclick="vcToggleBar()" title="隐藏控制栏 / Hide bar"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <button class="pl-fs-nav-btn" id="plFsNext" onclick="navigatePhoto(1)" title="下一个 Next"><svg viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M16.6 6H19v12h-2.4z M5 6l11 6-11 6z"/></svg></button>
             <button id="vcPlBtn" onclick="vcOpenPlaylist()" title="Playlist 播放列表">🎬<span id="vcPlBadge"></span></button>
             <button class="vc-btn" id="vcFsBtn" onclick="vcFullscreen()" title="Fullscreen"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg></button>
@@ -3423,15 +3419,8 @@
       function _vcInFs() { return !!(document.fullscreenElement || document.webkitFullscreenElement); }
       function _vcCloseUpNext() { const un = document.getElementById('vcUpNext'); if (un) un.classList.remove('open'); }
 
-      // ⌄ — collapse the control bar for a truly unobstructed fullscreen view.
-      function vcToggleBar() {
-          const w = document.getElementById('vcFsWrap');
-          if (!w) return;
-          const hiding = !w.classList.contains('bar-hidden');
-          w.classList.toggle('bar-hidden', hiding);
-          if (hiding) _vcCloseUpNext();   // the Up Next overlay is anchored above the bar
-      }
-      // Tap the video (in fullscreen): close the Up Next overlay if open, else toggle the bar.
+      // Tap the video (in fullscreen) to show/hide the control bar — the same gesture every
+      // video player uses. If the Up Next overlay is open, the first tap just closes that.
       (function () {
           const mc = document.querySelector('.modal-photo-container');
           if (!mc) return;
