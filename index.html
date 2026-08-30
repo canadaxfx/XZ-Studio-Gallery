@@ -1394,15 +1394,16 @@
         bottom: auto;
         width: min(260px, calc(100% - 20px));
         max-height: calc(100% - 150px);
-        overflow-y: auto;
+        overflow: hidden;                 /* the list scrolls, not the whole panel */
         background: rgba(15,15,20,.92);
         border-radius: 12px;
         padding: 8px;
-        gap: 5px;
         z-index: 20;
         box-shadow: 0 6px 22px rgba(0,0,0,.5);
       }
-      #vcUpNext .vcun-head { display: flex; align-items: center; gap: 6px; padding: 2px 2px 6px; }
+      /* header stays pinned at the top while the list below it scrolls */
+      #vcUpNext .vcun-head { display: flex; align-items: center; gap: 6px; padding: 2px 2px 6px; flex-shrink: 0; }
+      #vcUpNextList { overflow-y: auto; flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; gap: 5px; }
       #vcUpNext .vcun-title {
         flex: 1; min-width: 0;
         color: #cbd5e1; font-size: 10.5px; font-weight: 700; letter-spacing: .06em;
@@ -1417,7 +1418,10 @@
       }
       #vcUpNext .vcun-hbtn:hover { background: rgba(255,255,255,.14); }
       #vcUpNext .vcun-hbtn svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
-      #vcUnLoop.on { background: #fff; border-color: #fff; color: #111; opacity: 1; }
+      /* both selectors so the "on" fill also wins while the cursor is still over the button
+         (otherwise .vcun-hbtn:hover, being more specific, keeps the transparent hover bg) */
+      #vcUpNext .vcun-hbtn.on,
+      #vcUpNext .vcun-hbtn.on:hover { background: #fff; border-color: #fff; color: #111; opacity: 1; }
       #vcUpNext .vcun-item {
         display: flex; align-items: center; gap: 8px; padding: 5px; border-radius: 8px;
         cursor: pointer; width: 100%; border: none; text-align: left;
@@ -3478,11 +3482,11 @@
                   '</button>';
           }
           list.innerHTML = html || '<div class="vcun-empty">播放列表为空 · Empty</div>';
-          // centre the current item so you can scroll up for history / down for what's coming
-          const box = document.getElementById('vcUpNext');
+          // centre the current item in the scrollable list so you can scroll up for history
+          // / down for what's coming (the header stays pinned above)
           requestAnimationFrame(() => {
               const n = list.querySelector('.vcun-now');
-              if (box && n) box.scrollTop = Math.max(0, n.offsetTop - box.clientHeight / 2 + n.offsetHeight / 2);
+              if (n) n.scrollIntoView({ block: 'center' });
           });
       }
       function vcJumpTo(i) {
