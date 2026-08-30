@@ -1332,21 +1332,21 @@
         transition: opacity .2s ease, transform .2s ease;
         z-index: 5;
       }
-      /* cap the seek bar so the extra width goes to button spacing, not a giant scrubber.
-         !important + order:0 override the base @media(max-width:600px) rule that otherwise
-         drops the seek onto its own full-width second row in fullscreen. */
-      .vc-fs-wrap:fullscreen .pl-fs-controls,
-      .vc-fs-wrap:-webkit-full-screen .pl-fs-controls { flex-wrap: nowrap; }
-      .vc-fs-wrap:fullscreen .vc-middle,
-      .vc-fs-wrap:-webkit-full-screen .vc-middle {
-        flex: 1 1 auto !important;
-        max-width: 260px !important;
-        min-width: 56px !important;
-        order: 0 !important;
+      /* Wide fullscreen (landscape / desktop, ≥601px): everything on ONE row, seek in the
+         middle and capped so it doesn't hog space. */
+      @media (min-width: 601px) {
+        .vc-fs-wrap:fullscreen .pl-fs-controls,
+        .vc-fs-wrap:-webkit-full-screen .pl-fs-controls { flex-wrap: nowrap; }
+        .vc-fs-wrap:fullscreen .vc-middle,
+        .vc-fs-wrap:-webkit-full-screen .vc-middle { flex: 1 1 auto; max-width: 260px; min-width: 120px; order: 0; }
       }
+      /* Narrow portrait (≤600px): let the seek drop to its own full-width row (base @media
+         rule) but keep ALL the buttons together on one row above it. */
       @media (max-width: 600px) {
         .vc-fs-wrap:fullscreen .pl-fs-controls,
-        .vc-fs-wrap:-webkit-full-screen .pl-fs-controls { gap: 6px; padding: 6px 10px; width: calc(100% - 16px); }
+        .vc-fs-wrap:-webkit-full-screen .pl-fs-controls { gap: 8px; padding: 6px 12px; width: calc(100% - 16px); }
+        .vc-fs-wrap:fullscreen .pl-fs-nav-btn,
+        .vc-fs-wrap:-webkit-full-screen .pl-fs-nav-btn { width: 30px; height: 30px; }
       }
       /* ⌄ hide-bar toggle → true unobstructed fullscreen; tap the video to bring it back */
       .vc-fs-wrap.bar-hidden .pl-fs-controls {
@@ -1389,7 +1389,7 @@
         top: 20px;
         right: 16px;
         bottom: auto;
-        width: min(300px, calc(100% - 32px));
+        width: min(260px, calc(100% - 20px));
         max-height: calc(100% - 120px);
         overflow-y: auto;
         background: rgba(15,15,20,.92);
@@ -1433,6 +1433,14 @@
       }
       #vcUpNext .vcun-item-m { color: #9ca3af; font-size: 10px; }
       #vcUpNext .vcun-empty { color: #9ca3af; font-size: 12px; padding: 10px 6px; }
+      /* even tighter on phones */
+      @media (max-width: 600px) {
+        .vc-fs-wrap:fullscreen #vcUpNext.open,
+        .vc-fs-wrap:-webkit-full-screen #vcUpNext.open { width: min(220px, calc(100% - 16px)); right: 10px; padding: 6px; }
+        #vcUpNext .vcun-item { gap: 6px; padding: 4px; }
+        #vcUpNext .vcun-item img { width: 44px; height: 26px; }
+        #vcUpNext .vcun-item-t { font-size: 11px; }
+      }
 
       .modal-photo {
         max-width: 100%;
@@ -3464,12 +3472,13 @@
           for (let i = 0; i < g.length; i++) {
               const p = g[i] || {};
               const now = (i === currentPhotoIndex);
+              // meta = just the duration (or "Now playing") — date dropped to keep rows narrow
+              const meta = now ? '正在播放 Now playing' : (p.duration ? fmtDuration(p.duration) : '');
               html +=
                   '<button class="vcun-item' + (now ? ' vcun-now' : '') + '" onclick="vcJumpTo(' + i + ')">' +
                     '<img src="' + generateThumbnail(p.url, 'm') + '" onerror="this.style.visibility=\'hidden\'" alt="">' +
                     '<span class="vcun-item-t">' + (now ? '▶ ' : '') + _vcUnLabel(p) +
-                      '<span class="vcun-item-m"> · ' + (now ? '正在播放 Now playing'
-                          : ((p.date || '') + (p.duration ? ' · ' + fmtDuration(p.duration) : ''))) + '</span>' +
+                      (meta ? '<span class="vcun-item-m"> · ' + meta + '</span>' : '') +
                     '</span>' +
                   '</button>';
           }
