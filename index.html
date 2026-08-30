@@ -2700,6 +2700,8 @@
         <div class="pl-fs-controls" id="plNavBar">
             <button class="pl-fs-nav-btn" id="plFsPrev" onclick="navigatePhoto(-1)" title="上一个 Previous"><svg viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M5 6h2.4v12H5z M19 6v12l-11-6z"/></svg></button>
             <button class="vc-btn" id="vcPlayBtn" onclick="vcTogglePlay()">▶</button>
+            <button class="pl-fs-nav-btn" id="plFsNext" onclick="navigatePhoto(1)" title="下一个 Next"><svg viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M16.6 6H19v12h-2.4z M5 6l11 6-11 6z"/></svg></button>
+            <button class="vc-btn" id="vcMuteBtn" onclick="vcToggleMute()" title="Mute"><svg viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
             <div class="vc-middle">
                 <input type="range" class="vc-seek" id="vcSeek" value="0" min="0" step="0.1">
                 <div style="display:flex;justify-content:space-between">
@@ -2707,8 +2709,6 @@
                     <span class="vc-time" id="vcDuration">0:00</span>
                 </div>
             </div>
-            <button class="vc-btn" id="vcMuteBtn" onclick="vcToggleMute()" title="Mute"><svg viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
-            <button class="pl-fs-nav-btn" id="plFsNext" onclick="navigatePhoto(1)" title="下一个 Next"><svg viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M16.6 6H19v12h-2.4z M5 6l11 6-11 6z"/></svg></button>
             <button id="vcPlBtn" onclick="vcOpenPlaylist()" title="Playlist 播放列表">🎬<span id="vcPlBadge"></span></button>
             <button class="vc-btn" id="vcFsBtn" onclick="vcFullscreen()" title="Fullscreen"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg></button>
         </div>
