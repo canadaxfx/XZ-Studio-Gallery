@@ -1735,9 +1735,12 @@
             "naying concert",
             "vlog"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7677525362289130683"
-        }
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7677525362289130683"
+            }
+        ]
     },
     {
         "id": 1060,
@@ -2884,9 +2887,12 @@
             "hong kong",
             "event"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7676333585242200817"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7676333585242200817"
+            }
+        ],
         "hidden": ""
     },
     {
@@ -8833,9 +8839,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -8862,9 +8871,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -8890,9 +8902,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -8919,9 +8934,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -8947,9 +8965,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -8976,9 +8997,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9004,9 +9028,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9033,9 +9060,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9061,9 +9091,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9090,9 +9123,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9118,9 +9154,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9147,9 +9186,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9175,9 +9217,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9204,9 +9249,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9232,9 +9280,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9261,9 +9312,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9289,9 +9343,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9318,9 +9375,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9346,9 +9406,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9375,9 +9438,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9403,9 +9469,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9432,9 +9501,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9460,9 +9532,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9489,9 +9564,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9517,9 +9595,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9546,9 +9627,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9574,9 +9658,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9603,9 +9690,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9631,9 +9721,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9658,9 +9751,12 @@
             "ralph lauren",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7646710813906435249"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7646710813906435249"
+            }
+        ],
         "source": [
             "拉夫劳伦香氛RalphLauren"
         ],
@@ -9687,9 +9783,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -9717,9 +9816,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -9746,9 +9848,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -9776,9 +9881,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -9805,9 +9913,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -9835,9 +9946,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -9864,9 +9978,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -9894,9 +10011,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -9923,9 +10043,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -9953,9 +10076,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -9982,9 +10108,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10012,9 +10141,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10041,9 +10173,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10071,9 +10206,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10100,9 +10238,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10130,9 +10271,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10159,9 +10303,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10189,9 +10336,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10218,9 +10368,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10248,9 +10401,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10277,9 +10433,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10307,9 +10466,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10336,9 +10498,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10366,9 +10531,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10395,9 +10563,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10425,9 +10596,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10454,9 +10628,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10484,9 +10661,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10513,9 +10693,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10543,9 +10726,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10572,9 +10758,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10602,9 +10791,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10631,9 +10823,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10661,9 +10856,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10690,9 +10888,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -10720,9 +10921,12 @@
             "travel",
             "scenery"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7645597610887401713"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7645597610887401713"
+            }
+        ],
         "source": [
             "Endorsement Misc"
         ],
@@ -12226,9 +12430,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7642731109385607845"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7642731109385607845"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -12257,9 +12464,12 @@
             "best actor",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642392362283067761"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642392362283067761"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -12288,9 +12498,12 @@
             "best actor",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642392362283067761"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642392362283067761"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -12319,9 +12532,12 @@
             "best actor",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642392362283067761"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642392362283067761"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -12350,9 +12566,12 @@
             "best actor",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642392362283067761"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642392362283067761"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -12381,9 +12600,12 @@
             "best actor",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642392362283067761"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642392362283067761"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -12412,9 +12634,12 @@
             "best actor",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642392362283067761"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642392362283067761"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -12443,9 +12668,12 @@
             "best actor",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642392362283067761"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642392362283067761"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -12474,9 +12702,12 @@
             "best actor",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642392362283067761"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642392362283067761"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -12505,9 +12736,12 @@
             "best actor",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642392362283067761"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642392362283067761"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -12536,9 +12770,12 @@
             "best actor",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642392362283067761"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642392362283067761"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13015,9 +13252,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13047,9 +13287,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13078,9 +13321,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13110,9 +13356,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13141,9 +13390,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13173,9 +13425,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13204,9 +13459,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13236,9 +13494,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13267,9 +13528,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13299,9 +13563,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13330,9 +13597,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13362,9 +13632,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13393,9 +13666,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13425,9 +13701,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13456,9 +13735,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13488,9 +13770,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13519,9 +13804,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13551,9 +13839,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13582,9 +13873,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13614,9 +13908,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13645,9 +13942,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13676,9 +13976,12 @@
             "saint laurent",
             "ysl"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7642277650496907441"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7642277650496907441"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -13732,9 +14035,12 @@
             "l'oréal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -13761,9 +14067,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -13789,9 +14098,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -13818,9 +14130,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -13846,9 +14161,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -13876,9 +14194,12 @@
             "weibo",
             "endorsement"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -13904,9 +14225,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -13933,9 +14257,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -13961,9 +14288,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -13990,9 +14320,12 @@
             "l'oréal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14019,9 +14352,12 @@
             "weibo",
             "endorsement"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14049,9 +14385,12 @@
             "weibo",
             "endorsement"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14077,9 +14416,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14106,9 +14448,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14134,9 +14479,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14163,9 +14511,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14191,9 +14542,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14220,9 +14574,12 @@
             "l'oréal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14248,9 +14605,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14277,9 +14637,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14305,9 +14668,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14334,9 +14700,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14363,9 +14732,12 @@
             "weibo",
             "endorsement"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14392,9 +14764,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14420,9 +14795,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14449,9 +14827,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14477,9 +14858,12 @@
             "l'oréal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14506,9 +14890,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14534,9 +14921,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14563,9 +14953,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14591,9 +14984,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14620,9 +15016,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14648,9 +15047,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14677,9 +15079,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14705,9 +15110,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -14734,9 +15142,12 @@
             "l'oreal men",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7640402551984228965"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7640402551984228965"
+            }
+        ],
         "source": [
             "欧莱雅男士"
         ],
@@ -15316,9 +15727,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15346,9 +15760,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15375,9 +15792,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15405,9 +15825,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15434,9 +15857,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15464,9 +15890,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15493,9 +15922,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15523,9 +15955,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15552,9 +15987,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15582,9 +16020,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15611,9 +16052,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15641,9 +16085,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15670,9 +16117,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15700,9 +16150,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15729,9 +16182,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15759,9 +16215,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15788,9 +16247,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15818,9 +16280,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15847,9 +16312,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15877,9 +16345,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15906,9 +16377,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15936,9 +16410,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15965,9 +16442,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -15995,9 +16475,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16024,9 +16507,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16054,9 +16540,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16083,9 +16572,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16113,9 +16605,12 @@
             "gucci",
             "college student film festival"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635641971084379825"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635641971084379825"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16144,9 +16639,12 @@
             "gucci",
             "awards"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635592180384256689"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635592180384256689"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16175,9 +16673,12 @@
             "gucci",
             "awards"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635592180384256689"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635592180384256689"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16206,9 +16707,12 @@
             "gucci",
             "awards"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635592180384256689"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635592180384256689"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16237,9 +16741,12 @@
             "gucci",
             "awards"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635592180384256689"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635592180384256689"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16268,9 +16775,12 @@
             "gucci",
             "awards"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635592180384256689"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635592180384256689"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16299,9 +16809,12 @@
             "gucci",
             "awards"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635592180384256689"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635592180384256689"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16330,9 +16843,12 @@
             "gucci",
             "awards"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635592180384256689"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635592180384256689"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16361,9 +16877,12 @@
             "gucci",
             "awards"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635592180384256689"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635592180384256689"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16392,9 +16911,12 @@
             "gucci",
             "awards"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7635592180384256689"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7635592180384256689"
+            }
+        ],
         "source": [
             "活动 / Events"
         ],
@@ -16454,9 +16976,12 @@
             "college student film festival",
             "weibo video"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7635629888157905585"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7635629888157905585"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG",
             "活动 / Events"
@@ -17886,9 +18411,12 @@
             "qi xia",
             "filming start"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7627131385355095546"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7627131385355095546"
+            }
+        ],
         "source": [
             "十日终焉"
         ],
@@ -17917,9 +18445,12 @@
             "qi xia",
             "filming start"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7627131385355095546"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7627131385355095546"
+            }
+        ],
         "source": [
             "十日终焉"
         ],
@@ -17948,9 +18479,12 @@
             "qi xia",
             "filming start"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7627131385355095546"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7627131385355095546"
+            }
+        ],
         "source": [
             "十日终焉"
         ],
@@ -17978,9 +18512,12 @@
             "drama",
             "filming ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7627131385355095546"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7627131385355095546"
+            }
+        ],
         "source": [
             "十日终焉"
         ],
@@ -18009,9 +18546,12 @@
             "qi xia",
             "filming start"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7627131385355095546"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7627131385355095546"
+            }
+        ],
         "source": [
             "十日终焉"
         ],
@@ -18040,9 +18580,12 @@
             "qi xia",
             "filming start"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7627131385355095546"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7627131385355095546"
+            }
+        ],
         "source": [
             "十日终焉"
         ],
@@ -18071,9 +18614,12 @@
             "qi xia",
             "filming start"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7627131385355095546"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7627131385355095546"
+            }
+        ],
         "source": [
             "十日终焉"
         ],
@@ -18102,9 +18648,12 @@
             "qi xia",
             "filming start"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7627131385355095546"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7627131385355095546"
+            }
+        ],
         "source": [
             "十日终焉"
         ],
@@ -18133,9 +18682,12 @@
             "qi xia",
             "filming start"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7627131385355095546"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7627131385355095546"
+            }
+        ],
         "source": [
             "十日终焉"
         ],
@@ -18162,9 +18714,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18192,9 +18747,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18221,9 +18779,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18251,9 +18812,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18280,9 +18844,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18310,9 +18877,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18339,9 +18909,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18369,9 +18942,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18398,9 +18974,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18428,9 +19007,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18457,9 +19039,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18487,9 +19072,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18516,9 +19104,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18546,9 +19137,12 @@
             "liushin",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18575,9 +19169,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18605,9 +19202,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18634,9 +19234,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18664,9 +19267,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18693,9 +19299,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18723,9 +19332,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18752,9 +19364,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18782,9 +19397,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18811,9 +19429,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18841,9 +19462,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18870,9 +19494,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18900,9 +19527,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18929,9 +19559,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18958,9 +19591,12 @@
             "liushin",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7626712864631526257"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7626712864631526257"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -18986,9 +19622,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19015,9 +19654,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19043,9 +19685,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19072,9 +19717,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19100,9 +19748,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19129,9 +19780,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19157,9 +19811,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19186,9 +19843,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19214,9 +19874,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19244,9 +19907,12 @@
             "daily life",
             "throwback"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19272,9 +19938,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19301,9 +19970,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19329,9 +20001,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19358,9 +20033,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19386,9 +20064,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19415,9 +20096,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19443,9 +20127,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19472,9 +20159,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19500,9 +20190,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19529,9 +20222,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19557,9 +20253,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19586,9 +20285,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19614,9 +20316,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19643,9 +20348,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19671,9 +20379,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19699,9 +20410,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19728,9 +20442,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19756,9 +20473,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19785,9 +20505,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19813,9 +20536,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19842,9 +20568,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19870,9 +20599,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19899,9 +20631,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19927,9 +20662,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19955,9 +20693,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7624486408590589297"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7624486408590589297"
+            }
+        ],
         "source": [
             "欧莱雅PRO"
         ],
@@ -19984,9 +20725,12 @@
             "li-ning",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20014,9 +20758,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20043,9 +20790,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20073,9 +20823,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20102,9 +20855,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20132,9 +20888,12 @@
             "li-ning",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20161,9 +20920,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20191,9 +20953,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20220,9 +20985,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20250,9 +21018,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20279,9 +21050,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20309,9 +21083,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20338,9 +21115,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20368,9 +21148,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20397,9 +21180,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20427,9 +21213,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20456,9 +21245,12 @@
             "lining",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20486,9 +21278,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20515,9 +21310,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20545,9 +21343,12 @@
             "li-ning",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20574,9 +21375,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20604,9 +21408,12 @@
             "li-ning",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20633,9 +21440,12 @@
             "li ning",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20663,9 +21473,12 @@
             "weibo update"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20692,9 +21505,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20722,9 +21538,12 @@
             "lining",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20751,9 +21570,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20781,9 +21603,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20810,9 +21635,12 @@
             "lining",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -20839,9 +21667,12 @@
             "li-ning",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7621477109886494577"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7621477109886494577"
+            }
+        ],
         "source": [
             "李宁"
         ],
@@ -21353,9 +22184,12 @@
             "nars",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21382,9 +22216,12 @@
             "nars",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21410,9 +22247,12 @@
             "nars",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21439,9 +22279,12 @@
             "nars",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21467,9 +22310,12 @@
             "nars",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21496,9 +22342,12 @@
             "nars",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21524,9 +22373,12 @@
             "nars",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21553,9 +22405,12 @@
             "nars",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21581,9 +22436,12 @@
             "nars",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21610,9 +22468,12 @@
             "nars",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21638,9 +22499,12 @@
             "nars",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21667,9 +22531,12 @@
             "nars",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21695,9 +22562,12 @@
             "nars",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21724,9 +22594,12 @@
             "nars",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21752,9 +22625,12 @@
             "nars",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21781,9 +22657,12 @@
             "nars",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21809,9 +22688,12 @@
             "nars",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21838,9 +22720,12 @@
             "nars",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21866,9 +22751,12 @@
             "nars",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21895,9 +22783,12 @@
             "nars",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21923,9 +22814,12 @@
             "nars",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21951,9 +22845,12 @@
             "nars",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619314255783857649"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619314255783857649"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -21980,9 +22877,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22009,9 +22909,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22038,9 +22941,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22068,9 +22974,12 @@
             "weibo",
             "vernal equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22097,9 +23006,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22126,9 +23038,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22155,9 +23070,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22184,9 +23102,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22213,9 +23134,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22242,9 +23166,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22271,9 +23198,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22300,9 +23230,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22329,9 +23262,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22358,9 +23294,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22387,9 +23326,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22416,9 +23358,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22445,9 +23390,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -22473,9 +23421,12 @@
             "nars",
             "spring equinox"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7619368034650456165"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7619368034650456165"
+            }
+        ],
         "source": [
             "NARS"
         ],
@@ -23780,9 +24731,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -23808,9 +24762,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -23835,9 +24792,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -23863,9 +24823,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -23890,9 +24853,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -23918,9 +24884,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -23945,9 +24914,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -23973,9 +24945,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24000,9 +24975,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24028,9 +25006,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24055,9 +25036,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24085,9 +25069,12 @@
             "red carpet"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24112,9 +25099,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24140,9 +25130,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24167,9 +25160,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24195,9 +25191,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24222,9 +25221,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24250,9 +25252,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24277,9 +25282,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24305,9 +25313,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24332,9 +25343,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24360,9 +25374,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24387,9 +25404,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24415,9 +25435,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24442,9 +25465,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24470,9 +25496,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24498,9 +25527,12 @@
             "tv drama quality ceremony",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24526,9 +25558,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24553,9 +25588,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24581,9 +25619,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24608,9 +25649,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24636,9 +25680,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24663,9 +25710,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24691,9 +25741,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24718,9 +25771,12 @@
         "englishTags": [
             "tv drama quality ceremony"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -24745,9 +25801,12 @@
             "tv drama quality ceremony"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7615256898212110321"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7615256898212110321"
+            }
+        ],
         "source": [
             "电视剧品质盛典"
         ],
@@ -25640,9 +26699,12 @@
             "milan fashion week",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -25673,9 +26735,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -25702,9 +26767,12 @@
             "milan fashion week",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -25735,9 +26803,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -25764,9 +26835,12 @@
             "milan fashion week",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -25793,9 +26867,12 @@
             "milan fashion week",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -25826,9 +26903,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -25859,9 +26939,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -25892,9 +26975,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -25921,9 +27007,12 @@
             "milan fashion week",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -25954,9 +27043,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -25983,9 +27075,12 @@
             "milan fashion week",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -26012,9 +27107,12 @@
             "milan fashion week",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -26045,9 +27143,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -26078,9 +27179,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -26107,9 +27211,12 @@
             "milan fashion week",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -26136,9 +27243,12 @@
             "milan fashion week",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -26169,9 +27279,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -26202,9 +27315,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -26235,9 +27351,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -26264,9 +27383,12 @@
             "milan fashion week",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -26293,9 +27415,12 @@
             "milan fashion week",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -26326,9 +27451,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -26355,9 +27483,12 @@
             "milan fashion week",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611458110885399973"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611458110885399973"
+            }
+        ],
         "source": [
             "TODS"
         ],
@@ -26907,9 +28038,12 @@
             "milan fashion week",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -26942,9 +28076,12 @@
             "black outfit"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -26972,9 +28109,12 @@
             "milan fashion week",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27007,9 +28147,12 @@
             "black outfit"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27042,9 +28185,12 @@
             "black outfit"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27072,9 +28218,12 @@
             "milan fashion week",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27107,9 +28256,12 @@
             "black outfit"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27137,9 +28289,12 @@
             "milan fashion week",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27172,9 +28327,12 @@
             "black outfit"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27207,9 +28365,12 @@
             "black outfit"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27237,9 +28398,12 @@
             "milan fashion week",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27267,9 +28431,12 @@
             "milan fashion week",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27297,9 +28464,12 @@
             "milan fashion week",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27327,9 +28497,12 @@
             "milan fashion week",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27357,9 +28530,12 @@
             "milan fashion week",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27392,9 +28568,12 @@
             "black outfit"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27427,9 +28606,12 @@
             "black outfit"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27462,9 +28644,12 @@
             "black outfit"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27492,9 +28677,12 @@
             "milan fashion week",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27527,9 +28715,12 @@
             "black outfit"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27562,9 +28753,12 @@
             "black outfit"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27592,9 +28786,12 @@
             "milan fashion week",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27627,9 +28824,12 @@
             "black outfit"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27657,9 +28857,12 @@
             "milan fashion week",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7611529926646819505"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7611529926646819505"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28230,9 +29433,12 @@
             "fashion show",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28263,9 +29469,12 @@
             "fashion show",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28296,9 +29505,12 @@
             "fashion show",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28329,9 +29541,12 @@
             "fashion show",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28362,9 +29577,12 @@
             "fashion show",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28395,9 +29613,12 @@
             "fashion show",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28428,9 +29649,12 @@
             "fashion show",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28461,9 +29685,12 @@
             "fashion show",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28494,9 +29721,12 @@
             "fashion show",
             "black outfit"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28531,9 +29761,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28568,9 +29801,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28605,9 +29841,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28642,9 +29881,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28679,9 +29921,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28716,9 +29961,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28753,9 +30001,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28790,9 +30041,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28826,9 +30080,12 @@
             "gif"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7610452642058754810"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7610452642058754810"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -31720,9 +32977,12 @@
             "boucheron",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -31748,9 +33008,12 @@
             "boucheron",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -31776,9 +33039,12 @@
             "boucheron",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -31805,9 +33071,12 @@
             "weibo"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -31834,9 +33103,12 @@
             "weibo"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -31862,9 +33134,12 @@
             "boucheron",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -31890,9 +33165,12 @@
             "boucheron",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -31920,9 +33198,12 @@
             "photoshoot"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -31949,9 +33230,12 @@
             "weibo"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -31977,9 +33261,12 @@
             "boucheron",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -32005,9 +33292,12 @@
             "boucheron",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -32034,9 +33324,12 @@
             "weibo"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -32063,9 +33356,12 @@
             "weibo"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -32092,9 +33388,12 @@
             "weibo"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -32121,9 +33420,12 @@
             "weibo"
         ],
         "quality": "1080p",
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -32149,9 +33451,12 @@
             "boucheron",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -32178,9 +33483,12 @@
             "weibo",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -32206,9 +33514,12 @@
             "boucheron",
             "weibo"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7601069710226846137"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7601069710226846137"
+            }
+        ],
         "source": [
             "宝诗龙Boucheron"
         ],
@@ -32418,9 +33729,12 @@
             "东方卫视舞台",
             "舞台 / Stages"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7590347819816895417"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7590347819816895417"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -32450,9 +33764,12 @@
             "东方卫视舞台",
             "舞台 / Stages"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7590307812837761521"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7590307812837761521"
+            }
+        ],
         "platform": [
             "weibo"
         ],
