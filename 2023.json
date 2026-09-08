@@ -2590,9 +2590,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7309853385979694386"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7309853385979694386"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -4118,9 +4121,12 @@
             "gesture dance",
             "weibo video"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7303110895612349723"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7303110895612349723"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -6709,9 +6715,12 @@
             "weibo",
             "daily life series"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7286289466354928957"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7286289466354928957"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG",
             "生日"
@@ -7622,9 +7631,12 @@
             "casual",
             "travel"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7282685729170263348"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7282685729170263348"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -8774,9 +8786,12 @@
             "drama",
             "finale"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7280420705567526202"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7280420705567526202"
+            }
+        ],
         "source": [
             "骄阳伴我"
         ],
@@ -11048,9 +11063,12 @@
             "sheng yang",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7275295012076784930"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7275295012076784930"
+            }
+        ],
         "source": [
             "骄阳伴我"
         ],
@@ -11453,9 +11471,12 @@
             "where dreams begin",
             "douyin"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7274599140149955899"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7274599140149955899"
+            }
+        ],
         "source": [
             "骄阳伴我"
         ],
@@ -11860,9 +11881,12 @@
             "sheng yang",
             "drama promotion"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7273833791129423163"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7273833791129423163"
+            }
+        ],
         "source": [
             "骄阳伴我"
         ],
@@ -13228,9 +13252,12 @@
             "the longest promise",
             "finale"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7257915756778622266"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7257915756778622266"
+            }
+        ],
         "source": [
             "玉骨遥"
         ],
@@ -13286,9 +13313,12 @@
             "the longest promise",
             "drama finale"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7257807604968197432"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7257807604968197432"
+            }
+        ],
         "source": [
             "玉骨遥"
         ],
@@ -13844,9 +13874,12 @@
             "shiying",
             "dark shiying"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7257150477844925752"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7257150477844925752"
+            }
+        ],
         "source": [
             "玉骨遥"
         ],
@@ -14687,9 +14720,12 @@
             "weibo",
             "drama promotion"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7256014082103381307"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7256014082103381307"
+            }
+        ],
         "source": [
             "玉骨遥"
         ],
@@ -14774,9 +14810,12 @@
             "jade bone dynasty",
             "bracelet"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7255908911377681699"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7255908911377681699"
+            }
+        ],
         "source": [
             "玉骨遥"
         ],
@@ -14946,9 +14985,12 @@
             "douyin",
             "the longest promise"
         ],
-        "platform_links": {
-            "weibo": "https://weibo.com/6643123988/N9PCN7enJ"
-        },
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/6643123988/N9PCN7enJ"
+            }
+        ],
         "source": [
             "玉骨遥"
         ],
@@ -16021,9 +16063,12 @@
             "shi ying",
             "drama promotion"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7252272171265936677"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7252272171265936677"
+            }
+        ],
         "source": [
             "玉骨遥"
         ],
@@ -16568,9 +16613,12 @@
             "casual",
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7250508124233207043"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7250508124233207043"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -19559,9 +19607,12 @@
             "studio update",
             "weibo video"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7230812317401746749"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7230812317401746749"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -20859,9 +20910,12 @@
             "daily life",
             "studio update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7227101442610384189"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7227101442610384189"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -23936,9 +23990,12 @@
             "travel",
             "in the pixel"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7215883062364736805"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7215883062364736805"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -27039,9 +27096,12 @@
             "black jacket",
             "business attire"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7202889560248929593"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7202889560248929593"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27072,9 +27132,12 @@
             "black jacket",
             "business attire"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7202889560248929593"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7202889560248929593"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27105,9 +27168,12 @@
             "black jacket",
             "business attire"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7202889560248929593"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7202889560248929593"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27138,9 +27204,12 @@
             "black jacket",
             "business attire"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7202889560248929593"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7202889560248929593"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27171,9 +27240,12 @@
             "black jacket",
             "business attire"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7202889560248929593"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7202889560248929593"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27204,9 +27276,12 @@
             "black jacket",
             "business attire"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7202889560248929593"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7202889560248929593"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27237,9 +27312,12 @@
             "black jacket",
             "business attire"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7202889560248929593"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7202889560248929593"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27270,9 +27348,12 @@
             "black jacket",
             "business attire"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7202889560248929593"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7202889560248929593"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -27303,9 +27384,12 @@
             "black jacket",
             "business attire"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7202889560248929593"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7202889560248929593"
+            }
+        ],
         "source": [
             "GUCCI"
         ],
@@ -28145,9 +28229,12 @@
             "the brightest star in the sky",
             "photoshoot"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7197363057851370763"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7197363057851370763"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
