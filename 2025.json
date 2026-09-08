@@ -20578,7 +20578,7 @@
         "groupName": "20250601-1",
         "quality": "1080p",
         "link": "https://weibo.com/6643123988/PuupYivHG",
-        "postText": "#梦中的那片海开播2周年# #梦中的那片海未公开花絮# 冰场上的欢笑，是这场追梦的路途的起点，坚定向前，不负热血初心。遇见肖春生@X玖少年团肖战DAYTOY 2周年！#梦中的那片海#",
+        "postText": "电视剧梦中的那片海：#梦中的那片海开播2周年# #梦中的那片海未公开花絮# 冰场上的欢笑，是这场追梦的路途的起点，坚定向前，不负热血初心。遇见肖春生@X玖少年团肖战DAYTOY 2周年！#梦中的那片海#\n\nCCTV电视剧：【#梦中的那片海开播2周年#】 #梦中的那片海未公开花絮# 从什刹海冰场出发，这群年轻人开启了充满未知与挑战的旅程。两年前的今天，《#梦中的那片海#》央视开播，让我们回到那片海，重温感动的时光！@X玖少年团肖战DAYTOY @李沁 @刘芮麟Wayne @曹斐然 @赵昕zhaozhao @崔航Felix @张龄心 @鲁诺lenox https://video.weibo.com/show?fid=1034:4907839303647271",
         "englishTags": [
             "where dreams begin",
             "drama",
@@ -20592,7 +20592,10 @@
         "platform": [
             "weibo"
         ],
-        "size_mb": 23.52
+        "size_mb": 23.52,
+        "platform_links": {
+            "weibo": "https://weibo.com/2030112487/PuunDAsb4"
+        }
     },
     {
         "id": 1280,
