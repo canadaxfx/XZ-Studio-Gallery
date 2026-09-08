@@ -578,9 +578,12 @@
             "documentary",
             "music"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7447066386708319528"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7447066386708319528"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -641,9 +644,12 @@
             "our album",
             "pre-sale"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7444979134326902073"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7444979134326902073"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -672,9 +678,12 @@
             "documentary",
             "our song"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7444595033006787892"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7444595033006787892"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -705,9 +714,12 @@
             "drifting",
             "our song"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7444036434840849714"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7444036434840849714"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -735,9 +747,12 @@
             "our album",
             "music"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7442567274050899250"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7442567274050899250"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -1047,9 +1062,12 @@
             "weibo music",
             "goodnight"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7441984054058077480"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7441984054058077480"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -1078,9 +1096,12 @@
             "album",
             "good night"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7442350971063258425"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7442350971063258425"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -1354,9 +1375,12 @@
             "we",
             "dont look back"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7441614715182189859"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7441614715182189859"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -1387,9 +1411,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1417,9 +1444,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1447,9 +1477,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1477,9 +1510,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1508,9 +1544,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1538,9 +1577,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1568,9 +1610,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1598,9 +1643,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1628,9 +1676,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1658,9 +1709,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1688,9 +1742,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1719,9 +1776,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1749,9 +1809,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1779,9 +1842,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1809,9 +1875,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1839,9 +1908,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1869,9 +1941,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -1899,9 +1974,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7441612961640140091"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7441612961640140091"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -2204,9 +2282,12 @@
             "don't look back",
             "music"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7440839806323526947"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7440839806323526947"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -2236,9 +2317,12 @@
             "lighthouse",
             "drifting"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7440037099425877298"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7440037099425877298"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -2268,9 +2352,12 @@
             "lighthouse",
             "music video"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7439663796798360882"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7439663796798360882"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -2298,9 +2385,12 @@
             "album",
             "lighthouse"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7439671678633807131"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7439671678633807131"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -2720,9 +2810,12 @@
             "drifting",
             "music video"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7439312937438809381"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7439312937438809381"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -3258,9 +3351,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3288,9 +3384,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3318,9 +3417,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3348,9 +3450,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3378,9 +3483,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3408,9 +3516,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3438,9 +3549,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3468,9 +3582,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3498,9 +3615,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3528,9 +3648,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3558,9 +3681,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3588,9 +3714,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3618,9 +3747,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3648,9 +3780,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3678,9 +3813,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3708,9 +3846,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3738,9 +3879,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3768,9 +3912,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/note/7439645991478824251"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7439645991478824251"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -3826,9 +3973,12 @@
             "our song",
             "music"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7438212484982492416"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7438212484982492416"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -3857,9 +4007,12 @@
             "we",
             "music"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7437383821781208371"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7437383821781208371"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -3889,9 +4042,12 @@
             "we are all the same",
             "music video"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436794400602131747"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436794400602131747"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -3922,9 +4078,12 @@
             "music video",
             "promotional content"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7437043380263161139"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7437043380263161139"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -4196,9 +4355,12 @@
             "our song",
             "music video"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436633640366361906"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436633640366361906"
+            }
+        ],
         "source": [
             "专辑我们"
         ],
@@ -4697,9 +4859,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -4726,9 +4891,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -4755,9 +4923,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -4787,9 +4958,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -4816,9 +4990,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -4845,9 +5022,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -4874,9 +5054,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -4906,9 +5089,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -4938,9 +5124,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -4967,9 +5156,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -4996,9 +5188,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -5025,9 +5220,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -5054,9 +5252,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -5083,9 +5284,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -5112,9 +5316,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -5141,9 +5348,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -5170,9 +5380,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -5199,9 +5412,12 @@
         "source": [
             "专辑我们"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7436679145175731516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436679145175731516"
+            }
+        ],
         "platform": [
             "weibo"
         ],
@@ -5848,9 +6064,12 @@
         "englishTags": [
             "weibo update"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7426745339949927715"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7426745339949927715"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -7638,9 +7857,12 @@
             "birthday",
             "douyin"
         ],
-        "platform_links": {
-            "weibo": "https://weibo.com/6643123988/OA2LN4Jal"
-        },
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/6643123988/OA2LN4Jal"
+            }
+        ],
         "source": [
             "生日"
         ],
@@ -7911,9 +8133,12 @@
             "weibo",
             "singing"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7417840040925056308"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7417840040925056308"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -8897,9 +9122,12 @@
             "weibo",
             "night"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7416726238238166272"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7416726238238166272"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -11599,9 +11827,12 @@
             "nature",
             "mountains"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7397062206153608463"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7397062206153608463"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -13346,9 +13577,12 @@
             "chongqing",
             "street photography"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7380361655063973174"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7380361655063973174"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -13840,9 +14074,12 @@
             "filming wrap",
             "historical drama"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7375818597605674281"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7375818597605674281"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG",
             "藏海传"
@@ -17642,9 +17879,12 @@
             "travel",
             "europe"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7341396153688182026"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7341396153688182026"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -20208,9 +20448,12 @@
             "new year",
             "weibo post"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7333994239551982874"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7333994239551982874"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -20933,9 +21176,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7331413625598463270"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7331413625598463270"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -22455,9 +22701,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7323619209446034726"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7323619209446034726"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
@@ -23929,9 +24178,12 @@
         "englishTags": [
             "daily life"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7320530118324129059"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7320530118324129059"
+            }
+        ],
         "source": [
             "日常见肖战 & VLOG"
         ],
