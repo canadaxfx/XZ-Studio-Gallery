@@ -497,9 +497,12 @@
             "gu yiye",
             "drama promotion"
         ],
-        "platform_links": {
-            "douyin": "https://www.douyin.com/video/7046647341994036516"
-        },
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7046647341994036516"
+            }
+        ],
         "source": [
             "王牌部队"
         ],
