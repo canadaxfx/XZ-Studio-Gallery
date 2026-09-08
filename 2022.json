@@ -11886,9 +11886,12 @@
             "weibo"
         ],
         "size_mb": 3.38,
-        "platform_links": {
-            "中国军网": "http://tv.81.cn/mcwt/10128851.html"
-        }
+        "platform_links": [
+            {
+                "platform": "中国军网",
+                "url": "http://tv.81.cn/mcwt/10128851.html"
+            }
+        ]
     },
     {
         "id": 479,
