@@ -2555,7 +2555,10 @@
               <option value="all">Platform</option>
               <option value="weibo">Weibo</option>
               <option value="douyin">Douyin</option>
+              <option value="x">X / Twitter</option>
+              <option value="facebook">Facebook</option>
               <option value="rednote">RedNote</option>
+              <option value="other">Others 其他</option>
             </select>
 
             <select id="filterYear" onchange="applyDateFilter()">
@@ -3737,15 +3740,42 @@
         return [];
       }
 
+      // Platforms that have their own <option> in #filterSource (+ synonyms). The
+      // "Others 其他" filter matches any entry whose platforms are ALL outside this
+      // set — so a hand-entered platform (threads, lofter, …) with no dedicated
+      // option is still reachable. Keep in sync with #filterSource.
+      const _KNOWN_PLATFORMS = new Set(['weibo', 'douyin', 'x', 'twitter', 'facebook',
+        'rednote', 'xiaohongshu', 'xhs']);
+
+      // Best-guess platform key from a link's host — lets the PRIMARY link be labelled
+      // from the URL itself instead of trusting a possibly-mismatched platform field
+      // (e.g. an entry tagged platform:"douyin" whose citation link is a weibo.com URL).
+      function platformFromUrl(u) {
+        let h = '';
+        try { h = new URL(/^https?:\/\//i.test(u) ? u : 'https://' + u).hostname.toLowerCase(); } catch (e) { return ''; }
+        if (h.indexOf('oasis.weibo') !== -1) return 'oasis';
+        if (/(^|\.)weibo\.(com|cn)$/.test(h) || h === 'weibo.video') return 'weibo';
+        if (h.indexOf('douyin.com') !== -1) return 'douyin';
+        if (h.indexOf('xiaohongshu.com') !== -1 || h === 'xhslink.com') return 'rednote';
+        if (/(^|\.)(x|twitter)\.com$/.test(h) || h === 't.co') return 'x';
+        if (h.indexOf('instagram.com') !== -1 || h === 'instagr.am') return 'instagram';
+        if (h.indexOf('youtube.com') !== -1 || h === 'youtu.be') return 'youtube';
+        if (h.indexOf('bilibili.com') !== -1 || h === 'b23.tv') return 'bilibili';
+        if (h.indexOf('facebook.com') !== -1 || h === 'fb.watch') return 'facebook';
+        if (h.indexOf('qq.com') !== -1) return 'qq';
+        if (h.indexOf('mgtv.com') !== -1) return 'mgtv';
+        return '';
+      }
+
       function setPlatformBtnBehavior(btn, mainLink, extraLinks, primarySource) {
         const existingPop = document.getElementById('platformPopover');
         if (existingPop) existingPop.style.display = 'none';
         const lmap = {weibo:'Weibo 微博',oasis:'Oasis 绿洲',douyin:'Douyin 抖音',youtube:'YouTube',bilibili:'Bilibili',ins:'Instagram',instagram:'Instagram',xiaohongshu:'RedNote 小红书',xhs:'RedNote 小红书',rednote:'RedNote 小红书',twitter:'Twitter',x:'X',facebook:'Facebook',qq:'QQ 腾讯',wx:'WeChat 微信',wechat:'WeChat 微信',mgtv:'MGTV 芒果TV'};
         const links = [];
         const w = mainLink ? String(mainLink).trim() : '';
-        // Fall back to the raw platform string itself (never a hardcoded 'Weibo') --
-        // primarySource may be any free-typed platform not in lmap.
-        if (w) links.push({label: lmap[primarySource] || primarySource || 'Weibo 微博', url: /^https?/i.test(w) ? w : 'https://' + w});
+        // Label from the URL host first; then the entry's platform field (which can
+        // be mismatched); then the raw string; 'Weibo 微博' only as last resort.
+        if (w) links.push({label: lmap[platformFromUrl(w)] || lmap[primarySource] || primarySource || 'Weibo 微博', url: /^https?/i.test(w) ? w : 'https://' + w});
         normPlatformLinks(extraLinks).forEach(({ platform, url }) => {
           links.push({ label: lmap[platform.toLowerCase()] || platform, url });
         });
@@ -5313,7 +5343,13 @@
           normPlatformLinks(item.platform_links).forEach(x => _itemPlatforms.add(x.platform.toLowerCase()));
           if (!_itemPlatforms.size) _itemPlatforms.add('weibo');
           if (_itemPlatforms.has('xiaohongshu')) _itemPlatforms.add('rednote');
-          if (!_itemPlatforms.has(sVal)) return false;
+          if (_itemPlatforms.has('twitter')) _itemPlatforms.add('x');
+          if (_itemPlatforms.has('x')) _itemPlatforms.add('twitter');
+          if (sVal === 'other') {
+            if ([..._itemPlatforms].some(p => _KNOWN_PLATFORMS.has(p))) return false;
+          } else if (!_itemPlatforms.has(sVal)) {
+            return false;
+          }
         }
         return true;
       }
