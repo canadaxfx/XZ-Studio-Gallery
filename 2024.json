@@ -2253,12 +2253,10 @@
         "platform": [
             "douyin"
         ],
-        "url_4k": "https://assets.xz-studio-gallery.com/4k/20241126_XZ-Weibo-1.mp4",
         "hidden": "",
-        "quality": "720p",
+        "quality": "4k",
         "duration": 206,
-        "size_mb": 24.81,
-        "size_4k": 104.35
+        "size_mb": 104.3
     },
     {
         "id": 814,
