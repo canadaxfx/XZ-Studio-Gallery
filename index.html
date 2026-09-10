@@ -1571,17 +1571,13 @@
         flex-shrink: 0;
       }
 
-      /* Both dismiss × buttons share .close-modal (flat ghost circle + thin SVG glyph).
-         The bottom one sits on its own right-aligned row above the Add-to-Playlist button
-         so it can't crowd it on narrow screens; the Add button stays centered. */
+      /* Row holding the centered "Add to Playlist" button. (Single close × lives in the
+         header — no redundant bottom one, matching Archive.) */
       .pl-addrow {
         display: flex;
-        flex-direction: column;
-        gap: 4px;
+        justify-content: center;
         margin-bottom: 10px;
       }
-      .pl-addrow #plModalAddBtn2 { align-self: center; }
-      .pl-addrow .close-bottom-btn { order: -1; align-self: flex-end; flex-shrink: 0; }
 
       /* Enhanced Download Section */
       .download-section {
@@ -2731,7 +2727,6 @@
           <div class="download-section">
             <div class="pl-addrow">
               <button class="pl-modal-add-btn" id="plModalAddBtn2" onclick="plModalToggle()" style="display:none;font-size:13px;padding:5px 16px;">+ 加入播放列表 Add to Playlist</button>
-              <button class="close-modal close-bottom-btn" onclick="closeModal()" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
             </div>
 
             <div class="download-actions-row" id="actionButtonsRow">
@@ -3040,7 +3035,7 @@
 // ============================================================
 
       /* ---------- Core Variables ---------- */
-      const DATA_VER = '20260910-3'; // bump when pushing new JSON to GitHub
+      const DATA_VER = '20260910-4'; // bump when pushing new JSON to GitHub
       let photoData = [];
       let currentRenderData = [];
       let expandedYears = new Set();
