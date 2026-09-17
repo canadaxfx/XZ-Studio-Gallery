@@ -620,19 +620,31 @@
         background-color: #f6b60d;
         border: 1px solid #ffe082;
       }
+      .badge-oasis {
+        background-color: #2CB353;
+      }
       /* REDNOTE: Changed to Standard Red */
       .badge-rednote {
         background-color: #ff2442;
         border: 1px solid #ff8fab;
       }
       .badge-instagram {
-        background-color: #e1306c;
+        background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
       }
       .badge-twitter {
         background-color: #1da1f2;
       }
       .badge-douyin {
         background-color: #000000;
+      }
+      .badge-wechat {
+        background-color: #07C160;
+      }
+      .badge-youtube-src {
+        background-color: #FF0000;
+      }
+      .badge-bilibili {
+        background-color: #00A1D6;
       }
       .badge-other {
         background-color: #999999;
@@ -3029,7 +3041,7 @@
 // ============================================================
 
       /* ---------- Core Variables ---------- */
-      const DATA_VER = '20260916-3'; // bump when pushing new JSON to GitHub
+      const DATA_VER = '20260916-4'; // bump when pushing new JSON to GitHub
       let photoData = [];
       let currentRenderData = [];
       let expandedYears = new Set();
@@ -3839,18 +3851,19 @@
         // Row 1: all platform badges
         const _BADGE_DEFS = {
             weibo:       { cls: 'badge-weibo',    text: 'WEIBO' },
+            oasis:       { cls: 'badge-oasis',    text: 'OASIS' },
             rednote:     { cls: 'badge-rednote',  text: 'REDNOTE' },
             xiaohongshu: { cls: 'badge-rednote',  text: 'REDNOTE' },
             douyin:      { cls: 'badge-douyin',   text: 'DOUYIN' },
             twitter:     { cls: 'badge-twitter',  text: 'TWITTER' },
-            ins:         { cls: 'badge-other',    text: 'INS' },
-            instagram:   { cls: 'badge-instagram','text': 'INS' },
-            youtube:     { cls: 'badge-other',    text: 'YOUTUBE' },
-            bilibili:    { cls: 'badge-other',    text: 'BILI' },
+            ins:         { cls: 'badge-instagram','text': 'INS' },
+            wx:          { cls: 'badge-wechat',   text: 'WECHAT' },
+            youtube:     { cls: 'badge-youtube-src', text: 'YOUTUBE' },
+            bilibili:    { cls: 'badge-bilibili', text: 'BILI' },
         };
         const _seenBadges = new Set();
         const _badgeHtml = [];
-        const _normPlat = p => { const k = String(p).toLowerCase().trim(); return (k==='xiaohongshu'||k==='xhs') ? 'rednote' : k==='instagram' ? 'ins' : k; };
+        const _normPlat = p => { const k = String(p).toLowerCase().trim(); return (k==='xiaohongshu'||k==='xhs') ? 'rednote' : k==='instagram' ? 'ins' : k==='wechat' ? 'wx' : k; };
         const _addBadge = (k) => {
             const key = _normPlat(k);
             if (_seenBadges.has(key)) return;
