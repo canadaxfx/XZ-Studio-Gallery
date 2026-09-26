@@ -22,6 +22,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7589977646885326129"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/695500bf000000002203336a?xsec_token=ABVzOo4zu3q64mkk_3PXtOnedUW_9rwVyBjh6eXQJXb_Q="
             }
         ],
         "source": [
@@ -2195,6 +2199,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7588352168086173349"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/694f46ae00000000220394b0?xsec_token=ABDDZXZgUVIjxbME2aBcN18PMNr-uvF7Dou6aGcBp7cWQ="
             }
         ],
         "source": [
@@ -16786,7 +16794,6 @@
         "groupName": "20250726",
         "duration": 243,
         "link": "https://weibo.com/6643123988/PCToLa6jc",
-        "description": "",
         "postText": "#日常见肖战# 之#小站记# 漫步徐行，停驻间标注📝@肖战 眼中的小世界，留存难忘的电子回忆。趁一切都在原地各自美好，致敬这人生[期待] http://t.cn/A6F2x5jn ​​​",
         "englishTags": [
             "studio weibo",
@@ -16801,7 +16808,13 @@
         ],
         "size_mb": 15.16,
         "size_4k": 173.19,
-        "quality": "480p"
+        "quality": "480p",
+        "platform_links": [
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/6884631c0000000017033b37?xsec_token=ABE8sDzwQkRERGLYBOKXIiFDtcSGvh4EzuFuTnI8Ecc4M="
+            }
+        ]
     },
     {
         "id": 625,
@@ -17291,6 +17304,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7524220728066002191"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/686b69460000000017037a94?xsec_token=ABBZf02gXwT2QXfZ_IceyTmyidR2mKZ6AjxIGCDMIZjrY="
             }
         ],
         "source": [
@@ -17323,6 +17340,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7524219796171361588"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/686b68e40000000015021ea9?xsec_token=ABBZf02gXwT2QXfZ_IceyTmyP63E2aDpWJ_lN1fiDubdY="
             }
         ],
         "source": [
@@ -17988,6 +18009,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7514589807343930684"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/68492c95000000000c0387bc?xsec_token=ABlSWsOCDqVHw9RtEGBUPKyWHDFJw-xkGzJWUwlZFkGdw="
             }
         ],
         "source": [
