@@ -1,5 +1,28 @@
 [
     {
+        "id": 1208,
+        "url": "https://assets.xz-studio-gallery.com/full/20260927_XHS_YSL_XZ-STU-1.mp4",
+        "date": "2026-09-27",
+        "month": "September",
+        "year": "2026",
+        "tags": [
+            "YSL"
+        ],
+        "groupName": "20260927",
+        "duration": 54,
+        "link": "https://www.xiaohongshu.com/explore/6a6a26840000000001001dc9?xsec_token=ABCao0qvBmNtwMC_GjXHHhLurAFY_cVjExQe_x8cfymPE=&xsec_source=pc_share",
+        "source": [
+            "YSL圣罗兰美妆"
+        ],
+        "platform": [
+            "rednote"
+        ],
+        "description": "",
+        "postText": "OMG 你帅到我啦🫢#肖战[话题]# #谁不喜欢帅哥呢[话题]# #帅出高级感[话题]#",
+        "size_mb": 2.67,
+        "englishTags": []
+    },
+    {
         "id": 1201,
         "url": "https://assets.xz-studio-gallery.com/full/20260926_异想天开_XZ-STU-1.mp4",
         "date": "2026-09-26",
@@ -26,6 +49,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7689461881790733285"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/6ab67524000000000b004023?xsec_token=ABwaoDKhAJTqzt8Tfy611ttSu_pmUxJioCneiN_7MPwXs="
             }
         ]
     },
@@ -73,6 +100,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7689122291100362353"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/6ab5410d00000000140016e2?xsec_token=ABW_FwqvyJLJ09LNf6VU7XS8Ve0pVy-8hrBBPlRbxrA58="
             }
         ]
     },
@@ -743,6 +774,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7688431017510547441"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/6ab2cb68000000000a0278e9?xsec_token=ABP0eUiYnAUjjDa2RV504vJ9SB5eh8p5mrHz061bM-02s="
             }
         ]
     },
@@ -2182,6 +2217,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7677525362289130683"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/6a8c0c9600000000170013d3?xsec_token=ABF5MOGr_9vAHLZcMzL8B7DcuF-PcY8YkYthCyOs-fNqg="
             }
         ]
     },
@@ -3963,9 +4002,12 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7676333585242200817"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/6a87c5c60000000023020f04?xsec_token=ABSTyPY3oK-S2Z0Os2zaKuqZp9yYk8MENSAW3nSUOeAc0="
             }
-        ],
-        "hidden": ""
+        ]
     },
     {
         "id": 1057,
@@ -5617,13 +5659,18 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "#十日终焉官宣杀青# 在终焉之地的十日棋局里看过月光，追过晨光，这些都是镜头内外最珍贵的回响。\n这一段轮回，暂存于此。只待与齐夏@肖战 再次重逢。 #剧集十日终焉# \n🐧预约：http://t.cn/A6D2e85e\n🧣预约：http://t.cn/AXMIzsuD http://t.cn/AXC5Nww6 ​​​",
         "size_mb": 3.47,
         "englishTags": [
             "ten days of the end",
             "qi xia",
             "filming wrap"
+        ],
+        "platform_links": [
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/6a6c1fbe0000000008012332?xsec_token=ABb471gbuZZfXKpzOZl99OAo6aeK-Ph6JG2Uwe3U2dPes="
+            }
         ]
     },
     {
@@ -13846,6 +13893,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7642731109385607845"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/6a106abe000000003601d902?xsec_token=ABXGvlaXWativImGqloJD_I6utcGim0o37F2HiLJsKc68="
             }
         ],
         "source": [
@@ -16369,6 +16420,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7635629888157905585"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/69f735a10000000038034a53?xsec_token=ABOZ1CbXBxzaFLhTZ0d_QKTclyIFMBWX-JPiY8g-QpPYQ="
             }
         ],
         "source": [
@@ -34808,6 +34863,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7590307812837761521"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/6956326d0000000022033d38?xsec_token=ABZ14c8ReYTy9GiXePE2CrC6CaOJ4ckcj3fi0M1SzxTuk="
             }
         ],
         "platform": [
@@ -34880,6 +34939,12 @@
         ],
         "size_mb": 73.77,
         "size_4k": 277.12,
-        "quality": "720p"
+        "quality": "720p",
+        "platform_links": [
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/69568aac000000002103dc66?xsec_token=ABZ14c8ReYTy9GiXePE2CrCygByc5BK67cDf7XToJ7Ur8="
+            }
+        ]
     }
 ]
