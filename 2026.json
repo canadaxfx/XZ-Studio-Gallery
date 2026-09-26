@@ -19,10 +19,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "金鱼叹息，泡泡升空，从一场异想出发！\n\n点击预约：\nQQ音乐： http://t.cn/AXWZLhoO\n酷狗音乐： http://t.cn/AXWZtgXz\n酷我音乐： http://t.cn/AXWZtgXZ\n网易云音乐：http://t.cn/AXOsYSAd\n\n距离《异想天开》上线还有3天，一起跳入这场异想。@肖战  #肖战全新EP异想天开# ​​​ http://t.cn/AXWAFQXp ​​​",
         "size_mb": 1.3,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://v.douyin.com/h6eSz0dQQLQ/"
+            }
+        ]
     },
     {
         "id": 1192,
@@ -41,10 +46,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "有些情绪，只在独处时显形；有些声音，只在安静时听见。这次在音乐的旋律里，收回散落的自己。@肖战 #肖战全新EP异想天开##七号打歌中心# http://t.cn/AXW7xCkB ​​​",
         "size_mb": 6.35,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://v.douyin.com/Ud4huI8XTXM/"
+            }
+        ]
     },
     {
         "id": 1194,
@@ -575,6 +585,138 @@
         "size_mb": 49.8,
         "englishTags": [],
         "quality": "4k"
+    },
+    {
+        "id": 1202,
+        "url": "https://assets.xz-studio-gallery.com/full/20260924_DY_VOGUE_XZ-STU-8.webp",
+        "date": "2026-09-24",
+        "month": "September",
+        "year": "2026",
+        "tags": [
+            "VOGUE"
+        ],
+        "groupName": "20260924",
+        "link": "https://www.douyin.com/note/7689017616090625211",
+        "source": [
+            "VOGUE"
+        ],
+        "platform": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "用一组图开启这个中秋🎑@肖战 #肖战",
+        "size_mb": 0.36,
+        "englishTags": []
+    },
+    {
+        "id": 1203,
+        "url": "https://assets.xz-studio-gallery.com/full/20260924_DY_VOGUE_XZ-STU-9.webp",
+        "date": "2026-09-24",
+        "month": "September",
+        "year": "2026",
+        "tags": [
+            "VOGUE"
+        ],
+        "groupName": "20260924",
+        "link": "https://www.douyin.com/note/7689017616090625211",
+        "source": [
+            "VOGUE"
+        ],
+        "platform": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "用一组图开启这个中秋🎑@肖战 #肖战",
+        "size_mb": 0.33,
+        "englishTags": []
+    },
+    {
+        "id": 1204,
+        "url": "https://assets.xz-studio-gallery.com/full/20260924_DY_VOGUE_XZ-STU-13.webp",
+        "date": "2026-09-24",
+        "month": "September",
+        "year": "2026",
+        "tags": [
+            "VOGUE"
+        ],
+        "groupName": "20260924",
+        "link": "https://www.douyin.com/note/7689017616090625211",
+        "source": [
+            "VOGUE"
+        ],
+        "platform": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "用一组图开启这个中秋🎑@肖战 #肖战",
+        "size_mb": 0.35,
+        "englishTags": []
+    },
+    {
+        "id": 1205,
+        "url": "https://assets.xz-studio-gallery.com/full/20260924_DY_VOGUE_XZ-STU-15.webp",
+        "date": "2026-09-24",
+        "month": "September",
+        "year": "2026",
+        "tags": [
+            "VOGUE"
+        ],
+        "groupName": "20260924",
+        "link": "https://www.douyin.com/note/7689017616090625211",
+        "source": [
+            "VOGUE"
+        ],
+        "platform": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "用一组图开启这个中秋🎑@肖战 #肖战",
+        "size_mb": 0.26,
+        "englishTags": []
+    },
+    {
+        "id": 1206,
+        "url": "https://assets.xz-studio-gallery.com/full/20260924_DY_VOGUE_XZ-STU-16.webp",
+        "date": "2026-09-24",
+        "month": "September",
+        "year": "2026",
+        "tags": [
+            "VOGUE"
+        ],
+        "groupName": "20260924",
+        "link": "https://www.douyin.com/note/7689017616090625211",
+        "source": [
+            "VOGUE"
+        ],
+        "platform": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "用一组图开启这个中秋🎑@肖战 #肖战",
+        "size_mb": 0.32,
+        "englishTags": []
+    },
+    {
+        "id": 1207,
+        "url": "https://assets.xz-studio-gallery.com/full/20260924_DY_VOGUE_XZ-STU-19.webp",
+        "date": "2026-09-24",
+        "month": "September",
+        "year": "2026",
+        "tags": [
+            "VOGUE"
+        ],
+        "groupName": "20260924",
+        "link": "https://www.douyin.com/note/7689017616090625211",
+        "source": [
+            "VOGUE"
+        ],
+        "platform": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "用一组图开启这个中秋🎑@肖战 #肖战",
+        "size_mb": 0.12,
+        "englishTags": []
     },
     {
         "id": 1195,
