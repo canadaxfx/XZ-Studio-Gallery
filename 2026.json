@@ -23,6 +23,10 @@
             {
                 "platform": "xiaohongshu",
                 "url": "https://www.xiaohongshu.com/discovery/item/6ab8bbd8000000000a022ca6?xsec_token=ABmQCv-1ie9pwYIKUHfSAfog6rcET9uLA26A4476Vapjk="
+            },
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7436039841013304611"
             }
         ]
     },
