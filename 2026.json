@@ -488,6 +488,30 @@
         "englishTags": []
     },
     {
+        "id": 1239,
+        "url": "https://assets.xz-studio-gallery.com/full/20261001_XZ-Weibo-1.mp4",
+        "date": "2026-10-01",
+        "month": "October",
+        "year": "2026",
+        "tags": [
+            "我和我的祖国",
+            "央视国庆晚会",
+            "长城"
+        ],
+        "groupName": "20261001",
+        "quality": "1080p",
+        "link": "https://www.douyin.com/video/7691691465094294011",
+        "source": [
+            "官方推广 / Official Promo"
+        ],
+        "platform": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "声起，敬山河。@肖战 #肖战 #央视国庆晚会 #央视国庆晚会节目单",
+        "englishTags": []
+    },
+    {
         "id": 1211,
         "url": "https://assets.xz-studio-gallery.com/full/20260929_出道十周年_XZ-STU-1.mp4",
         "date": "2026-09-29",
@@ -620,10 +644,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
-        "postText": "条条框框退后一步，异想天开跳前一步。@肖战  #肖战全新EP异想天开# http://t.cn/AXWxa1As ​​​",
+        "postText": "WEIBO: 条条框框退后一步，异想天开跳前一步。@肖战  #肖战全新EP异想天开# http://t.cn/AXWxa1As\nDOUYIN: 亮片散落一地，不喧哗，自有声。@肖战 #肖战全新EP异想天开",
         "size_mb": 8.51,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7690789073770932858"
+            }
+        ]
     },
     {
         "id": 1210,
