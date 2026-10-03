@@ -4634,18 +4634,10 @@
         let yearPhotos = currentRenderData.filter((p) => p.year === year);
 
         if (currentSearchQuery) {
-          const query = currentSearchQuery;
-          yearPhotos = yearPhotos.filter(
-            (p) =>
-              p.year.includes(query) ||
-              p.month.toLowerCase().includes(query) ||
-              p.date.includes(query) ||
-              (p.description && p.description.toLowerCase().includes(query)) ||
-              (Array.isArray(p.tags) &&
-                p.tags.some((t) => String(t).toLowerCase().includes(query))) ||
-              (Array.isArray(p.englishTags) && p.englishTags.some(t => String(t).toLowerCase().includes(query))) ||
-              (p.postText && p.postText.toLowerCase().includes(query)),
-          );
+          // Same multi-keyword matcher applyAllFilters() uses — this used to be a
+          // whole-phrase copy, so a query whose words aren't adjacent counted
+          // results but rendered an empty grid (Oct 2026).
+          yearPhotos = yearPhotos.filter((p) => matchesSearchText(p, currentSearchQuery));
         }
 
         // Cached so jumpToMonth() can find the right index without re-deriving
