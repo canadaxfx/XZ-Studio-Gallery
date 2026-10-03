@@ -5414,6 +5414,10 @@
       // Single entry point for every filter/search change — replaces the old
       // separate performSearch/applyDateFilter paths that didn't combine.
       function applyAllFilters() {
+        // New search/filter ⇒ every year starts on page 1 — keyword searches too (this
+        // reset used to run only on the filter-only path, so a year left on page 2 by an
+        // earlier search rendered an empty grid when the new results fit on one page).
+        Object.keys(yearPaginationSettings).forEach(yr => { yearPaginationSettings[yr].currentPage = 1; });
         const resetBtn = document.getElementById("resetDateBtn");
         resetBtn.classList.toggle('hidden', !hasActiveDropdownFilters());
         elClearSearchBtn.style.display = currentSearchQuery ? "block" : "none";
@@ -5457,7 +5461,6 @@
           Object.values(photosByYear).forEach((yearPhotos) =>
             yearPhotos.sort((a, b) => new Date(b.date) - new Date(a.date)),
           );
-          Object.keys(yearPaginationSettings).forEach(yr => { yearPaginationSettings[yr].currentPage = 1; });
           createTimelineHTML(photosByYear);
           _setStats(filtered.length, Object.keys(photosByYear).length);
           return;
