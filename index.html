@@ -631,6 +631,9 @@
       .badge-instagram {
         background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
       }
+      .badge-facebook {
+        background-color: #0866FF; /* Facebook brand blue */
+      }
       .badge-twitter {
         /* X (formerly Twitter) brand style — data values 'twitter' and 'x' both use it */
         background-color: #000000;
@@ -3042,7 +3045,7 @@
 // ============================================================
 
       /* ---------- Core Variables ---------- */
-      const DATA_VER = '20261005-1'; // bump when pushing new JSON to GitHub
+      const DATA_VER = '20261005-2'; // bump when pushing new JSON to GitHub
       let photoData = [];
       let currentRenderData = [];
       let expandedYears = new Set();
@@ -3857,6 +3860,7 @@
             xiaohongshu: { cls: 'badge-rednote',  text: 'REDNOTE' },
             douyin:      { cls: 'badge-douyin',   text: 'DOUYIN' },
             x:           { cls: 'badge-twitter',  text: 'X' },
+            facebook:    { cls: 'badge-facebook', text: 'FB' },
             ins:         { cls: 'badge-instagram','text': 'INS' },
             wx:          { cls: 'badge-wechat',   text: 'WECHAT' },
             youtube:     { cls: 'badge-youtube-src', text: 'YOUTUBE' },
