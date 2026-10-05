@@ -632,7 +632,8 @@
         background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
       }
       .badge-twitter {
-        background-color: #1da1f2;
+        /* X (formerly Twitter) brand style — data values 'twitter' and 'x' both use it */
+        background-color: #000000;
       }
       .badge-douyin {
         background-color: #000000;
@@ -2564,7 +2565,7 @@
               <option value="all">Platform</option>
               <option value="weibo">Weibo</option>
               <option value="douyin">Douyin</option>
-              <option value="x">X / Twitter</option>
+              <option value="x">X</option>
               <option value="facebook">Facebook</option>
               <option value="rednote">RedNote</option>
               <option value="other">Others 其他</option>
@@ -3041,7 +3042,7 @@
 // ============================================================
 
       /* ---------- Core Variables ---------- */
-      const DATA_VER = '20260928-1'; // bump when pushing new JSON to GitHub
+      const DATA_VER = '20261005-1'; // bump when pushing new JSON to GitHub
       let photoData = [];
       let currentRenderData = [];
       let expandedYears = new Set();
@@ -3770,7 +3771,7 @@
       function setPlatformBtnBehavior(btn, mainLink, extraLinks, primarySource) {
         const existingPop = document.getElementById('platformPopover');
         if (existingPop) existingPop.style.display = 'none';
-        const lmap = {weibo:'Weibo 微博',oasis:'Oasis 绿洲',douyin:'Douyin 抖音',youtube:'YouTube',bilibili:'Bilibili',ins:'Instagram',instagram:'Instagram',xiaohongshu:'RedNote 小红书',xhs:'RedNote 小红书',rednote:'RedNote 小红书',twitter:'Twitter',x:'X',facebook:'Facebook',qq:'QQ 腾讯',wx:'WeChat 微信',wechat:'WeChat 微信',mgtv:'MGTV 芒果TV'};
+        const lmap = {weibo:'Weibo 微博',oasis:'Oasis 绿洲',douyin:'Douyin 抖音',youtube:'YouTube',bilibili:'Bilibili',ins:'Instagram',instagram:'Instagram',xiaohongshu:'RedNote 小红书',xhs:'RedNote 小红书',rednote:'RedNote 小红书',twitter:'X',x:'X',facebook:'Facebook',qq:'QQ 腾讯',wx:'WeChat 微信',wechat:'WeChat 微信',mgtv:'MGTV 芒果TV'};
         const links = [];
         const w = mainLink ? String(mainLink).trim() : '';
         // Label from the URL host first; then the entry's platform field (which can
@@ -3855,7 +3856,7 @@
             rednote:     { cls: 'badge-rednote',  text: 'REDNOTE' },
             xiaohongshu: { cls: 'badge-rednote',  text: 'REDNOTE' },
             douyin:      { cls: 'badge-douyin',   text: 'DOUYIN' },
-            twitter:     { cls: 'badge-twitter',  text: 'TWITTER' },
+            x:           { cls: 'badge-twitter',  text: 'X' },
             ins:         { cls: 'badge-instagram','text': 'INS' },
             wx:          { cls: 'badge-wechat',   text: 'WECHAT' },
             youtube:     { cls: 'badge-youtube-src', text: 'YOUTUBE' },
@@ -3863,7 +3864,7 @@
         };
         const _seenBadges = new Set();
         const _badgeHtml = [];
-        const _normPlat = p => { const k = String(p).toLowerCase().trim(); return (k==='xiaohongshu'||k==='xhs') ? 'rednote' : k==='instagram' ? 'ins' : k==='wechat' ? 'wx' : k; };
+        const _normPlat = p => { const k = String(p).toLowerCase().trim(); return (k==='xiaohongshu'||k==='xhs') ? 'rednote' : k==='instagram' ? 'ins' : k==='wechat' ? 'wx' : k==='twitter' ? 'x' : k; };
         const _addBadge = (k) => {
             const key = _normPlat(k);
             if (_seenBadges.has(key)) return;
