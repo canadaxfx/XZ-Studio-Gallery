@@ -1,5 +1,28 @@
 [
     {
+        "id": 1343,
+        "url": "https://assets.xz-studio-gallery.com/full/20261006_XHS_生日_XZ-STU-1.mp4",
+        "date": "2026-10-06",
+        "month": "October",
+        "year": "2026",
+        "tags": [
+            "生日"
+        ],
+        "groupName": "20261006",
+        "duration": 54,
+        "link": "https://www.xiaohongshu.com/explore/6ac1c2760000000014003da3?xsec_token=AB7HVqgUgYUtY2H_vj3oeRagAWUzys3TENSorgV_-Wo48=&xsec_source=pc_search",
+        "source": [
+            "生日"
+        ],
+        "platform": [
+            "rednote"
+        ],
+        "description": "",
+        "postText": "但还有好多嘴角要上扬，好多祝福要说！[派对R][心心眼R]#肖战[话题]# #肖战1005生日快乐[话题]#",
+        "size_mb": 2.5,
+        "englishTags": []
+    },
+    {
         "id": 1262,
         "url": "https://assets.xz-studio-gallery.com/full/20261005_生日_XZ-STU-1.jpg",
         "date": "2026-10-05",
@@ -1575,10 +1598,19 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
-        "postText": "#肖战1005生日快乐# 你用角色安放想象，用旋律推开晴空。那些天马行空的念想，被你一一演成了真切模样；那些无拘无束的歌，被你慢慢唱开。悄无声息间，把一个个“不可能”，都铺成了前行的路。愿新的一岁，你的想象依旧辽阔，脚步依旧坚定。\n\n@肖战 新的一岁，也继续享受这人间的奇遇吧！🎊 http://t.cn/AXWrLoRW",
+        "postText": "微博：#肖战1005生日快乐# 你用角色安放想象，用旋律推开晴空。那些天马行空的念想，被你一一演成了真切模样；那些无拘无束的歌，被你慢慢唱开。悄无声息间，把一个个“不可能”，都铺成了前行的路。愿新的一岁，你的想象依旧辽阔，脚步依旧坚定。\n\n@肖战 新的一岁，也继续享受这人间的奇遇吧！🎊 http://t.cn/AXWrLoRW\n\n抖音：愿你抬手便能触到诗意，低头亦能撞见烟火。生日快乐🎂@肖战 #肖战 #肖战1005生日快乐\n\n小红书：纯过生日的一天  这个视频看完不烧心#肖战 #肖战1005生日快乐",
         "size_mb": 42.22,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/note/7693096652690077297"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/6ac0e4b3000000000a02676a?xsec_token=ABzQExzxX0Eqdf-xRkoa5pyNHjTDhnl320XnpwNDR69jc="
+            }
+        ]
     },
     {
         "id": 1334,
