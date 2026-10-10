@@ -26,6 +26,10 @@
             {
                 "platform": "douyin",
                 "url": "https://www.douyin.com/video/7694622201975677541"
+            },
+            {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/discovery/item/6ac8b1dd000000000a021bdd?xsec_token=ABVNIA7plrqpuwzqRl7Hk8EIu1OdZxmdZdCWm-Q6UxbUI="
             }
         ]
     },
