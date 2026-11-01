@@ -363,10 +363,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "眼泪是流不完的，亮亮以后只留幸福的眼泪💧@肖战 #小城良方# http://t.cn/AXj3xBmR ​​​",
         "size_mb": 6.81,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7702673803638704241"
+            }
+        ]
     },
     {
         "id": 1830,
@@ -387,10 +392,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "亮亮@肖战 心中的雪已经慢慢融化了❄️#小城良方# http://t.cn/AXj3VN5t ​​​",
         "size_mb": 7.82,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7702673600516246193"
+            }
+        ]
     },
     {
         "id": 1829,
@@ -411,10 +421,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "远离小城就远离了幸福，这一次刘铮亮@肖战 选择靠近❄️#小城良方# http://t.cn/AXj3qc1Y ​​​",
         "size_mb": 7.42,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7702673401245291173"
+            }
+        ]
     },
     {
         "id": 1828,
@@ -435,10 +450,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "亮哥@肖战 来小城不仅救死扶伤，还进行了一些形态重组🔧#小城良方# http://t.cn/AXjmOpoJ ​​​",
         "size_mb": 7.14,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7702673025028462457"
+            }
+        ]
     },
     {
         "id": 1827,
@@ -679,10 +699,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "今天氛围感一下[哈哈]@肖战  #小城良方# http://t.cn/AXjRDfiu ​​​",
         "size_mb": 4.6,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7702305965161797602"
+            }
+        ]
     },
     {
         "id": 1816,
@@ -703,10 +728,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "堂堂铮铮造句小天才亮亮@肖战 是也。#小城良方# http://t.cn/AXjRrVj1 ​​​",
         "size_mb": 3.06,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7702305763326919418"
+            }
+        ]
     },
     {
         "id": 1815,
@@ -727,10 +757,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "当幸福来敲亮家门✊，这次相聚小西门的大家举杯敬自己。@肖战 #小城良方# http://t.cn/AXjRufS6 ​​​",
         "size_mb": 6.02,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7702305629377983226"
+            }
+        ]
     },
     {
         "id": 1814,
@@ -751,10 +786,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "大名鼎鼎的“牌子猫”刘铮亮@肖战 对话小🐈‍⬛咪～#小城良方# http://t.cn/AXj8tQRl ​​​",
         "size_mb": 8.18,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7702305402650138277"
+            }
+        ]
     },
     {
         "id": 1813,
@@ -1021,6 +1061,30 @@
         "englishTags": []
     },
     {
+        "id": 1847,
+        "url": "https://assets.xz-studio-gallery.com/full/20261029_DY_小城良方_XZ-STU-1.mp4",
+        "date": "2026-10-29",
+        "month": "October",
+        "year": "2026",
+        "tags": [
+            "小城良方"
+        ],
+        "groupName": "20261029",
+        "quality": "1080p",
+        "duration": 17,
+        "link": "https://www.douyin.com/video/7702105550771559872",
+        "source": [
+            "小城良方"
+        ],
+        "platform": [
+            "douyin"
+        ],
+        "description": "",
+        "postText": "#生气解决不了任何问题 命运高抬贵手，原来是准备扇人了✋@肖战 #肖战 #小城良方",
+        "size_mb": 1.31,
+        "englishTags": []
+    },
+    {
         "id": 1801,
         "url": "https://assets.xz-studio-gallery.com/full/20261029_小城良方_XZ-STU-25.mp4",
         "date": "2026-10-29",
@@ -1039,10 +1103,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "#小城良方# 谁能告诉一下刀特刘鼓点怎么踩🤔 @肖战 http://t.cn/AXjTCk1t ​​​",
         "size_mb": 3.52,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7702110697824998385"
+            }
+        ]
     },
     {
         "id": 1800,
@@ -1063,10 +1132,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "亮之哲理已送达，来看刘大夫@肖战 是怎么把自己说美了的🥰#小城良方# http://t.cn/AXjTK2q1 ​​​",
         "size_mb": 3.05,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7702008571856539304"
+            }
+        ]
     },
     {
         "id": 1799,
@@ -1285,10 +1359,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "亮子@肖战 老老实实回来上班了[努力] #小城良方# http://t.cn/AXjTXf0t ​​​",
         "size_mb": 6.46,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7702008374163314673"
+            }
+        ]
     },
     {
         "id": 1789,
@@ -1309,10 +1388,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "手术台上的全力以赴，长廊一隅的满眼触动💧。@肖战 #小城良方# http://t.cn/AXjTxSSy ​​​",
         "size_mb": 5.03,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7702007958759366266"
+            }
+        ]
     },
     {
         "id": 1788,
@@ -1619,10 +1703,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "南方还是北方？其实回到家乡小城才是最好的一剂良方❤️@肖战 #小城良方# http://t.cn/AXjWA3Hw ​​​",
         "size_mb": 8.67,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7701634026356510458"
+            }
+        ]
     },
     {
         "id": 1774,
@@ -1643,10 +1732,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "刘铮亮@肖战 要撤回的话有一点too much #小城良方# http://t.cn/AXjWzUfu ​​​",
         "size_mb": 3.73,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7701633813697070464"
+            }
+        ]
     },
     {
         "id": 1773,
@@ -2184,10 +2278,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "刘大夫@肖战 就算是波棱盖卡马路牙子上也不影响嘴秃噜#小城良方# http://t.cn/AXj9adiP ​​​",
         "size_mb": 5.4,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7701203591453484154"
+            }
+        ]
     },
     {
         "id": 1749,
@@ -2208,10 +2307,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "搁浅的日子里，对自己的嘴更好一点怎么了😋@肖战 #小城良方# http://t.cn/AXj9vxDV ​​​",
         "size_mb": 5.5,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7701203394312618683"
+            }
+        ]
     },
     {
         "id": 1748,
@@ -2773,10 +2877,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "刘铮亮@肖战 的秋冬look book参考请翻阅📖#小城良方# http://t.cn/AXjogy8a ​​​",
         "size_mb": 7.29,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7701225595665356401"
+            }
+        ]
     },
     {
         "id": 1724,
@@ -3322,10 +3431,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "吹过金陵的风，感受过南京精彩的夜。感谢大家一次又一次的奔赴，感谢南京，感谢我们！@肖战 2026［出口·我们］巡回演唱会，我们下次见！#肖战个人巡回演唱会# http://t.cn/AXjoxEiA ​​​",
         "size_mb": 37.65,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7701164853348699749"
+            }
+        ]
     },
     {
         "id": 1683,
@@ -3370,10 +3484,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "牌子猫@肖战 的多面日常，别试图预判牌子猫下一秒是什么样子😼#小城良方# http://t.cn/AXjXGusl ​​​",
         "size_mb": 4.78,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7700937633760932709"
+            }
+        ]
     },
     {
         "id": 1681,
@@ -3394,10 +3513,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "亮子从小西门的全世界路过一下@肖战 #小城良方# http://t.cn/AXjXam86 ​​​",
         "size_mb": 4.1,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7700948069802207985"
+            }
+        ]
     },
     {
         "id": 1680,
@@ -3418,10 +3542,15 @@
         "platform": [
             "weibo"
         ],
-        "description": "",
         "postText": "源于医者本能，源于仁为本心，小刘医生@肖战 上线中。#小城良方# http://t.cn/AXjXHZqg ​​​",
         "size_mb": 5.34,
-        "englishTags": []
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "douyin",
+                "url": "https://www.douyin.com/video/7700923390375352805"
+            }
+        ]
     },
     {
         "id": 1679,
