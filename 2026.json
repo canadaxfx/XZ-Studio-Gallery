@@ -41,10 +41,15 @@
         "platform": [
             "douyin"
         ],
-        "description": "",
-        "postText": "亮亮说话主打一个敞亮！@肖战 #小城良方 #肖战 #刘铮亮",
-        "size_mb": 3.12,
-        "englishTags": []
+        "postText": "抖音：亮亮说话主打一个敞亮！@肖战 #小城良方 #肖战 #刘铮亮\n微博：#小城良方# 问！亮亮知道自己有些淡淡的幽默在身上吗@肖战 http://t.cn/AXjdDdss",
+        "size_mb": 7.44,
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/6643123988/RppyD5B7R"
+            }
+        ]
     },
     {
         "id": 1844,
@@ -65,10 +70,15 @@
         "platform": [
             "douyin"
         ],
-        "description": "",
-        "postText": "冬天就快过去了❄️@肖战 #肖战 #小城良方 #刘铮亮",
-        "size_mb": 2.46,
-        "englishTags": []
+        "postText": "抖音：冬天就快过去了❄️@肖战 #肖战 #小城良方 #刘铮亮\n微博：往这个视频里加了什么，看得人心里暖暖的。@肖战 #小城良方# http://t.cn/AXjgPvWE",
+        "size_mb": 3.92,
+        "englishTags": [],
+        "platform_links": [
+            {
+                "platform": "weibo",
+                "url": "https://weibo.com/6643123988/RppKO6JTA"
+            }
+        ]
     },
     {
         "id": 1843,
